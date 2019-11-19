@@ -1,0 +1,1617 @@
+<!doctype html>
+
+
+
+<html ⚡="">
+
+<head>
+  <meta charset="utf-8">
+  <title>How To Use Font Awesome icons in Angular Applications | Angular Wiki</title>
+  <link rel="canonical" href="https://www.angularjswiki.com/angular/how-to-use-font-awesome-icons-in-angular-applications/">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="amp-google-client-id-api" content="googleanalytics">
+  <script async="" src="https://cdn.ampproject.org/v0.js"></script>
+
+
+
+  <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+
+<script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
+<script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
+<script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
+<script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async=""></script>
+<script custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js" async=""></script>
+<script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+
+
+
+  <style amp-custom=""> 
+
+ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em;padding-left: 1.5rem;padding-right: 1.5rem;}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em;white-space: normal;}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}.h00{font-size:4rem}.h0,.h1{font-size:3rem}.h2{font-size:2rem;}.h3{font-size:1.5rem}.h4{font-size:1.125rem}.h5{font-size:.875rem}.h6{font-size:.75rem}.font-family-inherit{font-family:inherit}.font-size-inherit{font-size:inherit}.text-decoration-none{text-decoration:none}.bold{font-weight:700}.regular{font-weight:400}.italic{font-style:italic}.caps{text-transform:uppercase;letter-spacing:.2em}.left-align{text-align:left}.center{text-align:center}.right-align{text-align:right}.justify{text-align:justify}.nowrap{white-space:nowrap}.break-word{word-wrap:break-word}.line-height-1{line-height:1rem}.line-height-2{line-height:1.125rem}.line-height-3{line-height:1.5rem}.line-height-4{line-height:2rem}.list-style-none{list-style:none}.underline{text-decoration:underline}.truncate{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.list-reset{list-style:none;padding-left:0}.inline{display:inline}.block{display:block}.inline-block{display:inline-block}.table{display:table}.table-cell{display:table-cell}.overflow-hidden{overflow:hidden}.overflow-scroll{overflow:scroll}.overflow-auto{overflow:auto}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.left{float:left}.right{float:right}.fit{max-width:100%}.max-width-1{max-width:24rem}.max-width-2{max-width:32rem}.max-width-3{max-width:48rem}.max-width-4{max-width:64rem}.border-box{box-sizing:border-box}.align-baseline{vertical-align:baseline}.align-top{vertical-align:top}.align-middle{vertical-align:middle}.align-bottom{vertical-align:bottom}.m0{margin:0}.mt0{margin-top:0}.mr0{margin-right:0}.mb0{margin-bottom:0}.ml0,.mx0{margin-left:0}.mx0{margin-right:0}.my0{margin-top:0;margin-bottom:0}.m1{margin:.5rem}.mt1{margin-top:.5rem}.mr1{margin-right:.5rem}.mb1{margin-bottom:.5rem}.ml1,.mx1{margin-left:.5rem}.mx1{margin-right:.5rem}.my1{margin-top:.5rem;margin-bottom:.5rem}.m2{margin:1rem}.mt2{margin-top:1rem}.mr2{margin-right:1rem}.mb2{margin-bottom:1rem}.ml2,.mx2{margin-left:1rem}.mx2{margin-right:1rem}.my2{margin-top:1rem;margin-bottom:1rem}.m3{margin:1.5rem}.mt3{margin-top:1.5rem}.mr3{margin-right:1.5rem}.mb3{margin-bottom:1.5rem}.ml3,.mx3{margin-left:1.5rem}.mx3{margin-right:1.5rem}.my3{margin-top:1.5rem;margin-bottom:1.5rem}.m4{margin:2rem}.mt4{margin-top:2rem}.mr4{margin-right:2rem}.mb4{margin-bottom:2rem}.ml4,.mx4{margin-left:2rem}.mx4{margin-right:2rem}.my4{margin-top:2rem;margin-bottom:2rem}.mxn1{margin-left:calc(.5rem * -1);margin-right:calc(.5rem * -1)}.mxn2{margin-left:calc(1rem * -1);margin-right:calc(1rem * -1)}.mxn3{margin-left:calc(1.5rem * -1);margin-right:calc(1.5rem * -1)}.mxn4{margin-left:calc(2rem * -1);margin-right:calc(2rem * -1)}.m-auto{margin:auto}.mt-auto{margin-top:auto}.mr-auto{margin-right:auto}.mb-auto{margin-bottom:auto}.ml-auto,.mx-auto{margin-left:auto}.mx-auto{margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.p0{padding:0}.pt0{padding-top:0}.pr0{padding-right:0}.pb0{padding-bottom:0}.pl0,.px0{padding-left:0}.px0{padding-right:0}.py0{padding-top:0;padding-bottom:0}.p1{padding:.5rem}.pt1{padding-top:.5rem}.pr1{padding-right:.5rem}.pb1{padding-bottom:.5rem}.pl1{padding-left:.5rem}.py1{padding-top:.5rem;padding-bottom:.5rem}.px1{padding-left:.5rem;padding-right:.5rem}.p2{padding:1rem}.pt2{padding-top:1rem}.pr2{padding-right:1rem}.pb2{padding-bottom:1rem}.pl2{padding-left:1rem}.py2{padding-top:1rem;padding-bottom:1rem}.px2{padding-left:1rem;padding-right:1rem}.p3{padding:1.5rem}.pt3{padding-top:1.5rem}.pr3{padding-right:1.5rem}.pb3{padding-bottom:1.5rem}.pl3{padding-left:1.5rem}.py3{padding-top:1.5rem;padding-bottom:1.5rem}.px3{padding-left:1.5rem;padding-right:1.5rem}.p4{padding:2rem}.pt4{padding-top:2rem}.pr4{padding-right:2rem}.pb4{padding-bottom:2rem}.pl4{padding-left:2rem}.py4{padding-top:2rem;padding-bottom:2rem}.px4{padding-left:2rem;padding-right:2rem}.col{float:left}.col,.col-right{box-sizing:border-box}.col-right{float:right}.col-1{width:8.33333%}.col-2{width:16.66667%}.col-3{width:25%}.col-4{width:33.33333%}.col-5{width:41.66667%}.col-6{width:50%}.col-7{width:58.33333%}.col-8{width:66.66667%}.col-9{width:75%}.col-10{width:83.33333%}.col-11{width:91.66667%}.col-12{width:100%}@media (min-width:40.06rem){.sm-col{float:left;box-sizing:border-box}.sm-col-right{float:right;box-sizing:border-box}.sm-col-1{width:8.33333%}.sm-col-2{width:16.66667%}.sm-col-3{width:25%}.sm-col-4{width:33.33333%}.sm-col-5{width:41.66667%}.sm-col-6{width:50%}.sm-col-7{width:58.33333%}.sm-col-8{width:66.66667%}.sm-col-9{width:75%}.sm-col-10{width:83.33333%}.sm-col-11{width:91.66667%}.sm-col-12{width:100%}}@media (min-width:52.06rem){.md-col{float:left;box-sizing:border-box}.md-col-right{float:right;box-sizing:border-box}.md-col-1{width:8.33333%}.md-col-2{width:16.66667%}.md-col-3{width:25%}.md-col-4{width:33.33333%}.md-col-5{width:41.66667%}.md-col-6{width:50%}.md-col-7{width:58.33333%}.md-col-8{width:66.66667%}.md-col-9{width:75%}.md-col-10{width:83.33333%}.md-col-11{width:91.66667%}.md-col-12{width:100%}}@media (min-width:64.06rem){.lg-col{float:left;box-sizing:border-box}.lg-col-right{float:right;box-sizing:border-box}.lg-col-1{width:8.33333%}.lg-col-2{width:16.66667%}.lg-col-3{width:25%}.lg-col-4{width:33.33333%}.lg-col-5{width:41.66667%}.lg-col-6{width:50%}.lg-col-7{width:58.33333%}.lg-col-8{width:66.66667%}.lg-col-9{width:75%}.lg-col-10{width:83.33333%}.lg-col-11{width:91.66667%}.lg-col-12{width:100%}}.flex{display:-ms-flexbox;display:flex}@media (min-width:40.06rem){.sm-flex{display:-ms-flexbox;display:flex}}@media (min-width:52.06rem){.md-flex{display:-ms-flexbox;display:flex}}@media (min-width:64.06rem){.lg-flex{display:-ms-flexbox;display:flex}}.flex-column{-ms-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.items-start{-ms-flex-align:start;align-items:flex-start}.items-end{-ms-flex-align:end;align-items:flex-end}.items-center{-ms-flex-align:center;align-items:center}.items-baseline{-ms-flex-align:baseline;align-items:baseline}.items-stretch{-ms-flex-align:stretch;align-items:stretch}.self-start{-ms-flex-item-align:start;align-self:flex-start}.self-end{-ms-flex-item-align:end;align-self:flex-end}.self-center{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.self-baseline{-ms-flex-item-align:baseline;align-self:baseline}.self-stretch{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch}.justify-start{-ms-flex-pack:start;justify-content:flex-start}.justify-end{-ms-flex-pack:end;justify-content:flex-end}.justify-center{-ms-flex-pack:center;justify-content:center}.justify-between{-ms-flex-pack:justify;justify-content:space-between}.justify-around{-ms-flex-pack:distribute;justify-content:space-around}.justify-evenly{-ms-flex-pack:space-evenly;justify-content:space-evenly}.content-start{-ms-flex-line-pack:start;align-content:flex-start}.content-end{-ms-flex-line-pack:end;align-content:flex-end}.content-center{-ms-flex-line-pack:center;align-content:center}.content-between{-ms-flex-line-pack:justify;align-content:space-between}.content-around{-ms-flex-line-pack:distribute;align-content:space-around}.content-stretch{-ms-flex-line-pack:stretch;align-content:stretch}.flex-auto{-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-none{-ms-flex:none;flex:none}.order-0{-ms-flex-order:0;order:0}.order-1{-ms-flex-order:1;order:1}.order-2{-ms-flex-order:2;order:2}.order-3{-ms-flex-order:3;order:3}.order-last{-ms-flex-order:99999;order:99999}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}.z1{z-index:1}.z2{z-index:2}.z3{z-index:3}.z4{z-index:4}.border{border-style:solid;border-width:1px}.border-top{border-top-style:solid;border-top-width:1px}.border-right{border-right-style:solid;border-right-width:1px}.border-bottom{border-bottom-style:solid;border-bottom-width:1px}.border-left{border-left-style:solid;border-left-width:1px}.border-none{border:0}.rounded{border-radius:3px}.circle{border-radius:50%}.rounded-top{border-radius:3px 3px 0 0}.rounded-right{border-radius:0 3px 3px 0}.rounded-bottom{border-radius:0 0 3px 3px}.rounded-left{border-radius:3px 0 0 3px}.not-rounded{border-radius:0}.hide{position:absolute;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}@media (max-width:40rem){.xs-hide{display:none}}@media (min-width:40.06rem) and (max-width:52rem){.sm-hide{display:none}}@media (min-width:52.06rem) and (max-width:64rem){.md-hide{display:none}}@media (min-width:64.06rem){.lg-hide{display:none}}.display-none{display:none}*{box-sizing:border-box}body{background:#fff;color:#4a4a4a;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;min-width:315px;overflow-x:hidden;font-smooth:always;-webkit-font-smoothing:antialiased}main{max-width:700px;margin:0 auto}p{padding:0;margin:0;padding-left: 1.5rem;padding-right: 1.5rem;margin-bottom:1rem;}.ampstart-accent{color:#003f93}#content:target{margin-top:calc(0px - 3.5rem);padding-top:3.5rem}.ampstart-title-lg{font-size:3rem;line-height:3.5rem;letter-spacing:.06rem}.ampstart-title-md{font-size:2rem;line-height:2.5rem;letter-spacing:.06rem}.ampstart-title-sm{font-size:1.5rem;line-height:2rem;letter-spacing:.06rem}.ampstart-subtitle,body{line-height:1.5rem;letter-spacing:normal}.ampstart-subtitle{color:#003f93;font-size:1rem}.ampstart-byline,.ampstart-caption,.ampstart-hint,.ampstart-label{font-size:.875rem;color:#4f4f4f;line-height:1.125rem;letter-spacing:.06rem}.ampstart-label{text-transform:uppercase}.ampstart-footer,.ampstart-small-text{font-size:.75rem;line-height:1rem;letter-spacing:.06rem}.ampstart-card{box-shadow:0 1px 1px 0 rgba(0,0,0,.14),0 1px 1px -1px rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.h1,h1{font-size:3rem;line-height:3.5rem}.h2,h2{font-size:2rem;line-height:2.5rem;}.h3,h3{font-size:1.5rem;line-height:2rem}.h4,h4{font-size:1.125rem;line-height:1.5rem}.h5,h5{font-size:.875rem;line-height:1.125rem}.h6,h6{font-size:.75rem;line-height:1rem}h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-weight:400;letter-spacing:.06rem;padding-left: 1.5rem;padding-right: 1.5rem;}a,a:active,a:visited{color:inherit}.ampstart-btn{font-family:inherit;font-weight:inherit;font-size:1rem;line-height:1.125rem;padding:.7em .8em;text-decoration:none;white-space:nowrap;word-wrap:normal;vertical-align:middle;cursor:pointer;background-color:#000;color:#fff;border:1px solid #fff}.ampstart-btn:visited{color:#fff}.ampstart-btn-secondary{background-color:#fff;color:#000;border:1px solid #000}.ampstart-btn-secondary:visited{color:#000}.ampstart-btn:active .ampstart-btn:focus{opacity:.8}.ampstart-btn[disabled],.ampstart-btn[disabled]:active,.ampstart-btn[disabled]:focus,.ampstart-btn[disabled]:hover{opacity:.5;outline:0;cursor:default}.ampstart-dropcap:first-letter{color:#000;font-size:3rem;font-weight:700;float:left;overflow:hidden;line-height:3rem;margin-left:0;margin-right:.5rem}.ampstart-initialcap{padding-top:1rem;margin-top:1.5rem}.ampstart-initialcap:first-letter{color:#000;font-size:3rem;font-weight:700;margin-left:-2px}.ampstart-pullquote{border:none;border-left:4px solid #000;font-size:1.5rem;padding-left:1.5rem}.ampstart-byline time{font-style:normal;white-space:nowrap}.amp-carousel-button-next{background-image:url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Next</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>')}.amp-carousel-button-prev{background-image:url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Previous</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>')}.ampstart-dropdown{min-width:200px}.ampstart-dropdown.absolute{z-index:100}.ampstart-dropdown.absolute>section,.ampstart-dropdown.absolute>section>header{height:100%}.ampstart-dropdown>section>header{background-color:#000;border:0;color:#fff}.ampstart-dropdown>section>header:after{display:inline-block;content:"+";padding:0 0 0 1.5rem;color:#003f93}.ampstart-dropdown>[expanded]>header:after{content:"–"}.absolute .ampstart-dropdown-items{z-index:200}.ampstart-dropdown-item{background-color:#000;color:#003f93;opacity:.9}.ampstart-dropdown-item:active,.ampstart-dropdown-item:hover{opacity:1}.ampstart-footer{background-color:#fff;color:#000;padding-top:5rem;padding-bottom:5rem}.ampstart-footer .ampstart-icon{fill:#000}.ampstart-footer .ampstart-social-follow li:last-child{margin-right:0}.ampstart-image-fullpage-hero{color:#fff}.ampstart-fullpage-hero-heading-text,.ampstart-image-fullpage-hero .ampstart-image-credit{-webkit-box-decoration-break:clone;box-decoration-break:clone;background:#000;padding:0 1rem .2rem}.ampstart-image-fullpage-hero>amp-img{max-height:calc(100vh - 3.5rem)}.ampstart-image-fullpage-hero>amp-img img{-o-object-fit:cover;object-fit:cover}.ampstart-fullpage-hero-heading{line-height:3.5rem}.ampstart-fullpage-hero-cta{background:transparent}.ampstart-readmore{background:linear-gradient(0deg,rgba(0,0,0,.65) 0,transparent);color:#fff;margin-top:5rem;padding-bottom:3.5rem}.ampstart-readmore:after{display:block;content:"⌄";font-size:2rem}.ampstart-readmore-text{background:#000}@media (min-width:52.06rem){.ampstart-image-fullpage-hero>amp-img{height:60vh}}.ampstart-image-heading{color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.65) 0,transparent)}.ampstart-image-heading>*{margin:0}amp-carousel .ampstart-image-with-heading{margin-bottom:0}.ampstart-image-with-caption figcaption{color:#4f4f4f;line-height:1.125rem}amp-carousel .ampstart-image-with-caption{margin-bottom:0}.ampstart-input{max-width:100%;width:300px;min-width:100px;font-size:1rem;line-height:1.5rem}.ampstart-input [disabled],.ampstart-input [disabled]+label{opacity:.5}.ampstart-input [disabled]:focus{outline:0}.ampstart-input>input,.ampstart-input>select,.ampstart-input>textarea{width:100%;margin-top:1rem;line-height:1.5rem;border:0;border-radius:0;border-bottom:1px solid #4a4a4a;background:none;color:#4a4a4a;outline:0}.ampstart-input>label{color:#003f93;pointer-events:none;text-align:left;font-size:.875rem;line-height:1rem;opacity:0;animation:.2s;animation-timing-function:cubic-bezier(.4,0,.2,1);animation-fill-mode:forwards}.ampstart-input>input:focus,.ampstart-input>select:focus,.ampstart-input>textarea:focus{outline:0}.ampstart-input>input:focus:-ms-input-placeholder,.ampstart-input>select:focus:-ms-input-placeholder,.ampstart-input>textarea:focus:-ms-input-placeholder{color:transparent}.ampstart-input>input:focus::placeholder,.ampstart-input>select:focus::placeholder,.ampstart-input>textarea:focus::placeholder{color:transparent}.ampstart-input>input:not(:placeholder-shown):not([disabled])+label,.ampstart-input>select:not(:placeholder-shown):not([disabled])+label,.ampstart-input>textarea:not(:placeholder-shown):not([disabled])+label{opacity:1}.ampstart-input>input:focus+label,.ampstart-input>select:focus+label,.ampstart-input>textarea:focus+label{animation-name:a}@keyframes a{to{opacity:1}}.ampstart-input>label:after{content:"";height:2px;position:absolute;bottom:0;left:45%;background:#003f93;transition:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);visibility:hidden;width:10px}.ampstart-input>input:focus+label:after,.ampstart-input>select:focus+label:after,.ampstart-input>textarea:focus+label:after{left:0;width:100%;visibility:visible}.ampstart-input>input[type=search]{-webkit-appearance:none;-moz-appearance:none;appearance:none}.ampstart-input>input[type=range]{border-bottom:0}.ampstart-input>input[type=range]+label:after{display:none}.ampstart-input>select{-webkit-appearance:none;-moz-appearance:none;appearance:none}.ampstart-input>select+label:before{content:"⌄";line-height:1.5rem;position:absolute;right:5px;zoom:2;top:0;bottom:0;color:#003f93}.ampstart-input-chk,.ampstart-input-radio{width:auto;color:#4a4a4a}.ampstart-input input[type=checkbox],.ampstart-input input[type=radio]{margin-top:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;width:20px;height:20px;border:1px solid #003f93;vertical-align:middle;margin-right:.5rem;text-align:center}.ampstart-input input[type=radio]{border-radius:20px}.ampstart-input input[type=checkbox]:not([disabled])+label,.ampstart-input input[type=radio]:not([disabled])+label{pointer-events:auto;animation:none;vertical-align:middle;opacity:1;cursor:pointer}.ampstart-input input[type=checkbox]+label:after,.ampstart-input input[type=radio]+label:after{display:none}.ampstart-input input[type=checkbox]:after,.ampstart-input input[type=radio]:after{position:absolute;top:0;left:0;bottom:0;right:0;content:" ";line-height:1.4rem;vertical-align:middle;text-align:center;background-color:#fff}.ampstart-input input[type=checkbox]:checked:after{background-color:#003f93;color:#fff;content:"✓"}.ampstart-input input[type=radio]:checked{background-color:#fff}.ampstart-input input[type=radio]:after{top:3px;bottom:3px;left:3px;right:3px;border-radius:12px}.ampstart-input input[type=radio]:checked:after{content:"";font-size:3rem;background-color:#003f93}.ampstart-input>label,_:-ms-lang(x){opacity:1}.ampstart-input>input:-ms-input-placeholder,_:-ms-lang(x){color:transparent}.ampstart-input>input::placeholder,_:-ms-lang(x){color:transparent}.ampstart-input>input::-ms-input-placeholder,_:-ms-lang(x){color:transparent}.ampstart-input>select::-ms-expand{display:none}.ampstart-headerbar{background-color:#fff;color:#000;z-index:999;box-shadow:0 0 5px 2px rgba(0,0,0,.1)}.ampstart-headerbar+:not(amp-sidebar),.ampstart-headerbar+amp-sidebar+*{margin-top:3.5rem}.ampstart-headerbar-nav .ampstart-nav-item{padding:0 1rem;background:transparent;opacity:.8}.ampstart-headerbar-nav{line-height:3.5rem}.ampstart-nav-item:active,.ampstart-nav-item:focus,.ampstart-nav-item:hover{opacity:1}.ampstart-navbar-trigger:focus{outline:none}.ampstart-nav a,.ampstart-navbar-trigger,.ampstart-sidebar-faq a{cursor:pointer;text-decoration:none}.ampstart-nav .ampstart-label{color:inherit}.ampstart-navbar-trigger{line-height:3.5rem;font-size:2rem}.ampstart-headerbar-nav{-ms-flex:1;flex:1}.ampstart-nav-search{-ms-flex-positive:0.5;flex-grow:0.5}.ampstart-headerbar .ampstart-nav-search:active,.ampstart-headerbar .ampstart-nav-search:focus,.ampstart-headerbar .ampstart-nav-search:hover{box-shadow:none}.ampstart-nav-search>input{border:none;border-radius:3px;line-height:normal}.ampstart-nav-dropdown{min-width:200px}.ampstart-nav-dropdown amp-accordion header{background-color:#fff;border:none}.ampstart-nav-dropdown amp-accordion ul{background-color:#fff}.ampstart-nav-dropdown .ampstart-dropdown-item,.ampstart-nav-dropdown .ampstart-dropdown>section>header{background-color:#fff;color:#000}.ampstart-nav-dropdown .ampstart-dropdown-item{color:#003f93}.ampstart-sidebar{background-color:#fff;color:#000;min-width:300px;width:300px}.ampstart-sidebar .ampstart-icon{fill:#003f93}.ampstart-sidebar-header{line-height:3.5rem;min-height:3.5rem}.ampstart-sidebar .ampstart-dropdown-item,.ampstart-sidebar .ampstart-dropdown header,.ampstart-sidebar .ampstart-faq-item,.ampstart-sidebar .ampstart-nav-item,.ampstart-sidebar .ampstart-social-follow{margin:0 0 2rem}.ampstart-sidebar .ampstart-nav-dropdown{margin:0}.ampstart-sidebar .ampstart-navbar-trigger{line-height:inherit}.ampstart-navbar-trigger svg{pointer-events:none}.ampstart-related-article-section{border-color:#4a4a4a}.ampstart-related-article-section .ampstart-heading{color:#4a4a4a;font-weight:400}.ampstart-related-article-readmore{color:#000;letter-spacing:0}.ampstart-related-section-items>li{border-bottom:1px solid #4a4a4a}.ampstart-related-section-items>li:last-child{border:none}.ampstart-related-section-items .ampstart-image-with-caption{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;margin-bottom:0}.ampstart-related-section-items .ampstart-image-with-caption>amp-img,.ampstart-related-section-items .ampstart-image-with-caption>figcaption{-ms-flex:1;flex:1}.ampstart-related-section-items .ampstart-image-with-caption>figcaption{padding-left:1rem}@media (min-width:40.06rem){.ampstart-related-section-items>li{border:none}.ampstart-related-section-items .ampstart-image-with-caption>figcaption{padding:1rem 0}.ampstart-related-section-items .ampstart-image-with-caption>amp-img,.ampstart-related-section-items .ampstart-image-with-caption>figcaption{-ms-flex-preferred-size:100%;flex-basis:100%}}.ampstart-social-box{display:-ms-flexbox;display:flex}.ampstart-social-box>amp-social-share{background-color:#000}.ampstart-icon{fill:#003f93}.ampstart-input{width:100%}main .ampstart-social-follow{margin-left:auto;margin-right:auto;width:315px}main .ampstart-social-follow li{transform:scale(1.8)}h1+.ampstart-byline time{font-size:1.5rem;font-weight:400}</style>
+</head>
+  <body>
+
+  
+  <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4 ">
+    <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger  pr2  ">☰
+    </div>
+        Angular Wiki
+        
+  </header>
+
+
+<amp-sidebar id="header-sidebar" class="ampstart-sidebar px3  " layout="nodisplay">
+  <div class="flex justify-start items-center ampstart-sidebar-header">
+    <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger items-start">✕</div>
+  </div>
+  <nav class="ampstart-sidebar-nav ampstart-nav">
+    <ul class="list-reset m0 p0 ampstart-label">
+
+        
+        <li class="ampstart-nav-item">
+          <a class="ampstart-nav-link" href="https://www.angularjswiki.com/#">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+        
+        <li class="ampstart-nav-item">
+          <a class="ampstart-nav-link" href="https://www.angularjswiki.com/angular/">
+            
+            <span>Angular</span>
+            
+          </a>
+        </li>
+        
+        <li class="ampstart-nav-item">
+          <a class="ampstart-nav-link" href="https://www.angularjswiki.com/flexlayout/">
+            
+            <span>Flex Layout</span>
+            
+          </a>
+        </li>
+        
+    </ul>
+  </nav>
+
+
+
+<ul class="ampstart-social-follow list-reset flex justify-around items-center flex-wrap m0 mb4">
+    <li>
+        <a href="https://twitter.com/angular_js" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Twitter"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.2" viewBox="0 0 53 49"><title>Twitter</title><path d="M45 6.9c-1.6 1-3.3 1.6-5.2 2-1.5-1.6-3.6-2.6-5.9-2.6-4.5 0-8.2 3.7-8.2 8.3 0 .6.1 1.3.2 1.9-6.8-.4-12.8-3.7-16.8-8.7C8.4 9 8 10.5 8 12c0 2.8 1.4 5.4 3.6 6.9-1.3-.1-2.6-.5-3.7-1.1v.1c0 4 2.8 7.4 6.6 8.1-.7.2-1.5.3-2.2.3-.5 0-1 0-1.5-.1 1 3.3 4 5.7 7.6 5.7-2.8 2.2-6.3 3.6-10.2 3.6-.6 0-1.3-.1-1.9-.1 3.6 2.3 7.9 3.7 12.5 3.7 15.1 0 23.3-12.6 23.3-23.6 0-.3 0-.7-.1-1 1.6-1.2 3-2.7 4.1-4.3-1.4.6-3 1.1-4.7 1.3 1.7-1 3-2.7 3.6-4.6" class="ampstart-icon ampstart-icon-twitter"></path></svg></a>
+    </li>
+    <li>
+        <a href="https://facebook.com/angularjswiki" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="23.6" viewBox="0 0 56 55"><title>Facebook</title><path d="M47.5 43c0 1.2-.9 2.1-2.1 2.1h-10V30h5.1l.8-5.9h-5.9v-3.7c0-1.7.5-2.9 3-2.9h3.1v-5.3c-.6 0-2.4-.2-4.6-.2-4.5 0-7.5 2.7-7.5 7.8v4.3h-5.1V30h5.1v15.1H10.7c-1.2 0-2.2-.9-2.2-2.1V8.3c0-1.2 1-2.2 2.2-2.2h34.7c1.2 0 2.1 1 2.1 2.2V43" class="ampstart-icon ampstart-icon-fb"></path></svg></a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/angularwiki/" target="_blank" class="inline-block p1" aria-label="Link to AMP HTML Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 54 54"><title>instagram</title><path d="M27.2 6.1c-5.1 0-5.8 0-7.8.1s-3.4.4-4.6.9c-1.2.5-2.3 1.1-3.3 2.2-1.1 1-1.7 2.1-2.2 3.3-.5 1.2-.8 2.6-.9 4.6-.1 2-.1 2.7-.1 7.8s0 5.8.1 7.8.4 3.4.9 4.6c.5 1.2 1.1 2.3 2.2 3.3 1 1.1 2.1 1.7 3.3 2.2 1.2.5 2.6.8 4.6.9 2 .1 2.7.1 7.8.1s5.8 0 7.8-.1 3.4-.4 4.6-.9c1.2-.5 2.3-1.1 3.3-2.2 1.1-1 1.7-2.1 2.2-3.3.5-1.2.8-2.6.9-4.6.1-2 .1-2.7.1-7.8s0-5.8-.1-7.8-.4-3.4-.9-4.6c-.5-1.2-1.1-2.3-2.2-3.3-1-1.1-2.1-1.7-3.3-2.2-1.2-.5-2.6-.8-4.6-.9-2-.1-2.7-.1-7.8-.1zm0 3.4c5 0 5.6 0 7.6.1 1.9.1 2.9.4 3.5.7.9.3 1.6.7 2.2 1.4.7.6 1.1 1.3 1.4 2.2.3.6.6 1.6.7 3.5.1 2 .1 2.6.1 7.6s0 5.6-.1 7.6c-.1 1.9-.4 2.9-.7 3.5-.3.9-.7 1.6-1.4 2.2-.7.7-1.3 1.1-2.2 1.4-.6.3-1.7.6-3.5.7-2 .1-2.6.1-7.6.1-5.1 0-5.7 0-7.7-.1-1.8-.1-2.9-.4-3.5-.7-.9-.3-1.5-.7-2.2-1.4-.7-.7-1.1-1.3-1.4-2.2-.3-.6-.6-1.7-.7-3.5 0-2-.1-2.6-.1-7.6 0-5.1.1-5.7.1-7.7.1-1.8.4-2.8.7-3.5.3-.9.7-1.5 1.4-2.2.7-.6 1.3-1.1 2.2-1.4.6-.3 1.6-.6 3.5-.7h7.7zm0 5.8c-5.4 0-9.7 4.3-9.7 9.7 0 5.4 4.3 9.7 9.7 9.7 5.4 0 9.7-4.3 9.7-9.7 0-5.4-4.3-9.7-9.7-9.7zm0 16c-3.5 0-6.3-2.8-6.3-6.3s2.8-6.3 6.3-6.3 6.3 2.8 6.3 6.3-2.8 6.3-6.3 6.3zm12.4-16.4c0 1.3-1.1 2.3-2.3 2.3-1.3 0-2.3-1-2.3-2.3 0-1.2 1-2.3 2.3-2.3 1.2 0 2.3 1.1 2.3 2.3z" class="ampstart-icon ampstart-icon-instagram"></path></svg></a>
+    </li>
+    
+</ul>
+
+    
+</amp-sidebar>
+
+  
+    <main id="content" role="main" class="">
+      <article class="recipe-article">
+        <header>
+          
+          <span class="ampstart-subtitle block px3 pt2 mb2">Learn how to use Font Awesome icons in Angular</span>
+          
+          <h1 class="mb1 px3">How To Use Font Awesome icons in Angular Applications</h1>
+
+          
+
+  
+  <address class="ampstart-byline clearfix mb4 px3 h5">
+    <time class="ampstart-byline-pubdate block bold my1">Jun 9, 2019</time>
+  </address>
+  
+
+
+
+<amp-img src="https://www.angularjswiki.com/amp/angular/how-to-use-font-awesome-icons-in-angular-applications/featured.jpg" width="1280" height="853" layout="responsive" alt="Font Awesome icons in Angular" class="mb4 mx3"></amp-img>
+
+
+        </header>
+        <div>
+
+<p>In this tutorial I will explain how to use Font Awesome icons in Angular applications.</p>
+
+<p>First we will learn basic Font Awesome icons rendering in Angular and then we will go through some cool Font Awesome features like animations,layering,transforming etc..</p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#installing-free-version-font-awesome-icons-in-angular">Installing free version Font Awesome icons in Angular</a></li>
+<li><a href="#installing-pro-version-font-awesome-icons-in-angular">Installing pro version Font Awesome icons in Angular</a></li>
+<li><a href="#global-level-configuration">Global level configuration</a></li>
+<li><a href="#project-level-configuration">Project level configuration</a></li>
+<li><a href="#using-font-awesome-icons-in-angular-applications">Using Font Awesome icons in Angular applications</a></li>
+<li><a href="#using-font-awesome-icon-library">Using Font Awesome Icon library</a></li>
+<li><a href="#available-icon-styles-in-font-awesome">Available icon styles in Font Awesome</a></li>
+<li><a href="#changing-font-awesome-icons-color-and-stroke-in-angular">Changing Font Awesome Icons color and stroke in Angular</a></li>
+<li><a href="#changing-default-icon-style-in-font-awesome-angular">Changing default icon style in Font Awesome Angular</a></li>
+<li><a href="#font-awesome-icons-features">Font Awesome icons features</a></li>
+<li><a href="#changing-size-of-font-awesome-icons-in-angular">Changing size of Font Awesome icons in Angular</a></li>
+<li><a href="#fixed-width-font-awesome-icons-in-angular">Fixed width Font Awesome icons in Angular</a></li>
+<li><a href="#rotating-font-awesome-icons-in-angular">Rotating Font Awesome icons in Angular</a></li>
+<li><a href="#mirroring-font-awesome-icons-in-angular">Mirroring Font Awesome icons in Angular</a></li>
+<li><a href="#animating-font-awesome-icons-in-angular">Animating Font Awesome icons in Angular</a></li>
+<li><a href="#pulled-font-awesome-icons">Pulled Font Awesome Icons</a></li>
+<li><a href="#transform-font-awesome-icons-in-angular">Transform Font Awesome icons in Angular</a></li>
+<li><a href="#combine-two-icons-using-font-awesome-mask">Combine two icons using Font Awesome mask</a></li>
+<li><a href="#layering-text-counters-font-awesome-icons">Layering, Text, &amp; Counters Font Awesome icons</a></li>
+<li><a href="#adding-text-to-font-awesome-icons-in-angular">Adding text to Font Awesome icons in Angular</a></li>
+<li><a href="#adding-counters-to-font-awesome-icons-in-angular">Adding counters to Font Awesome icons in Angular</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+<h2 id="installing-free-version-font-awesome-icons-in-angular">Installing free version Font Awesome icons in Angular</h2>
+
+<p>To install Font Awesome icons in Angular applications use the below npm or yarn commands</p>
+
+<pre><code>npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-brands-svg-icons
+npm install @fortawesome/free-regular-svg-icons
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/angular-fontawesome
+
+yarn add @fortawesome/fontawesome-svg-core
+yarn add @fortawesome/free-brands-svg-icons
+yarn add @fortawesome/free-regular-svg-icons
+yarn add @fortawesome/free-solid-svg-icons
+yarn add @fortawesome/angular-fontawesome
+</code></pre>
+
+<h2 id="installing-pro-version-font-awesome-icons-in-angular">Installing pro version Font Awesome icons in Angular</h2>
+
+<p>To install pro version Font Awesome icons follow the below steps</p>
+
+<ol>
+<li>Configure npm registry to install icons from Font Awesome npm package.</li>
+<li>If you buy a license for Font Awesome icons you will be given an authentication token through which you can set your npm registry.</li>
+</ol>
+
+<p>This configuration can be done at global level or per project level</p>
+
+<h2 id="global-level-configuration">Global level configuration</h2>
+
+<p>To use Font Awesome icons across all the angular projects add @fortawesome scope to use Font Awesome pro npm package source
+i.e., npm.fontawesome.com</p>
+
+<pre><code>npm config set &quot;@fortawesome:registry&quot; https://npm.fontawesome.com/ &amp;&amp; \
+  npm config set &quot;//npm.fontawesome.com/:_authToken&quot; TOKEN
+</code></pre>
+
+<p>TOKEN will be given when you buy a professional license.</p>
+
+<h2 id="project-level-configuration">Project level configuration</h2>
+
+<p>To use Font Awesome icons in a single project create a .npmrc file at project root level and set the below configuration</p>
+
+<pre><code>@fortawesome:registry=https://npm.fontawesome.com/
+//npm.fontawesome.com/:_authToken=TOKEN
+</code></pre>
+
+<p>After the configurations install the pro Font Awesome icons by using below npm commands</p>
+
+<pre><code>npm install --save-dev @fortawesome/fontawesome-pro
+npm install @fortawesome/pro-solid-svg-icons
+npm install @fortawesome/pro-regular-svg-icons
+npm install @fortawesome/pro-light-svg-icons
+</code></pre>
+
+<h2 id="using-font-awesome-icons-in-angular-applications">Using Font Awesome icons in Angular applications</h2>
+
+<p>We can use Font Awesome icons in Angular applications two ways depending upon our requirements</p>
+
+<ol>
+<li>Using Explicitly in Component</li>
+<li>Using Icon library</li>
+</ol>
+
+<p>Steps to use Font Awesome icons at component level</p>
+
+<ol>
+<li><p>In app.module.ts file import FontAwesomeModule from @fortawesome package as shown below</p>
+
+<pre><code>import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+</code></pre></li>
+
+<li><p>And then add FontAwesomeModuel in imports array as shown below</p></li>
+</ol>
+
+<pre><code>@NgModule({
+  declarations: [
+    AppComponent,
+    FontawesomeDemoComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+</code></pre>
+
+<p>I have created a component called FontAwesomeDemo in my angular application to use Font Awesome icons</p>
+
+<p>Import the required icons from <code>@fortawesome/free-solid-svg-icons</code> file as shown below.
+In this example I am importing Film Icon.</p>
+
+<pre><code>import { Component, OnInit } from '@angular/core';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
+
+
+@Component({
+  selector: 'app-fontawesome-demo',
+  templateUrl: './fontawesome-demo.component.html',
+  styleUrls: ['./fontawesome-demo.component.scss']
+})
+export class FontawesomeDemoComponent implements OnInit {
+
+  filmIcon = faFilm;
+  constructor() { }
+  ngOnInit() {
+  }
+
+}
+</code></pre>
+
+<p>I have created a variable called coffeeIcon and assign it to the faCoffee imported from free svg icons package.</p>
+
+<p>In the component html render using <code>fa-icon</code> selector show below</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;filmIcon&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20film%20icon.png" sizes="(min-width:102px) 102px, 100vw" width="102" height="82" alt="fontawesome film icon" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>This approach is good when you are using Font Awesome icons in a single component. But most of the times this is not the case We will be using icons across the applications.</p>
+
+<p>So each time importing icons in individual components is not a good idea.</p>
+
+<p>That&rsquo;s where Icon library very useful.</p>
+
+<p>We can import all necessary icons in one place and use them across the application. Go through the below example</p>
+
+<h2 id="using-font-awesome-icon-library">Using Font Awesome Icon library</h2>
+
+<p>To use Font Awesome icons across the application follow the below steps.</p>
+
+<ol>
+<li>In app.module.ts file Import { FontAwesomeModule } from &lsquo;@fortawesome/angular-fontawesome&rsquo;</li>
+<li>Next add FontAwesomeModule to imports array as shown above.</li>
+<li>To use the icon library  Import { library } from &lsquo;@fortawesome/fontawesome-svg-core&rsquo;</li>
+<li>Import required icons for example { faFilm } from &lsquo;@fortawesome/free-solid-svg-icons&rsquo;</li>
+<li>And finally Add them the library with library.add(faFilm)</li>
+<li>Ideally we will be using more than one icon, so to add multiple icons just pass them to library.add method as comma separated values.</li>
+</ol>
+
+<pre><code>import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+  constructor() {
+    library.add(faFilm);
+  }
+}
+</code></pre>
+
+<p>To add the multiple icons to Font Awesome library use the following code snippet.</p>
+
+<pre><code>import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import { faFish } from '@fortawesome/free-solid-svg-icons';
+
+//Adding to the library
+
+library.add(faFilm,faFish);
+
+</code></pre>
+
+<p>After setting up library icons now we can use icons directly in our component file using their name as shown below</p>
+
+<pre><code>&lt;fa-icon icon=&quot;film&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>The default icon style in Font Awesome is &lsquo;fas&rsquo; i.e., font awesome solid style.</p>
+
+<p>If you want to change the icon style we can pass the style to icon attribute as shown below. (You need to import corresponding icon style)</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['far', 'film']&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>far means font awesome regular styles.</p>
+
+<p>As the icons are not managed by component file, if you remove the icons from library at app module level the components which are using those icons will break.</p>
+
+<p>If you want to use all available icons, You can add them to library as shown below</p>
+
+<pre><code>import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+library.add(fas, far);
+</code></pre>
+
+<p>Here I am adding bothe regular and solid styles to the library.
+Now we can use all free icons within our project.</p>
+
+<p>The only disadvantage of this approach is angular project bundle size will increase.</p>
+
+<p>So it is better to add necessary icons to the library instead of adding all icons.</p>
+
+<h2 id="available-icon-styles-in-font-awesome">Available icon styles in Font Awesome</h2>
+
+<p>There are four different types of icon styles available in Font Awesome</p>
+
+<ol>
+<li>regular icons (imported from @fortawesome/free-solid-svg-icons)</li>
+<li>solid icons   (imported from @fortawesome/free-regular-svg-icons)</li>
+<li>brand icons   (imported from @fortawesome/free-brands-svg-icons)</li>
+<li>pro light icons (imported from @fortawesome/pro-light-svg-icons)</li>
+</ol>
+
+<p>To use regular icons use the prefix &lsquo;far&rsquo;</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['far', 'bell']&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>To use solid icons use the prefix &lsquo;fas&rsquo;</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'bell']&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>To use brand icons such as twitter,facebook etc use the prefix &lsquo;fab&rsquo;</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fab', 'angular']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fab', 'twitter']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fab', 'facebook']&quot;&gt;&lt;/fa-icon&gt;
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20brand%20icons.png" sizes="(min-width:252px) 252px, 100vw" width="252" height="103" alt="fontawesome brand icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>To use the pro only light icons use the prefix &lsquo;fal&rsquo;</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fal', 'calendar']&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>In some cases we might need to add same icon from different kinds of styles.</p>
+
+<p>To use same icon from multiple styles, we have to import icons using alias names as shown below.</p>
+
+<pre><code>import { faBell as farBell } from '@fortawesome/free-regular-svg-icons';
+import { faBell as fasBell } from '@fortawesome/free-solid-svg-icons';
+
+library.add(farBell, fasBell);
+</code></pre>
+
+<p>Now we can use bell icon in our component file as shown below</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'bell']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['far', 'bell']&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="Regular%20vs%20solid%20icons.png" sizes="(min-width:165px) 165px, 100vw" width="165" height="106" alt="Regular vs solid icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="changing-font-awesome-icons-color-and-stroke-in-angular">Changing Font Awesome Icons color and stroke in Angular</h2>
+
+<p>To change the Font Awesome Icons color and stroke we can use <code>style</code> attribute of <code>fa-icon</code> selector
+as shown below</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'film']&quot; 
+[styles]=&quot;{'stroke': 'red', 'color': 'red'}&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<h2 id="changing-default-icon-style-in-font-awesome-angular">Changing default icon style in Font Awesome Angular</h2>
+
+<p>To change the default icon style in Font Awesome we have to inject <code>FaIconService</code> and change the <code>defaultPrefix</code> property as shown below</p>
+
+<p>The default icon style in Font Awesome is <code>fas</code></p>
+
+<pre><code>import { FaIconService } from '@fortawesome/angular-fontawesome';
+
+export class AppComponent {
+
+  constructor(private faIconService: FaIconService) {
+      this.faIconService.defaultPrefix = 'far';
+  }
+
+}
+</code></pre>
+
+<h2 id="font-awesome-icons-features">Font Awesome icons features</h2>
+
+<p>Angular Font Awesome icons comes up with useful features like</p>
+
+<ol>
+<li>Changing icons size</li>
+<li>Fixed width icons</li>
+<li>Rotating icons</li>
+<li>Mirroring icons</li>
+<li>Animating icons</li>
+<li>Adding border to the icons</li>
+<li>Pulled icons</li>
+<li>Changing default styles of icons like color and stroke</li>
+</ol>
+
+<h2 id="changing-size-of-font-awesome-icons-in-angular">Changing size of Font Awesome icons in Angular</h2>
+
+<p>We can change the size of Font Awesome icons in Angular using <code>size</code> property of <code>fa-icon</code> selector.</p>
+
+<p>Normally Font Awesome icons inherit the size of parent container. By using size property we can relatively increase or decrease the size of icons with respect to the inherited <code>font-size</code>.</p>
+
+<pre><code>&lt;div style=&quot;font-size:15px;color:red&quot;&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;xs&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;sm&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;lg&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;2x&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;3x&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;5x&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;6x&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;7x&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fab', 'angular']&quot; size=&quot;10x&quot;&gt;&lt;/fa-icon&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20icon%20different%20sizes.png" sizes="(min-width:290px) 290px, 100vw" width="290" height="85" alt="fontawesome icon different sizes" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="fixed-width-font-awesome-icons-in-angular">Fixed width Font Awesome icons in Angular</h2>
+
+<p>Font Awesome icons contains more than 1500+ free icons and 3500+ pro icons. But all the icons are not of same size.</p>
+
+<p>To force the icons to render in a fixed size we can use <code>fixedWidth</code> property of <code>&lt;fa-icon&gt;</code></p>
+
+<p>This fixedWidth property is very useful when we want vertically align a series of icons in a list or navigation menu.</p>
+
+<p>To understand it further I have added android,apple brand icons which are of different width and rendered them normally and with fixedWidth.</p>
+
+<p>I have added background color to Font Awesome icons for visual indication of icons width.</p>
+
+<pre><code>&lt;div style=&quot;font-size:5em&quot;&gt;
+    &lt;fa-icon class=&quot;normal&quot; [icon]=&quot;['fab', 'android']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;br/&gt;
+    &lt;fa-icon class=&quot;normal&quot; [icon]=&quot;['fab', 'apple']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;br/&gt;
+    &lt;fa-icon class=&quot;fixed&quot; [icon]=&quot;['fab', 'android']&quot; 
+    [fixedWidth]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+    &lt;br/&gt;
+    &lt;fa-icon class=&quot;fixed&quot; [icon]=&quot;['fab', 'apple']&quot; 
+    [fixedWidth]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+&lt;/div&gt;
+
+//Adding background color to see the width of the icons
+
+.normal{
+    background-color: red;
+    color:white;
+}
+.fixed{
+    background-color: red;
+    color:white;
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fixed%20width%20fontawesome%20icons.png" sizes="(min-width:119px) 119px, 100vw" width="119" height="379" alt="fixed width fontawesome icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>As you can see, the icons rendered with <code>fixedWidth</code> are vertically aligned with same width</p>
+
+<p>Often in our projects we might need to rotate,flip or mirror an icon depending upon the project design.</p>
+
+<p>Font Awesome angular comes up with handy utilities to help us in such scenarios.</p>
+
+<h2 id="rotating-font-awesome-icons-in-angular">Rotating Font Awesome icons in Angular</h2>
+
+<p>We can rotate the Font Awesome icons in Angular using rotate property of <code>&lt;fa-icon&gt;</code></p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; rotate=&quot;90&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; rotate=&quot;180&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; rotate=&quot;270&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="Rotating%20fontawesome%20icons.png" sizes="(min-width:290px) 290px, 100vw" width="290" height="99" alt="Rotating fontawesome icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="mirroring-font-awesome-icons-in-angular">Mirroring Font Awesome icons in Angular</h2>
+
+<p>We can mirror the Font Awesome icons using <code>flip</code> property as shown below</p>
+
+<p>Allowed values for <code>flip</code> property are</p>
+
+<ol>
+<li>horizontal : mirrors icon horizontally</li>
+<li>vertical : mirrors icon vertically</li>
+<li>both : mirrors icon vertically and horizontally (requires 5.7.0 or greater)</li>
+</ol>
+
+<pre><code>&lt;h3&gt;horizontal&lt;/h3&gt; 
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; flip=&quot;horizontal&quot;&gt;
+&lt;/fa-icon&gt;&lt;br/&gt;
+&lt;h3&gt;Vertically&lt;/h3&gt; 
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;&lt;br/&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; flip=&quot;vertical&quot;&gt;
+&lt;/fa-icon&gt;&lt;br/&gt;
+&lt;h3&gt;Both Vertical and horizontal&lt;/h3&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; flip=&quot;both&quot;&gt;&lt;/fa-icon&gt;
+
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="Mirroring%20fontawesome%20icons.png" sizes="(min-width:169px) 169px, 100vw" width="169" height="364" alt="Mirroring fontawesome icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="animating-font-awesome-icons-in-angular">Animating Font Awesome icons in Angular</h2>
+
+<p>One of the beautiful features of Font Awesome icons is the ability to add animation to the icons.</p>
+
+<p>This feature very useful when we want to add loading or status communicating symbols.</p>
+
+<p>In Font Awesome Angular we can use <code>spin</code> and <code>pulse</code> to animate the icons.</p>
+
+<p>Have a look at the rotating fan icon</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'fan']&quot; [spin]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'fan']&quot; [pulse]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>And spinner and sync icons are usually used along with animations.</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'spinner']&quot; [spin]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'spinner']&quot; [pulse]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+
+&lt;fa-icon [icon]=&quot;['fas', 'sync']&quot; [spin]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'sync']&quot; [pulse]=&quot;true&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<amp-video width="480"
+height="270" controls   layout="responsive">
+  <source src="https://www.angularjswiki.com/img/fontawesome/fontawesome%20icons%20animations.mp4" type="video/mp4">
+  <source src="https://www.angularjswiki.com/img/fontawesome/fontawesome%20icons%20animations.webm" type="video/webm">
+
+</amp-video>
+
+<p>The real fun is we can bind the <code>spin</code> and <code>pulse</code> values to angular component variables.
+As shown below</p>
+
+<p>I have created a variable called <code>isAnimated</code> and binding it to the <code>fa-icon</code> spin property.
+On clicking the icon Iam toggling the isAnimated value</p>
+
+<pre><code>&lt;fa-icon 
+size=&quot;5x&quot;
+[icon]=&quot;['fas', 'volleyball-ball']&quot; 
+[spin]=&quot;isAnimated&quot; 
+(click)=&quot;isAnimated=!isAnimated&quot;&gt;
+&lt;/fa-icon&gt;
+
+&lt;fa-icon 
+size=&quot;5x&quot;
+[icon]=&quot;['fas', 'walking']&quot; 
+[spin]=&quot;isAnimated&quot; 
+(click)=&quot;isAnimated=!isAnimated&quot;&gt;
+&lt;/fa-icon&gt;
+
+&lt;fa-icon 
+size=&quot;5x&quot;
+[icon]=&quot;['fas', 'biking']&quot; 
+[spin]=&quot;isAnimated&quot; 
+(click)=&quot;isAnimated=!isAnimated&quot;&gt;
+&lt;/fa-icon&gt;
+
+&lt;fa-icon 
+size=&quot;5x&quot;
+[icon]=&quot;['fas', 'car-crash']&quot; 
+[spin]=&quot;isAnimated&quot; 
+(click)=&quot;isAnimated=!isAnimated&quot;&gt;
+&lt;/fa-icon&gt;
+
+&lt;fa-icon 
+size=&quot;5x&quot;
+[icon]=&quot;['fas', 'fighter-jet']&quot; 
+[spin]=&quot;isAnimated&quot; 
+(click)=&quot;isAnimated=!isAnimated&quot;&gt;
+&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<amp-video width="480"
+height="270" controls   layout="responsive">
+  <source src="https://www.angularjswiki.com/img/fontawesome/FontawesomeAnimation.mp4" type="video/mp4">
+  <source src="https://www.angularjswiki.com/img/fontawesome/FontawesomeAnimation.webm" type="video/webm">
+
+</amp-video>
+
+<h2 id="pulled-font-awesome-icons">Pulled Font Awesome Icons</h2>
+
+<p>Usually notes and tips are wrapped around the single quotes or double quotes to give us some visual distinction.</p>
+
+<p>We can use <code>pull</code> property of Font Awesome angular to wrap text around icons.</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'quote-left']&quot; pull=&quot;left&quot;&gt;&lt;/fa-icon&gt;
+If You Are Working On Something That You Really Care About, 
+You Don’t Have To Be Pushed. The Vision Pulls You
+&lt;fa-icon [icon]=&quot;['fas', 'quote-right']&quot; pull=&quot;right&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>The allowed values of <code>pull</code> are left,right.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20pulled%20icons.png" sizes="(min-width:290px) 290px, 100vw" width="290" height="34" alt="fontawesome pulled icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="transform-font-awesome-icons-in-angular">Transform Font Awesome icons in Angular</h2>
+
+<p>we can scale,position,flip and rotate icons using <code>transform</code> attribute of Font Awesome selector in Angular.</p>
+
+<p>And further we can combine them for some beautiful effects.</p>
+
+<p>To scale Font Awesome icons using transform attribute use <code>shrink-x</code> or <code>grow-x</code>. Where <code>x</code> is any numeric value including decimals.</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; transform=&quot;shrink-5&quot;&gt;
+&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; transform=&quot;grow-5&quot;&gt;
+&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="scaling%20fontawesome%20icons.png" sizes="(min-width:290px) 290px, 100vw" width="290" height="107" alt="scaling fontawesome icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>To position the icons i.e., to move icons up, down, left, or right, use <code>up-x, down-x, left-x, and right-x</code> where <code>x</code> any numeric value, including decimals.</p>
+
+<pre><code>
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; transform=&quot;up-5&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; transform=&quot;left-5&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; transform=&quot;down-5&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; transform=&quot;right-5&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20position%20icons.png" sizes="(min-width:290px) 290px, 100vw" width="290" height="88" alt="fontawesome position icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>Now we will combine both position and scaling as shown below.</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;shrink-10 up-5&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;shrink-10 down-5&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;shrink-10 left-5&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;shrink-10 right-5&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="positioning%20fontawesome%20icons.png" sizes="(min-width:290px) 290px, 100vw" width="290" height="65" alt="positioning fontawesome icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>To rotate the icons using Font Awesome transform property use <code>rotate-x</code>. Where <code>x</code> is degrees to rotate and negative values also allowed.</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;rotate-90&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;rotate--90&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;rotate-180&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;rotate-270&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20icons%20transform%20rotate.png" sizes="(min-width:289px) 289px, 100vw" width="289" height="64" alt="fontawesome icons transform rotate" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>We can bind <code>rotate</code> values to our component variables to create animatation effect.
+Have a look at the below jumping horse animation.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<amp-video width="480"
+height="270" controls   layout="responsive">
+  <source src="https://www.angularjswiki.com/img/fontawesome/Jumping%20horce%20animation.mp4" type="video/mp4">
+  <source src="https://www.angularjswiki.com/img/fontawesome/Jumping%20horce%20animation.webm" type="video/webm">
+
+</amp-video>
+
+<pre><code>&lt;fa-icon 
+size=&quot;5x&quot;
+[icon]=&quot;['fas', 'horse']&quot; 
+transform=&quot;rotate-{{rotation}}&quot;&gt;
+&lt;/fa-icon&gt;
+&lt;br/&gt;
+&lt;input type='range' min=&quot;-15&quot; max=&quot;0&quot; 
+[value]=&quot;rotation&quot; 
+(input)=&quot;rotation=$event.target.value&quot;/&gt;
+</code></pre>
+
+<p>I have created a range input with minimum value as <code>-15</code> and maximum value as <code>0</code>. And bound it to rotation value of horse icon.</p>
+
+<p>The horse icon will jump from -15 to 0 angle whenever we change the range.</p>
+
+<p>To mirror or flip the icons we can use <code>flip-h</code> (horizontal) or <code>flip-v</code> (vertical) or we can use both <code>flip-h flip-v</code> to flip both horizontally and vertically.</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;flip-h&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;flip-v&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;flip-v flip-h&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="transform%20fontawesome%20icons%20flipping.png" sizes="(min-width:290px) 290px, 100vw" width="290" height="81" alt="transform fontawesome icons flipping" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>We can use all of them in one tranform as shown below</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'snowboarding']&quot; 
+transform=&quot;flip-h rotate-90 shrink-10 up-5&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="Transform%20fontawesome%20icons.png" sizes="(min-width:95px) 95px, 100vw" width="95" height="102" alt="Transform fontawesome icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="combine-two-icons-using-font-awesome-mask">Combine two icons using Font Awesome mask</h2>
+
+<p>We can combine two icons into one single color icons using mask property for <code>fa-icon</code> as shown below</p>
+
+<pre><code>&lt;fa-icon [icon]=&quot;['fas', 'headphones']&quot; transform=&quot;shrink-6&quot; 
+[mask]=&quot;['fas', 'square']&quot;&gt;&lt;/fa-icon&gt;
+&lt;fa-icon [icon]=&quot;['fas', 'pencil-alt']&quot; transform=&quot;shrink-6&quot; 
+[mask]=&quot;['fas', 'comment']&quot;&gt;&lt;/fa-icon&gt;
+</code></pre>
+
+<p>mask icon i.e., outer icon acts like background to the actual icon as shown below.
+transform property will be applied on actual icon.</p>
+
+<p>In the above example headphones and pencil-alt are actual icons. Whereas square and comment icons acts like background.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="masking%20fontawesome%20icons.png" sizes="(min-width:163px) 163px, 100vw" width="163" height="85" alt="masking fontawesome icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="layering-text-counters-font-awesome-icons">Layering, Text, &amp; Counters Font Awesome icons</h2>
+
+<p>Font Awesome layers have some cool features like</p>
+
+<ol>
+<li>we can place multiple icons on top of each other.</li>
+<li>We can add text on top of icons.</li>
+<li>We can add counters to the icons.</li>
+</ol>
+
+<p>Angular Font Awesome has a selector called <code>fa-layers</code> which is used to place icons on top of each other.</p>
+
+<p>We will try to place twitter icon on top of square icon. To achieve this use the below code snippet</p>
+
+<pre><code>&lt;fa-layers&gt;
+        &lt;fa-icon [icon]=&quot;['fas', 'square']&quot;&gt;&lt;/fa-icon&gt;
+        &lt;fa-icon [icon]=&quot;['fab', 'twitter']&quot;&gt;&lt;/fa-icon&gt;
+&lt;/fa-layers&gt; 
+</code></pre>
+
+<p>The above code first renders square icon (layer one) on top of that it will add one more layer with twitter icon.</p>
+
+<p>But if you see the output you won&rsquo;t see anything other than square icon because both icon layers are of same color.</p>
+
+<p>So if you give some other color to the twitter icons it will be visible</p>
+
+<pre><code>&lt;fa-layers&gt;
+    &lt;fa-icon [icon]=&quot;['fas', 'square']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;fa-icon [icon]=&quot;['fab', 'twitter']&quot; style=&quot;color:yellow&quot;&gt;&lt;/fa-icon&gt;
+&lt;/fa-layers&gt; 
+</code></pre>
+
+<p>Or instead of giving color you can use <code>inverse</code> attribute to create knock-out looking effect.</p>
+
+<pre><code>&lt;fa-layers&gt;
+    &lt;fa-icon [icon]=&quot;['fas', 'square']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;fa-icon [inverse]=&quot;true&quot; [icon]=&quot;['fab', 'twitter']&quot; &gt;&lt;/fa-icon&gt;
+&lt;/fa-layers&gt; 
+</code></pre>
+
+<p>Further we can use <code>transform</code> to shrink and position the twitter icon exactly middle of square icon.</p>
+
+<pre><code>&lt;fa-layers&gt;
+    &lt;fa-icon [icon]=&quot;['fas', 'square']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;fa-icon [inverse]=&quot;true&quot; [icon]=&quot;['fab', 'twitter']&quot; 
+    transform=&quot;right-1 shrink-5&quot;&gt;&lt;/fa-icon&gt;
+&lt;/fa-layers&gt; 
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20icons%20layers.png" sizes="(min-width:289px) 289px, 100vw" width="289" height="74" alt="fontawesome icons layers" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>Now we will see how to combine more than two icons into one icon using Font Awesome layers</p>
+
+<pre><code>  &lt;fa-layers&gt;
+      &lt;fa-icon [icon]=&quot;['fas', 'play']&quot; 
+       transform=&quot;rotate--90 grow-2&quot;&gt;&lt;/fa-icon&gt;
+      &lt;fa-icon [inverse]=&quot;true&quot; [icon]=&quot;['fas', 'sun']&quot; 
+       transform=&quot;shrink-10 up-2&quot;&gt;&lt;/fa-icon&gt;
+      &lt;fa-icon [inverse]=&quot;true&quot; [icon]=&quot;['fas', 'moon']&quot; 
+       transform=&quot;shrink-11 down-4.2 left-4&quot;&gt;&lt;/fa-icon&gt;
+      &lt;fa-icon [inverse]=&quot;true&quot; [icon]=&quot;['fas', 'star']&quot; 
+      transform=&quot;shrink-11 down-4.2 right-4&quot;&gt;&lt;/fa-icon&gt;
+  &lt;/fa-layers&gt;
+</code></pre>
+
+<p>I am placing sun,moon,star on top of rotated play icon (i.e., triangle). I have used transform property to align them properly as shown below</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20multiple%20icons.png" sizes="(min-width:105px) 105px, 100vw" width="105" height="103" alt="fontawesome multiple icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<p>Placing multiple icons on top of each other has several real world use cases.</p>
+
+<p>For example banning cellphones and camera symbols icons.</p>
+
+<pre><code>&lt;fa-layers&gt;
+  &lt;fa-icon [icon]=&quot;['fas', 'camera']&quot; 
+  transform=&quot;shrink-7&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fas', 'ban']&quot; style=&quot;color:red&quot;&gt;&lt;/fa-icon&gt;
+&lt;/fa-layers&gt;
+&lt;br/&gt;
+
+&lt;fa-layers&gt;
+  &lt;fa-icon [icon]=&quot;['fas', 'mobile-alt']&quot; 
+   transform=&quot;shrink-7&quot;&gt;&lt;/fa-icon&gt;
+  &lt;fa-icon [icon]=&quot;['fas', 'ban']&quot; style=&quot;color:red&quot;&gt;&lt;/fa-icon&gt;
+&lt;/fa-layers&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20ban%20icons.png" sizes="(min-width:171px) 171px, 100vw" width="171" height="93" alt="fontawesome ban icons" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="adding-text-to-font-awesome-icons-in-angular">Adding text to Font Awesome icons in Angular</h2>
+
+<p>To add text to the icon we can use <code>fa-layers-text</code> selector inside <code>fa-layer</code> as shown below</p>
+
+<p>Here we are adding date to the calendar icons using <code>fa-layer-text</code>.</p>
+
+<pre><code>&lt;fa-layers&gt;
+    &lt;fa-icon [icon]=&quot;['fas', 'calendar']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;fa-layers-text content=&quot;16&quot; style=&quot;color: white;font-weight: bold&quot; 
+     transform=&quot;shrink-5 down-3&quot;&gt;&lt;/fa-layers-text&gt;
+&lt;/fa-layers&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20icon%20layer%20text.png" sizes="(min-width:90px) 90px, 100vw" width="90" height="97" alt="fontawesome icons layer text" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+
+<h2 id="adding-counters-to-font-awesome-icons-in-angular">Adding counters to Font Awesome icons in Angular</h2>
+
+<p>To add counters to Font Awesome icons in Angular we can use <code>fa-layers-counter</code> along with <code>fa-layer</code>.</p>
+
+<p>This feature very useful while showing notification counters or email counters.</p>
+
+<pre><code>&lt;fa-layers size=&quot;5x&quot;&gt;
+    &lt;fa-icon [icon]=&quot;['fas', 'envelope']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;fa-layers-counter content=&quot;100+&quot;&gt;&lt;/fa-layers-counter&gt;
+&lt;/fa-layers&gt;
+
+&lt;fa-layers size=&quot;5x&quot;&gt;
+    &lt;fa-icon [icon]=&quot;['fas', 'bell']&quot;&gt;&lt;/fa-icon&gt;
+    &lt;fa-layers-counter content=&quot;&quot;&gt;&lt;/fa-layers-counter&gt;
+&lt;/fa-layers&gt;
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align: center">
+
+
+<amp-img src="fontawesome%20icons%20layer%20counter.png" sizes="(min-width:188px) 188px, 100vw" width="188" height="101" alt="fontawesome icons layer counter" class="mb4 mx3" layout="responsive"></amp-img>
+
+
+</div>
+
+
+</div>
+
+
+
+
+      </section></article>
+    </main>
+
+  
+  <footer class="ampstart-footer flex flex-column items-center px3 ">
+
+
+    
+    <small>
+      © Angular Wiki, 2019
+    </small>
+  </footer>
+  
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>icons on Angular Wiki</title>
+    <link>https://www.angularjswiki.com/categories/icons/</link>
+    <description>Recent content in icons on Angular Wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;{year}</copyright>
+    <lastBuildDate>Thu, 16 Aug 2018 01:01:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.angularjswiki.com/categories/icons/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mat-Icon List : 900&#43; Angular Material Icons</title>
+      <link>https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/</link>
+      <pubDate>Thu, 16 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/</guid>
+      <description>&amp;lt;mat-icon&amp;gt; selector used to display Material icons in Angular.We have around 900+ Angular Material icons.To show the below &amp;lt;mat-icon&amp;gt; list icons,We need to load material icons css provided by Google
+&amp;lt;mat-icon&amp;gt; is part of angular material module called MatIconModule.We can use font ligature as an icon by putting the ligature text in &amp;lt;mat-icon&amp;gt; component.
+For example &amp;lt;mat-icon&amp;gt;home&amp;lt;/mat-icon&amp;gt; displays home icon.
+We have to import MatIconModule from Angular Material Modules.</description>
+    </item>
+    
+  </channel>
+</rss>

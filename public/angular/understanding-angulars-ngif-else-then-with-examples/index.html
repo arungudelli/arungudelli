@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#2962ff">
+  <meta name="google-site-verification" content="xs41tO2R1bwa_XSFshm1bdIi5xl1Pclcl0-Ar5NdwNg" />
+  <meta name="generator" content="Source Themes Academic 4.1.0">
+  <meta name="generator" content="Hugo 0.54.0" />
+
+  <link rel='preconnect' href='//codefund.app' />
+  <link rel='preconnect' href='//cdn2.codefund.app' />
+  <link rel='preconnect' href='//www.googletagmanager.com'/>
+  <link rel='preconnect' href='//www.google-analytics.com'/>
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Arunkumar Gudelli">
+
+  
+  
+  
+    
+  
+
+  
+  
+    
+    
+
+    
+  <meta name="description" content="Angular&#39;s *ngIf directive displays or removes an element from DOM based on the condition passed.To write ngIf else in angular,we need to define else template for *ngIf.">
+  <meta name="keywords" content="ngif in angular,ngif else in angular,ngif with then,ngif else and then templates in angular">
+  <link rel="canonical" href="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/">
+  
+  <link rel="amphtml" href="https://www.angularjswiki.com/amp/angular/understanding-angulars-ngif-else-then-with-examples/">
+  
+  
+  <link rel="alternate" hreflang="fr" href="https://www.angularjswiki.com/fr/angular/understanding-angulars-ngif-else-then-with-examples/">
+  
+  <link rel="alternate" hreflang="en-us" href="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/">
+  <style>
+  @charset "UTF-8";
+:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent}article,figcaption,figure,footer,main,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}[tabindex="-1"]:focus{outline:0!important}h1,h2,h3,h4,h5{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ol,ul{margin-top:0;margin-bottom:1rem}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}b,strong{font-weight:bolder}a{color:#007bff;text-decoration:none;background-color:transparent;-webkit-text-decoration-skip:objects}a:hover{color:#0056b3;text-decoration:underline}a:not([href]):not([tabindex]){color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus,a:not([href]):not([tabindex]):hover{color:inherit;text-decoration:none}a:not([href]):not([tabindex]):focus{outline:0}code,pre{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:1em}pre{margin-top:0;margin-bottom:1rem;overflow:auto;-ms-overflow-style:scrollbar}figure{margin:0 0 1rem}img{vertical-align:middle;border-style:none}table{border-collapse:collapse}th{text-align:inherit}label{display:inline-block;margin-bottom:.5rem}button{border-radius:0}button:focus{outline:1px dotted;outline:5px auto -webkit-focus-ring-color}button,input{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button,input{overflow:visible}button{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=date],input[type=datetime-local],input[type=month],input[type=time]{-webkit-appearance:listbox}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{outline-offset:-2px;-webkit-appearance:none}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}output{display:inline-block}summary{display:list-item;cursor:pointer}template{display:none}[hidden]{display:none!important}.h1,.h2,.h3,.h4,.h5,h1,h2,h3,h4,h5{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}.h1,h1{font-size:2.5rem}.h2,h2{font-size:2rem}.h3,h3{font-size:1.75rem}.h4,h4{font-size:1.5rem}.h5,h5{font-size:1.25rem}.lead{font-size:1.25rem;font-weight:300}.mark,mark{padding:.2em;background-color:#fcf8e3}.figure{display:inline-block}code{font-size:87.5%;color:#2962ff;word-break:break-word}a>code{color:#2962ff}pre{display:block;font-size:87.5%;color:#2962ff}pre code{font-size:inherit;color:#2962ff;word-break:normal}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.container-fluid{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-12,.col-6,.col-lg-4,.col-lg-8,.col-md-3,.col-md-5,.col-md-6,.col-md-9,.col-xl-2,.col-xl-6,.col-xl-7,.col-xl-3,.col-xl-8{position:relative;width:100%;min-height:1px;padding-right:15px;padding-left:15px}.col-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}@media (min-width:768px){.col-md-3{-ms-flex:0 0 25%;flex:0 0 25%;max-width:25%}.col-md-5{-ms-flex:0 0 41.666667%;flex:0 0 41.666667%;max-width:41.666667%}.col-md-6{-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%}.col-md-9{-ms-flex:0 0 75%;flex:0 0 75%;max-width:75%}.order-md-1{-ms-flex-order:1;order:1}.order-md-2{-ms-flex-order:2;order:2}}@media (min-width:992px){.col-lg-4{-ms-flex:0 0 33.333333%;flex:0 0 33.333333%;max-width:33.333333%}.col-lg-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}}@media (min-width:1200px){.col-xl-3{flex:0 0 25%;max-width:25%}.col-xl-7{flex:0 0 58.33333333%;max-width:58.33333333%}.col-xl-2{-ms-flex:0 0 16.666667%;flex:0 0 16.666667%;max-width:16.666667%}.col-xl-8{-ms-flex:0 0 66.666667%;flex:0 0 66.666667%;max-width:66.666667%}}.table{width:100%;margin-bottom:1rem;background-color:transparent}.table td,.table th{padding:.75rem;vertical-align:top;border-top:1px solid #dee2e6}.table thead th{vertical-align:bottom;border-bottom:2px solid #dee2e6}.table tbody+tbody{border-top:2px solid #dee2e6}.table .table{background-color:#fff}.table-responsive{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;-ms-overflow-style:-ms-autohiding-scrollbar}.btn{display:inline-block;font-weight:400;text-align:center;white-space:nowrap;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}@media screen and (prefers-reduced-motion:reduce){.btn{transition:none}}.btn:focus,.btn:hover{text-decoration:none}.btn:focus{outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.btn:disabled{opacity:.65}.btn:not(:disabled):not(.disabled){cursor:pointer}.btn-light{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-light:hover{color:#212529;background-color:#e2e6ea;border-color:#dae0e5}.btn-light:focus{box-shadow:0 0 0 .2rem rgba(248,249,250,.5)}.btn-light:disabled{color:#212529;background-color:#f8f9fa;border-color:#f8f9fa}.btn-outline-primary{color:#007bff;background-color:transparent;background-image:none;border-color:#007bff}.btn-outline-primary:hover{color:#fff;background-color:#007bff;border-color:#007bff}.btn-outline-primary:focus{box-shadow:0 0 0 .2rem rgba(0,123,255,.5)}.btn-outline-primary:disabled{color:#007bff;background-color:transparent}.btn-lg{padding:.5rem 1rem;font-size:1.25rem;line-height:1.5;border-radius:.3rem}.fade{transition:opacity .15s linear}@media screen and (prefers-reduced-motion:reduce){.fade{transition:none}}.fade:not(.show){opacity:0}.collapse:not(.show){display:none}.nav{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none}.nav-link{display:block;padding:.5rem 1rem}.nav-link:focus,.nav-link:hover{text-decoration:none}.navbar{position:relative;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:.5rem 1rem}.navbar>.container,.navbar>.container-fluid{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between}.navbar-brand{display:inline-block;padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;line-height:inherit;white-space:nowrap}.navbar-brand:focus,.navbar-brand:hover{text-decoration:none}.navbar-nav{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;padding-left:0;margin-bottom:0;list-style:none}.navbar-nav .nav-link{padding-right:0;padding-left:0}.navbar-collapse{-ms-flex-preferred-size:100%;flex-basis:100%;-ms-flex-positive:1;flex-grow:1;-ms-flex-align:center;align-items:center}.navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;background-color:transparent;border:1px solid transparent;border-radius:.25rem}.navbar-toggler:focus,.navbar-toggler:hover{text-decoration:none}@media (max-width:991.98px){.navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid{padding-right:0;padding-left:0}}@media (min-width:992px){.navbar-expand-lg{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-lg .navbar-nav{-ms-flex-direction:row;flex-direction:row}.navbar-expand-lg .navbar-nav .nav-link{padding-right:.5rem;padding-left:.5rem}.navbar-expand-lg>.container,.navbar-expand-lg>.container-fluid{-ms-flex-wrap:nowrap;flex-wrap:nowrap}.navbar-expand-lg .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}.navbar-expand-lg .navbar-toggler{display:none}}.navbar-light .navbar-brand{color:rgba(0,0,0,.9)}.navbar-light .navbar-brand:focus,.navbar-light .navbar-brand:hover{color:rgba(0,0,0,.9)}.navbar-light .navbar-nav .nav-link{color:rgba(0,0,0,.5)}.navbar-light .navbar-nav .nav-link:focus,.navbar-light .navbar-nav .nav-link:hover{color:rgba(0,0,0,.7)}.navbar-light .navbar-nav .active>.nav-link,.navbar-light .navbar-nav .nav-link.active,.navbar-light .navbar-nav .nav-link.show,.navbar-light .navbar-nav .show>.nav-link{color:rgba(0,0,0,.9)}.navbar-light .navbar-toggler{color:rgba(0,0,0,.5);border-color:rgba(0,0,0,.1)}.card{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;min-width:0;word-wrap:break-word;background-color:#fff;background-clip:border-box;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}.card-title{margin-bottom:.75rem}.card-text:last-child{margin-bottom:0}.pagination{display:-ms-flexbox;display:flex;padding-left:0;list-style:none;border-radius:.25rem}.page-link{position:relative;display:block;padding:.5rem .75rem;margin-left:-1px;line-height:1.25;color:#007bff;background-color:#fff;border:1px solid #dee2e6}.page-link:hover{z-index:2;color:#0056b3;text-decoration:none;background-color:#e9ecef;border-color:#dee2e6}.page-link:focus{z-index:2;outline:0;box-shadow:0 0 0 .2rem rgba(0,123,255,.25)}.page-link:not(:disabled):not(.disabled){cursor:pointer}.page-item:first-child .page-link{margin-left:0;border-top-left-radius:.25rem;border-bottom-left-radius:.25rem}.page-item:last-child .page-link{border-top-right-radius:.25rem;border-bottom-right-radius:.25rem}.page-item.active .page-link{z-index:1;color:#fff;background-color:#007bff;border-color:#007bff}.page-item.disabled .page-link{color:#6c757d;pointer-events:none;cursor:auto;background-color:#fff;border-color:#dee2e6}.badge{display:inline-block;padding:.25em .4em;font-size:75%;font-weight:700;line-height:1;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25rem}.badge:empty{display:none}.btn .badge{position:relative;top:-1px}.alert{position:relative;padding:.75rem 1.25rem;margin-bottom:1rem;border:1px solid transparent;border-radius:.25rem}.alert-warning{color:#856404;background-color:#fff3cd;border-color:#ffeeba}@-webkit-keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}@keyframes progress-bar-stripes{from{background-position:1rem 0}to{background-position:0 0}}.progress{display:-ms-flexbox;display:flex;height:1rem;overflow:hidden;font-size:.75rem;background-color:#e9ecef;border-radius:.25rem}.progress-bar{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;color:#fff;text-align:center;white-space:nowrap;background-color:#007bff;transition:width .6s ease}@media screen and (prefers-reduced-motion:reduce){.progress-bar{transition:none}}.media{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start}.media-body{-ms-flex:1;flex:1}.close{float:right;font-size:1.5rem;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.5}.close:not(:disabled):not(.disabled){cursor:pointer}.close:not(:disabled):not(.disabled):focus,.close:not(:disabled):not(.disabled):hover{color:#000;text-decoration:none;opacity:.75}button.close{padding:0;background-color:transparent;border:0;-webkit-appearance:none}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1050;display:none;overflow:hidden;outline:0}.modal-dialog{position:relative;width:auto;margin:.5rem;pointer-events:none}.modal.fade .modal-dialog{transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out;-webkit-transform:translate(0,-25%);transform:translate(0,-25%)}@media screen and (prefers-reduced-motion:reduce){.modal.fade .modal-dialog{transition:none}}.modal.show .modal-dialog{-webkit-transform:translate(0,0);transform:translate(0,0)}.modal-content{position:relative;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;width:100%;pointer-events:auto;background-color:#fff;background-clip:padding-box;border:1px solid rgba(0,0,0,.2);border-radius:.3rem;outline:0}.modal-header{display:-ms-flexbox;display:flex;-ms-flex-align:start;align-items:flex-start;-ms-flex-pack:justify;justify-content:space-between;padding:1rem;border-bottom:1px solid #e9ecef;border-top-left-radius:.3rem;border-top-right-radius:.3rem}.modal-header .close{padding:1rem;margin:-1rem -1rem -1rem auto}.modal-title{margin-bottom:0;line-height:1.5}.modal-body{position:relative;-ms-flex:1 1 auto;flex:1 1 auto;padding:1rem}.modal-footer{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:end;justify-content:flex-end;padding:1rem;border-top:1px solid #e9ecef}.modal-footer>:not(:first-child){margin-left:.25rem}.modal-footer>:not(:last-child){margin-right:.25rem}@media (min-width:576px){.modal-dialog{max-width:500px;margin:1.75rem auto}}.carousel{position:relative}.border{border:1px solid #dee2e6!important}.border-bottom{border-bottom:1px solid #dee2e6!important}.rounded{border-radius:.25rem!important}.d-none{display:none!important}.d-flex{display:-ms-flexbox!important;display:flex!important}@media (min-width:768px){.d-md-none{display:none!important}}@media (min-width:1200px){.d-xl-block{display:block!important}}.justify-content-center{-ms-flex-pack:center!important;justify-content:center!important}.align-items-center{-ms-flex-align:center!important;align-items:center!important}@media (min-width:1200px){.flex-xl-nowrap{-ms-flex-wrap:nowrap!important;flex-wrap:nowrap!important}}.float-right{float:right!important}.fixed-top{position:fixed;top:0;right:0;left:0;z-index:1030}.shadow{box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important}.mt-0{margin-top:0!important}.mb-0{margin-bottom:0!important}.my-1{margin-top:.25rem!important}.my-1{margin-bottom:.25rem!important}.mr-3{margin-right:1rem!important}.ml-3{margin-left:1rem!important}.p-0{padding:0!important}.py-0{padding-top:0!important}.py-0{padding-bottom:0!important}.pt-3{padding-top:1rem!important}.pt-5{padding-top:3rem!important}.mr-auto,.mx-auto{margin-right:auto!important}.ml-auto,.mx-auto{margin-left:auto!important}@media (min-width:768px){.py-md-3{padding-top:1rem!important}.py-md-3{padding-bottom:1rem!important}.pl-md-5{padding-left:3rem!important}}.text-center{text-align:center!important}@media (min-width:768px){.text-md-left{text-align:left!important}}.visible{visibility:visible!important}@media print{*,::after,::before{text-shadow:none!important;box-shadow:none!important}a:not(.btn){text-decoration:underline}pre{white-space:pre-wrap!important}pre{border:1px solid #adb5bd;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}@page{size:a3}body{min-width:992px!important}.container{min-width:992px!important}.navbar{display:none}.table{border-collapse:collapse!important}.table td,.table th{background-color:#fff!important}}html{font-family:roboto,sans-serif;font-size:16px;color:#000;line-height:1.65}@media screen and (min-width:58em){html{font-size:20px}}body{font-family:inherit;font-size:1rem;line-height:inherit;color:inherit;background-color:#fff;margin-top:70px;padding-top:0;counter-reset:captions}@media screen and (max-width:1200px){body{margin-top:50px}}p{margin-top:0;margin-bottom:1rem}ol,ul{margin-top:0;margin-bottom:1rem}.navbar-light{font-family:roboto,sans-serif;font-weight:400;line-height:1.25;text-rendering:optimizeLegibility}h1,h2,h3,h4,h5{font-family:montserrat,sans-serif;font-weight:400;margin-top:1rem;margin-bottom:.5rem;line-height:1.25;color:#313131;text-rendering:optimizeLegibility;overflow-wrap:break-word;word-wrap:break-word;word-break:break-word;-webkit-hyphens:manual;-ms-hyphens:manual;hyphens:manual}h1{font-size:2.25rem;font-weight:600}h2{margin-top:1rem;font-size:1.5rem;font-weight:600}h3{margin-top:1.5rem;font-size:1.25rem}h4,h5{font-weight:700;margin-top:1rem;font-size:1rem}a,h3.article-title a:hover{color:#2962ff;text-decoration:none;transition:color .6s ease}a:focus,a:hover{color:#2962ff}img,video{height:auto;max-width:100%;display:block}video{height:auto;max-height:400px}figcaption{display:block;margin-top:.75em;line-height:1.25;font-size:1rem;margin-bottom:1.65rem;font-family:montserrat,sans-serif}figcaption.numbered:before{font-weight:700;text-transform:uppercase;content:attr(data-pre) counter(captions) attr(data-post)}figcaption.numbered{counter-increment:captions}figcaption h4{display:inline;font-size:1rem;font-weight:400;margin:0}code,pre{font-family:roboto mono,monospace;color:#2962ff;background-color:#ffff}pre{margin:0 0 1rem;background-color:#ffff;border-color:#f8f8f8;font-size:.9rem;border-radius:4px}pre code{white-space:pre;overflow-x:auto}.universal-wrapper{margin:0 auto;padding-right:1rem;padding-left:1rem;padding-top:.1rem;width:100%}@media only screen and (min-width:1001px){.universal-wrapper{width:1000px}}.small,small{font-size:.75em}.searching{overflow:hidden}.modal-content{background:#fff}.modal-title{margin:0}.modal-content pre{margin:0}.modal-header{border:0;color:#000}.modal-footer{border:0}#modal-error{color:red}a[data-fancybox]{text-decoration:none}a[data-fancybox] img{height:250px;max-width:inherit;display:inherit;margin:0;padding:4px;box-shadow:none;vertical-align:inherit}.post-nav{margin-top:1rem;font-size:1rem}.post-nav-item{hyphens:auto;word-wrap:break-word;padding:11px 0 12px;width:100%}.post-nav-item a{color:#2b2b2b;line-height:1.7;text-transform:none}.post-nav-item .meta-nav{color:#767676;font-weight:900;line-height:2;text-transform:uppercase}@keyframes intro{0%{opacity:0}100%{opacity:1}}.home-section{background-color:#fff;padding:110px 0;animation:intro .3s both;animation-delay:.15s}.home-section:first-of-type{padding-top:50px}.home-section:nth-of-type(even){background-color:#f7f7f7}@media screen and (max-width:768px){.home-section{padding:60px 0}.home-section:first-of-type{padding-top:40px}}.section-heading h1{margin:0 0 10px}.section-heading p{font-weight:400;font-size:1.1rem;color:#b2b2b2}.see-all{margin-top:2rem;text-transform:uppercase}.wg-hero{padding:3em 0;clear:both;background-size:cover;background-repeat:no-repeat;background-position:50%;animation:intro .3s both;animation-delay:0s;animation-delay:.25s}.hero-title{font-size:2.7rem;margin-top:0;line-height:1}.hero-lead{max-width:768px;font-size:1.35rem}.wg-hero .hero-lead,.wg-hero .hero-title{color:#000}.wg-hero a:not(.wg-hero.btn){color:#fff}.wg-hero .cta-btns{margin-bottom:16px}.wg-hero .btn{color:#0039cb;padding:.6em 2.1em}.wg-hero .btn-lg{font-size:1.1rem}.hero-media{display:flex;align-items:center;justify-content:center;height:100%;text-align:center}#profile{text-align:center;padding:30px 10px;position:relative}.portrait{width:200px;height:200px;margin:0 auto;border-radius:50%;object-fit:cover}.portrait-title h2{font-size:1.75em;font-weight:300;color:#000;margin:20px 0 10px}.portrait-title h3{font-size:1rem;font-weight:300;color:rgba(0,0,0,.54);margin:0 0 10px}ul.network-icon{display:inline-flex;flex-direction:row;flex-wrap:wrap;justify-content:center;list-style:none;padding:0}.network-icon svg{height:30px;fill:#2962ff}#profile .network-icon{margin-top:30px}.network-icon li{margin-right:20px}.network-icon li:last-of-type{margin-right:0}.network-icon li:hover{transform:scale(1.2)}.big-icon{font-size:2rem}ul.ul-interests li{font-size:.9rem}.share-box{float:right}ul.share{display:flex;flex-direction:row;flex-wrap:wrap;list-style:none;margin:0;padding:0}ul.share li{display:inline-flex;margin-right:5px}ul.share li:last-of-type{margin-right:0}ul.share li i{display:block;width:30px;height:30px;line-height:30px;font-size:16px;text-align:center;transition:all 150ms ease-in-out;color:#fff}ul.share li:hover i{transform:scale(1.4)}article{animation:intro .3s both;animation-delay:.15s}.article-container{max-width:760px;padding:0 20px;margin:0 auto}.page-subtitle{font-size:1.15rem;color:rgba(0,0,0,.54);margin-bottom:1rem}.article-title{font-size:1.75rem}.article-title a{color:#151515;transition:color .6s ease}.article-metadata{margin-bottom:15px;overflow:hidden;font-size:14px;letter-spacing:.03em;color:rgba(0,0,0,.54)}.stream-meta.article-metadata{margin-bottom:5px}article .article-metadata{margin-bottom:20px;line-height:30px}.article-metadata a{color:rgba(0,0,0,.54)}.article-metadata a:hover{color:#2962ff}.middot-divider{padding-right:.45em;padding-left:.45em;font-size:15px}.middot-divider::after{content:'\00B7'}.article-style img,.article-style video{margin-left:auto;margin-right:auto;margin-top:2rem;margin-bottom:2rem;padding:0}.article-style td img,.article-style td video{margin-top:0;margin-bottom:0}.article-style figure{margin-top:2rem;margin-bottom:2rem}.article-style figure img{margin-top:0;margin-bottom:0}.article-widget{padding-top:1rem}.article-widget h3{margin-top:0}.hr-light{border-top:1px solid rgba(0,0,0,.05);margin-top:.5rem;margin-bottom:1rem}.media.stream-item{margin-bottom:2rem}.media.stream-item .article-title{font-size:1.2rem}.media.stream-item .article-style{margin-top:2px;font-size:.8rem}.media.stream-item .stream-meta{margin-top:12px}.media.stream-item img{max-width:150px;height:auto;object-fit:cover}@media screen and (max-width:768px){.media.stream-item img{max-width:80px}}.author-card{margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(0,0,0,.05)}.author-card .portrait{width:60px;height:60px;margin:0 auto;border-radius:50%;object-fit:cover}.author-card .card-title{margin-top:0;margin-bottom:15px;font-weight:600;color:rgba(0,0,0,.84)}.author-card .card-title a{color:rgba(0,0,0,.84)}.author-card p{margin-bottom:5px}.author-card .card-text{color:rgba(0,0,0,.76);font-size:.8rem;margin-bottom:4px}.experience .card-text,.experience .card-text p{color:#000!important;font-size:.75rem!important}.card .card-text ul{margin-top:-1rem;margin-bottom:0}#map{height:350px;width:100%}footer{margin:4rem 0 0;padding:2rem 0;width:100%}footer p{font-size:.75rem;text-align:center}.site-footer,footer a#back_to_top i{color:rgba(0,0,0,.54)}a.badge:focus,a.badge:hover{color:rgba(0,0,0,.68)}.btn{padding:.5rem;font-size:.8rem;line-height:.5;border-radius:.3rem}.btn-outline-primary{border-color:#2962ff;color:#2962ff}.btn-outline-primary:not(:disabled):not(.disabled).active,.btn-outline-primary:not(:disabled):not(.disabled):active{color:#fff;background-color:#2962ff;border-color:#2962ff}.btn-outline-primary:hover{color:#fff;background-color:#2962ff;border-color:#2962ff}.navbar{min-height:70px!important}.navbar-light{background:#fff!important;box-shadow:0 .125rem .25rem 0 rgba(0,0,0,.11)}.navbar-light .navbar-toggler{border-color:transparent}.navbar-toggler{color:#34495e!important}.navbar-light .navbar-toggler:focus,.navbar-light .navbar-toggler:hover{background-color:transparent}nav#navbar-main li.nav-item{font-size:16px}.navbar-light .navbar-nav>.nav-item>.nav-link,.navbar-light .navbar-nav>.nav-item>.nav-link:focus,.navbar-light .navbar-nav>.nav-item>.nav-link:hover{white-space:nowrap;-webkit-transition:.2s ease;transition:.2s ease;color:#34495e;font-weight:600}.navbar-light .navbar-nav>.nav-item>.nav-link:focus{color:#34495e;background-color:transparent}.navbar-light .navbar-nav>.nav-item>.nav-link:hover{color:#2962ff;background-color:transparent}.navbar-light .navbar-nav>li.nav-item>a.active,.navbar-light .navbar-nav>li.nav-item>a.active:focus,.navbar-light .navbar-nav>li.nav-item>a.active:hover{color:#2962ff;font-weight:700;background-color:transparent!important}.navbar-brand,.navbar-nav li.nav-item a.nav-link{height:inherit;padding-top:10px;padding-bottom:10px}.navbar-brand img{max-height:50px}.navbar-light .navbar-nav>.open>a,.navbar-light .navbar-nav>.open>a:focus,.navbar-light .navbar-nav>.open>a:hover,.navbar-light .navbar-nav>.open>a:visited{color:#34495e!important;background-color:#fff!important}.navbar-light .navbar-brand{font-weight:700;font-size:1.2em;color:#2b2b2b}.navbar-light .navbar-brand:focus,.navbar-light .navbar-brand:hover{color:#2b2b2b;background-color:transparent}@media screen and (max-width:1200px){.navbar{min-height:50px!important}.navbar-brand,.navbar-nav li.nav-item a.nav-link{height:inherit;line-height:40px;padding-top:5px;padding-bottom:5px}.navbar-brand img{max-height:40px}.navbar-toggler{display:block}.fixed-top{top:0;border-width:0 0 1px}.navbar-nav>li.nav-item>a.nav-link{padding-top:10px;padding-bottom:10px;line-height:normal}.collapse.in{display:block!important}}table{width:100%;max-width:100%;margin-bottom:1rem;font-size:.93rem}table>tbody>tr>td,table>tbody>tr>th,table>thead>tr>td,table>thead>tr>th{padding:8px;line-height:1.43;vertical-align:top;border-top:1px solid #ddd}table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}table>caption+thead>tr:first-child>td,table>caption+thead>tr:first-child>th,table>thead:first-child>tr:first-child>td,table>thead:first-child>tr:first-child>th{border-top:0}table>tbody+tbody{border-top:2px solid #ddd}table table{background-color:#fff}table>tbody>tr:nth-child(odd)>td,table>tbody>tr:nth-child(odd)>th{background-color:#f9f9f9}table>tbody>tr:hover>td,table>tbody>tr:hover>th{background-color:#e5e5e5}div.alert>div{position:relative;display:block;font-size:1rem;margin-left:2rem;margin-top:0;margin-bottom:0}div.alert div>*{margin-bottom:.5rem}div.alert div>:last-child{margin-bottom:0}div.alert a{color:currentColor;text-decoration:none;border-bottom:solid 1px currentColor}.alert-note{color:#12537e;background-color:#f6fbfe;border-color:#209cee}.alert-warning{color:#cd0930;background-color:#fff5f7;border-color:#ff3860}.docs-article-container{max-width:760px}.docs .body-footer{border-top:1px solid #e8e8e8;margin-top:30px;padding-top:10px;font-size:14px;color:#707070}.docs-content{order:1;position:relative}.docs-content>h2[id],.docs-content>h3[id],.docs-content>h4[id]{pointer-events:none}.docs-content>ol li,.docs-content>ul li{margin-bottom:.25rem}.docs-search{position:relative;padding:1rem 15px;margin-right:-15px;margin-left:-15px;}.docs-sidebar{order:0;border-bottom:1px solid rgba(0,0,0,.1)}@media(min-width:768px){.docs-sidebar{border-right:1px solid rgba(0,0,0,.1)}@supports((position:-webkit-sticky) or (position:sticky)){.docs-sidebar{position:-webkit-sticky;position:sticky;top:50px;z-index:10;height:calc(100vh - 50px)}}}@media(min-width:1200px){.docs-sidebar{border-right:1px solid rgba(0,0,0,.1)}@supports((position:-webkit-sticky) or (position:sticky)){.docs-sidebar{position:-webkit-sticky;position:sticky;top:70px;z-index:10;height:calc(100vh - 70px)}}}@media(min-width:1200px){.docs-sidebar{flex:0 1 320px}}.docs-sidebar .nav>li>a{display:block;padding:.25rem 1.5rem;font-size:.8rem;color:rgba(0,0,0,.65)}.docs-sidebar .nav>li>a:hover{color:rgba(0,0,0,.85);text-decoration:none;background-color:transparent}.docs-sidebar .docs-toc-item.active a,.docs-sidebar .nav>.active:hover>a,.docs-sidebar .nav>.active>a{font-weight:700;color:#2962ff;background-color:transparent}.docs-toggle{line-height:1;font-size:1.2rem;color:#2962ff;background-color:transparent}.docs-links{padding-top:1rem;padding-bottom:1rem;margin-right:-15px;margin-left:-15px}@media(min-width:768px){@supports((position:-webkit-sticky) or (position:sticky)){.docs-links{max-height:calc(100vh - 5rem - 70px);overflow-y:auto}}}@media(min-width:768px){.docs-links{display:block!important}}.docs-toc{order:2;padding-top:1.5rem;padding-bottom:1.5rem;font-size:.875rem}@supports((position:-webkit-sticky) or (position:sticky)){.docs-toc{position:-webkit-sticky;position:sticky;top:70px;height:calc(100vh - 70px);overflow-y:auto}}.docs-toc-link{display:block;padding:.25rem 1.5rem;font-weight:700;color:rgba(0,0,0,.65)}.docs-toc-link:hover{color:rgba(0,0,0,.85);text-decoration:none}.docs-toc-item.active{margin-bottom:1rem}.docs-toc-item.active:not(:first-child){margin-top:1rem}.docs-toc-item.active>.docs-toc-link{color:rgba(0,0,0,.85)}.docs-toc-item.active>.docs-toc-link:hover{background-color:transparent}.docs-sidenav{display:block}.docs-toc-title{color:#b5b5b5;font-size:.875rem;font-weight:600;padding-left:calc(1.5rem + 1px);margin-bottom:.5rem}#TableOfContents{padding-left:0;border-left:1px solid #eee}#TableOfContents ul,ul.toc-top{padding-left:0}#TableOfContents li{display:block;margin-bottom:10px}#TableOfContents li a,.toc-top li a{display:block;padding:.125rem 1.5rem;color:#000;font-size:.9rem}#TableOfContents li a:hover,.toc-top li a:hover{color:#2962ff;text-decoration:none}.pagination li>span{background-color:#282a36;border:1px solid #ddd}.hero-lead svg{height:35px!important}.share-box svg{height:20px}.subscribe label{vertical-align:middle;margin-bottom:0;cursor:pointer}.subscribe span{height:25px;width:25px;display:inline-block}.subscribe svg{height:25px;fill:#2962ff;vertical-align:middle}.google-auto-placed{padding-top:20px;padding-bottom:20px}.subbox td{ border:none !important;background: none !important;}
+.dropdown{
+  position: relative;
+  margin-left:5px;
+}
+.dropdown .nav-link{
+  font-size: 12px;
+}
+.dropdown-menu a{
+color:black;  
+}
+.dropdown-menu{
+  position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: 10px;
+    font-size: 12px;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-menu.show {
+    display: block;
+}
+.arrow-down{
+  width: 0;
+    height: 0;
+    float:left;
+    margin-left:3px;
+    border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 10px solid black;
+}
+.lang-name{
+  float:left;
+}
+  </style>  
+  
+  
+  
+
+  
+    
+
+
+
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="https://www.angularjswiki.com/index.xml" type="application/rss+xml" title="Angular Wiki">
+  <link rel="feed" href="https://www.angularjswiki.com/index.xml" type="application/rss+xml" title="Angular Wiki">
+  
+
+  <link rel="manifest" href="https://www.angularjswiki.com/site.webmanifest">
+  <link rel="icon" type="image/png" href="https://www.angularjswiki.com/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" type="image/png" href="https://www.angularjswiki.com/img/icon-192x192.png">
+
+ 
+
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@angularjswiki">
+  <meta property="twitter:creator" content="@angularjswiki">
+  
+  <meta property="twitter:title" content="NgIf Else In Angular &amp; *NgIf Async Pipe Observable Example | Angular Wiki">
+  <meta property="twitter:description" content="Angular&#39;s *ngIf directive displays or removes an element from DOM based on the condition passed.To write ngIf else in angular,we need to define else template for *ngIf."><meta property="twitter:image" content="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/featured.jpeg">
+  <meta property="og:site_name" content="Angular Wiki">
+  <meta property="og:url" content="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/">
+  <meta property="og:title" content="NgIf Else In Angular &amp; *NgIf Async Pipe Observable Example | Angular Wiki">
+  <meta property="og:description" content="Angular&#39;s *ngIf directive displays or removes an element from DOM based on the condition passed.To write ngIf else in angular,we need to define else template for *ngIf."><meta property="og:image" content="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/featured.jpeg">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-08-04T01:01:05&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-10-26T16:20:19&#43;00:00">
+  
+
+  
+
+  
+
+  <title>NgIf Else In Angular &amp; *NgIf Async Pipe Observable Example | Angular Wiki</title>
+
+
+
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
+
+  
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="https://www.angularjswiki.com/">Angular Wiki</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+        </span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.angularjswiki.com/#">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.angularjswiki.com/angular/">
+            
+            <span>Angular</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.angularjswiki.com/flexlayout/">
+            
+            <span>Flex Layout</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <ul class="network-icon" aria-hidden="true">
+    <li>
+        <a href="https://www.instagram.com/angularwiki/" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://twitter.com/angular_js" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.facebook.com/angularjswiki" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z" />
+                </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/company/angular-js/" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+        
+        
+        <li class="nav-item dropdown" id="langselect">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <div class="lang-sec">
+            <div class="lang-name">English</div>
+            <div class="arrow-down"></div>
+            </div>
+
+          </a>
+          <ul class="dropdown-menu" id="lang">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="https://www.angularjswiki.com/fr/angular/understanding-angulars-ngif-else-then-with-examples/">
+                <span>Français</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+        
+        
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid docs">
+    <div class="row flex-xl-nowrap">
+        <div class="col-12 col-md-3 col-xl-2 docs-sidebar" style="border:none">
+            <form class="docs-search d-flex align-items-center">
+        <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
+            </span>
+        </button>
+        
+      
+      
+</form>
+<nav class="collapse docs-links" id="docs-nav">
+
+</nav>
+        </div>
+        <div class="d-none d-xl-block col-xl-3 docs-toc">
+            
+
+
+<div id="mc_embed_signup">
+   Get free link to download 900&#43; Material Icons
+<form id="mc-embedded-subscribe-form" class="validate" action="https://angularjswiki.us18.list-manage.com/subscribe/post?u=e192476b173f610e0808e2561&amp;id=236d3dbb17" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup_scroll">
+        <table class="subbox">
+<tr>
+<td><div class="mc-field-group"><label for="mce-FNAME">Name</label></div>
+</td>
+<td><div class="mc-field-group"><input id="mce-FNAME" class="required" name="FNAME" type="text" value="" /></div>
+</td>
+</tr>
+<tr>
+<td><div class="mc-field-group"><label for="mce-EMAIL">Email</label></div>
+</td>
+<td><div class="mc-field-group"><input id="mce-EMAIL" class="required email" name="EMAIL" type="email" value="" /></div>
+</td>
+</tr>
+</table>
+
+</div>
+
+
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input tabindex="-1" name="b_e192476b173f610e0808e2561_236d3dbb17" type="text" value="" /></div>
+<div class="clear">
+        <button type="submit" class="btn btn-light btn-lg subscribe">
+                <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/>
+                                        
+                                      </svg>
+                </span> Subscribe
+        </button>
+    
+    
+</div>
+</form>
+</div>
+
+
+        </div>
+
+<main class="col-12 col-md-9 col-xl-7 docs-content" role="main">
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="article-container pt-3">
+    <div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+      <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="https://www.angularjswiki.com/img/Angular-wiki-logo.png">
+        <meta itemprop="width" content="250">
+        <meta itemprop="height" content="48">
+      </div>
+      <meta itemprop="name" content="Angular wiki">
+    </div>
+  <h1 itemprop="name headline">NgIf Else In Angular &amp; *NgIf Async Pipe Observable Example</h1>
+
+  
+  <p class="page-subtitle">Understanding ngIf else in Angular</p>
+  
+
+  
+    
+
+
+
+<meta content="2018-08-04 01:01:05 &#43;0000 &#43;0000" itemprop="datePublished">
+<meta content="2019-10-26 16:20:19 &#43;0000 &#43;0000" itemprop="dateModified">
+<link itemprop="mainEntityOfPage" href="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/" />
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+      <span itemprop="name">
+        
+
+      
+      
+      
+        <a href="https://www.angularjswiki.com/authors/admin/">Arunkumar Gudelli</a></span></span>
+  
+
+
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Oct 26, 2019</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+  
+
+  <div style="text-align:center">
+      <picture>
+          
+          
+            <source media="(min-width: 640px)" srcset="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/featured.jpeg">  
+            <source media="(min-width: 400px)" srcset="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/featured_hu10788e76f90ddf65cf3af347270efb36_50665_400x0_resize_q90_lanczos.jpeg">
+            <source media="(min-width: 300px)" srcset="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/featured_hu10788e76f90ddf65cf3af347270efb36_50665_300x0_resize_q90_lanczos.jpeg">
+          
+          
+          
+          <img src="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/featured.jpeg" alt="ng If Else Angular" itemprop="image">
+        </picture>
+  </div>
+   
+</div>
+<br/>
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>Angular&rsquo;s <strong>ngIf</strong> directive displays or removes an element from DOM based on given condition.</p>
+
+<p>To write <strong>ngIf else in angular</strong> we need to define &ldquo;else&rdquo; template for <code>*ngIf</code> directive.</p>
+
+<p>we can use <code>async</code> pipe with <code>*ngIf</code> to read the data coming from an observable.</p>
+
+<p>In all versions of Angular, the syntax of <code>*ngif</code> directive is same.</p>
+
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#understand-ngif-in-angular-with-example">Understand *ngIf in Angular with example</a></li>
+<li><a href="#steps-to-write-ngif-else-in-angular-with-example">Steps to write *ngIf else in Angular with example</a></li>
+<li><a href="#ngif-with-alternative-then-template-in-angular">*ngIf with alternative then template in Angular</a></li>
+<li><a href="#ngif-with-both-else-and-then-templates-example-in-angular">*ngif with both else and then templates example in Angular</a></li>
+<li><a href="#ngif-with-logical-operators-and-or-not">*ngif with Logical Operators AND (&amp;&amp;), OR(||), NOT(!)</a></li>
+<li><a href="#using-as-to-store-ngif-condition-in-a-local-variable">Using <code>as</code> to store <code>*ngIf</code> condition in a local variable</a></li>
+<li><a href="#ngif-with-async-pipe-and-observable-example">*ngIf with async pipe and observable example</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+<h2 id="understand-ngif-in-angular-with-example">Understand *ngIf in Angular with example</h2>
+
+<p><code>*ngIf</code> evaluates the given condition &amp; then renders the &ldquo;then template&rdquo; or &ldquo;else template&rdquo;.</p>
+
+<p>Look at the below example</p>
+
+<pre><code>&lt;div *ngIf=&quot;display&quot;&gt;Hi I am Visible&lt;/div&gt;
+</code></pre>
+
+<p>If <code>display</code> property is true then the <code>&lt;div&gt;</code> element will be added to the DOM. Otherwise, no element will be added.</p>
+
+<p>The default templates of <code>*ngIf</code> are</p>
+
+<ul>
+<li><code>then template</code> is inline template of <code>ngIf</code></li>
+<li><code>else template</code> is blank</li>
+</ul>
+
+<p>In the above code inline template is <code>&lt;div&gt;Hi I am Visible&lt;/div&gt;</code> and there is no <code>else template</code></p>
+
+<p>Or we can bind alternative templates to <code>*ngif</code> based upon our usage.</p>
+
+<p><code>*ngIf</code> is a directive that means we can add it to any HTML element or component</p>
+
+<pre><code>&lt;p *ngIf=&quot;display&quot;&gt;Visible only if display is true&lt;/p&gt;
+</code></pre>
+
+<p>Or we can apply it to other angular components, for instance, <a href="https://www.angularjswiki.com/angular/checkbox-implementation-in-angular-using-angular-material/" target="_blank" rel="noopener">material checkbox</a> component</p>
+
+<pre><code>&lt;mat-checkbox *ngIf=&quot;display&quot;&gt;Material Checkbox&lt;/mat-checkbox&gt;
+</code></pre>
+
+<p>The syntax is very simple we need to add a prefix, asterisk(*) before the directive name <code>ngIf</code>.</p>
+
+<p>So why we need to add the asterisk before the directive name?</p>
+
+<p>The asterisk before <code>ngIf</code> makes our life simple. Angular will convert <code>*ngif</code> attribute to <code>&lt;ng-template&gt;</code> element as displayed below.</p>
+
+<pre><code>&lt;div *ngIf=&quot;display&quot; class=&quot;inline&quot;&gt;Hi I am Visible&lt;/div&gt; 
+
+//This will be converted to 
+
+&lt;ng-template [ngIf]=&quot;display&quot;&gt;
+&lt;div class=&quot;inline&quot;&gt;Hi I am Visible&lt;/div&gt;
+&lt;/ng-template&gt;  
+
+//inline default template (then template)                
+//And no else template
+
+&lt;div *ngIf=&quot;false&quot; class=&quot;inline&quot;&gt;This is not added to DOM&lt;/div&gt;
+
+&lt;ng-template [ngIf]=&quot;false&quot;&gt; 
+ &lt;div class=&quot;inline&quot;&gt;This is not added to DOM
+ &lt;/div&gt; 
+&lt;/ng-template&gt;
+</code></pre>
+
+<p>Now the above definition makes sense. <code>then</code> template is <code>&lt;div&gt;Hi I am Visible&lt;/div&gt;</code> which is inline and there is no <code>else</code> template.</p>
+
+<p>The asterisk is just a syntactic sugar to <a href="https://www.angularjswiki.com/angular/what-is-ng-template-in-angular/" target="_blank" rel="noopener">ng-template</a></p>
+
+<p>And If you see the generated HTML,no element will be added to the DOM if <code>ngIf</code> expression evaluated to <code>false</code>.</p>
+
+
+
+
+
+
+
+<figure>
+
+<picture>
+    
+    
+    
+    
+    <source media="(min-width: 259px)" srcset="https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/ngif.png">  
+    
+  <img src="ngif.png" alt="ngif" />
+</picture>
+  
+
+
+<figcaption data-pre="Figure " data-post=":" >
+  <h4>ngif</h4>
+  
+</figcaption>
+
+</figure>
+
+
+
+<p>So why angular will remove the element rather than hiding it. Go through the below article to understand it further.</p>
+
+<p><a href="https://www.angularjswiki.com/angular/difference-between-ngif-and-hidden-or-displaynone-in-angular/" target="_blank" rel="noopener">Difference between ngIf and hidden in Angular</a></p>
+
+<p>We can use <code>ngIf</code> in four different ways</p>
+
+<ol>
+<li>Simple <code>ngIf</code> (as explained above)</li>
+<li><code>*ngIf</code> with <code>else</code></li>
+<li><code>*ngIf</code> with <code>then</code></li>
+<li><code>*ngIf</code> with <code>then</code> and <code>else</code></li>
+</ol>
+
+<p>Now how can we write <code>*ngIf else</code> in Angular?
+we need bind <code>else</code> template to <code>*ngIf</code></p>
+
+<h2 id="steps-to-write-ngif-else-in-angular-with-example">Steps to write *ngIf else in Angular with example</h2>
+
+<p>Now we will see how to write <code>*ngIf</code> else by using Angular&rsquo;s <code>&lt;ng-template&gt;</code> with a simple example.</p>
+
+<pre><code>&lt;div *ngIf=&quot;display; else elseTemplate&quot; class=&quot;main&quot;&gt;
+   Visible when display is true
+&lt;/div&gt;
+&lt;ng-template #elseTemplate&gt;
+   &lt;div class=&quot;alternative&quot;&gt;
+      Visible when display is false
+   &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+
+<p><code>else</code> binding points to a <code>&lt;ng-template&gt;</code> labeled as <code>#elseTemplate</code>. If the condition or expression is true then default inline template will be rendered otherwise else template will be rendered.</p>
+
+<p>And this template can be defined anywhere in the component view, But as a good practice and to improve readability it is defined right below the <code>ngIf</code> block.</p>
+
+<pre><code>import { Component, OnInit } from '@angular/core';
+@Component({
+selector:'app-ngifelse',
+templateUrl:'./ngifelse.component.html',
+styleUrls: ['./ngifelse.component.css']
+})
+
+export class NgifelseComponent implements OnInit {
+   display:boolean;
+   constructor() {
+    this.display=true;
+   }
+   ngOnInit() {}
+}
+
+//*ngIf else Component View
+&lt;ng-template #elseTemplate&gt;
+  &lt;div class=&quot;alternative&quot;&gt;
+      Visible when display is false
+  &lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;div&gt;
+  This example explains how to write *ngIf else block
+  in Angular.
+  And ng-template block can be defined anywhere in
+  the component view
+&lt;/div&gt;
+&lt;div *ngIf=&quot;display; else elseTemplate&quot; class=&quot;main&quot;&gt;
+   Visible when display is true
+&lt;/div&gt;
+</code></pre>
+
+<p>I have declared <code>else</code> template above the <code>*ngIf</code> block in <code>NgIfElseComponent</code> view, But avoid declaring like this as it is difficult to understand.</p>
+
+<p>The above <code>*ngIf else</code> block will be converted to the following <code>&lt;ng-template&gt;</code> element</p>
+
+<pre><code>&lt;ng-template [ngIf]=&quot;display&quot; [ngIfElse]=&quot;elseTemplate&quot;&gt; 
+ &lt;div class=&quot;main&quot;&gt;
+    Visible when display is true
+ &lt;/div&gt;
+&lt;/ng-template&gt;
+&lt;ng-template #elseTemplate&gt;
+ &lt;div class=&quot;alternative&quot;&gt;
+    Visible when display is false 
+ &lt;/div&gt;
+&lt;/ng-template&gt;
+</code></pre>
+
+<h2 id="ngif-with-alternative-then-template-in-angular">*ngIf with alternative then template in Angular</h2>
+
+<p>By default, the <code>then</code> template of <code>*ngIf</code> is the inline template. We can change the inline template of <code>ngIf</code> by binding  <code>&lt;ng-template&gt;</code> just like else binding as explained above.</p>
+
+<p>See the below example</p>
+
+<pre><code>import { Component, OnInit } from '@angular/core';
+@Component({
+selector:'app-ngifthen',
+templateUrl:'./ngifthen.component.html',
+styleUrls: ['./ngifthen.component.css']
+})
+export class NgifthenComponent implements OnInit {
+display:boolean;
+constructor() {
+this.display=true;
+}
+ngOnInit() {}
+}
+
+//NgIfthen Component view
+&lt;div *ngIf=&quot;display; then thenTemplate&quot;&gt;
+  Inline template will be ignored
+&lt;/div&gt;
+&lt;ng-template #thenTemplate&gt;
+  Displayed when display is true
+&lt;/ng-template&gt;
+</code></pre>
+
+<p>You might think that why we need <code>[ngIfThen]</code> template reference when we have Inline template.</p>
+
+<p>we can change the <code>then</code> or <code>else</code> templates dynamically at run time by taking advantage of these <code>[ngIfThen]</code> and <code>[ngIfElse]</code> Go through the below article to understand it further</p>
+
+<p><a href="https://www.angularjswiki.com/angular/dynamically-change-ngif-thenelse-templates-at-runtime-in-angular/" target="_blank" rel="noopener">Dynamically Change NgIf, Then,Else Templates At Run time In Angular</a></p>
+
+<h2 id="ngif-with-both-else-and-then-templates-example-in-angular">*ngif with both else and then templates example in Angular</h2>
+
+<p>We can pass both <code>else</code> template and <code>then</code> template to <code>*ngIf</code> directive as shown below.</p>
+
+<p>And default inline template will be ignored in this case.</p>
+
+<pre><code>&lt;div *ngIf=&quot;display; then thenTemplate; else elseTemplate&quot;&gt;
+ Inline template will be ignored
+&lt;/div&gt;
+&lt;ng-template #thenTemplate&gt;
+ Displayed when display is true
+&lt;/ng-template&gt;
+&lt;ng-template #elseTemplate&gt;
+ Displayed when display is false
+&lt;/ng-template&gt;
+</code></pre>
+
+<p>And this will be converted to</p>
+
+<pre><code>&lt;ng-template [ngIf]=&quot;display&quot; [ngIfThen]=&quot;thenTemplate&quot; [ngIfElse]=&quot;elseTemplate&quot;&gt;
+ Inline template will be ignored
+&lt;/ng-template&gt;
+&lt;ng-template #thenTemplate&gt;
+ Displayed when display is true
+&lt;/ng-template&gt;
+&lt;ng-template #elseTemplate&gt;
+ Displayed when display is false
+&lt;/ng-template&gt;
+</code></pre>
+
+<h2 id="ngif-with-logical-operators-and-or-not">*ngif with Logical Operators AND (&amp;&amp;), OR(||), NOT(!)</h2>
+
+<p>We can pass logical operators AND (&amp;&amp;),OR(||) and NOT(!) in *ngif condition. Here are the examples.</p>
+
+<pre><code>&lt;!-- logic AND &amp;&amp; operator --&gt;
+&lt;div *ngIf=&quot;display &amp;&amp; hasAccess&quot;&gt;
+Visible when display and hasAccess are true
+&lt;/div&gt;
+
+&lt;!-- logic OR || operator --&gt;
+&lt;div *ngIf=&quot;display || hasAccess&quot;&gt;
+Visisble when one of the variable display or hasAccess true
+&lt;/div&gt;
+
+&lt;!-- logical NOT ! operator&quot; --&gt;
+&lt;div *ngIf=&quot;!display&quot;&gt;
+Visible only when display is false.
+&lt;/div&gt;
+</code></pre>
+
+<h2 id="using-as-to-store-ngif-condition-in-a-local-variable">Using <code>as</code> to store <code>*ngIf</code> condition in a local variable</h2>
+
+<p>We can save the <code>*ngIf</code> condition in a local variable using <code>as</code> so that we can use it in template. Have a look at the below example.</p>
+
+<pre><code>&lt;div *ngIf=&quot;display as ngIfCondition;else elseTemplate&quot;&gt;
+  shows when display is {{ngIfCondition}}
+&lt;/div&gt;
+
+&lt;ng-template #elseTemplate let-ngIfCondition&gt;
+  shows when display is {{ngIfCondition}}
+&lt;/ng-template&gt;
+</code></pre>
+
+<p>We are storing <code>*ngIf</code> condition in a local variable called <code>ngIfCondition</code>.So that we can use it in <code>then</code> or <code>else</code> templates if required.</p>
+
+<p>And in <code>&lt;ng-template&gt;</code> we have to pass local variable prefixing with <code>let</code> keyword.</p>
+
+<p>You might wonder why this is useful, because anyway the expression is going to be <code>true</code> or <code>false</code>. Or we can simply use <code>{{display}}</code> instead of declaring local variable <code>ngIfCondition</code>.</p>
+
+<p><code>display</code> variable is readily available at the time of <code>*ngIf</code> evaluation.What if the  variable is asynchronous and coming from an observable.</p>
+
+<h2 id="ngif-with-async-pipe-and-observable-example">*ngIf with async pipe and observable example</h2>
+
+<p>We will bind some product data coming from an Observable to a component using <code>async</code> pipe.</p>
+
+<pre><code>&lt;div&gt;
+&lt;h3&gt;Name:&lt;/h3&gt;
+&lt;p&gt;{{(product| async)?.Name}}&lt;/p&gt;
+
+&lt;h3&gt;Category:&lt;/dh3&gt;
+&lt;p&gt;{{(product| async)?.category}}&lt;/p&gt;
+
+&lt;h3&gt;Description:&lt;/h3&gt;
+&lt;p&gt;{{(product| async)?.description}}&lt;/p&gt;
+
+&lt;h3&gt;Price:&lt;/h3&gt;
+&lt;p&gt;{{(product| async)?.price}}&lt;/p&gt;
+
+&lt;/div&gt;
+</code></pre>
+
+<p>We should use pipe on every property we want to display.</p>
+
+<p>The problem with above approach is</p>
+
+<ul>
+<li>We are using pipe on every property, this creates subscription each time async pipe is used. In the above example we will create 4 subscriptions.</li>
+<li>To prevent this we can use rxjs share() operator to share subscription with multiple subscribers.</li>
+</ul>
+
+<pre><code> product: Observable&lt;{}&gt;;
+      constructor() { }
+      ngOnInit() {
+        this.product= this.getAsyncData().pipe(share());
+      }
+</code></pre>
+
+<ul>
+<li>But the component view remains the same foreach property we have to use <code>async</code> pipe and ? Operator</li>
+<li>And we cannot display alternate template during the data load.</li>
+</ul>
+
+<p>The ideal solution will be something like below</p>
+
+<pre><code> if(product){
+         //Display 
+         product.Name
+         product.category
+         product.description
+         product.price
+    }else{
+       //Loading
+    }
+</code></pre>
+
+<p>That is exactly what *ngIf will does with async pipe with observable by using <code>*ngIf as</code> syntax</p>
+
+<pre><code>&lt;h1&gt;*ngIf async pipe with observable&lt;/h1&gt;
+
+&lt;div *ngIf=&quot;product | async as productItem; else loading&quot;&gt;
+&lt;div&gt;
+ &lt;h3&gt;Name:&lt;/h3&gt;
+ &lt;p&gt;{{productItem.Name}}&lt;/p&gt;
+ 
+ &lt;h3&gt;Category:&lt;/dh3&gt;
+ &lt;p&gt;{{productItem.category}}&lt;/p&gt;
+ 
+ &lt;h3&gt;Description:&lt;/h3&gt;
+ &lt;p&gt;{{(productItem.description}}&lt;/p&gt;
+ 
+ &lt;h3&gt;Price:&lt;/h3&gt;
+ &lt;p&gt;{{productItem.price}}&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;ng-template #loading let-productItem&gt;
+   Loading... (product is {{productItem|json}})
+&lt;/ng-template&gt;
+</code></pre>
+
+<p>we will dig into the code and see what is happening here</p>
+
+<pre><code>&lt;div *ngIf=&quot;product | async as productItem; else loading&quot;&gt;
+</code></pre>
+
+<p>We are passing product observable to *ngIf with async pipe and storing it in <code>productItem</code> local variable.</p>
+
+<p>Initially if product is null it will show the loading template.Once product is available it will show inline template of <code>*ngIf</code></p>
+
+<p>The above code with *ngIf is very clean and easy to understand. We are removing unwanted safe-traversal-operator.? operator and multiple subscriptions.</p>
+
+<p>I hope you understood the basic concepts of the <code>*ngIf</code> directive with then and else templates.</p>
+
+    </div>
+
+    Spread the word
+  <ul class="network-icon">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=NgIf%20Else%20In%20Angular%20%26%20%2aNgIf%20Async%20Pipe%20Observable%20Example&amp;url=https%3a%2f%2fwww.angularjswiki.com%2fangular%2funderstanding-angulars-ngif-else-then-with-examples%2f"
+         target="_blank" rel="noopener" aria-label="Twitter">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+          </svg>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fwww.angularjswiki.com%2fangular%2funderstanding-angulars-ngif-else-then-with-examples%2f"
+         target="_blank" rel="noopener" aria-label="facebook">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+              d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z" />
+          </svg>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.angularjswiki.com%2fangular%2funderstanding-angulars-ngif-else-then-with-examples%2f&amp;title=NgIf%20Else%20In%20Angular%20%26%20%2aNgIf%20Async%20Pipe%20Observable%20Example"
+         target="_blank" rel="noopener" aria-label="linkedin">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+      </svg>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=NgIf%20Else%20In%20Angular%20%26%20%2aNgIf%20Async%20Pipe%20Observable%20Example&amp;body=https%3a%2f%2fwww.angularjswiki.com%2fangular%2funderstanding-angulars-ngif-else-then-with-examples%2f" aria-label="email">
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+              d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+          </svg>
+      </a>
+    </li>
+  </ul>
+
+
+
+    <br/>
+    
+<div id="mc_embed_signup">
+   Get free link to download 900&#43; Material Icons
+<form id="mc-embedded-subscribe-form" class="validate" action="https://angularjswiki.us18.list-manage.com/subscribe/post?u=e192476b173f610e0808e2561&amp;id=236d3dbb17" method="post" name="mc-embedded-subscribe-form" novalidate="" target="_blank">
+<div id="mc_embed_signup_scroll">
+        <table class="subbox">
+<tr>
+<td><div class="mc-field-group"><label for="mce-FNAME">Name</label></div>
+</td>
+<td><div class="mc-field-group"><input id="mce-FNAME" class="required" name="FNAME" type="text" value="" /></div>
+</td>
+</tr>
+<tr>
+<td><div class="mc-field-group"><label for="mce-EMAIL">Email</label></div>
+</td>
+<td><div class="mc-field-group"><input id="mce-EMAIL" class="required email" name="EMAIL" type="email" value="" /></div>
+</td>
+</tr>
+</table>
+
+</div>
+
+
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input tabindex="-1" name="b_e192476b173f610e0808e2561_236d3dbb17" type="text" value="" /></div>
+<div class="clear">
+        <button type="submit" class="btn btn-light btn-lg subscribe">
+                <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/>
+                                        
+                                      </svg>
+                </span> Subscribe
+        </button>
+    
+    
+</div>
+</form>
+</div>
+    
+    
+    
+
+    
+
+
+    
+      
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  
+  <img class="portrait mr-3" src="https://www.angularjswiki.com/author/admin/avatar_hufa038520d36dafb78f39a62f91de8258_77813_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+  
+
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="https://www.angularjswiki.com/authors/admin">Arunkumar Gudelli</a></h5>
+    
+    <p class="card-text" itemprop="description">I am One among a million Software engineers of India. I write beautiful markup.I make the Web useful.</p>
+    
+    <ul class="network-icon" aria-hidden="true">
+    <li>
+        <a href="https://www.arungudelli.com" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path
+                    d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a href="mailto:arunkumar.gudelli@gmail.com" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" />
+                </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://facebook.com/gudelliarun" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z" />
+                </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/gudelliarun" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                <path
+                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://in.linkedin.com/in/arungudelli" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+            </svg>
+        </a>
+    </li>
+</ul>    
+  </div>
+</div>
+
+
+
+      
+      
+    
+    
+    <div class="article-widget">
+      <div class="post-nav">
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="https://www.angularjswiki.com/angular/dynamically-change-ngif-thenelse-templates-at-runtime-in-angular/" rel="next">Dynamically Change NgIf Then,Else Templates At Runtime In Angular</a>
+  </div>
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="https://www.angularjswiki.com/angular/difference-between-ngif-and-hidden-or-displaynone-in-angular/" rel="prev">Difference Between NgIf And Hidden Or Display:none In Angular</a>
+  </div>
+  
+</div>
+
+    </div>
+    
+
+    
+
+
+  </div>
+</article>
+</main>
+</div>    
+</div>
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">
+  
+        <a href="https://www.angularjswiki.com/contact-us/">Contact Us</a>
+  
+  
+  
+    <a href="https://www.angularjswiki.com/privacy-policy/">Privacy Policy</a>
+  
+  
+  
+    <a href="https://www.angularjswiki.com/disclaimer/">Disclaimer</a>
+  
+  
+  <a href="https://www.angularjswiki.com/copyright-policy-and-fair-use-guide/">Copyright</a>
+  
+  </p>
+  
+
+  <p class="powered-by">
+    &copy;2019 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+
+
+    
+
+    
+    
+
+    
+    
+    
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <script>
+        
+        window.addEventListener('load', function() {
+        
+        var languageSelector = document.querySelector("#langselect");
+        
+        languageSelector.addEventListener('click',function(){
+           var langMenu = document.querySelector("#lang");
+           langMenu.classList.add("show")
+        });
+        
+        var navigator = document.querySelector('.navbar-toggler');
+        navigator.addEventListener('click',function(){
+            var menu=document.getElementById('navbar');
+            if(navigator.getAttribute('aria-expanded')=="false"){
+              menu.classList.add('show');
+              navigator.setAttribute('aria-expanded',"true")
+            }else{
+              menu.classList.remove('show');
+              navigator.setAttribute('aria-expanded',"false")
+            }
+        });
+        
+        
+        var docsnavigator = document.querySelector('.docs-toggle');
+        docsnavigator.addEventListener('click',function(){
+            var docmenu=document.getElementById('docs-nav');
+            if(docsnavigator.getAttribute('aria-expanded')=="false"){
+              docmenu.classList.add('show');
+              docsnavigator.setAttribute('aria-expanded',"true")
+            }else{
+              docmenu.classList.remove('show');
+              docsnavigator.setAttribute('aria-expanded',"false")
+            }
+        });
+        
+      });
+      if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function(err) {
+    console.log('ServiceWorker failed', err);
+  });
+}
+    </script>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-80463924-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-80463924-1');
+</script>
+<div id="codefund"></div>
+<script src="https://codefund.io/properties/122/funder.js" async="async"></script>
+</body>
+</html>
+

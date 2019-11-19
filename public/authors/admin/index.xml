@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>admin on Angular Wiki</title>
+    <link>https://www.angularjswiki.com/authors/admin/</link>
+    <description>Recent content in admin on Angular Wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;{year}</copyright>
+    <lastBuildDate>Sun, 20 Oct 2019 01:01:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.angularjswiki.com/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How To Use Angular Pipes in Components &amp; Service ts files</title>
+      <link>https://www.angularjswiki.com/angular/how-to-use-angular-pipes-in-components-and-services/</link>
+      <pubDate>Sun, 20 Oct 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-use-angular-pipes-in-components-and-services/</guid>
+      <description>Steps to use angular pipes in components and service ts files
+ Import angular pipe in app.module.ts file and add it to the providers array. In Component file, import angular pipe &amp;amp; inject the pipe into the constructor. And Finally use the angular pipe transform method &amp;amp; pass the required parameters according to pipe defination to format the values.  Now we will understand it further using examples.
+Table of Contents   Use Date Pipe in Angular Components &amp;amp; Services ts file Use Currency Pipe in Angular Components &amp;amp; Services ts file   Use Date Pipe in Angular Components &amp;amp; Services ts file To use date pipe in component &amp;amp; services follow the below steps</description>
+    </item>
+    
+    <item>
+      <title>How to add conditional class in Angular using ngClass</title>
+      <link>https://www.angularjswiki.com/angular/how-to-add-a-class-based-on-condition-in-angular/</link>
+      <pubDate>Thu, 17 Oct 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-add-a-class-based-on-condition-in-angular/</guid>
+      <description>To add a conditional class in Angular we can pass an object to ngClass where key is the class name and value is condition i.e., true or false as shown below.
+&amp;lt;div [ngClass]=&amp;quot;{&#39;classname&#39; : condition}&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;  And in the above code, class name will be added only when the condition is true.
+We can add a single class or multiple classes dynamically based upon the conditions.
+We will go through few examples to understand it further.</description>
+    </item>
+    
+    <item>
+      <title>How to Check Angular CLI Version in Command prompt</title>
+      <link>https://www.angularjswiki.com/angular/how-to-check-angular-cli-version-in-command-prompt/</link>
+      <pubDate>Wed, 16 Oct 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-check-angular-cli-version-in-command-prompt/</guid>
+      <description>To Check the Angular CLI version in Command prompt use the below commands.
+ ng &amp;ndash;version ng v npm list -global &amp;ndash;depth 0  ng --version command returns the details of version of Angular CLI installed and in addition to that version of Angular development packages like @angular-devkit/architect,rxjs etc.. as shown below.
+Angular CLI: 8.1.1 Node: 10.16.0 OS: win32 x64 Angular: ... Package Version ------------------------------------------------------ @angular-devkit/architect 0.801.1 @angular-devkit/core 8.1.1 @angular-devkit/schematics 8.</description>
+    </item>
+    
+    <item>
+      <title>Font Awesome Icons list &amp; Font Awesome CSS content values cheatsheet</title>
+      <link>https://www.angularjswiki.com/angular/font-awesome-icons-list-usage-css-content-values/</link>
+      <pubDate>Sun, 14 Jul 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/font-awesome-icons-list-usage-css-content-values/</guid>
+      <description>This post contains complete font awesome icons list with their CSS content values and step by step tutorial to use font awesome icons in our webpages.
+In font awesome 5.9 version we have around 1534 free icons.
+And these free font awesome icons divided into three categories.
+ font awesome solid icons font awesome regular icons font awesome brand icons  We can download font awesome icons css file and serve them from our own server Or we can serve them from public CDNs.</description>
+    </item>
+    
+    <item>
+      <title>Angular Date Pipe &amp; formatting dates in Angular with examples</title>
+      <link>https://www.angularjswiki.com/angular/angular-date-pipe-formatting-date-times-in-angular-with-examples/</link>
+      <pubDate>Wed, 19 Jun 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-date-pipe-formatting-date-times-in-angular-with-examples/</guid>
+      <description>Angular date pipe used to format dates in angular according to the given date formats,timezone and country locale information.
+Using date pipe, we can convert a date object, a number (milliseconds from UTC) or an ISO date strings according to given predefined angular date formats or custom angular date formats.
+Table of Contents   How to Use Angular Date Pipe Angular Date Pipe Examples List of all predefined date formats in Angular Angular date pipe timezone example How to display UTC date time in angular using date pipe Angular date pipe example with country locale Creating Custom Date Pipe in Angular Defining Custom date formats in Angular   How to Use Angular Date Pipe Angular date pipe accpets three parameters</description>
+    </item>
+    
+    <item>
+      <title>How To Use Font Awesome icons in Angular Applications</title>
+      <link>https://www.angularjswiki.com/angular/how-to-use-font-awesome-icons-in-angular-applications/</link>
+      <pubDate>Sun, 09 Jun 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-use-font-awesome-icons-in-angular-applications/</guid>
+      <description>In this tutorial I will explain how to use Font Awesome icons in Angular applications.
+First we will learn basic Font Awesome icons rendering in Angular and then we will go through some cool Font Awesome features like animations,layering,transforming etc..
+Table of Contents   Installing free version Font Awesome icons in Angular Installing pro version Font Awesome icons in Angular Global level configuration Project level configuration Using Font Awesome icons in Angular applications Using Font Awesome Icon library Available icon styles in Font Awesome Changing Font Awesome Icons color and stroke in Angular Changing default icon style in Font Awesome Angular Font Awesome icons features Changing size of Font Awesome icons in Angular Fixed width Font Awesome icons in Angular Rotating Font Awesome icons in Angular Mirroring Font Awesome icons in Angular Animating Font Awesome icons in Angular Pulled Font Awesome Icons Transform Font Awesome icons in Angular Combine two icons using Font Awesome mask Layering, Text, &amp;amp; Counters Font Awesome icons Adding text to Font Awesome icons in Angular Adding counters to Font Awesome icons in Angular   Installing free version Font Awesome icons in Angular To install Font Awesome icons in Angular applications use the below npm or yarn commands</description>
+    </item>
+    
+    <item>
+      <title>Angular Flex Layout Tutorial with examples</title>
+      <link>https://www.angularjswiki.com/flexlayout/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://www.angularjswiki.com/flexlayout/</guid>
+      <description>In this Angular Flexlayout tutorial, we will learn how to build powerful responsive HTML UI layouts in Angular apps using flex layout module.
+What is Angular Flex Layout Using flexbox CSS layout we can change the width and height of HTML DOM elements based upon the available space.
+We can define different kinds of layouts for different kinds of display devices and different screen sizes.
+And this flexbox CSS layout is direction-agnostic i.</description>
+    </item>
+    
+    <item>
+      <title>Angular flex layout basics</title>
+      <link>https://www.angularjswiki.com/flexlayout/basics/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://www.angularjswiki.com/flexlayout/basics/</guid>
+      <description>Angular flex layout features divided into two main categories
+ Static API Responsive API  Each API has its own directives or APIs which can be applied on flexbox container or flexbox child elements.
+In this section we will learn about basic flex layout directives
+Angular flex layout directives for flexbox containers The following API or directives are used on flexbox container
+ fxLayout fxLayoutGap fxLayoutAlign  fxLayout  fxLayout is a directive used to define the layout of the HTML elements.</description>
+    </item>
+    
+    <item>
+      <title>Angular Currency Pipe &amp; Formatting Currency In Angular</title>
+      <link>https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/</link>
+      <pubDate>Sat, 09 Feb 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-currency-pipe-formatting-currency-in-angular/</guid>
+      <description>Angular Currency Pipe is one of the bulit in pipe in Angular used to format currency value according to given country code,currency,decimal,locale information.
+Table of Contents   Angular Currency Pipe Syntax Angular Currency Pipe example Angular Currency Pipe without symbol Angular Currency Pipe No Decimal Angular Currency Pipe example with locale Display Currency symbol to the right using Angular Currency Pipe Creating Custom Angular Currency Pipe List of All Countries currency codes of Angular Currency Pipes   Angular Currency Pipe Syntax Angular Currency Pipe takes currency value as input and currencyCode,display,digitsInfo and locale as parameters as shown below</description>
+    </item>
+    
+    <item>
+      <title>Angular TitleCase Pipe:Capitalize First Letter Of Each Word In Angular</title>
+      <link>https://www.angularjswiki.com/angular/how-to-capitalize-first-letter-of-each-word-in-angular/</link>
+      <pubDate>Sat, 09 Feb 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-capitalize-first-letter-of-each-word-in-angular/</guid>
+      <description>To capitalize first letter of each word in Angular use Angular&amp;rsquo;s TitleCasePipe.We have to pass input to the titlecase pipe as shown below
+&amp;lt;p&amp;gt;{{&#39;titleCasePipe capitalizes first letter of each word in angular&#39; | titlecase}}&amp;lt;/p&amp;gt; &amp;lt;!-- Output --&amp;gt; &amp;lt;!--TitleCasePipe Capitalizes First Letter Of Each Word In Angular--&amp;gt;  Angular TitleCasePipe is one of the built in pipes which converts text to titlecase.
+Table of Contents   Angular TitleCasePipe Syntax Angular TitleCasePipe Examples   Angular TitleCasePipe Syntax The syntax is very simple Just we need to pass input of type string to titlecase pipe</description>
+    </item>
+    
+    <item>
+      <title>How To Delete A Component In Angular</title>
+      <link>https://www.angularjswiki.com/angular/how-to-delete-a-component-in-angular/</link>
+      <pubDate>Fri, 08 Feb 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-delete-a-component-in-angular/</guid>
+      <description>Steps to delete a component in Angular
+ Remove the import line reference from Angular app.module.ts file. Remove the component declaration from @NgModule declaration array in app.module.ts file And then manually delete the component folder from Angular project. Finally Delete all the references of component manually from the Angular project.  In Angular CLI,there is no command available to delete a component created by Angular CLI as of now.
+There is no ng delete component command as part of Angular CLI.</description>
+    </item>
+    
+    <item>
+      <title>How To Install And Use JQuery In Angular Projects</title>
+      <link>https://www.angularjswiki.com/angular/how-to-install-and-use-jquery-in-angular-projects/</link>
+      <pubDate>Sat, 02 Feb 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-install-and-use-jquery-in-angular-projects/</guid>
+      <description>jQuery plugin in Angular will be very useful while we are doing DOM manipulations.In this tutorial I will be explaining how to install and use jquery in Angular Projects
+Table of Contents   Install and Use jquery in Angular Install and Use jquery in Angular with typescript jquery @types Should I use jquery in Angular Projects   Install and Use jquery in Angular To install jquery in Angular use the following node npm command</description>
+    </item>
+    
+    <item>
+      <title>Angular Material Divider : Mat-Divider Example</title>
+      <link>https://www.angularjswiki.com/angular/angular-material-divider-mat-divider-example/</link>
+      <pubDate>Tue, 29 Jan 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-material-divider-mat-divider-example/</guid>
+      <description>Angular Material Divider component _mat-divider_ a simple line divider that groups elements in list and layout by following material design styles.
+Table of Contents   Importing mat-divider module Angular Material Divider mat-divider types Simple mat-divider example mat-divider Inset example mat-divider vertical example mat-divider style mat-divider color mat-divider thickness mat-divider properties mat-divider not showing mat-divider vertical not working mat-divider is not a known element   Importing mat-divider module To use mat-divider we have to import MatDividerModule from angular material module.</description>
+    </item>
+    
+    <item>
+      <title>How To Update Angular CLI Version To Latest Versions</title>
+      <link>https://www.angularjswiki.com/angular/update-angular-cli-version-ng-update-to-latest-6-7-versions/</link>
+      <pubDate>Tue, 22 Jan 2019 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/update-angular-cli-version-ng-update-to-latest-6-7-versions/</guid>
+      <description>To update the Angular CLI version to 7 simply use the below command.
+ng update @angular/cli  But this command might not work, if you are using older version of Angular CLI. We will start with checking of Angular CLI version and update the Angular CLI package accordingly
+Table of Contents   Angular CLI version check Update Angular CLI version Globally Your global Angular CLI version is greater than your local version.</description>
+    </item>
+    
+    <item>
+      <title>How To Read Local JSON Files In Angular</title>
+      <link>https://www.angularjswiki.com/angular/how-to-read-local-json-files-in-angular/</link>
+      <pubDate>Fri, 02 Nov 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/how-to-read-local-json-files-in-angular/</guid>
+      <description>We can import or read local JSON files in Angular,several different ways depending upon the Angular version we are using.
+In this post I am listing out different methods with examples on how to read JSON files in Angular.
+Table of Contents   Reading local JSON files in Angular 7 and Angular 6.1 Reading local JSON files in Angular 5 or Angular 4 Reading local JSON files in Angular 2+ versions Reading local JSON files in Offline Angular Applications   Reading local JSON files in Angular 7 and Angular 6.</description>
+    </item>
+    
+    <item>
+      <title>Angular EXCEPTION: No Provider For Http! Error Fix</title>
+      <link>https://www.angularjswiki.com/angular/angular-exception-no-provider-for-http-error-fix/</link>
+      <pubDate>Mon, 10 Sep 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-exception-no-provider-for-http-error-fix/</guid>
+      <description>To avoid Angular EXCEPTION: No provider for Http! error we need to import HttpClientModule from @angular/common/http.
+import { HttpClientModule } from &#39;@angular/common/http&#39;; @NgModule({ imports: [ BrowserModule, HttpClientModule, ], declarations: [ AppComponent ], bootstrap: [ AppComponent ] }) export class AppModule { }  And this HttpClientModule introduced in Angular 4.3.
+If you are using earlier versions of Angular import HttpModule from @angular/http to fix EXCEPTION: No provider for Http!
+import { HttpModule } from &#39;@angular/http&#39;; @NgModule({ imports: [ BrowserModule, HttpModule ], declarations: [ AppComponent ], bootstrap: [ AppComponent ] }) export class AppModule { }  And this HttpModule is deprecated from Angular 5.</description>
+    </item>
+    
+    <item>
+      <title>Angular Material Buttons : Mat-Button Example</title>
+      <link>https://www.angularjswiki.com/angular/buttons-in-angular-using-material-design-mat-button-example/</link>
+      <pubDate>Thu, 23 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/buttons-in-angular-using-material-design-mat-button-example/</guid>
+      <description>Angular Material button module MatButtonModule(mat-button,mat-raised-button,mat-icon-button,mat-fab,mat-mini-fab) enhances the user experience of normal buttons (&amp;lt;button&amp;gt;) and anchor (&amp;lt;a&amp;gt;)tags by following Material design principles.
+When you want to perform an action in webpage use button and use an anchor tag to navigate to other pages.
+Buttons are placed anywhere in webpage and also places like:
+ Dialogs Modalwindows Forms Cards Toolbars  Table of Contents   Import mat button module MatButton Directive MatAnchor Directive Types of Angular Material Buttons  Text buttons Outlined Buttons Contained buttons Floating action buttons  mat-button example mat-stroked-button example mat-flat-button example mat-raised-button example mat-icon-button example mat-button with icon and text example mat-fab example mat-mini-fab example mat button api mat-button color change and theming mat-button disabled mat-button disableRipple mat-button isIconButton mat-button isRoundButton mat-button ripple mat-button focus method Angular Materials Buttons Demo mat button not a known element   Import mat button module To import Mat Button Module use the following code.</description>
+    </item>
+    
+    <item>
+      <title>Angular Material Progress Bar: Mat-Progress-Bar Example</title>
+      <link>https://www.angularjswiki.com/angular/progress-bar-in-angular-mat-progress-bar-examplematerial-design/</link>
+      <pubDate>Mon, 20 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/progress-bar-in-angular-mat-progress-bar-examplematerial-design/</guid>
+      <description>We can create a beatiful Progress bar in Angular using &amp;lt;mat-progress-bar&amp;gt; which is part of angular material progress bar module called MatProgressBarModule
+In this tutorial we learn how basics of angular material progress bar and then we will create reading position indicator.
+Table of Contents   Angular Material Progress Bar mat-progress-bar example Angular Progress Bar with percentage Reading position indicator in Angular using mat-progress-bar Angular Material progress bar types mat-progress-bar determinate mode mat-progress-bar indeterminate mode mat-progress-bar buffer mode mat-progress-bar query mode mat-progress-bar change color mat-progress-bar is not a known element mat-progress-bar properties   Angular Material Progress Bar &amp;lt;mat-progress-bar&amp;gt; is a horizontal progress bar in Angular, used to inform users about the progress of ongoing tasks like loading a webpage, reading position indicator of a web page or submitting the form data to the server etc.</description>
+    </item>
+    
+    <item>
+      <title>Mat-Icon List : 900&#43; Angular Material Icons</title>
+      <link>https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/</link>
+      <pubDate>Thu, 16 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/</guid>
+      <description>&amp;lt;mat-icon&amp;gt; selector used to display Material icons in Angular.We have around 900+ Angular Material icons.To show the below &amp;lt;mat-icon&amp;gt; list icons,We need to load material icons css provided by Google
+&amp;lt;mat-icon&amp;gt; is part of angular material module called MatIconModule.We can use font ligature as an icon by putting the ligature text in &amp;lt;mat-icon&amp;gt; component.
+For example &amp;lt;mat-icon&amp;gt;home&amp;lt;/mat-icon&amp;gt; displays home icon.
+We have to import MatIconModule from Angular Material Modules.</description>
+    </item>
+    
+    <item>
+      <title>Loop Object Key Values In Angular Using *NgFor &amp; Angular Keyvalue Pipe</title>
+      <link>https://www.angularjswiki.com/angular/angular-keyvalue-pipe-loop-object-key-values-using-ngfor/</link>
+      <pubDate>Wed, 15 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-keyvalue-pipe-loop-object-key-values-using-ngfor/</guid>
+      <description>KeyValue pipe released in Angular 6.1 to loop through objects,Maps and arrays.Now by passing KeyValue pipe to *ngFor we can loop through objects key values &amp;amp; maps.
+Prior to this Angular 6.1 release we cannot iterate directly through objects key values &amp;amp; maps using *ngFor directive.
+To tackle this issue Angular keyvalue pipe has been introduced.
+This keyvalue pipe converts Object or Map into an array of key value pairs.</description>
+    </item>
+    
+    <item>
+      <title>How To Use Ng-Template In Angular?</title>
+      <link>https://www.angularjswiki.com/angular/what-is-ng-template-in-angular/</link>
+      <pubDate>Fri, 10 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/what-is-ng-template-in-angular/</guid>
+      <description>ng-template is an Angular element used to render HTML templates.
+We use ng-template with angular *ngIf directive to display else template.
+So what exactly this ng-template will do?
+Whether it really renders HTML template, we will see with an example.
+&amp;lt;div&amp;gt; ng-template works!&amp;lt;/div&amp;gt; &amp;lt;ng-template&amp;gt;Inside ng-template tag&amp;lt;/ng-template&amp;gt;  If you see the output it will display only ng-template works which is in div element.And have a look at the generated HTML source code.</description>
+    </item>
+    
+    <item>
+      <title>Dynamically Change NgIf Then,Else Templates At Runtime In Angular</title>
+      <link>https://www.angularjswiki.com/angular/dynamically-change-ngif-thenelse-templates-at-runtime-in-angular/</link>
+      <pubDate>Sun, 05 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/dynamically-change-ngif-thenelse-templates-at-runtime-in-angular/</guid>
+      <description>We can take full advantage of ngIfThen,ngIfElse template references in *ngIf directive to change then or else templates dynamically at runtime. Go through the below example to understand it further.
+Understanding Angular’s NgIf, Else, Then With Examples
+I have created a component called NgifthenelseComponent in my Angular project.
+import { Component, OnInit,ViewChild, TemplateRef } from &#39;@angular/core&#39;; @Component({ selector:&#39;app-ngifthenelse&#39;, templateUrl:&#39;./ngifthenelse.component.html&#39;, styleUrls: [&#39;./ngifthenelse.component.css&#39;] }) export class NgifthenelseComponent implements OnInit { show:boolean; constructor() { this.</description>
+    </item>
+    
+    <item>
+      <title>NgIf Else In Angular &amp; *NgIf Async Pipe Observable Example</title>
+      <link>https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/</link>
+      <pubDate>Sat, 04 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/understanding-angulars-ngif-else-then-with-examples/</guid>
+      <description>Angular&amp;rsquo;s ngIf directive displays or removes an element from DOM based on given condition.
+To write ngIf else in angular we need to define &amp;ldquo;else&amp;rdquo; template for *ngIf directive.
+we can use async pipe with *ngIf to read the data coming from an observable.
+In all versions of Angular, the syntax of *ngif directive is same.
+Table of Contents   Understand *ngIf in Angular with example Steps to write *ngIf else in Angular with example *ngIf with alternative then template in Angular *ngif with both else and then templates example in Angular *ngif with Logical Operators AND (&amp;amp;&amp;amp;), OR(||), NOT(!</description>
+    </item>
+    
+    <item>
+      <title>Difference Between NgIf And Hidden Or Display:none In Angular</title>
+      <link>https://www.angularjswiki.com/angular/difference-between-ngif-and-hidden-or-displaynone-in-angular/</link>
+      <pubDate>Thu, 02 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/difference-between-ngif-and-hidden-or-displaynone-in-angular/</guid>
+      <description>The main difference between angular ngIf directive &amp;amp; hidden or display:none is ngIf will add or remove the element from DOM based on condition or expression. hidden attribute in html5 and display none CSS will show or hide the HTML element.
+We will go through the examples to understand them further.
+Table of Contents   ngIf in Angular hidden or display:none in Angular Why ngIf directive remove the element rather than hide it?</description>
+    </item>
+    
+    <item>
+      <title>NgOnInit &amp; Constructor Differences In Angular With Examples</title>
+      <link>https://www.angularjswiki.com/angular/what-is-the-difference-between-constructor-and-ngoninit-in-angular/</link>
+      <pubDate>Wed, 01 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/what-is-the-difference-between-constructor-and-ngoninit-in-angular/</guid>
+      <description>ngOnInit and constructor methods in Angular might be confusing to you,if you are new to Angular.In this tutorial, we will cover the differences between ngOnInit &amp;amp; constructor.
+Table of Contents   What is a Constructor? What is ngOnInit() in Angular? When is ngOnInit Executed? Understand difference between constructor &amp;amp; ngOnInit() in Angular with example When to use constructor &amp;amp; when to use ngOnInit in Angular Constructor usage in Angular ngOnInit() method usage in Angular ngOnInit vs Constructor in Angular   What is a Constructor?</description>
+    </item>
+    
+    <item>
+      <title>Port 4200 Is Already In Use. Use ‘–Port’ To Specify A Different Port Error</title>
+      <link>https://www.angularjswiki.com/angular/port-4200-is-already-in-use-use-port-to-specify-a-different-port-error/</link>
+      <pubDate>Fri, 16 Feb 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/port-4200-is-already-in-use-use-port-to-specify-a-different-port-error/</guid>
+      <description>Port 4200 is already in use. Use ‘-port’ to specify a different port error occures sometimes when we run our angular app using ng serve
+That means there is another existing service already running on port 4200. Table of Contents   Port 4200 is already in use.Use &amp;lsquo;-port&amp;rsquo; to specify a different port error Reasons Fix Port 4200 is already in use.Use &amp;lsquo;-port&amp;rsquo; to specify a different port error in Mac &amp;amp; Linux Fix Port 4200 is already in use.</description>
+    </item>
+    
+    <item>
+      <title>Checkbox Implementation In Angular Using Mat-Checkbox(Material Component)</title>
+      <link>https://www.angularjswiki.com/angular/checkbox-implementation-in-angular-using-angular-material/</link>
+      <pubDate>Thu, 15 Feb 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/checkbox-implementation-in-angular-using-angular-material/</guid>
+      <description>&amp;lt;mat-checkbox&amp;gt; selector is an angular material checkbox component, it works like &amp;lt;input type=”checkbox”&amp;gt; &amp;amp; sugar coated with Material design styling and animations.&amp;lt;mat-checkbox&amp;gt; part of Angular Material module called MatCheckboxModule.
+The simple usage of &amp;lt;mat-checkbox&amp;gt; is as follows
+&amp;lt;mat-checkbox&amp;gt;Checkbox example&amp;lt;/mat-checkbox&amp;gt;
+To use &amp;lt;mat-checkbox&amp;gt; we have to import MatCheckboxModule from @angular/Material module.
+import {MatCheckboxModule} from &#39;@angular/material&#39;&amp;lt;/pre&amp;gt;
+Table of Contents   Properties of mat-checkbox mat-checkbox Label mat-checkbox Checked state mat-checkbox UnChecked state mat-checkbox Indeterminate state mat-checkbox Disabled State mat-checkbox color and Theming mat-checkbox Example Bind Data to mat-checkbox using ngModel mat checkbox checked by default mat-checkbox change event mat-checkbox checked event MatCheckboxChange class mat-checkbox Indeterminate Change event mat-checkbox toggle method mat-checkbox focus method mat-checkbox demo mat-checkbox is not a known element Can&amp;rsquo;t bind to ngModel since it isn&amp;rsquo;t a known property of mat-checkbox References   Properties of mat-checkbox   Angular Material Checkbox Property Description      Checked : boolean Indicates whether checkbox is checked   Unchecked : Boolean Indicates whether checkbox is unchecked   Indeterminate : Boolean Indicates whether checkbox is indeterminate or we can call it as mixed state   Disabled Indicated whether checkbox is disabled   Id A unique id to represent checkbox elements if nothing is supplied then auto generated   labelPosition : before or after Indicates whether label should appear before or after the checkbox   Required : Boolean Indicates whether the checkbox is required inside a form   Value:string Indicates the value of checkbox element   Color:ThemePalatte (primary or accent or warn) Indicates theme color palette of checkbox element   disableRipple : Boolean Indicates whether ripple animation disabled on checkbox element   areaLabel : string Will be attached ‘area-label’ attribute of checkbox element   ariaLabelledby : string or null Will be attached ‘area-labelledby’ attribute of checkbox element     mat-checkbox Label Content of the &amp;lt;mat-checkbox&amp;gt; element acts as label for checkbox in angular material.</description>
+    </item>
+    
+    <item>
+      <title>Angular Material Tutorial: Creating Angular Apps Using Material Design</title>
+      <link>https://www.angularjswiki.com/angular/angular-material-2-tutorial-with-examples/</link>
+      <pubDate>Wed, 14 Feb 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-material-2-tutorial-with-examples/</guid>
+      <description>Angular Material module helps us to create high-quality UI applications with Angular framework by following Material Design specifications.
+In this Angular material tutorial I will explain basics of Angular Material with simple examples,starting from setting up Angular material project in our local machine.
+Angular Material project is under active development. New features are being added regularly.Official latest version of Angular Material is 7.0.
+Table of Contents   What is Angular Material?</description>
+    </item>
+    
+    <item>
+      <title>Angular Or Angular 7 Hello World Example</title>
+      <link>https://www.angularjswiki.com/angular/angular-2-hello-world-example/</link>
+      <pubDate>Tue, 13 Feb 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-2-hello-world-example/</guid>
+      <description>I will explain how to create an Angular 7 app with a simple “Hello World” example. This hello world example work in Angular 4,Angular 5,Angular 6,Angular7.
+Let us start with Angular Hello World example to know the basics of Angular 7.
+Before reading further, please go through my previous tutorial on how to setup local development environment for Angular.
+Setup Angular in Local Development Environment
+We will use Angular CLI as mentioned in the above tutorial to create our Angular application.</description>
+    </item>
+    
+    <item>
+      <title>Angular 7 Or Angular Local Development Environment Setup</title>
+      <link>https://www.angularjswiki.com/angular/angular-2-or-angular-local-development-environment-setup/</link>
+      <pubDate>Mon, 12 Feb 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/angular-2-or-angular-local-development-environment-setup/</guid>
+      <description>The best way to learn Angular 7 (or Angular) is to setup our own local development environment. In this tutorial, I will explain how to setup local development environment for Angular.
+Before reading this article, I would recommend to read following article if you have any confusion regarding Angular 2 and Angular 4 or any other versions.
+Is it Angular 2 or Angular?
+Table of Contents   Prerequisites: Install Node.</description>
+    </item>
+    
+    <item>
+      <title>Is Node.Js Required For Angular 2 Or Angular?</title>
+      <link>https://www.angularjswiki.com/angular/is-node-js-required-for-angular-2-or-angular/</link>
+      <pubDate>Sun, 11 Feb 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/is-node-js-required-for-angular-2-or-angular/</guid>
+      <description>Yes. Node.js required for Angular 2 or Angular apps.
+We need to install Node.js to develop Angular Apps.
+If you are familiar with Angular JS 1.x. All we need to do is to add Angular Js file in script tag.But this not the case for Angular.
+Reasons why we need Node.js for Angular  “Angular” is entirely new framework and it is (Angular or Angular 2) written in Typescript. Browser does not understand Typescript JS (i.</description>
+    </item>
+    
+    <item>
+      <title>Is It Angular 2 Or Angular 4 Or Just Angular?</title>
+      <link>https://www.angularjswiki.com/angular/is-it-angular-2-or-angular-4-or-just-angular/</link>
+      <pubDate>Sat, 10 Feb 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/is-it-angular-2-or-angular-4-or-just-angular/</guid>
+      <description>Angular 2 is completely new framework than Angular Js 1.X and written in typescript. It was a total breaking change.
+Recently in March 2017, Google released Angular 4. However, it just an update to Angular 2. To remove this confusion Google started calling it as “Angular” without version suffix.
+So It’s just “Angular”.
+Go through History of AngularJs
+Google clearly mentioned that, we should start avoiding GitHub/NPM libraries prefixed with ng2- or angular2-.</description>
+    </item>
+    
+    <item>
+      <title>History of AngularJs</title>
+      <link>https://www.angularjswiki.com/angular/history-of-angularjs/</link>
+      <pubDate>Tue, 30 Jan 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/angular/history-of-angularjs/</guid>
+      <description>When I started learning AngualJs I have couple of questions in my mind like who is the creator AngularJs? When it started? Why its named Angular? etc etc.
+Long back I read one quote
+The best things in life are not planned, they simply just happen;
+That&amp;rsquo;s exactly what happened with Angularjs. There is an interesting story behind the birth of Angularjs.
+The History of AngularJs It all started in 2008 and 2009, Misko hevery (a developer at Google) working on a part time project to simplify web application development.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.angularjswiki.com/author/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/author/admin/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

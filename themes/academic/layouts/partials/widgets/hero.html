@@ -1,0 +1,87 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+{{ if $page.Params.hero_media }}
+<div class="row">
+  <div class="col-md-6 order-md-1 text-center text-md-left">
+{{ end }}
+
+    <h1 class="hero-title" itemprop="headline">
+      {{ with $page.Title }}{{ . | markdownify }}{{ end }}
+    </h1>
+
+    {{ with $page.Content }}
+    <div class="hero-lead">{{ . }}
+        {{partial "socialicons_page.html"}}
+    </div>
+    {{ end }}
+
+    {{/* Call-to-action link */}}
+    {{ if $page.Params.cta.url }}
+      {{ $pack := or $page.Params.cta.icon_pack "fas" }}
+      {{ $pack_prefix := $pack }}
+      {{ if in (slice "fab" "fas" "far" "fal") $pack }}
+        {{ $pack_prefix = "fa" }}
+      {{ end }}
+      {{ $link := $page.Params.cta.url }}
+      {{ $scheme := (urls.Parse $link).Scheme }}
+      {{ $target := "" }}
+      {{ if not $scheme }}
+        {{ $link = $link | relLangURL }}
+      {{ else if in (slice "http" "https") $scheme }}
+        {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+      {{ end }}
+    <p class="cta-btns">
+        <a href="{{ $link | safeURL }}">
+        
+      </a>
+      <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="btn btn-light btn-lg subscribe">{{ if $page.Params.cta.icon }}
+          
+          
+         {{end}}
+         <span>
+         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm-28.9 143.6l75.5 72.4H120c-13.3 0-24 10.7-24 24v16c0 13.3 10.7 24 24 24h182.6l-75.5 72.4c-9.7 9.3-9.9 24.8-.4 34.3l11 10.9c9.4 9.4 24.6 9.4 33.9 0L404.3 273c9.4-9.4 9.4-24.6 0-33.9L271.6 106.3c-9.4-9.4-24.6-9.4-33.9 0l-11 10.9c-9.5 9.6-9.3 25.1.4 34.4z"/>
+          
+        </svg>
+      </span>
+      <label>
+         {{ $page.Params.cta.label | markdownify | emojify | safeHTML }}
+        </label>
+        </a>
+
+      {{/* Alternative Call-to-action link */}}
+      {{ if $page.Params.cta_alt.url }}
+        {{ $link := $page.Params.cta_alt.url }}
+        {{ $scheme := (urls.Parse $link).Scheme }}
+        {{ $target := "" }}
+        {{ if not $scheme }}
+          {{ $link = $link | relLangURL }}
+        {{ else if in (slice "http" "https") $scheme }}
+          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+        {{ end }}
+      <a href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }} class="hero-cta-alt pl-4">{{ $page.Params.cta_alt.label | markdownify | emojify | safeHTML }} 
+        <!-- <i class="fas fa-angle-right"></i> -->
+        
+      </a>
+      {{ end }}
+    </p>
+    {{ end }}
+
+    {{/* Call-to-action note */}}
+    {{ with $page.Params.cta_note }}
+    <p class="hero-note text-muted mb-0">
+      {{ .label | markdownify | emojify | safeHTML }}
+    </p>
+    {{ end }}
+
+  {{/* Hero image */}}
+  {{ if $page.Params.hero_media }}
+  </div>
+  <div class="col-6 mx-auto col-md-6 order-md-2 hero-media">
+    <!-- <img src="{{ printf "img/%s" $page.Params.hero_media | relURL }}" alt=""> -->
+    {{ partial "subscription.html" }}
+
+  </div>
+</div>
+{{ end }}

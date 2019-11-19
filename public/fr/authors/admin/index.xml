@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>admin on Angular Wiki</title>
+    <link>https://www.angularjswiki.com/fr/authors/admin/</link>
+    <description>Recent content in admin on Angular Wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <copyright>&amp;copy;{year}</copyright>
+    <lastBuildDate>Fri, 02 Nov 2018 01:01:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://www.angularjswiki.com/fr/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comment lire les fichiers JSON local dans Angular</title>
+      <link>https://www.angularjswiki.com/fr/angular/how-to-read-local-json-files-in-angular/</link>
+      <pubDate>Fri, 02 Nov 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/fr/angular/how-to-read-local-json-files-in-angular/</guid>
+      <description>Nous pouvons importer ou lire des fichiers JSON local dans Angular, de plusieurs façons différentes selon la version Angular que nous utilisons.
+Dans cet article, vous apprendrez différentes méthodes pour lire les fichiers JSON en Angular avec des exemples.
+Table des matières   Lecture des fichiers JSON local dans Angular 7 et Angular 6.1 Lecture des fichiers JSON local dans Angular 5 ou Angular 4 Lecture des fichiers JSON local dans les versions Angular 2+.</description>
+    </item>
+    
+    <item>
+      <title>*ngIf else dans Angular &amp; Exemple *NgIf Async Pipe Observable</title>
+      <link>https://www.angularjswiki.com/fr/angular/understanding-angulars-ngif-else-then-with-examples/</link>
+      <pubDate>Sat, 04 Aug 2018 01:01:05 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/fr/angular/understanding-angulars-ngif-else-then-with-examples/</guid>
+      <description>Angular&amp;rsquo;s &amp;ldquo;*ngIf&amp;rdquo; affiche ou supprime un élément du DOM en fonction de la condition donnée.
+Pour écrire &amp;ldquo;ngIf else&amp;rdquo; dans angular, il faut définir un modèle &amp;ldquo;else&amp;rdquo; pour la directive &amp;ldquo;*ngIf&amp;rdquo;.
+&amp;ldquo;*ngIf&amp;rdquo; combiné avec &amp;ldquo;async pipe&amp;rdquo; est très utile lors de la lecture de données à partir d&amp;rsquo;un fichier observable.
+Dans toutes les versions de Angular, la syntaxe de la directive *ngif est la même.
+Table des matières   comprendre *ngIf dans Angular avec exemple Etapes pour écrire &amp;ldquo;*ngIf else&amp;rdquo; en Angulaire avec exemple *ngIf avec alternative puis template dans Angular *ngif avec &amp;ldquo;else and then templates&amp;rdquo; exemple dans Angular *ngif avec opérateurs logiques AND (&amp;amp;&amp;amp;), OR(||), NOT( !</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.angularjswiki.com/fr/author/admin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.angularjswiki.com/fr/author/admin/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

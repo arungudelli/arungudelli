@@ -1,0 +1,37 @@
+<footer class="site-footer">
+    <p class="powered-by">
+  {{ with .Site.GetPage "contact-us.md" }}
+        {{ printf "<a href=\"%s\">%s</a>" .RelPermalink "Contact Us" | safeHTML }}
+  {{ end }}
+  
+  {{ with .Site.GetPage "privacy-policy.md" }}
+    {{ printf "<a href=\"%s\">%s</a>" .RelPermalink "Privacy Policy" | safeHTML }}
+  {{ end }}
+  
+  {{ with .Site.GetPage "disclaimer.md" }}
+    {{ printf "<a href=\"%s\">%s</a>" .RelPermalink "Disclaimer" | safeHTML }}
+  {{ end }}
+  {{ with .Site.GetPage "copyright-policy-and-fair-use-guide.md" }}
+  {{ printf "<a href=\"%s\">%s</a>" .RelPermalink "Copyright" | safeHTML }}
+  {{ end }}
+  </p>
+  
+
+  <p class="powered-by">
+    {{ with .Site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} &middot; {{ end }}
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    {{ if ne .Type "docs" }}
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    {{ end }}
+  </p>
+</footer>

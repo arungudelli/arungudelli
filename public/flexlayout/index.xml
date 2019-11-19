@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular Flex Layout Tutorial with examples on Angular Wiki</title>
+    <link>https://www.angularjswiki.com/flexlayout/</link>
+    <description>Recent content in Angular Flex Layout Tutorial with examples on Angular Wiki</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy;{year}</copyright>
+    <lastBuildDate>Wed, 24 Apr 2019 00:00:00 +0530</lastBuildDate>
+    
+	<atom:link href="https://www.angularjswiki.com/flexlayout/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular flex layout basics</title>
+      <link>https://www.angularjswiki.com/flexlayout/basics/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0530</pubDate>
+      
+      <guid>https://www.angularjswiki.com/flexlayout/basics/</guid>
+      <description>Angular flex layout features divided into two main categories
+ Static API Responsive API  Each API has its own directives or APIs which can be applied on flexbox container or flexbox child elements.
+In this section we will learn about basic flex layout directives
+Angular flex layout directives for flexbox containers The following API or directives are used on flexbox container
+ fxLayout fxLayoutGap fxLayoutAlign  fxLayout  fxLayout is a directive used to define the layout of the HTML elements.</description>
+    </item>
+    
+  </channel>
+</rss>
