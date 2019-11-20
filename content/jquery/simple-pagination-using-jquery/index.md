@@ -3,8 +3,8 @@ title="Simple Pagination Using JQuery & JPages Plugin"
 summary="Client side pagination using jQuery,jPages plugin.This jQuery pagination plugin has many features like scroll pagination,CSS3 animations to pagination."
 keywords="simple pagination jquery,jquery pagination plugin,jquery pagination tutorial,jquery"
 type='post'
-date='2019-11-16T20:54:23+0000'
-lastmod='2019-11-16T20:54:23+0000'
+date='2019-10-15T18:05:14+0000'
+lastmod='2019-10-15T18:05:14+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -62,8 +62,6 @@ As I told before <span style="text-decoration: underline;"><em>jQuery jPages&nbs
 
 If we set ‘keyBrowse’ parameter to true we can use left and right arrows to browse through pages. and to enable mouse scroll browse just set ‘scrollBrowse’ &nbsp;parameter to true.
 
-
-
 And if we want to jump to particular page,add one text box and button to HTML and in jQuery add following code.
 
 <pre>$("button").click(function () {
@@ -101,8 +99,6 @@ $("select#Itemsperpage").change(function () {
 });
 });</pre>
 
-
-
 &nbsp;
 
 ‘jPages’ <span style="text-decoration: underline;"><em>pagination plugin</em></span> provides an option called ‘destroy’ to remove pagination from the container. So first we will remove the pagination using “destroy” parameter and then we will add pagination using new ‘perPage’ value which comes from select box.
@@ -134,8 +130,6 @@ And If you don’t want to show page numbers or simply you can show blank links 
         links       : "blank"
     });
 });</pre>
-
-
 
 &nbsp;
 

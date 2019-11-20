@@ -3,8 +3,8 @@ title="Disable Text Selection Highlighting In HTML Using CSS"
 summary="We can use user-select property in CSS to disable text selection highlighting in HTML pages.It is not a standard feature, but available in all modern browsers except IE 9 & before."
 keywords="user-select css,disable text selection css,disable text selection highlighting css,css"
 type='post'
-date='2019-11-16T20:51:04+0000'
-lastmod='2019-11-16T20:51:04+0000'
+date='2019-11-09T18:03:09+0000'
+lastmod='2019-11-09T18:03:09+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -46,8 +46,6 @@ I have added <em>disable-select</em> class to the second div now we will add use
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
 }</pre>
-
-
 
 But we have to add browser specific prefix before the <em>user-select</em> option for safari,firefox and internet explorer or edge.
 
@@ -122,8 +120,6 @@ text selection is disabled
 
 
 
-
-
 ## user-select text:
 
 When you give user-select property as text, user can select the text.
@@ -152,7 +148,7 @@ On click we can select the text
 
 user-select auto behavior depends upon its parent element’s computed value of user-select.
 
-<ol><li>If the parent element’s computed value is none then it’s value is none. or if the computed value is all then it’s value is all. or if the value is text it’s value is text</li><li>Otherwise the default behavior is text. that is user can select the text.</li><li>On&nbsp;pseudo elements ::before and ::after the behavior is none</li><div class="google-auto-placed ap_container" style="text-align: center; width: 100%; height: auto; clear: none;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-5168564215048853" data-adsbygoogle-status="done" style="display: block; margin: auto; background-color: transparent;"><ins id="aswift_7_expand" style="display:inline-table;border:none;height:169px;margin:0;padding:0;position:relative;visibility:visible;width:675px;background-color:transparent;"><ins id="aswift_7_anchor" style="display:block;border:none;height:169px;margin:0;padding:0;position:relative;visibility:visible;width:675px;background-color:transparent;"><iframe width="675" height="169" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_7" name="aswift_7" style="left:0;position:absolute;top:0;border:0px;width:675px;height:169px;"></iframe></ins></ins></ins></div><li>And if the element is an editable element i.e., text or textarea the computed value is contain or element (In IE)</li></ol>
+<ol><li>If the parent element’s computed value is none then it’s value is none. or if the computed value is all then it’s value is all. or if the value is text it’s value is text</li><li>Otherwise the default behavior is text. that is user can select the text.</li><li>On&nbsp;pseudo elements ::before and ::after the behavior is none</li><li>And if the element is an editable element i.e., text or textarea the computed value is contain or element (In IE)</li></ol>
 
 ## user-select contain:
 

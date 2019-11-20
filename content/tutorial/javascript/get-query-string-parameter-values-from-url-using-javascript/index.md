@@ -3,8 +3,8 @@ title="Get Query String Parameter Values From URL Using JavaScript"
 summary="We can get Javascript query string URL parameters by using JavaScript split, ECMAScript 6 split, reduce or JavaScript URLSearchParams. To get javascript url parameter values by name use a regular expression."
 keywords="javascipt,query string parameter in javascript,urlsearchparams in javascript,javascript"
 type='post'
-date='2019-11-16T20:51:49+0000'
-lastmod='2019-11-16T20:51:49+0000'
+date='2019-11-04T18:03:29+0000'
+lastmod='2019-11-04T18:03:29+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -115,8 +115,6 @@ To get query string parameter values in JavaScript, We can use <em>UrlSearchParm
 
 The string parsing mechanism is ugly and old way of doing getting query string parameter values.
 
-
-
 If you are using latest browsers like&nbsp;Firefox 44+, Opera 36+, Edge 17+, Safari 10.3+ and Chrome 49+ you can use&nbsp;<code>UrlSearchParams</code> API in Javascript.
 
 Use the following code snippet to get query string parameters from current URL
@@ -138,8 +136,6 @@ parameters.get('param1') //1
 parameters.get('param2') //2
 
 </pre>
-
-
 
 If you want to get query string parameter for any url, Use the following JavaScript code snippet
 

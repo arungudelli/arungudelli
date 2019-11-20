@@ -3,8 +3,8 @@ title="Remove Login Screen From Windows 8"
 summary="No need of Login Screen in Windows 8 If you are a single User.Though Windows 8 command prompt you can remove login screen for windows 8.Steps to remove login screen from windows 8."
 keywords="windows8 login screen,windows8,windows 8"
 type='post'
-date='2019-11-16T20:57:12+0000'
-lastmod='2019-11-16T20:57:12+0000'
+date='2019-09-23T18:07:25+0000'
+lastmod='2019-09-23T18:07:25+0000'
 draft='false'
 authors=['admin']
 [image]

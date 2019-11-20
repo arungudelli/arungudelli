@@ -3,8 +3,8 @@ title="2 Ways To Write IF THEN ELSE In SQL SELECT Query In SQL Server"
 summary="In SQL server, To write if then else in SQL select query we can use SELECT CASE statement (In all versions), SELECT IIF logical function (From SQL server 2012)"
 keywords="sql server,if then else in sql select,sql-server"
 type='post'
-date='2019-11-16T20:50:24+0000'
-lastmod='2019-11-16T20:50:24+0000'
+date='2019-11-16T18:02:38+0000'
+lastmod='2019-11-16T18:02:38+0000'
 draft='false'
 authors=['admin']
 [image]

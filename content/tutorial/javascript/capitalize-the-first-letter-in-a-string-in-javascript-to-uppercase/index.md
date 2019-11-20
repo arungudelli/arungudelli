@@ -3,8 +3,8 @@ title="4 Ways To Capitalize The First Letter Of A String In JavaScript"
 summary="In Javscript,we can capitalize the first letter of a string in Javascript by using simple Javascript code or regex or ES6 or by overriding string prototype."
 keywords="javascript,ecma6,first letter capital in javascript,capitalize the first letter of a string in javascript"
 type='post'
-date='2019-11-16T20:51:26+0000'
-lastmod='2019-11-16T20:51:27+0000'
+date='2019-11-06T18:03:20+0000'
+lastmod='2019-11-06T18:03:20+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -67,8 +67,6 @@ We can get the first letter of a string using <code>string[0]</code> or <code>st
 That is why I have created one more variable called the first letter and assigning it to <code>string[0]</code> or&nbsp;<code>string.charAt(0)</code> so that it will work in all browsers.
 
 Nowadays almost every browser supports bracket notion of accessing string (IE 8+ and Chrome, Mozilla etc)
-
-
 
 <a href="https://www.arungudelli.com/tutorial/javascript/javascript-string-substring-vs-string-substr-vs-string-slice-differences/" target="_blank" rel="noopener">Difference between substring(),slice() and substr()</a>
 

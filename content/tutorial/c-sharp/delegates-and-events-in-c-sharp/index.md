@@ -3,8 +3,8 @@ title="Understanding Delegates And Events In C# / .Net Simplified : C# Tutorial"
 summary="Delegates and Events in C# are used to implement event handlers in C#.Delegate in C# is a reference to a method & Events in C# adds extra abstraction to Delegates.you will understand difference between Delegate and events after reading this C# tutorial."
 keywords="c# delegate,delegates in c#,delegate c#,delegates c#,c# delegate event,c# events and delegates,c# delegates tutorial,multicast delegates in c#,delegate in c#,c# delegate example,advantages of delegates in c#,c# delegates explained,c#"
 type='post'
-date='2019-11-16T20:54:51+0000'
-lastmod='2019-11-16T20:54:51+0000'
+date='2019-10-12T18:05:30+0000'
+lastmod='2019-10-12T18:05:30+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -46,8 +46,6 @@ Now the CEO select one delegate for the conference when needed (say at run time)
 
 Now if you read above definition a delegate can invoke a method which is having a same signature as that delegate. Confused??
 
-
-
 I will try to explain the use of <em>delegates &amp; Events with simple C# examples</em> so that at the end of this post you will have clear picture on Delegates and Events.
 
 ### <span style="text-decoration: underline;">C# Delegate Example:</span>
@@ -74,8 +72,6 @@ obj.Add(operatorX,operatorY);
 obj.Sub(operatorX,operatorY);
 obj.Multi(operatorX,operatorY);
 obj.Div(operatorX,operatorY);</pre>
-
-
 
 &nbsp;
 
@@ -158,8 +154,6 @@ Final example
 
 So What is the advantage? We can directly call the Sum method right why we have to use Delegate?
 
-
-
 With the use of Delegates we call or assign methods at run time. How?
 
 Going back to our problem we will slightly modify our Calculator as shown below
@@ -196,8 +190,6 @@ Going back to our problem we will slightly modify our Calculator as shown below
         private int Sub(int x, int y){}
         private int Multi(int x, int y){}
         private int Div(int x, int y){}</pre>
-
-
 
 &nbsp;
 

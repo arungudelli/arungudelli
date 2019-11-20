@@ -3,8 +3,8 @@ title="Basics Of HTML5 GetUserMedia API"
 summary="Capture video and audio with getUserMedia in HTML5,use HTML5's getusermedia to take snapshot.Tutorials explains HTML5's getusermedia API features with example"
 keywords="html5 getusermedia,html5 getusermedia api,html5 canvas,javascript,html5 getusermedia browser support,html5"
 type='post'
-date='2019-11-16T20:56:00+0000'
-lastmod='2019-11-16T20:56:00+0000'
+date='2019-10-04T18:06:13+0000'
+lastmod='2019-10-04T18:06:13+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -77,8 +77,6 @@ Here is the sample HTML file
 
 And next we will write javascript code. Instead of if else loops to support different browser we will define <span style="text-decoration: underline;"><em>navigator.getUserMedia</em></span> as shown below.
 
-
-
 <pre>jQuery(document).ready(function () {
            navigator.getUserMedia = (navigator.getUserMedia ||
                             navigator.webkitGetUserMedia ||
@@ -103,8 +101,6 @@ getUserMedia constraints are nothing but which media streams to use i.e., audio 
 successcallback is the function we call when media stream is loaded successfully in our case put it into video tag.success callback is required field.
 
 The getUserMedia function will call the function specified in the successCallback with the&nbsp;<a title="WebRTC/MediaStream_API#LocalMediaStream" href="https://developer.mozilla.org/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream" rel="nofollow">LocalMediaStream</a>&nbsp;object that contains the media stream.
-
-
 
 <pre>function(localMediaStream) {
    var video = document.querySelector('video');
@@ -132,8 +128,6 @@ Sample errorCallback function
 err.name will display the corresponding error codes
 
 And here is the Final Code. Load your document (remember host it on apache or IIS) and grant permission.
-
-
 
 <pre>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -172,8 +166,6 @@ And here is the Final Code. Load your document (remember host it on apache or II
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-
-
 
 &nbsp;
 

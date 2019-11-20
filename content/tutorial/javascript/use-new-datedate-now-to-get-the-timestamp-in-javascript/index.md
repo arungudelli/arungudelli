@@ -3,8 +3,8 @@ title="4 Ways To Get The Current Timestamp In JavaScript"
 summary="To get the current timestamp in JavaScript Just use +new Date() or You can use Date.now() or new Date().getTime() or new Date().valueOf()"
 keywords="get timestamp in javascript,+new date(),date.now(),new date().gettime(),new date().valueof(),javascript"
 type='post'
-date='2019-11-16T20:51:19+0000'
-lastmod='2019-11-16T20:51:19+0000'
+date='2019-11-07T18:03:16+0000'
+lastmod='2019-11-07T18:03:16+0000'
 draft='false'
 authors=['admin']
 [image]

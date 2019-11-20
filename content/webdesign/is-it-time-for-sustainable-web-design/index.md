@@ -3,8 +3,8 @@ title="Is It Time For Sustainable Web Design?"
 summary="Goal of Sustainable Web Design is Carbon footprint reduction. 1and1 offers sustainable web design options other uses of sustainable web design is a faster site & better SEO."
 keywords="1and1 webhosting,1and1 sustainable web design options,sustainable web design,web design,sustainable web design solutions,webdesign"
 type='post'
-date='2019-11-16T20:55:08+0000'
-lastmod='2019-11-16T20:55:08+0000'
+date='2019-10-10T18:05:40+0000'
+lastmod='2019-10-10T18:05:40+0000'
 draft='false'
 authors=['admin']
 [image]

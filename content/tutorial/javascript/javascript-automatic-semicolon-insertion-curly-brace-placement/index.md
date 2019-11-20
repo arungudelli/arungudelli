@@ -3,8 +3,8 @@ title="JavaScript Automatic Semicolon Insertion & Curly Brace Placement"
 summary="JavaScript Automatic Semicolon insertion happens because semicolons are optional in JavaScript. Be careful while using curly braces with return statements."
 keywords="javascript,javascript semicolon,javascript automatic semicolon insertion"
 type='post'
-date='2019-11-16T20:52:09+0000'
-lastmod='2019-11-16T20:52:09+0000'
+date='2019-10-31T18:03:43+0000'
+lastmod='2019-10-31T18:03:43+0000'
 draft='false'
 authors=['admin']
 [image]

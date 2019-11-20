@@ -3,8 +3,8 @@ title="Visual Studio Code Keyboard Shortcut Cheat Sheet (Windows,Mac & Linux)"
 summary="Visual Studio Code keyboard Shortcuts helps developers maximize their productivity by allowing them to work faster and more efficiently. Here I am listing down all the keyboard shortcuts and cheats of Visual Studio Code editor for Windows, Mac and Linux Operating systems. Give a shot."
 keywords="visual studio code,cheat sheet,keyboard shortcuts,keyboard cheat sheet,microsoft"
 type='post'
-date='2019-11-16T20:52:13+0000'
-lastmod='2019-11-16T20:52:13+0000'
+date='2019-10-30T18:03:47+0000'
+lastmod='2019-10-30T18:03:47+0000'
 draft='false'
 authors=['admin']
 [image]

@@ -3,8 +3,8 @@ title="20thingsilearned.Com:20 Things I Learned About Browsers And The Web"
 summary="How does the World Wide Web work? What is a browser? What is Cloud Computing? What is HTML5? The Best Answers for the above questions is 20thingsilearned.com"
 keywords="internet"
 type='post'
-date='2019-11-16T20:59:11+0000'
-lastmod='2019-11-16T20:59:11+0000'
+date='2019-08-18T18:09:19+0000'
+lastmod='2019-08-18T18:09:19+0000'
 draft='false'
 authors=['admin']
 [image]

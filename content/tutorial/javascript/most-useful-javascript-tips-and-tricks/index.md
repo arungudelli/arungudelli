@@ -3,8 +3,8 @@ title="Most Useful JavaScript Tips & Tricks For JavaScript Developers"
 summary="Useful Tips & Tricks for JavaScript developers.These are not related to any browser these Tips & Tricks are some best practices for the JavaScript Language."
 keywords="javascript tips and tricks,top javascript tricks,javascript tips and techniques,javascript best practices,javascript best practices 2013,javascript best practices google,javascript"
 type='post'
-date='2019-11-16T20:52:54+0000'
-lastmod='2019-11-16T20:52:55+0000'
+date='2019-10-25T18:04:11+0000'
+lastmod='2019-10-25T18:04:11+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -69,8 +69,6 @@ In JavaScript we can use type of to check the type of a variable but we cannot u
     alert( 'Array' );
 }</pre>
 
-
-
 &nbsp;
 
 I wrote some other code but that is not efficient as above code snippet.The concept here is the array length cannot be negative but when you are forced to do it it throws an exception.
@@ -102,8 +100,6 @@ var array1=array.slice(0, 3);</pre>
 To convert Java Script array to CSV format comma separated values you can use below code snippet.Use <span style="text-decoration: underline;"><em>JavaScript&nbsp;valueOf()</em></span> method for comma separated values
 
 And if you want to use pipe instead as deliminator you can use <span style="text-decoration: underline;"><em>JavaScript&nbsp;join()</em></span> method as shown below
-
-
 
 <pre>var numbers = ['1', '2', '3', '4']; 
 var str = numbers.valueOf();  
@@ -143,8 +139,6 @@ test[4]='5';
 removeElementByIndex(test, 2);
 
 //After 1,2,4</pre>
-
-
 
 &nbsp;
 
@@ -193,8 +187,6 @@ This is the most common mistake done by most of the developers observer the belo
    container.innerHtml += 'my number: ' + i;  
    console.log(i);  
 }</pre>
-
-
 
 &nbsp;
 

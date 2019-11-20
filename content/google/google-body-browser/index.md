@@ -3,8 +3,8 @@ title="Google Body Browser"
 summary="Exploring Human Body in 3D view.. If you are using google Chrome or FireFox 4 or higher Version browser.. then.. Click here for awesome Experience.. Select"
 keywords="google"
 type='post'
-date='2019-11-16T20:59:02+0000'
-lastmod='2019-11-16T20:59:02+0000'
+date='2019-08-22T18:09:08+0000'
+lastmod='2019-08-22T18:09:08+0000'
 draft='false'
 authors=['admin']
 [image]

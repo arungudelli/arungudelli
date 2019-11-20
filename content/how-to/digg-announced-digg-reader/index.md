@@ -3,8 +3,8 @@ title="DIGG Announced Their Reader Alternative To Google"
 summary="DIGG announced their Reader alternative to GOOGLE READER"
 keywords="google reader,digg reader,how-to"
 type='post'
-date='2019-11-16T20:57:07+0000'
-lastmod='2019-11-16T20:57:07+0000'
+date='2019-09-25T18:07:18+0000'
+lastmod='2019-09-25T18:07:18+0000'
 draft='false'
 authors=['admin']
 [image]

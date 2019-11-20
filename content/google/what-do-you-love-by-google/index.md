@@ -3,8 +3,8 @@ title="What Do You Love? By Google"
 summary="Explore your interests in different areas using Google new feature What do you love by google"
 keywords="google search features,google playground,google,google search techniques,internet"
 type='post'
-date='2019-11-16T20:57:49+0000'
-lastmod='2019-11-16T20:57:49+0000'
+date='2019-09-12T18:08:01+0000'
+lastmod='2019-09-12T18:08:01+0000'
 draft='false'
 authors=['admin']
 [image]

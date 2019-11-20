@@ -3,8 +3,8 @@ title="Simple JQuery Autocomplete Using Asp Net MVC"
 summary="I will explain how implement jQuery Autocomplete Search using Asp .Net MVC and Twitter Typeahead js library."
 keywords="jquery autocomplete,jquery ui autocomplete,jquery autocomplete example,jquery autocomplete json,jquery autosuggest,twitter typeahead,asp net,asp net mvc"
 type='post'
-date='2019-11-16T20:55:12+0000'
-lastmod='2019-11-16T20:55:12+0000'
+date='2019-10-09T18:05:43+0000'
+lastmod='2019-10-09T18:05:43+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -79,8 +79,6 @@ Everything is same as previous example except for the “remote” attribute.
 The code is straight forward we are passing queryString to a method called GetData() which return jSon data based upon input query in HomeController.
 
 Typeahead.js &nbsp;‘%QUERY’ &nbsp;keyword will give input search keyword which is a queryString to server.
-
-
 
 Now we will define GetData() method in HomeController.cs file
 

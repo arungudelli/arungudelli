@@ -3,8 +3,8 @@ title="NDepend – A Static Code Analysis Tool"
 summary="In this post I am going to review one of the static code analysis tool Ndepend by Patrick Smacchia. Before that I would like to explain few things about Static"
 keywords="csharp,ndepend,ndepend review,c#"
 type='post'
-date='2019-11-16T20:53:04+0000'
-lastmod='2019-11-16T20:53:04+0000'
+date='2019-10-24T18:04:17+0000'
+lastmod='2019-10-24T18:04:17+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -64,8 +64,6 @@ And to know whether code is properly commented or not
 
 <pre>SELECT METHODS WHERE NbLinesOfCode &gt; 50 AND&nbsp; NbLinesOfComment &lt; 10</pre>
 
-
-
 &nbsp;
 
 And know methods which are having high CyclomaticComplexity just type the following query
@@ -101,8 +99,6 @@ And it contains nice explanation, which is new to me.
 // It might derive from a class with a large SizeOfInst value.
 // See the definition of the SizeOfInst metric here
 // http://www.ndepend.com/Metrics.aspx#SizeOfInst</pre>
-
-
 
 &nbsp;
 

@@ -3,8 +3,8 @@ title="Switch To Old Boot Menu In Windows 8"
 summary="Speed up windows 8 Loading time by Switching to old legacy boot menu in windows 8.And also you can speed up boot process in windows 8 by old legacy boot menu."
 keywords="windows 8 speed secrets,legacy boot menu windows8,windows8,windows 8"
 type='post'
-date='2019-11-16T20:57:10+0000'
-lastmod='2019-11-16T20:57:10+0000'
+date='2019-09-24T18:07:21+0000'
+lastmod='2019-09-24T18:07:21+0000'
 draft='false'
 authors=['admin']
 [image]

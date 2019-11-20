@@ -3,8 +3,8 @@ title="JavaScript Substring Vs Substr Vs Slice Differences With Examples"
 summary="JavaScript substring(),substr(),slice() are predefined methods in string prototype used to get the substring from a string."
 keywords="javascript subtring(),javascript substr(),javascript slice(),javascript substr vs slice vs substring,javascript"
 type='post'
-date='2019-11-16T20:51:38+0000'
-lastmod='2019-11-16T20:51:38+0000'
+date='2019-11-05T18:03:24+0000'
+lastmod='2019-11-05T18:03:24+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -299,8 +299,6 @@ Negative indexes start from -1 and normal index starts from 0.
 
 Always remember that start index should be less than end index.
 
-
-
 <pre>string.slice(-5) //returns slice
 string.slice(0) //return slice
 
@@ -338,8 +336,6 @@ There is no difference between string.substring() and string.slice() methods, bo
 We might think why we need two different methods slice() and substring() as their behaviour is same. It is all about negative indexes.
 
 The initial JavaScript created in Netscape 2.0 has only <em>substring()</em> method. If the parameters are negative they treated as 0. And the order of parameters does not matter. if start index is greater than end index it will swap those and performs the operation.
-
-
 
 And in the next version of JavaScript 1.2 introduced in Netscape 4.0, they wanted to support negative indexes to traverse the string from the reverse.
 

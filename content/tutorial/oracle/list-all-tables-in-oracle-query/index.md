@@ -3,8 +3,8 @@ title="List All Tables In Oracle Database Query"
 summary="3 ways to show or list all tables in Oracle database. Based on privileges we can query oracle's all_tables,user_tables,all_all_tables,dba_tables to list all tables. all_tables lists all tables that have user access,user_tables lists all tables owned by the user,dba_tables displays all tables in the database."
 keywords="oracle,list all tables,query to show all tables"
 type='post'
-date='2019-11-16T20:52:05+0000'
-lastmod='2019-11-16T20:52:05+0000'
+date='2019-11-01T18:03:40+0000'
+lastmod='2019-11-01T18:03:40+0000'
 draft='false'
 authors=['admin']
 [image]

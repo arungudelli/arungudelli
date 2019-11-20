@@ -3,8 +3,8 @@ title="A Simple JQuery Autocomplete Search Tutorial"
 summary="Tutorial for jQuery-Autocomplete using Twitter typeahead.js plugin,An Alternative to jQuery UI Autocomplete library.This jQuery AutoComplete plugin has jQuery objects."
 keywords="jquery autocomplete,jquery ui autocomplete,jquery autocomplete example,jquery autocomplete json,jquery autosuggest,twitter typeahead,jquery"
 type='post'
-date='2019-11-16T20:55:25+0000'
-lastmod='2019-11-16T20:55:25+0000'
+date='2019-10-08T18:05:49+0000'
+lastmod='2019-10-08T18:05:49+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -75,8 +75,6 @@ Now I will show you how to implement multiple data set suggestions.
 
 We have to search for city names from different countries. For instance US and Canada,Sample Json Data
 
-
-
 <pre>//United States
 ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Philadelphia']
 
@@ -105,8 +103,6 @@ I saved above json data into two files US.json and Canada.json.
 
             ]);</pre>
 
-
-
 &nbsp;
 
 We have to use ‘prefetch’ attribute to retrieve json data from an URL.
@@ -132,8 +128,6 @@ Now I will explain how to customize suggestions using Twitter Typeahead.js
 I liked this feature very much we can easily customize suggestion list based upon our requirements.
 
 Take an example of &nbsp;a blog we will be having different categories, for instance &nbsp;HTML5,JavaScript,<a title=" CSS3 Anination Tutorial" href="https://www.arungudelli.com/2013/10/css3-animation-tutorial.html" target="_blank" rel="noopener">CSS3</a>. Now we are searching for a particular post by Post name or title.
-
-
 
 In search suggestion box we have to show Title,Category and Small Description with some styles.Like Post Name in bold font,below that small description and Category in Italic font and right side of suggestion box.
 
@@ -165,8 +159,6 @@ Now we have to pass this json data along with template
   ].join(''),
      engine: Hogan
 });</pre>
-
-
 
 &nbsp;
 

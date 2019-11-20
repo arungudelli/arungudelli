@@ -3,8 +3,8 @@ title="Knowledge Graph By Google"
 summary="Have you observed new google search feature. Search for famous persons or places or anything you interested. Its showing web pages as well as complete history"
 keywords="google"
 type='post'
-date='2019-11-16T20:58:36+0000'
-lastmod='2019-11-16T20:58:36+0000'
+date='2019-08-30T18:08:44+0000'
+lastmod='2019-08-30T18:08:44+0000'
 draft='false'
 authors=['admin']
 [image]

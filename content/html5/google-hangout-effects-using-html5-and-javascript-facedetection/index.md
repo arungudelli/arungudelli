@@ -3,8 +3,8 @@ title="Google Hangout Effects Using HTML5 And JavaScript Facedetection"
 summary="Face detection using javascript and HTML5 Canvas with an awesome Google hangout effects example.Face detection application like in Picassa and IPhoto."
 keywords="google hangout effects,js face recognition,facedetection with javascript,javascript face recognition,face detection using html5,face detection using php,,html5"
 type='post'
-date='2019-11-16T20:55:54+0000'
-lastmod='2019-11-16T20:55:54+0000'
+date='2019-10-05T18:06:08+0000'
+lastmod='2019-10-05T18:06:08+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -49,10 +49,6 @@ Just remove capture button and replace onclick event with setInterval Method as 
 The Logic is simple I am injecting local media stream video into HTML5 Canvas.For every 30msec one latest image snapshot will be drawn on the canvas. As the Time Interval is very less both video and canvas look like exactly same. Here is the <a href="https://www.arungudelli.com/Tools/HTML5/GoogleEffects/FaceDemo.htm" target="_blank" rel="noopener">Demo</a>.
 
 Now we will understand face detection JavaScript by LiuLiu. The library contains two js file ccv.js and face.js.
-
-
-
-
 
 
 

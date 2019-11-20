@@ -3,8 +3,8 @@ title="C# Const, ReadOnly & Static ReadOnly Differences"
 summary="C# Const makes fields or locals constant.ReadOnly applies to fields in C#, value is constant after initialization.Static ReadOnly makes ReadOnly field class member."
 keywords="c#,readonly field in c#,const field in c#,static readonly in c#,const vs readonly,"
 type='post'
-date='2019-11-16T20:52:29+0000'
-lastmod='2019-11-16T20:52:29+0000'
+date='2019-10-28T18:03:55+0000'
+lastmod='2019-10-28T18:03:55+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -45,8 +45,6 @@ We will use keyword “<em>const”</em>&nbsp;to declare Constant fields or loca
 
 Whenever you are defining a const field its value must be assigned&nbsp;at the time of declaration itself, after that we cannot change its value. Go through the following example to understand it
 
-
-
 <pre>        
         Public class Program
         {
@@ -74,8 +72,6 @@ The first two lines will works without any errors because X,Y,Z field values are
 In the above example&nbsp;<em>fieldConstant&nbsp;</em>is a field because its directly declared inside program class.
 
 And we can declare local variables as <em>const</em> as shown in above GetTheValue() method.
-
-
 
 The following built in value types&nbsp;can be declared as Const:&nbsp;int, long, char, float, double, decimal, bool, byte, short, string variable as const.
 
@@ -129,8 +125,6 @@ ReadOnly fields can be initialized at the time of declaration or only within the
         }
     }</pre>
 
-
-
 &nbsp;
 
 And the value may be different depending upon the constructor used. i.e., readonly field belongs to object of the class.
@@ -158,8 +152,6 @@ I compiled above sample program as a class library(A) and used it in another pro
 And Even in project B IL code, the value of const field numberofdays embedded in IL code. Now the problem is, in the source (in A ReadonlyConstant.cs library) the const field (numberOfdays )value changed to 5 and compiled and generated a new dll.
 
 But this new value of the const field does not affect in project B until unless we compile the project. After compilation the new const field value will be embedded in IL code of project B.
-
-
 
 To overcome this problem we will use static readonly fields.
 

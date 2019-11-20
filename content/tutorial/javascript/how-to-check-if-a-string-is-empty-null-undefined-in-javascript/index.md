@@ -3,8 +3,8 @@ title="How To Check If A String Is Empty/Null/Undefined In JavaScript"
 summary="To check if a string is null or empty or undefined use the following code snippet if(!emptyString){ // String is empty }"
 keywords="js empty string,js null string,undefined string,string empty javascript,check if a string is empty in javascript,javascript"
 type='post'
-date='2019-11-16T20:50:17+0000'
-lastmod='2019-11-16T20:50:17+0000'
+date='2019-11-17T18:02:33+0000'
+lastmod='2019-11-17T18:02:33+0000'
 draft='false'
 authors=['admin']
 [image]

@@ -3,8 +3,8 @@ title="Key Differences Between Ref And Out Parameters In C#"
 summary="Ref and out in C# allows us to pass the parameters by reference instead of Value.Ref parameters required to assign the value before calling the function where as for Out parameters its not required. tutorial explains difference between ref and out in C# with examples.& also it tells the difference between ref and out parameters in C# (ref vs out) at CLR level."
 keywords="c#,ref parameter in c#,out parameter in c#,ref vs out in c#"
 type='post'
-date='2019-11-16T20:52:47+0000'
-lastmod='2019-11-16T20:52:47+0000'
+date='2019-10-26T18:04:05+0000'
+lastmod='2019-10-26T18:04:05+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -84,8 +84,6 @@ That means you must assign the value before calling the function.(Same for norma
 
 So When to use “<em><strong>ref</strong></em>” parameters If you want to do manipulations on parameters (For example swapping two variables) we can use the ref parameters. Please see the below example
 
-
-
 <pre>//You must assign a and b before calling the method
 public static void swap(ref int a,ref int b)
         {
@@ -118,8 +116,6 @@ Have a look at below C# example with ref and out parameters.
             Console.WriteLine("Called");
         }
     }</pre>
-
-
 
 &nbsp;
 
@@ -158,8 +154,6 @@ void MethodOut(out int a)
             //Console.WriteLine(a);
             
         }</pre>
-
-
 
 &nbsp;
 
@@ -205,8 +199,6 @@ You must assign out parameter that’ y I assigned to Empty in the success case 
 Both allows us to pass parameters by reference instead of by Value
 
 For CLR(Common Language Run time) both <em><strong>ref</strong> </em>and <em><strong>out</strong></em>&nbsp;parameters are identical that means same Intermediate code will generate for both keywords. and the metadata also same except for one bit which specifies whether you specified <em><strong>out</strong> </em>or <em><strong>ref</strong> </em>when declaring the method.
-
-
 
 The difference is that the C# Compiler ensures that we write the correct code.(That’s why compile time error will come when didn’t initialize the <em><strong>ref</strong> </em>parameter).
 

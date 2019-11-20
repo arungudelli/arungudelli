@@ -3,8 +3,8 @@ title="Html Table With Fixed Header & Scrollable Body"
 summary="In HTML table most of the cases we need a fixed header & scrollable body. In this post I explains how to create a table with fixed header & body scrollable in HTML"
 keywords="html"
 type='post'
-date='2019-11-16T20:59:17+0000'
-lastmod='2019-11-16T20:59:17+0000'
+date='2019-08-16T18:09:25+0000'
+lastmod='2019-08-16T18:09:25+0000'
 draft='false'
 authors=['admin']
 [image]

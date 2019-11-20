@@ -3,8 +3,8 @@ title="Beginning HTML5"
 summary="This tutorial help you to understand the Syntax of HTML5 Look at the below sample html code Doctype: type of the document we are loading in this case HTML"
 keywords="html5"
 type='post'
-date='2019-11-16T20:58:48+0000'
-lastmod='2019-11-16T20:58:48+0000'
+date='2019-08-27T18:08:54+0000'
+lastmod='2019-08-27T18:08:54+0000'
 draft='false'
 authors=['admin']
 [image]

@@ -3,8 +3,8 @@ title="Matrix Effect Using HTML5 And Javascript"
 summary="To create Matrix Effect using HTML5 and JavaScript,I used HTML5 canvas functions fillText,fillStyle & Javascript setInterval,javascript array map& Math.random()"
 keywords="matrix effects,matrix effects html5,html5 canvas filltext,html5 canvas fillstyle,javascript setinterval,javascript math random,javascript array map,html5"
 type='post'
-date='2019-11-16T20:56:21+0000'
-lastmod='2019-11-16T20:56:21+0000'
+date='2019-10-02T18:06:27+0000'
+lastmod='2019-10-02T18:06:27+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -55,8 +55,6 @@ Line 10 will draw “Matrix” word at random locations. I am using <em><span st
 
 But this is not what we expected,Carefully observe the above Matrix Effect Gif Image: All alphabets are drawn along Y-Axis while X-Coordinates are constant.So I changed my code little bit as shown below.This is the key point in our Algorithm to <span style="text-decoration: underline;"><em>Create Matrix effect using HTML5</em></span>
 
-
-
 <pre>&lt;canvas id="myCanvas" width="500" height="200" style="border:1px solid #c3c3c3;"&gt;
 Your browser does not support the HTML5 canvas tag.
 &lt;/canvas&gt;
@@ -100,8 +98,6 @@ var roots = numbers.map(Math.sqrt);
 &nbsp;
 
 The Array index starts at ‘0’ zero so, For X -co ordinate I am adding 10,Our X coordinates are (10,20,30,40………290)(Line 12)
-
-
 
 And Y co-ordinates will vary from (0 to 110) If&nbsp; Y value &gt; 100 I am resetting array element to ‘0’ otherwise incrementing 10.(Line 14 to 21). Here I am not using new Array I am changing existing(YPositions) array itself using Java Script Array Map function.
 

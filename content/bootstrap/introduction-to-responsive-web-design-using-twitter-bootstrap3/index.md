@@ -3,8 +3,8 @@ title="Introduction To Responsive Web Design Using Twitter Bootstrap3"
 summary="Tutorial explains how to build responsive web pages using Twitter Bootstrap Framework.This is the best framework for designing responsive websites."
 keywords="twitter bootstrap,responsive web design,responsive web design using twitter bootstrap,bootstrap"
 type='post'
-date='2019-11-16T20:53:36+0000'
-lastmod='2019-11-16T20:53:36+0000'
+date='2019-10-21T18:04:42+0000'
+lastmod='2019-10-21T18:04:42+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -66,8 +66,6 @@ Before starting our example we will include the all necessary CSS and Js files a
 
 No need to explain all fields all are self explanatory. The only new thing is viewport meta attribute.
 
-
-
 <pre><meta name="viewport" content="width=device-width, initial-scale=1"></pre>
 
 &nbsp;
@@ -109,8 +107,6 @@ Now we will add responsive Navigation bar.First have a look at our navigation ba
 The Navigation Bar contains one heading Navigation,Navigation Bar Menu and One search box with submit button.
 
 Bootstrap provides&nbsp;&nbsp;“navbar” class for navigation bar. Add following HTML code below the title of the website(Inside container Only)
-
-
 
 <pre><nav class="navbar navbar-default" role="navigation">
 </nav></pre>
@@ -155,8 +151,6 @@ The above menu design is used in Mobile devices. We have Navigation Header (Bran
 
 So we will slightly modify our code to make it responsive menu
 
-
-
 <pre><div class="container-fluid">                
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNavigationBar">
@@ -184,8 +178,6 @@ So we will slightly modify our code to make it responsive menu
                     </form>
                 </div>
             </div></pre>
-
-
 
 &nbsp;
 

@@ -3,8 +3,8 @@ title="Book Review : HTML5 Web Application Development By Example"
 summary="HTML5 Web Application Development By Example | Packt Publishing review.It's a good book to learn HTML5 if you are new to web development."
 keywords="html5,html5 web application development by example,book review"
 type='post'
-date='2019-11-16T20:54:13+0000'
-lastmod='2019-11-16T20:54:13+0000'
+date='2019-10-16T18:05:10+0000'
+lastmod='2019-10-16T18:05:10+0000'
 draft='false'
 authors=['admin']
 [image]

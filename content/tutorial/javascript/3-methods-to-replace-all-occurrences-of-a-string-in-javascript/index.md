@@ -3,8 +3,8 @@ title="3 Methods To Replace All Occurrences Of A String In JavaScript"
 summary="Javascript replace method, replaces only the first occurrence of the string. To replace all occurrences of a string in Javascript use string replace() & regex,Javascript split() & join(), Javascript indexOf method."
 keywords="replace all occurrences of a string in javascript,javascript replace,javascript replace all,javascript replace special characters,javascript replace all spaces,javascript replace all comma,javascript replace regex group,javascript replace all escape characters,javascript"
 type='post'
-date='2019-11-16T20:50:36+0000'
-lastmod='2019-11-16T20:50:36+0000'
+date='2019-11-13T18:02:48+0000'
+lastmod='2019-11-13T18:02:48+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -47,8 +47,6 @@ We need to pass a regular expression as a parameter with <span style="text-decor
 
 In the above example, we will pass the parameter as regular expression as shown below
 
-
-
 <pre>targetstring.replace(/js/g,"javascript");
 //vanilla javascript has replace method and this javascript method wont replace all occurrences</pre>
 
@@ -72,8 +70,6 @@ target.replace(/is/g,'');
 //"javascript  very popular scripting language,and It IS easy to learn"</pre>
 
 Now we will option additional option <em>i</em> to the regular expression
-
-
 
 <pre>target.replace(/is/gi,'');
 "javascript  very popular scripting language,and It  easy to learn"</pre>
@@ -100,8 +96,6 @@ And after that we will combine the string array using join method with the targe
 We can write our own function to replace all string occurrences in a text using javascript indexOf method.
 
 All we need to do is, loop through each occurrence and replace it with the given string as shown below
-
-
 
 The below method uses indexof method to find the occurrence and replaces it using the replace method until all occurrences are completed.
 
@@ -132,8 +126,6 @@ The string not being replaced properly why because regular expressions do not wo
 The solution for this problem is we need to escape the string which contains special character before passing it as a regular expression
 
 Mozilla doc provided a method to escape the special characters in a string
-
-
 
 <pre>function&nbsp;escapeRegExp(str)
 {

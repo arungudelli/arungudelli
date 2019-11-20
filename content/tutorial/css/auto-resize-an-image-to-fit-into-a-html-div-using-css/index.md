@@ -3,8 +3,8 @@ title="Auto Resize An Image To Fit Into A HTML Div Using CSS"
 summary="Auto resize an image (img) to fit into a smaller Div can be achieved through simple CSS or CSS3. In this tutorial I will explain both CSS and CSS3 ways using simple html example.Add max-width,max-height CSS as 100% for img tag,then image will be auto resized.Use CSS3 object-fit:contain to resize img to fit into div."
 keywords="css,html,auto resize image css,resize image,image fit into div"
 type='post'
-date='2019-11-16T20:51:54+0000'
-lastmod='2019-11-16T20:51:54+0000'
+date='2019-11-03T18:03:33+0000'
+lastmod='2019-11-03T18:03:33+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -59,8 +59,6 @@ For example say our image width is 100px and height is 100px.
 &lt;img src="image.png"&gt;
 &lt;/div&gt;</pre>
 
-
-
 We have four divs of different sizes and width,height of divs are applied through css as shown below.
 
 <pre>/* CSS for div elements and img tags */
@@ -89,8 +87,6 @@ width: 75px;
 width:150px;
 height:150px;
 }</pre>
-
-
 
 In the first div width and height of our image is auto resized to fit into 50*80px div element(Actual image size 100*100)&nbsp; i.e., image auto resized to 50*50 px
 

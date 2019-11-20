@@ -3,8 +3,8 @@ title="Simple Notifications Using JQuery"
 summary="Toastr is the best plugin for implementing Notifications using jQuery at client side.This Toastr jQuery notification plugin comes with so many features."
 keywords="jquery,simple notifications using jquery,toastr plugin,jquery plugins,javascript"
 type='post'
-date='2019-11-16T20:54:03+0000'
-lastmod='2019-11-16T20:54:03+0000'
+date='2019-10-17T18:05:05+0000'
+lastmod='2019-10-17T18:05:05+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -90,8 +90,6 @@ By default close button is disabled in this jQuery notification plug in and You 
 This will enable close button icon in notification dialogue box as shown in above figure. And if you want to override this closeButton use the below code.
 
 <pre>toastr.options.closeHtml = '&lt;button&gt;&lt;i&gt;Close&lt;/i&gt;&lt;/button&gt;';</pre>
-
-
 
 &nbsp;
 

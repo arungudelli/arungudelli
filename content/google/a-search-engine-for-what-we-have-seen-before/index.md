@@ -3,8 +3,8 @@ title="A Search Engine For What We Have Seen Before"
 summary="Powerful Search engine for what you see before.How to find previously viewed or searched pages? Remember what you have searched before"
 keywords="search engine,search tools,chrome,google,internet"
 type='post'
-date='2019-11-16T20:58:12+0000'
-lastmod='2019-11-16T20:58:12+0000'
+date='2019-09-07T18:08:18+0000'
+lastmod='2019-09-07T18:08:18+0000'
 draft='false'
 authors=['admin']
 [image]

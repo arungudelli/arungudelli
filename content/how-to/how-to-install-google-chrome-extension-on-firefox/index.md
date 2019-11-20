@@ -3,8 +3,8 @@ title="How To Install Google Chrome Extension On Firefox"
 summary="How to install Google chrome extensions on Firefox and safari"
 keywords="google chrome extensions,mozilla firefox,safari,install chrome extension in safari,install chrome extension in firefox,install chrome extension in mozilla,google chrome,mozilla,how-to"
 type='post'
-date='2019-11-16T20:56:56+0000'
-lastmod='2019-11-16T20:56:56+0000'
+date='2019-09-27T18:07:05+0000'
+lastmod='2019-09-27T18:07:05+0000'
 draft='false'
 authors=['admin']
 [image]

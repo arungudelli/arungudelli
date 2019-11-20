@@ -3,8 +3,8 @@ title="A Simple Walking Man CSS3 Animation Tutorial"
 summary="This CSS3 Animation Tutorial will explains Basics of CSS3 Animations like CSS3 Keyframe Animation,CSS3 Transform,CSS3 Rotate Animation with walking man Example."
 keywords="css3 animations,css3 animation tutorial,css3 animation example,css3 rotate animation,css3 keyframes,css3 transform,css3 animation effects,css,html5,css3"
 type='post'
-date='2019-11-16T20:55:35+0000'
-lastmod='2019-11-16T20:55:35+0000'
+date='2019-10-07T18:05:56+0000'
+lastmod='2019-10-07T18:05:56+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -196,8 +196,6 @@ to {background:yellow;}
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-
-
 &nbsp;
 
 We defined a @keyframe with name “myfirst” &nbsp;We are changing from red to yellow.And applying the animation property on div with duration.&nbsp;You must specify the duration otherwise animation wont effect because default value is ‘0’
@@ -249,8 +247,6 @@ For Moving Hands Apply the Following CSS
 &nbsp;
 
 Right hand and left leg should sink with each other so applied same <span style="text-decoration: underline;"><em>CSS3 Animation Effect</em></span> for both elements and vice versa.
-
-
 
 For moving hands I am using <span style="text-decoration: underline;"><em>CSS3 transform rotate</em></span> property from 30 degrees to -30 degree.
 

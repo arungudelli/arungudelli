@@ -3,8 +3,8 @@ title="Checked And UnChecked Keywords In C#"
 summary="C# Tutorial explains checked,unchecked contexts with examples. C# unchecked context ignores arithmetic overflows & in C# checked context not."
 keywords="checked and unchecked in c#,checked keyword in c#,unchecked keyword in c#,checked and unchecked context in c#,c#"
 type='post'
-date='2019-11-16T20:53:10+0000'
-lastmod='2019-11-16T20:53:10+0000'
+date='2019-10-23T18:04:23+0000'
+lastmod='2019-10-23T18:04:23+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -66,8 +66,6 @@ So the correct code will be
 
 Just include the code in “<em><strong>checked</strong></em>” block. And now at runtime code will through arithmetic overflow exception. So to handle the exception I will add try catch blocks. So the final code is
 
-
-
 <pre>            checked
             {
                 try
@@ -87,8 +85,6 @@ Just include the code in “<em><strong>checked</strong></em>” block. And now 
 Now you might be thinking that why we required two contexts , instead we can maintain only one <em><strong>checked</strong> </em>context. In real world projects chances of getting arithmetic overflow exceptions are very low(that’s why default context is unchecked).
 
 So checking for exceptions for each such statements at runtime will be extra overhead for CLR. So the&nbsp;code that might cause overflow exception should be executed in a <em><strong>checked</strong> </em>context.Remaining code will be executed in <em><strong>unchecked</strong> </em>environment for which performance is priority
-
-
 
 The ideal solution for this is to write code like below
 

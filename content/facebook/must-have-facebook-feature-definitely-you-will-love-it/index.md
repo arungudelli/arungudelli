@@ -3,8 +3,8 @@ title="Must Have Facebook Feature Definitely You Will Love It"
 summary="Must have browsing feature,And also very much helpful in Facebook"
 keywords="google chrome,facebook,internet tips"
 type='post'
-date='2019-11-16T20:57:31+0000'
-lastmod='2019-11-16T20:57:31+0000'
+date='2019-09-18T18:07:40+0000'
+lastmod='2019-09-18T18:07:40+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -34,8 +34,6 @@ And also Facebook recently introduced new feature “Notifications update side b
 If we want to see the full image again we need to open it in new window.After that only we can comment or like? Am I correct?
 
 For status updates this feature is good(Instantly we can like or comment), saves lot of time.But for images like this again we need to open new window.
-
-
 
 And also same problem with the cover photo updates,see the below images.
 

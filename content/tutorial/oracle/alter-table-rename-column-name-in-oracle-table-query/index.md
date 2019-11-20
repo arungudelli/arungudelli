@@ -3,8 +3,8 @@ title="Oracle Rename Column Using ALTER Query & Rename Table Example"
 summary="In Oracle, to rename a column in a table, use ALTER TABLE RENAME COLUMN statement"
 keywords="rename column name in oralce,rename table in oracle,oracle"
 type='post'
-date='2019-11-16T20:50:55+0000'
-lastmod='2019-11-16T20:50:55+0000'
+date='2019-11-11T18:02:58+0000'
+lastmod='2019-11-11T18:02:58+0000'
 draft='false'
 authors=['admin']
 [image]

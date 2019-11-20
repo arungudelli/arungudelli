@@ -3,8 +3,8 @@ title="HTML5 Local Storage API Tutorial With Examples"
 summary="Local Storage HTML5 API is a better Storage than cookies. it's often as Web Storage.With Local storage API in HTML5 web pages can store data locally in browser."
 keywords="html5 local storage,html5,html4 web storage,html5 local storage tutorial,web development,websorage api"
 type='post'
-date='2019-11-16T20:57:53+0000'
-lastmod='2019-11-16T20:57:53+0000'
+date='2019-09-11T18:08:03+0000'
+lastmod='2019-09-11T18:08:03+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -56,8 +56,6 @@ All browsers today offering 5-10 MB of storage in every user’s browser.i.e., F
 
 HTML5 local storage supports different web apps and mobile apps.Local storage is nothing but your app can store data in browser <em>to reduce communication needed with the server.</em>
 
-
-
 A page can store one or more key/value pairs in the browser’s local storage.And later use key to&nbsp;retrieve value.&nbsp;These can be done by <span style="text-decoration: underline;"><em>Local Storage</em></span> object in local storage API.
 
 You may thing why Local Storage why not Web Storage,Web refers to something more and we are implementing at client side,local make sense instead of Web.
@@ -88,8 +86,6 @@ var value = localstorage.getItem("key1");
 &nbsp;
 
 Now value contain value2 not value1. And one thing <span style="text-decoration: underline;"><em>Local Storage</em></span> stores only string values.But in Shopping cart if we want to store item counts and prices in Local Storage you need to use parsing.
-
-
 
 <pre>localStorage.setItem("numitems", 1);
 var numItems = localStorage.getItem("numitems");

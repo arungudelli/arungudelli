@@ -3,8 +3,8 @@ title="A Simple CSS Drop Down Menu"
 summary="CSS Drop Down Menu: In this tutorial I will explain how to create a Simple Drop Down Menu using CSS alone without using Javascript and Images."
 keywords="css,drop down menu,css drop down menu using css,css drop down menu,css3"
 type='post'
-date='2019-11-16T20:53:53+0000'
-lastmod='2019-11-16T20:53:53+0000'
+date='2019-10-19T18:04:55+0000'
+lastmod='2019-10-19T18:04:55+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -82,8 +82,6 @@ nav ul li:hover &gt; ul {
 
 First we will hide the first set of sub links Articles&gt;Web Design,Fun,Freebies and Archives&gt;January,February using <span style="color: #000000;"><em>“display:none” </em></span>&nbsp;attribute. and to make them appear we have to change the <em>“display” &nbsp;</em>attribute to <em>“block”&nbsp;</em>on HOVER of LI.
 
-
-
 The child selector &nbsp;&gt; make sure only the child UL of LI are visible rather than all other UL elements or other sub menus.
 
 Here is the Demo
@@ -114,8 +112,6 @@ And in next step few lines of CSS code to make it look like Menu
             float: none;
         }</pre>
 
-
-
 &nbsp;
 
 First we will remove bullets for list elements by adding <em>“list-style:none”&nbsp;</em>to “nav ul” element. And <em>“position:relative”&nbsp;</em> attribute will allows us to position sub menu elements according to the Main Menu. <em>“display:inline-table”&nbsp;</em>attribute allows us to display main navigation elements to display as an inline-table.
@@ -143,8 +139,6 @@ Now it has a look of Drop Down Menu But as you move from one link to other links
             left: 100%;
             top: 0;
         }</pre>
-
-
 
 &nbsp;
 

@@ -3,8 +3,8 @@ title="The Curious Case Of Readonly Field In C#"
 summary="Readonly modifier in C# used to declare variables constant. & this readonly keyword applicable only to fields not locals."
 keywords="c#,readonly field in c#,readonly variable in c#,readonly"
 type='post'
-date='2019-11-16T20:52:37+0000'
-lastmod='2019-11-16T20:52:37+0000'
+date='2019-10-27T18:04:01+0000'
+lastmod='2019-10-27T18:04:01+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -56,8 +56,6 @@ Please see the following example
 </pre>
 
 For example, a customer gets by default 10% discount on the product. Often in some special cases if we want to increase the discount or decrease the discount we will use another constructor to create an object.
-
-
 
 <pre>var customer1 = new ReadonlyConstant.ReadonlyClass();
 
@@ -138,8 +136,6 @@ As the readonly&nbsp;fields can be assigned inside the constructor we can pass t
    //The value of x is 90
  }
 }</pre>
-
-
 
 &nbsp;
 

@@ -3,8 +3,8 @@ title="HTML5 Canvas Example :A Simple Snake Game"
 summary="A simple Snake Game using HTML5 Canvas.Step by step tutorial to develope Snake game using Html5 Canvas and JavaScript."
 keywords="html5 canvas example,html5 canvas tag,html5 canvas tutorial,html5"
 type='post'
-date='2019-11-16T20:57:38+0000'
-lastmod='2019-11-16T20:57:38+0000'
+date='2019-09-16T18:07:47+0000'
+lastmod='2019-09-16T18:07:47+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -78,8 +78,6 @@ The key of the Game is calling Paint function continuously. &nbsp;<em><strong>se
 
 For Example &nbsp;<em><strong>var AlertMsg=setInterval(function (){alert(“Hello”);},2000);</strong></em>
 
-
-
 The above Code &nbsp;display alert message for every 2 seconds. And For stopping we use&nbsp;<em><strong>clearInterval</strong><strong>(AlertMsg)</strong></em> function.
 
 In play method we will call setInterval with Paint() and in Pause we will call clearInterval.<br>
@@ -91,8 +89,6 @@ In play method we will call setInterval with Paint() and in Pause we will call c
 <span style="text-decoration: underline;"><em><strong>Game Sounds And Buttons:</strong></em></span>
 
 With &lt;audio&gt; tag in HTML5 We can include sounds in Web page.I am used three audio tags for Gameplaying(background music),GameOver(When snake eat itself) and SnakeEatingFood.
-
-
 
 
 

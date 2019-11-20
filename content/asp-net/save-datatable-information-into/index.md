@@ -3,8 +3,8 @@ title="Save Datatable Information Into Database"
 summary="This Post will explain How we can save Datatable or Data Set information to Data base.I tried to explain this in detail,but a primary knowledge on C#,Xml,Sql is"
 keywords="asp .net"
 type='post'
-date='2019-11-16T20:59:13+0000'
-lastmod='2019-11-16T20:59:13+0000'
+date='2019-08-17T18:09:22+0000'
+lastmod='2019-08-17T18:09:22+0000'
 draft='false'
 authors=['admin']
 [image]

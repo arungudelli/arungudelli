@@ -3,8 +3,8 @@ title="Close Similar Tabs In Chrome And Mozilla"
 summary="Close similar tabs in chrome and mozilla"
 keywords="close similar tabs,tabcloser,googlechrome,mozilla,google chrome,how-to"
 type='post'
-date='2019-11-16T20:57:03+0000'
-lastmod='2019-11-16T20:57:03+0000'
+date='2019-09-26T18:07:12+0000'
+lastmod='2019-09-26T18:07:12+0000'
 draft='false'
 authors=['admin']
 [image]

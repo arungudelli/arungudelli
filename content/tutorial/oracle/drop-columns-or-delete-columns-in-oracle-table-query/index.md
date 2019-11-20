@@ -3,8 +3,8 @@ title="Drop Columns Or Delete Columns In Oracle Table Query"
 summary="To delete columns in Oracle use ALTER TABLE...DROP COLUMN statement query. Dropping columns in oracle can be done in 2 ways Logical Delete, Physical Delete."
 keywords="drop column in oracle table,delete column in oracle table,drop column query in oracle,oracle"
 type='post'
-date='2019-11-16T20:50:59+0000'
-lastmod='2019-11-16T20:50:59+0000'
+date='2019-11-10T18:03:05+0000'
+lastmod='2019-11-10T18:03:05+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -46,8 +46,6 @@ To delete a single column in oracle table logically use below query
 
 <pre>ALTER TABLE oracle_table_name SET UNUSED (column_to_be_deleted);</pre>
 
-
-
 We have to pass column name to the unused statement.
 
 For example if you want to mark department_id from employee table as unused use the below query
@@ -79,8 +77,6 @@ For example, the below oracle query permanently deletes department_id,is_manager
 We can specify the <em>checkpoint</em> clause to avoid the amount of undo logs created during the drop column query to avoid potential exhaustion of undo space.
 
 The below query creates a checkpoint for every 300 records processed.
-
-
 
 <pre>ALTER TABLE employee  DROP UNUSED COLUMNS CHECKPOINT 300;
 

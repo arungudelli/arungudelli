@@ -3,8 +3,8 @@ title="Javascript String Contains: Check If A String Contains A Substring"
 summary="To check if a Javascript String Contains a substring or not, we can use 7 different Javascript methods as listed in below table."
 keywords="check if a string contains a substring in javascript (in es6),substring check javascript (in es5 and before),substring check javascript by using javascript search method,substring check javascript by using javascript match method,substring check javascript using regular expression,substring check in javascript using lodash js,substring check javascript using underscore js,best way of substring check javascript,javascript"
 type='post'
-date='2019-11-16T20:50:50+0000'
-lastmod='2019-11-16T20:50:50+0000'
+date='2019-11-12T18:02:52+0000'
+lastmod='2019-11-12T18:02:52+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -54,8 +54,6 @@ The second parameter search position is optional and the default value is 0.
 
 If you want to check whether a string contains a substring only after a certain position you can pass the search position as a parameter as shown in the below examples.
 
-
-
 <pre>var substringtocheck = "ES6";
 var actualstring="ES6 contains includes method";
 var isContains = actualstring.includes(substringtocheck,1);
@@ -86,8 +84,6 @@ Object.defineProperty(String.prototype, 'includes', {
 In ES5 and before versions of Javascript we can use <em>indexOf</em> method to check if a string contains a substring or not.
 
 Go through the following code example to understand it further.
-
-
 
 <pre>var actualstring = "In ES5 use IndexOf method",
 var substringToCheck = "IndexOf";
@@ -121,8 +117,6 @@ var isContains=actualstring.search("search") !== -1;
 //isContains true
 
 </pre>
-
-
 
 The search method in JavaScript will return substring position if found, otherwise -1.
 
@@ -158,8 +152,6 @@ regexp.test(actualstring);
 
 /RegExp/.test(actualstring);
 //returns true</pre>
-
-
 
 We have to pass our substring as regular expression only (i.e., without quotes) as shown above.
 

@@ -3,8 +3,8 @@ title="How To Draw Polygon Using HTML5 Canvas"
 summary="To draw HTML5 Canvas Polygon we have to use JavaScript & Canvas API functions like HTML5 Canvas fill,stroke,lineTo based on path abstractions of Canvas API"
 keywords="html5 draw polygon,html5 canvas polygon,html5 canvas fill,html5 canvas stroke,html5,javascript,html5 canvas"
 type='post'
-date='2019-11-16T20:56:30+0000'
-lastmod='2019-11-16T20:56:30+0000'
+date='2019-10-01T18:06:35+0000'
+lastmod='2019-10-01T18:06:35+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -83,8 +83,6 @@ Observe the below code carefully I will explain each line one by one.
   ctx.closePath();
 }</pre>
 
-
-
 &nbsp;
 
 We are passing context(ctx),center of regular polygon(x,y),radius(r),number of sides(sides) as parameter to regular polygon function.if sides &lt; 3 we cannot make a polygon so return directly.
@@ -130,8 +128,6 @@ function polygon(ctx, x, y, radius, sides) {
 &lt;canvas id="canvas" width="500" height="300"&gt;OOPS.. Upgrade your Browser&lt;/canvas&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-
-
 
 &nbsp;
 
