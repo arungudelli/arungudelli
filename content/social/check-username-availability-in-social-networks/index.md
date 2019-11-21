@@ -13,17 +13,39 @@ focal_point=''
 preview_only=false
 +++
 
+Maintain one common username across the social media by checking username availability across the social networks.
 
+Personal branding is necessary now a days,to increase our personal brand it’s better to have unique username in social networking sites and Social bookmarking sites.
 
+How to check whether our username available on social networking sites?
 
+Here is the simple procedure. 
 
+Namechk is helps us to check username or vanity url availability at more that hundred Social networking and Bookmarking websites.Promote your brand consistently by registering a username that is still available on popular sites and domains 
 
+How to check:-
+Click here to go to namechk service
+Enter your username as shown below
+Name Check
+And  it will shows available domains with our username as shown below
+Domain results
+On the below it shows availability of username availability in popular social bookmarking sites as shown below
+Social bookmarking availability
 
+About Namechk:-
 
+NameChk was designed by david Gosse and Andy Edinborough.
 
+David Gosse CEO of Vortaloptics(http://www.vortaloptics.com/)a vertical search and local search 
+engine development company.
 
+The concept for the site was inspired by Jon Sykes who started a similar site but he stopped maintaining it and then sold his domain,later David started it again. 
 
+Also Available on Iphone and Ipad:-
 
+Namechk is also available on Iphone and Ipads.
+Click here to go to Namechk app.
+I am waiting for the android version.I think they develop it very soon.
 
 
 Wait before leaving.
