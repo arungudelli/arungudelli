@@ -48,9 +48,7 @@ hero_media = "hero-academic.png"
 #  label = '<a id="academic-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">Latest release <!-- V --></a>'
 +++
 
-Here I writes everything About programming, web development and so on. However, sometimes I will deviate from the regular topics just to mix it up a bit and add a little flair to the site.
-
-In short this blog will help people to put their best foot forward on the WEB.
+Learn programming and web development with simple detailed tutorials and examples.
 
 
 
