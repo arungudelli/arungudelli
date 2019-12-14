@@ -5,7 +5,7 @@ keywords="amazon kindle,pdf to kindle,how-to"
 type='post'
 date='2019-09-28T18:07:02+0000'
 lastmod='2019-09-28T18:07:02+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='How To Convert PDF To Kindle Format'

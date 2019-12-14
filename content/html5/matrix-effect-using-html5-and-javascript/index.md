@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Now a days I am playing around with <span style="text-decoration: underline;"><em>HTML5 Canvas</em> <em>API</em></span> and <span style="text-decoration: underline;"><em>Java Script</em></span>. It’s an amazing option to create animations.
 
 The Matrix movie known for its visual effects.

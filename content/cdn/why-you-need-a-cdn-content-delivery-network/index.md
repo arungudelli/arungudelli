@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 You might heard about Content Delivery Network or CDN, This post will explains what exactly is this Content Delivery Network? What kind of problem it solves? Whether you should use <span style="text-decoration: underline;">CDN(Content Delivery Network)</span> or Not?
 
 There’s a glass ceiling to web performance. Once you’ve gone through every line of code on your website, paring down the three data-intensive areas that will slow down responsiveness – images, JavaScript, and CSS – you know there’s nothing else you can do. So, what do you do?

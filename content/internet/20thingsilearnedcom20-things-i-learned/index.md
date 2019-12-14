@@ -5,7 +5,7 @@ keywords="internet"
 type='post'
 date='2019-08-18T18:09:19+0000'
 lastmod='2019-08-18T18:09:19+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='20thingsilearned.Com:20 Things I Learned About Browsers And The Web'

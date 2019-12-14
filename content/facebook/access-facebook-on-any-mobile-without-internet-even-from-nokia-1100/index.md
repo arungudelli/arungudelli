@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 In this post I will explain how to access Facebook on any mobile without internet or GPRS connection.
 
 Now a days everyone(even school students) using smart phones like apple,android,windows etc but there are still some people who would like to use classic mobiles like Nokia 1100 I am one of them.

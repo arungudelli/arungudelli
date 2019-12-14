@@ -5,7 +5,7 @@ keywords="read later fast,save pages to read offline,save pages to read later,sa
 type='post'
 date='2019-08-25T18:09:00+0000'
 lastmod='2019-08-25T18:09:00+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Read Later Fast : Chrome And Mozilla Plug In For Offline Access Of Webpages'

@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 In this Tutorial I will explain How to Create a Simple Autocomplete search functionality using jQuery.
 
 Look at the <a title="jQuery Autocomplete Tutorial" href="https://www.arungudelli.com/Tools/HTML5/jQueryAutoComplete/AutoComplete.htm" target="_blank" rel="noopener">jQuery AutoComplete Demo</a>

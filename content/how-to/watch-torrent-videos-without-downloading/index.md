@@ -5,7 +5,7 @@ keywords="watch torrents,ts magic player,internet tips,torrent,how-to"
 type='post'
 date='2019-09-09T18:08:12+0000'
 lastmod='2019-09-09T18:08:12+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Watch Torrent Videos Without Downloading'

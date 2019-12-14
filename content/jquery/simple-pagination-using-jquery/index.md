@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 In this Tutorial I will explain how to implement simple <span style="text-decoration: underline;"><em>C</em></span><span style="text-decoration: underline;"><em>lient</em>&nbsp;S<em>ide Pagination</em></span> using <span style="text-decoration: underline;"><em>jQuery</em></span>
 
 There are so many <em><span style="text-decoration: underline;">jQuery&nbsp;</span><span style="text-decoration: underline;">plugins</span></em> available for <span style="text-decoration: underline;"><em>pagination</em></span> &nbsp;but recently I came across one beautiful plug in called ‘<em><strong>jPages</strong></em> ‘ with rich set of features like such as

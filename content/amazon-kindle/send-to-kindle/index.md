@@ -5,7 +5,7 @@ keywords="kindle,amazon kindle"
 type='post'
 date='2019-08-28T18:08:51+0000'
 lastmod='2019-08-28T18:08:51+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Send To Kindle'

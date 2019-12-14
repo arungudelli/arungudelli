@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Now a days I have been experimenting with CSS3 features, with some advanced CSS3 selectors we can easily Create a Drop Down Menu with pure CSS without using any fancy background images and JavaScript.
 
 In this tutorial I will explain step by step procedure to create a simple drop down menu &nbsp;with pure CSS.

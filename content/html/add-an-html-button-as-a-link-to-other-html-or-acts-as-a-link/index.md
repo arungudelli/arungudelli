@@ -22,7 +22,7 @@ preview_only=false
 
 To add an HTML button as a link to other HTML, we can use the button inside HTML form or style an anchor link as a button or use button onClick event.
 
-<ol><li><a href="#step-1">Add an HTML button as a link using the form tag</a></li><li><a href="#step-2">Add an HTML button as a link using CSS</a></li><li><a href="#step-3">Add an HTML button as a link using JavaScript</a></li></ol>
+{{%toc%}}
 
 ## 1. Add an HTML button as a link using the form tag:
 

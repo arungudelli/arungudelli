@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 The problem with Facebook Timeline is we cannot is full images only part of the pic is visible to us.If we want to see full image we need open it in new window.see the below pic
 
 <a href="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/12/FacebookTimeline.png"><img class="aligncenter wp-image-497" title="FacebookTimeline" src="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/12/FacebookTimeline-300x167.png" alt="FacebookTimeline" width="500" height="300"></a><br>

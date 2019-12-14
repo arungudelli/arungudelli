@@ -14,17 +14,11 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Steps to display Indian rupee symbol in HTML pages (₹)
 
 <ol><li>Use rupee symbol ASCII code <em><strong><span style="text-decoration: underline;">8377</span></strong></em></li><li>Or Use rupee symbol Unicode character code <span style="text-decoration: underline;"><em><strong>&amp;#x20B9</strong></em></span></li><li>Or Use CSS content values</li><li>Or Use font awesome icons</li></ol>
 
-<ul><li><a href="#step-1">Display Rupee symbol in HTML using ASCII Code</a></li><li><a href="#step-2">Display Rupee symbol in HTML using Unicode Character code</a></li><li><a href="#step-3">Display Rupee symbol in HTML using CSS content values</a></li><li><a href="#step-4">Display Rupee symbol in HTML using font awesome icons</a></li></ul>
+{{%toc%}}
 
 Before that let’s go to the history of &nbsp;Indian Currency Rupee Symbol(₹).
 

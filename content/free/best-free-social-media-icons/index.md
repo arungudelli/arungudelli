@@ -5,19 +5,13 @@ keywords="social media icons,social media icon,free social media icons,social me
 type='post'
 date='2019-10-18T18:05:02+0000'
 lastmod='2019-10-18T18:05:02+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Free Social Media Icons Sets(30+) For Websites'
 focal_point=''
 preview_only=false
 +++
-
-
-
-
-
-
 
 
 Social Media Icons&nbsp;plays a huge role in driving traffic to our blog or website.Every day Design trends are changing, and having quality Social Media Icons in our website can help with the usability of site.

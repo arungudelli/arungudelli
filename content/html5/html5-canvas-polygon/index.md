@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 This tutorial I will explain simple algorithm to draw polygons using HTML5 canvas API.
 
 First we have to identify the points on HTML5 canvas and then use context.lineto() method for drawing lines and finally use stroke or fill method to make polygon visible. Here is the sample code for Drawing <strong><span style="text-decoration: underline;"><em>HTML5 Canvas Polygon</em></span></strong>

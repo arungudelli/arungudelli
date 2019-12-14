@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 In this <span style="text-decoration: underline;"><em>Tutorial</em></span> I will explain all the Basics of <span style="text-decoration: underline;"><em>HTML5 Local Storage API</em></span>.
 
 It’s often referred as <span style="text-decoration: underline;"><em>Web Storage</em></span>. Web storage is nothing but client side storage.Right now we are using cookies for the purpose of storing objects locally in client machine(in browser).

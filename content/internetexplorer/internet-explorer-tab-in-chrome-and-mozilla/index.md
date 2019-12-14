@@ -5,7 +5,7 @@ keywords="ie tab,ie tab for mozilla,ie tab for chrome,ie tab for firefox,ie-only
 type='post'
 date='2019-08-23T18:09:05+0000'
 lastmod='2019-08-23T18:09:05+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='How To Open Internet Explorer Sites Or IE-Only Websites In Firefox And Chrome'

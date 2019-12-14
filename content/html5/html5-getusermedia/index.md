@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 In this tutorial I will explain how to capture video and audio using <span style="text-decoration: underline;"><em>getUserMedia</em></span>&nbsp; in <span style="text-decoration: underline;"><em>HTML5</em></span> with an example.Then I will explain how to take snapshot using <span style="text-decoration: underline;"><em>HTML5 getUserMedia API</em></span>.
 
 And Finally You will learn how to implement Google Hangout Effects using <span style="text-decoration: underline;"><em>html5 getUserMedia API</em></span>

@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 Today &nbsp;I will explain how to implement Simple Client Side <span style="text-decoration: underline;"><em>Notifications using jQuery</em></span>.
 
 There are so many jQuery notifications&nbsp;plugins are available for implementing client side notifications , But recently I came across a beautiful plug in called ‘<a title="Toastr" href="http://codeseven.github.io/toastr/" target="_blank" rel="noopener noreferrer">Toastr</a>‘ , a CodeSeven jQuery plugin which is very simple to use and can be easily customized and extended.

@@ -5,7 +5,7 @@ keywords="gmail,google,google chrome,gmail print all,internet tips"
 type='post'
 date='2019-09-17T18:07:44+0000'
 lastmod='2019-09-17T18:07:44+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Print All Gmail Emails In One Folder Or Label At A Time'

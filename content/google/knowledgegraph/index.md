@@ -5,7 +5,7 @@ keywords="google"
 type='post'
 date='2019-08-30T18:08:44+0000'
 lastmod='2019-08-30T18:08:44+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Knowledge Graph By Google'

@@ -13,14 +13,7 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
-After I began to work for a <a href="https://www.webwizards.com.au">web design &amp; marketing agency</a>, I started learning responsive web design using Twitter Bootstrap Framework. This is my first tutorial on responsive Web design, I will start with the introduction Bootstrap framework and responsive web design, and at the end of the post you will get an idea how to build responsive web pages using bootstrap framework.
+I started learning responsive web design using Twitter Bootstrap Framework. This is my first tutorial on responsive Web design, I will start with the introduction Bootstrap framework and responsive web design, and at the end of the post you will get an idea how to build responsive web pages using bootstrap framework.
 
 ### What is Responsive Web Design?
 

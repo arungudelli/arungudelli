@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 I will explain basics of HTML5 Canvas with an Example.
 
 You will learn How to develop <a title="Snake Game" href="https://www.arungudelli.com/Tools/HTML5/SnakeGame/snakeGame.html" target="_blank" rel="noopener">Snake Game</a> using HTML5 Canvas.If you familiar with JQuery then it’s very easy.

@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 In this post I will explain how to identify fake Facebook profiles.
 
 The problem with the social networking sites is Fake profiles.Some times it’s difficult to find out fake profiles.Today I tried one simple Google trick to identify Fake Facebook profiles.

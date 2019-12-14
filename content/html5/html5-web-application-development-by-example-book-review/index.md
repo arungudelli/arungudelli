@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Do you get bored reading tons of theory about HTML5 and not many hands on Labs? Then go for “<a title="html5 web application development by example " href="http://www.packtpub.com/html5-web-application-development-using-css3-jquery/book" target="_blank" rel="nofollow">HTML5 web development by example</a>” by Packt publications.
 
 The book has the tagline “A Beginners Guide” and it’s what exactly it states.

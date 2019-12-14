@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Google hangouts very popular because of <span style="text-decoration: underline;"><em>Google effects</em></span> like face masks and background effects.
 
 I tried to implement Google Effects using <span style="text-decoration: underline;"><em>HTML5 Canvas</em></span>,<span style="text-decoration: underline;"><em>HTML5 getUserMedia API</em></span> via JavaScript face detection library by &nbsp;Liuliu.

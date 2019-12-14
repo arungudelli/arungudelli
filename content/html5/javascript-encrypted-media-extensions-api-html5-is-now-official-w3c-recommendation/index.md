@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 HTML5 Encrypted Media Extensions (EME) an API used to play digital Rights Management (DRM) content (encrypted video or audio) on web applications.
 
 It is in draft&nbsp;state from last few years and today its officially approved by W3C. (58.4 percent of W3C members voted in support &nbsp;and 30.8 percent to opposed, with 10.8 percent abstaining).

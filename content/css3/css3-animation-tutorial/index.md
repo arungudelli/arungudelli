@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 CSS3 is great way to Create Animations, we can replace flash Animations,Animated images and JavaScript with&nbsp;<span style="text-decoration: underline;"><em>CSS3 Animation</em></span>&nbsp;properties.
 
 In this <span style="text-decoration: underline;"><em>CSS3 Animation Tutorial</em></span> I will explain how to create Walking Man <span style="text-decoration: underline;"><em>Animation Effect Using CSS3</em></span> alone as shown below.

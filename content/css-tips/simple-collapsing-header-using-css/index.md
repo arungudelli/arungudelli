@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Today I will explain&nbsp;<span style="text-decoration: underline;"><em>How to create a Simple Collapsing &nbsp;Header Using CSS</em></span><em>&nbsp;</em>with an Example.
 
 Here is the demo&nbsp;&nbsp;<a title="Collapsing Header CSS" href="https://www.arungudelli.com/Tools/HTML5/SimpleCollapsingHeaderusingCSS.htm" target="_blank" rel="noopener">Collapsing Header CSS</a>
@@ -107,10 +101,3 @@ Here is the Finale Demo <a href="https://www.arungudelli.com/Tools/HTML5/SimpleC
 
 Wait before leaving.
 why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
-
-
-
-
-
-
-
