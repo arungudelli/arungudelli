@@ -13,30 +13,43 @@ focal_point=''
 preview_only=false
 +++
 
+Today I will explain how to create a slide panel jquery effect with an example. Jquery provides various sliding methods such as
 
+slideDown()
+slideUp()
+slideToggle()
 
+I used slideToggle method to create  jquery slide panel effect.
 
+slideToggle Method:
+First we will understand what is this slideToggle Method.
 
+As per the name of this method it changes between the slideDown and slideUp methods
+If the element have been slideDown it changes it will Slide them Up and vice versa.
+See the  slideToggle example
 
+```
+<!doctype html>
+<html> 
+<head> 
+<style></style>
+ <script></script>
+ </head> <body> 
+<div id="panel"> 
+<img style="float:left; "src="welcome-to-my-blog.jpg" align="center" height="100%"/>
+< br/><br/>
+<p><i><h1>Put your own content here</h1></i></p>
+ </div> <p><a href="#">Slide Panel</a></p> 
+</body>
+ </html>
+``` 
 
-
-
-
-
-
-
-
-
-
-&nbsp;
-
-
-
-
-
-And for sliding button I created one paragraph with class ‘<span style="text-decoration: underline;"><em>jquery slide</em></span>‘.
+I created one div with id ‘slide panel jquery‘.
+You can add your own content in this slide panel jquery div.
+And for sliding button I created one paragraph with class ‘jquery slide‘.
 
 And I added some CSS stuff as shown below.
+
 
 <pre>body {
 	margin: 0 auto;

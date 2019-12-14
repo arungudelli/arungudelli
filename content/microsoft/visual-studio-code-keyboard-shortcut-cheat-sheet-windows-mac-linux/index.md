@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Visual Studio Code keyboard&nbsp;Shortcuts helps developers maximize their productivity by allowing them to work faster and more efficiently.&nbsp;Here I am listing down all the keyboard shortcuts and cheats of Visual Studio Code editor for Windows, Mac&nbsp;and Linux Operating systems. Give a shot.
 
 Visual Studio Code – and the caption is Code Editing Redefined

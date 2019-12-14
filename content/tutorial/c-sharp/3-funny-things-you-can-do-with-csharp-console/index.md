@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 Yesterday I am discussing with one of my cousin, he is currently doing a course on C# .Net. He is experimenting lot of things in C#, I came to to 3 funny code snippets to play around C# console through him. I thought it’s a good idea to share with you people.
 
 These code snippets may not help us in our daily life but it’s good know these things.

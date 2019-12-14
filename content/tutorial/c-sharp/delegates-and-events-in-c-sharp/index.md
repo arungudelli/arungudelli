@@ -13,22 +13,13 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 This C# tutorial explains all the basics of <span style="text-decoration: underline;"><em>C# Delegates and Events</em></span>, &amp; Where to use Delegates in our daily projects.
 
 You might read so many definitions like
 
 <ul><li><span style="text-decoration: underline;"><em>C# Delegate</em></span> similar to functional pointer in C++ but type safe</li><li>A delegate can point to a method, which is having same signature as that of the delegate.</li><li>With the use of delegates we can call methods asynchronously.</li><li>Delegates and events can be used to implement publisher-Subscriber models. &nbsp; labla labla labla……………………….</li></ul>
 
-### <span style="text-decoration: underline;">Table Of Contents:</span>
-
-<ul><li><a href="#step-1">What is a Delegate?</a></li><li><a href="#step-2">C# Delegate Example.</a></li><li><a href="#step-3">A simple C# Delegate</a></li><li><a href="#step-4">What is Multicast Delegate in C#?</a></li><li><a href="#step-5">Purpose of Multicast Delegate in C#</a>.</li><li><a href="#step-6">Purpose of Events in C#</a></li><li><a href="#step-7">Delegates and Asynchronous Method Calls in C#:</a></li></ul>
+{{%toc%}}
 
 {{< figure src="What-are-Delegates-and-Events.jpg" title="What are Delegates and Events in C#" alt="What are Delegates and Events in C#" >}}
 

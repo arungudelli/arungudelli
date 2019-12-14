@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 In this tutorial I will explain about little known keywords called <span style="text-decoration: underline;"><em><strong>checked</strong> </em></span>and <span style="text-decoration: underline;"><em><strong>unchecked</strong> </em></span>in C#.
 
 I came to know about these keywords accidentally, I will share the story with you people.

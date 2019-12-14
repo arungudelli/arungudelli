@@ -14,17 +14,12 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Ref and out parameters in C# allows us to pass the parameters by reference instead of Value.
 
 This C# tutorial will explain the main differences between ref and out parameters with examples and also with respect to Common language runtime(CLR).
 
-<ul><li><a href="#step-1">Ref vs Out in C# difference</a></li><li><a href="#step-2">Ref Parameter in C# with Example</a></li><li><a href="#step-3">Out Parameter in C# with Example</a></li><li><a href="#step-4">Why Out Parameter in C#</a></li><li><a href="#step-5">Difference&nbsp;between ref and out Parameters in C# at CLR level</a></li><li><a href="#step-6">Overloading of Methods with ref and out Parameters in C#</a></li></ul>
+{{%toc%}}
+
 
 ### <span style="text-decoration: underline;">Ref vs Out in C# difference:</span>
 

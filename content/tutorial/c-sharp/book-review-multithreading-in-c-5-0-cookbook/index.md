@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Now a days computer processors are containing more and more cores, Multithreading helps to increase the utilization of these cores.
 
 If you are working in Windows environment and dealing with Hardware components, Multithreading is a key factor for creating effective and scalable applications.

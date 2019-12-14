@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 In SQL server, To write if then else in SQL select query we can use
 
 <ol><li>SELECT CASE statement (In all versions of SQL server)</li><li>SELECT IIF logical function (From SQL server 2012 )</li></ol>
@@ -32,9 +25,7 @@ And additionally, we can consider employees having a salary greater than 1000USD
 
 Now we will use case statement and IIF function to select such employees.
 
-<a href="#step-1">Method:1 Using Select Case to write if else then in select query example</a>
-
-<a href="#step-2">Method:2 Logical function to write if else then in select query example</a>
+{{%toc%}}
 
 ## Method:1 Using Select Case to write if else then in select query example:
 
