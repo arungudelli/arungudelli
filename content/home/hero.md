@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 10  # Order that this section will appear.
 
-title = "Angular Wiki"
+title = ""
 
 # Hero image (optional). Enter filename of an image in the `static/img/` folder.
 hero_media = "hero-academic.png"
@@ -48,7 +48,9 @@ hero_media = "hero-academic.png"
 #  label = '<a id="academic-release" href="https://sourcethemes.com/academic/updates" data-repo="gcushen/hugo-academic">Latest release <!-- V --></a>'
 +++
 
-Learn Angular from basics to advanced topics with simple detailed tutorials and examples.
+Here I writes everything About programming, web development and so on. However, sometimes I will deviate from the regular topics just to mix it up a bit and add a little flair to the site.
+
+In short this blog will help people to put their best foot forward on the WEB.
 
 
 
