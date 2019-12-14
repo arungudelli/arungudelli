@@ -5,7 +5,7 @@ keywords="discount coupon,windows application,windows 8"
 type='post'
 date='2019-10-22T18:04:36+0000'
 lastmod='2019-10-22T18:04:36+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Online Shopping Discount Coupons Application For Windows 8 Phone'

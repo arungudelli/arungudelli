@@ -13,16 +13,9 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 In Oracle, to rename a column in a table, use <strong>ALTER TABLE RENAME COLUMN</strong> statement.
 
-<ol><li><a href="#step-1">Oracle Rename Column table syntax</a></li><li><a href="#step-2">Oracle Rename Column in a table query example</a></li><li><a href="#step-3">Oracle Rename table syntax</a></li><li><a href="#step-4">Oracle Rename table query example</a></li></ol>
+{{%toc%}}
 
 {{< figure src="Alter-table-rename-column-in-oracle-table-query.jpg" title="Alter table rename column in oracle table query" alt="Alter table rename column in oracle table query" >}}
 

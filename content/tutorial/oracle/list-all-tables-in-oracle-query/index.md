@@ -13,16 +13,9 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 We can get a list of all tables in Oracle database in three ways depending upon the user privileges.
 
-<ol><li>&nbsp;<a href="#userOwn">List all Tables in oracle database, owned by current Oracle user</a></li><li>&nbsp;<a href="#useraccess">List all Tables in oracle database ,accessed by current user</a></li><li>&nbsp;<a href="#alltables">List all Tables in Oracle database(entire database)</a></li><li>&nbsp;<a href="#all_all_tables">ALL_ALL_TABLES in Oracle</a></li></ol>
+{{%toc%}}
 
 &nbsp;
 

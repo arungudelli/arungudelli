@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 To check if a string is empty or null or undefined in Javascript use the following js code snippet.
 
 <pre>var emptyString;

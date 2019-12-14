@@ -13,18 +13,11 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 JavaScript introduced two new methods flat(),flatMap() to flatten array of arrays into single one dimensional array. These two methods are under active develoment. Check the browser compatability before using.
 
 flat() and flatMap() method APIs available in Chrome 69 and Mozilla firefox&nbsp;62,Opera 56.
 
-<ul><li><a href="#step-1">JavaScript Array flat()</a></li><li><a href="#step-3">JavaScript Array flat() without depth parameter</a></li><li><a href="#step-4">JavaScript Array flat() with depth parameter</a></li><li><a href="#step-5">Remove empty slots in Array using Javascript Array flat()</a></li><li><a href="#step-2">JavaScript Array flatMap()</a></li></ul>
+{{%toc%}}
 
 ## JavaScript Array flat():
 

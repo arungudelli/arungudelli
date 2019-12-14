@@ -13,20 +13,13 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 To check if a Javascript String Contains a substring or not, we can use 7 different Javascript methods as listed in below table.
 
 <div class='table-responsive'><table class='table'><thead><tr class="row-1 odd"><th class="column-1">Javascript string contains Method</th><th class="column-2">Javascript string contains example</th><th class="column-3">Result</th></tr></thead><tbody class="row-hover"><tr class="row-2 even"><td class="column-1">Javascript includes</td><td class="column-2">"Javascript String Contains".includes("String")</td><td class="column-3">true</td></tr><tr class="row-3 odd"><td class="column-1">Javascript indexOf</td><td class="column-2">"Javascript String Contains".indexOf("substring")!== -1;</td><td class="column-3">false</td></tr><tr class="row-4 even"><td class="column-1">Javscript search</td><td class="column-2">"Javascript String Contains".search("substring")!== -1;</td><td class="column-3">false</td></tr><tr class="row-5 odd"><td class="column-1">Javascript match</td><td class="column-2">"Javascript String Contains".match("Contains")!=null<br></td><td class="column-3">true</td></tr><tr class="row-6 even"><td class="column-1">Javascript Regular expression</td><td class="column-2">/Contains/.test("Javascript String Contains")</td><td class="column-3">true</td></tr><tr class="row-7 odd"><td class="column-1">Lodash includes</td><td class="column-2">_.includes('lodash substring',&nbsp;'lodash');</td><td class="column-3">true</td></tr><tr class="row-8 even"><td class="column-1">Underscore</td><td class="column-2">includes("underscore substring","underscore")</td><td class="column-3">true</td></tr></tbody></table></div>
 
 To check for case-insensitive Javascript string contains or Javascript string contains after some index, go through the complete tutorial.
 
-<ol><li><a href="#step-1">Javascript string contains substring check using includes method (in ES6)</a></li><li><a href="#step-2">check if a string contains a substring in javascript (in ES5 and before)</a></li><li><a href="#step-3">Javascript string contains substring check using search method</a></li><li><a href="#step-4">check if a string contains a substring or not by using Javascript match method</a></li><li><a href="#step-5">Javascript string contains a substring using Regular Expressions</a></li><li><a href="#step11">Javascript String Contains Case-insensitive check</a></li><li><a href="#step-6">check if a string contains a substring in javascript using&nbsp;Lodash js</a></li><li><a href="#step-7">check if a string contains a substring in javascript using&nbsp;Underscore js</a></li><li><a href="#step-8">Best way to check if a string contains a substring in javascript</a></li></ol>
+{{%toc%}}
 
 ## 1.JavaScript string contains substring check using includes method (in ES6):
 

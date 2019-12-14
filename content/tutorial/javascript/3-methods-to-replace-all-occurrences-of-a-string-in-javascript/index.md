@@ -14,12 +14,6 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Javascript replace() method replaces only the first occurrence of the string
 
 To replace all occurrences of a string in Javascript, use the below methods
@@ -35,7 +29,7 @@ targetstring.replace(stringtoreplace,"javascript");
 
 It will replace only first occurrence as shown above.
 
-<ul><li><a href="#step-1">Replace all occurrences of a string in Javascript using replace and regex</a></li><li><a href="#step-2">Javascript case insensitive replace all</a></li><li><a href="#step-3">Replace all occurrences of a string in Javascript using split and Join method</a></li><li><a href="#step-4">Replace all occurrences of a string in Javascript using indexOf method</a></li><li><a href="#step-5">Replace all occurrences of a string with special characters</a></li><li><a href="#step-6">Javascript replace all commas in a string</a></li><li><a href="#step-7">Javascript replace spaces in a string</a></li></ul>
+{{%toc%}}
 
 {{< figure src="replace-all-occurences-of-a-string-in-javascript.jpg" title="replace all occurences of a string in javascript" alt="replace all occurences of a string in javascript" >}}
 

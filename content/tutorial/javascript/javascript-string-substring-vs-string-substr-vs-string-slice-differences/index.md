@@ -13,16 +13,9 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 JavaScript&nbsp;<em>substring()</em>,<em>substr()</em>,<em>slice()</em>&nbsp;are predefined methods in string prototype used to get the substring from a string.In this tutorial, we will understand each one of them &amp; differences between them using examples.
 
-<ol><li><a href="#step1-h2">JavaScript substring()</a><ul><li><a href="#step11-h3">JavaScript substring() syntax</a></li><li><a href="#step12-h3">JavaScript substring() Description</a></li><li><a href="#step13-h3">JavaScript substring() Examples</a></li><li><a href="#step14-h3">JavaScript substring() Browser Support</a></li></ul></li><li><a href="#step-211">JavaScript Substring After a Character:</a></li><li><a href="#step-212">JavaScript Substring before a Character</a></li><li><a href="#step2-h2">JavaScript substr()</a><ul><li><a href="#step21-h3">JavaScript substr() Syntax</a></li><li><a href="#step21-h3">JavaScript substr() Syntax</a></li><li><a href="#step23-h3">JavaScript substr() Examples</a></li><li><a href="#step24-h3">JavaScript substr() Browser Support</a></li></ul></li><li><a href="#step311">JavaScript Substring from End</a></li><li><a href="#step3-h2">JavaScript slice()</a><ul><li><a href="#step31-h3">JavaScript slice() Syntax</a></li><li><a href="#step32-h3">JavaScript slice() Description</a></li><li><a href="#step33-h3">JavaScript slice() Examples</a></li><li><a href="#step34-h3">JavaScript slice() method with negative indexes</a></li><li><a href="#step35-h3">JavaScript slice() Browser Support</a></li></ul></li><li><a href="#step4-h2">Differences between substring,slice and substr methods</a><ul><li><a href="#step41">Similarities between JavaScript substring() and slice() methods</a></li><li><a href="#step42">Javascript substring() vs slice() differences</a></li><li><a href="#step43">Why we have two methods substring() and slice() in JavaScript?</a></li><li><a href="#step44">Javascript substring() vs substr() differences</a></li></ul></li></ol>
+{{%toc%}}
 
 ## JavaScript substring():
 

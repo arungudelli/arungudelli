@@ -14,15 +14,9 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 Auto resize an image (img) to fit into a smaller Div can be achieved through simple CSS or CSS3. In this tutorial I will explain both CSS and CSS3 ways using simple html example.
 
-<ul><li><a href="#withcss">Auto resize image using CSS</a></li><li><a href="#withcss3">Auto resize image using CSS3 (Modern Web browsers)</a></li><li><a href="#htmlDemo">Auto resize image using CSS Demo Example</a></li></ul>
+{{%toc%}}
 
 {{< figure src="Auto-resize-image.jpeg" title="Auto resize image using css" alt="Auto resize image using css" >}}
 

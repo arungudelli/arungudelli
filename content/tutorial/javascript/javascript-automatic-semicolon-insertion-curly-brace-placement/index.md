@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 JavaScript is tricky sometimes &amp; every time it offers something new to learn.
 
 Have a look at the following JavaScript example

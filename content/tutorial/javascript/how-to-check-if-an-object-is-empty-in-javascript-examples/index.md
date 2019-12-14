@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 Usually, we will return JSON data from server APIs (through AJAX). Sometimes the API might return an empty object i.e., “{}”.
 
 In javascript, we can check if an object is empty or not by using
@@ -28,7 +21,7 @@ In javascript, we can check if an object is empty or not by using
 
 And if you are using any third party libraries like jquery, lodash, Underscore etc you can their existing methods for checking javascript empty object. I will be listing down those methods in this article with examples.
 
-<ul><li><a href="#step-1">Check if an object is empty in JavaScript using JSON.stringify</a></li><li><a href="#step-2">Check if an object is empty in JavaScript using Object.keys in es7+</a></li><li><a href="#step-3">Check if an object is empty in JavaScript using Object.keys in es5+</a></li><li><a href="#step-4">Checking if an object is empty or not in Javascript in older browsers</a></li><li><a href="#step-5">Check if an object is empty in JavaScript using jQuery</a></li><li><a href="#step-6">Check if an object is empty in JavaScript using extjs</a></li><li><a href="#step-7">Check if an object is empty in JavaScript using lodash</a></li><li><a href="#step-8">Check if an object is empty in Javascript using Underscore&nbsp;</a></li></ul>
+{{%toc%}}
 
 {{< figure src="check-if-an-object-is-empty-javascript.jpg" title="check if an object is empty javascript" alt="check if an object is empty javascript" >}}
 

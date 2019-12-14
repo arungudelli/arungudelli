@@ -13,16 +13,9 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 We can capitalize the first letter of a string in Javascript by using several methods as listed below
 
-<ol><li><a href="#step-5">Capitalize the First Letter of a String using simple Javascript</a></li><li><a href="#step-1">Capitalize the First Letter of a String in JavaScript using Regular expressions</a></li><li><a href="#step-2">Capitalize the First letter of a string in JavaScript using ES6+(ECMAScript) features</a></li><li><a href="#step-3">Capitalize the first letter of a string in JavaScript by Overriding String Prototype</a></li><li><a href="#step-4">Best way to make the first letter of a string to uppercase in JavaScript</a></li></ol>
+{{%toc%}}
 
 ### Capitalize the First Letter of a String using simple Javascript:
 

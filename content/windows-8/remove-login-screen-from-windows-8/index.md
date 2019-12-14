@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 If you have a single user on your PC.It’s better to remove Login screen for your computer.
 
 To remove &nbsp;or disable Login Screen from Windows 8&nbsp;Follow the below simple steps to remove Login Screen

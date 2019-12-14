@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 To create GUID or UUID in JavaScript we can use the following methods
 
 <ol><li>Javascript Math.Random()</li><li>ES6 crypto API getRandomValues method.</li></ol>
@@ -31,7 +24,7 @@ According to the <a href="https://www.ietf.org/rfc/rfc4122.txt" target="_blank" 
 <pre> xxxxxxxx-xxxx-Mxxx-Nxxx-xxxxxxxxxxxx
  Where the allowed values of M and N are 1,2,3,4 and 5</pre>
 
-<ol><li><a href="#step-1">Creating UUID/GUID in Javascript using Math.Random()</a></li><li><a href="#step-2">Creating UUID/GUID in Javascript using ES6 Crypto API</a></li><li><a href="#step-3">Generated UUID/GUID Javascript examples</a></li></ol>
+{{%toc%}}
 
 ## Creating GUID/UUID in Javascript using Math.Random():
 

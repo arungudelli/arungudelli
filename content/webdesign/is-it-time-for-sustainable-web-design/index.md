@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 “Green is good” seems to be the marketing phrase that everyone is currently trying to sell. When we look back in time, we will have most likely adopted sustainable practices to the point where we will have forgotten the point (now) when these practices, that we are just beginning to understand and become aware of, were n’t natural…Perhaps a bit like thinking of living without a cell phone.
 
 More and more, people are making more sustainable choices when it comes to purchases and industries are being held responsible for their actions and choices. No one likes to sacrifice quality, but in a world that is quickly shifting to function more sustainable, the sustainable option is the one that is frequently being sought out by consumers.
@@ -51,10 +44,3 @@ And Finally Don’t Forgot to Join Our Reader List. Read Popular tutorial on&nbs
 
 Wait before leaving.
 why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
-
-
-
-
-
-
-

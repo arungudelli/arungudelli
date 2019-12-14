@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 To get the current timestamp in JavaScript we can use 4 different methods as shown in below table.
 
 <div class='table-responsive'><table class='table'><thead><tr class="row-1 odd"><th class="column-1">Javascript Method</th><th class="column-2">Result</th></tr></thead><tbody class="row-hover"><tr class="row-2 even"><td class="column-1">Date.now();</td><td class="column-2">1561682894385</td></tr><tr class="row-3 odd"><td class="column-1">+new Date();</td><td class="column-2">1561682890500</td></tr><tr class="row-4 even"><td class="column-1">new Date().getTime()</td><td class="column-2">1561682885990</td></tr><tr class="row-5 odd"><td class="column-1">new Date().valueOf()</td><td class="column-2">1561682881972</td></tr></tbody></table></div>
@@ -30,7 +23,7 @@ The above methods returns current timestamp in milliseconds.
 
 There are Four methods to get the current timestamp in JavaScript, as listed below
 
-<ol><li><a href="#step-1">Get the current timestamp in JavaScript by using +new Date()</a></li><li><a href="#step-2">Get the current timestamp in JavaScript by using Date.now()</a></li><li><a href="#step-3">Get the current timestamp in JavaScript by using new Date().getTime()</a></li><li><a href="#step-4">Get the current timestamp in JavaScript by using new Date().valueOf()</a></li></ol>
+{{%toc%}}
 
 {{< figure src="Get-current-timestamp-javascript.jpeg" title="Get current timestamp javascript" alt="Get current timestamp javascript" >}}
 

@@ -14,19 +14,13 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 We can get query string parameters in JavaScript without using 3rd party js like jQuery etc by using
 
 <ol><li>Simple JavaScript code</li><li>ECMAScript 6</li><li>JavaScript URLSearchParams API</li></ol>
 
 Javascript Query string URL parameters are very useful while doing CRUD operations on the server side.&amp; from client side also we might need to get query string parameters from URL using JavaScript &amp; modify them.
 
-<ul><li><a href="#js-1">Get query string parameter values from URL using simple JavaScript</a></li><li><a href="#js-2">Get query string parameter values from URL using ES6 (ECMAScript 6)</a></li><li><a href="#js-3">Get query string parameter values from URL using JavaScript URLSearchParams API</a></li><li><a href="#js-4">Get URL parameters values by name in JavaScript</a></li></ul>
+{{%toc%}}
 
 ## <span style="text-decoration: underline;">Get query string parameters from URL using simple JavaScript:</span>
 

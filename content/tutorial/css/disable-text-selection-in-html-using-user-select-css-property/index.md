@@ -14,15 +14,9 @@ preview_only=false
 +++
 
 
-
-
-
-
-
-
 We can use <em>user-select</em>&nbsp;property in CSS to disable text selection highlighting in HTML pages.It is not a standard feature, but&nbsp;available in all modern browsers except IE 9 &amp; before.
 
-<ol><li><a href="#step-1">Disable text selection&nbsp;highlighting in HTML using CSS user-select:none</a></li><li><a href="#step-10">Disable text selection highlighting in Chrome using CSS</a></li><li><a href="#step-11">Disable text selection highlighting in Mozilla Firefox using CSS</a></li><li><a href="#step-12">Disable text selection highlighting in Safari using CSS</a></li><li><a href="#step-13">Disable text selection highlighting in iOS Safari using CSS</a></li><li><a href="#step-14">Disable text selection highlighting in Internet Explorer/Edge using CSS</a></li><li><a href="#step-2">What does user-select property will do?</a></li><li><a href="#step-3">user-select property values</a></li><li><a href="#step-8">user-select none</a></li><li><a href="#step-4">user-select text</a></li><li><a href="#step-5">user-select all</a></li><li><a href="#step-6">user-select auto</a></li><li><a href="#step-7">user-select contain</a></li><li><a href="#step-9">user-select CSS example</a></li></ol>
+{{%toc%}}
 
 {{< figure src="Disable-text-selection-css.jpg" title="Disable text selection css" alt="Disable text selection css" >}}
 

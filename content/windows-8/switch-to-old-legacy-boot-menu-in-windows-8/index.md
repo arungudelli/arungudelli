@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 This post will explains how to switch to old boot menu in window8
 
 Windows 8 Metro boot menu has very good Graphical user interface, which is both touch and mouse friendly.We can boot the OS of our choice easily.

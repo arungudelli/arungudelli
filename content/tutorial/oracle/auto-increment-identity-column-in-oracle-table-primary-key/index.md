@@ -13,13 +13,6 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 We can create Auto increment columns in oracle by using IDENTITY columns in Oracle 12c. And in Oracle Database does not have any exisiting feature to auto increment column values in table schema until Oracle 12c (mid 2014).
 
 Auto increment columns widely used for auto-generating&nbsp;values for primary keys in Database tables.Most of the databases like SQL server etc have existing features to create auto increment columns.
@@ -30,7 +23,7 @@ In previous versions of Oracle this functionality developed using the combinatio
 
 In this tutorial I am going to explain&nbsp;these two ways to implement auto increment coulmns in Oracle database tables with examples,pros &amp; cons of each method.
 
-<ol><li><a href="#identity">Create Auto increment column in oracle By using IDENTITY Column</a></li><li><a href="#seq">Create Auto increment column in oracle column By using&nbsp;Sequences and Triggers.</a></li><li><a href="#perf">Best way to create auto increment column in oracle</a></li><li><a href="#limit">Limitations of IDENTITY Coulmn</a></li></ol>
+{{%toc%}}
 
 {{< figure src="AutoIncrementColumn.jpg" title="Auto Increment Column in Oracle" alt="Auto Increment Column in Oracle" >}}
 
