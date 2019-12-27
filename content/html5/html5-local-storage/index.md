@@ -121,19 +121,22 @@ If you substitute the global variable&nbsp;sessionStorage everywhere you’ve us
 
 ### <span style="text-decoration: underline;">Where we can see Local Storage keys and Values:-</span>
 
-<a href="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/LocalStorageinChrome.png"><img class="alignleft size-medium wp-image-352" title="LocalStorageinChrome" src="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/LocalStorageinChrome-300x224.png" alt="LocalStorageinChrome" width="300" height="224" srcset="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/LocalStorageinChrome-300x224.png 300w, https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/LocalStorageinChrome.png 334w" sizes="(max-width: 300px) 100vw, 300px"></a>And we can see the <span style="text-decoration: underline;"><em>local storage</em></span> key values in browsers using developer tools as shown in the pic.In developer tools select resources and Local Storage. you can select key and delete from browser itself instead of using local storage removeItem method.
+And we can see the <span style="text-decoration: underline;"><em>local storage</em></span> key values in browsers using developer tools as shown in the pic.In developer tools select resources and Local Storage. you can select key and delete from browser itself instead of using local storage removeItem method.
 
 To clear entire local storage you can use
 
 localStorage.clear();
 
-But how to use this clear method you need to create one sample HTML page.No need to bother download this <a href="https://www.arungudelli.com/Tools/HTML5/ClearStorage.html" target="_blank" rel="noopener">ClearWebStorage.html</a> file and click on clear button it will clear the total localStorage elements.
+But how to use this clear method you need to create one sample HTML page.
 
 &nbsp;
 
 ### <span style="text-decoration: underline;">What happens if 5MB storage exceeds:-</span>
 
-If 5MB storage exceeds browser should throw&nbsp;QUOTA_EXCEEDED_ERR exception.Most of the modern browsers will throw this exception.And remember don’t forgot to use try,catch loops.If you are not using it may crash the browser if it exceeds 5mb storage.Do you want to test this? download this <a href="https://www.arungudelli.com/Tools/HTML5/BlowUpStorage.html" target="_blank" rel="noopener">BlowUpStorage.html</a> file and test.
+If 5MB storage exceeds browser should throw&nbsp;QUOTA_EXCEEDED_ERR exception.Most of the modern browsers will throw this exception.And remember don’t forgot to use try,catch loops.
+
+If you are not using it may crash the browser if it exceeds 5mb storage.
+
 
 ### <span style="text-decoration: underline;">Important things to remember while using Local Storage API:-</span>
 
@@ -141,13 +144,8 @@ If 5MB storage exceeds browser should throw&nbsp;QUOTA_EXCEEDED_ERR exception.Mo
 
 I hope you understood the basics of HTML5 Local Storage API in this Tutorial.
 
-You might Like
 
-<a title="Html5 basics" href="https://www.arungudelli.com/2012/08/beginning-html5.html" target="_blank" rel="noopener">Beginning Html5</a>
 
-<a title="What is HTML5" href="https://www.arungudelli.com/2012/08/a-new-era-of-web-development-html5.html" target="_blank" rel="noopener">A new era in web development </a>
-
-<a title="Html5 canvas tutorial" href="https://www.arungudelli.com/2012/10/html5-canvas-example-snake-game.html" target="_blank" rel="noopener">Html5 canvas tutorial</a>
 
 Wait before leaving.
 why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.

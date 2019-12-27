@@ -94,13 +94,9 @@ And I included some text between &lt;audio&gt; and &lt;canvas&gt; tags.
 
 If a browser supports canvas and audio tags then it simply ignore the text between the tags.And If not then the browser ignore the tags and displays the text between tags.No need to check canvas and audio support explicitly.
 
-<a href="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/SnakeGame.png"><img class="aligncenter size-medium wp-image-450" title="SnakeGame" src="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/SnakeGame-300x256.png" alt="SnakeGame" width="300" height="256" srcset="https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/SnakeGame-300x256.png 300w, https://arun-arungudellicom.netdna-ssl.com/wp-content/uploads/2012/10/SnakeGame.png 575w" sizes="(max-width: 300px) 100vw, 300px"></a>
-
-<a title="Snake Game" href="https://www.arungudelli.com/Tools/HTML5/SnakeGame/snakeGame.html" target="_blank" rel="noopener">Click here</a> to Play Game now.Turn On Your Speakers,Use Arrows to Move Snake,Use buttons for play pause and sound OFF ON.
 
 If you have any doubts,suggestion feel Free to Post comments.
 
-<a href="https://www.arungudelli.com/Tools/HTML5/SnakeGame.rar" target="_blank" rel="noopener">Download</a> Source Code
 
 Wait before leaving.
 why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.

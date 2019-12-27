@@ -201,8 +201,6 @@ Go through this awesome article &nbsp;<a title="Google Effects" href="https://ww
 
 {{< figure src="GoogleEffects.jpg" title="Google Effects" alt="Google Effects" >}}
 
-<img src="https://ir-na.amazon-adsystem.com/e/ir?t=arunsblog-20&amp;l=as2&amp;o=1&amp;a=0132761610" alt="" width="1" border="0">
-
 I hope you’ve enjoyed this article and that it gives you more ideas on <span style="text-decoration: underline;"><em>HTML5 getUserMedia API</em></span>&nbsp;.
 
 If so share this post with your friends and also join our mailing list I will be sharing my learnings and experiments with HTML5
