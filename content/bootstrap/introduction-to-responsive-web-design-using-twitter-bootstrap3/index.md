@@ -45,7 +45,7 @@ Download the twitter Bootstrap framework zip file and extract them you will find
 
 Before starting our example we will include the all necessary CSS and Js files and attributes to the html file. Have a look at the sample HTML page.Don’t forget to add jQuery file.
 
-<pre>
+```
 <meta charset="”utf-8”">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -53,7 +53,7 @@ Before starting our example we will include the all necessary CSS and Js files a
     <title>Bootstrap Tutorial</title> <script src="js/jquery-1.10.1.min.js"></script> <script src="js/bootstrap.min.js"></script> <link href="css/bootstrap.min.css" rel="stylesheet">
 
  <script defer="" src="//arun-arungudellicom.netdna-ssl.com/wp-content/cache/autoptimize/js/autoptimize_386847f70fd99f9944c9300a4f86207d.js"></script>
-</pre>
+```
 
 &nbsp;
 
@@ -79,14 +79,17 @@ We will write appropriate HTML mark up according to our needs
 
 Our page content should be in center of the screen.&nbsp;Bootstrap provides a “container” class with correct padding and margin values. We will use this container as our parent element. Just write the following Code.
 
-<pre><div class="container"></div></pre>
+```
+<div class="container"></div>
+```
 
 &nbsp;
 
 Now we will add Title of the web page&nbsp;inside this Div Container
 
-<pre><h1><a href="#">Bootstrap Site</a></h1></pre>
-
+```
+<h1><a href="#">Bootstrap Site</a></h1>
+```
 &nbsp;
 
 No need to add any external styles to H1 tags Bootstrap provides default styling for H1 element.
@@ -101,21 +104,25 @@ The Navigation Bar contains one heading Navigation,Navigation Bar Menu and One s
 
 Bootstrap provides&nbsp;&nbsp;“navbar” class for navigation bar. Add following HTML code below the title of the website(Inside container Only)
 
-<pre><nav class="navbar navbar-default" role="navigation">
-</nav></pre>
+```
+<nav class="navbar navbar-default" role="navigation">
+</nav>
+```
 
 &nbsp;
 
 I have added one more class “navbar-default” which will add default styles to Navigation bar. Now we will add navigation menu elements
 
-<pre><ul class="nav navbar-nav">
+```
+<ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#">Projects</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Downloads</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
-</ul></pre>
+</ul>
+```
 
 &nbsp;
 
@@ -123,12 +130,14 @@ Just create a list of elements and Add classes named “nav navbar-nav”. and �
 
 But we have one more search box in navigation Menu To add that search box just add following Code.
 
-<pre><form class="navbar-form navbar-right" role="search">
+```
+<form class="navbar-form navbar-right" role="search">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Search">
             </div>
              <button type="submit" class="btn btn-default">Submit</button>
- </form></pre>
+ </form>
+ ```
 
 &nbsp;
 
@@ -144,7 +153,8 @@ The above menu design is used in Mobile devices. We have Navigation Header (Bran
 
 So we will slightly modify our code to make it responsive menu
 
-<pre><div class="container-fluid">                
+```
+<div class="container-fluid">                
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primaryNavigationBar">
                         <span class="sr-only">Toggle navigation</span>
@@ -170,7 +180,8 @@ So we will slightly modify our code to make it responsive menu
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
                 </div>
-            </div></pre>
+            </div>
+```            
 
 &nbsp;
 
@@ -192,12 +203,13 @@ Now a days most of the webpages contains featured content which will hi-lite the
 
 Bootstrap provides “”jumbotron” class to display featured content. Just add below code under the navigation menu code.
 
-<pre><div class="jumbotron">
+```
+<div class="jumbotron">
             <h1>Hello, world!</h1>
             <p>...</p>
             <p><a class="btn btn-primary btn-lg" role="button">Learn more</a>             </p>
 </div>
-</pre>
+```
 
 &nbsp;
 
@@ -215,12 +227,14 @@ Our webpage design contains four horizontal divs(Heading1, Heading2, Heading3 an
 
 To add this horizontal divs add the following Code
 
-<pre><div class="row">
+```
+<div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
             <div class="col-md-3"></div>
-</div></pre>
+</div>
+```
 
 &nbsp;
 
@@ -232,13 +246,14 @@ And I said this grid system is responsive rite. What does it mean? In medium dev
 
 But it’s better to mention this values explicitly so add following classes to the divs
 
-<pre><div class="row">
+```
+<div class="row">
             <div class="col-md-3 col-xs-12 col-sm-6"></div>
             <div class="col-md-3 col-xs-12 col-sm-6"></div>
             <div class="col-md-3 col-xs-12 col-sm-6"></div>
             <div class="col-md-3 col-xs-12 col-sm-6"></div>
-</div></pre>
-
+</div>
+```
 &nbsp;
 
 Have a look at the below images
@@ -264,14 +279,6 @@ In Extra small devices i.e., Bootstrap displays one column in a row .col-xs-12
 That means according to width of the device the webpage will adjust.
 
 If you want to create any page layout you should use row- column grid system.
-
-Here is the Final Demo
-
-<a title="Responsive Web Design Using Twitter Bootstrap" href="https://arungudelli.com/Tools/HTML5/bootstrap/Index.html" target="_blank" rel="noopener">Responsive Web Design Using Twitter Bootstrap.</a>
-
-Check the responsiveness of web page <a href="http://www.responsinator.com/?url=http%3A%2F%2Farungudelli.com%2FTools%2FHTML5%2Fbootstrap%2FIndex.html" target="_blank" rel="noopener">here</a>&nbsp;and Download the source Code from <a href="http://1drv.ms/To6Hgq" target="_blank" rel="noopener">Here</a>.
-
-I got help from friends at <a href="https://gorilla.marketing/web-design-manchester/">https://gorilla.marketing/web-design-manchester/</a> to put this tutorial together.
 
 Follow my blog for bootstrap tutorials.
 
