@@ -81,7 +81,7 @@ But this is not required as long as you know the basics of JavaScript and use se
 Reference: <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-7.9.1" target="_blank" rel="nofollow noopener">Rules of Automatic Semicolon Insertion</a>
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 

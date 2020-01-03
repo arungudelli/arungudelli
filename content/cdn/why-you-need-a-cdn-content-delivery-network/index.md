@@ -85,7 +85,7 @@ I hope you have enjoyed this article.If so share this post with your friends and
 And Finally Don’t Forgot to Join Our Reader List. Read Popular tutorial on&nbsp;<a title="HTML5" href="https://www.arungudelli.com/category/html5" target="_blank">HTML5</a>
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 

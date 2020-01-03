@@ -247,7 +247,7 @@ Here is the jsFiddle <a href="http://jsfiddle.net/arungudelli/309zd5ck/" target=
 As explained above user-select : contain option is only supported in IE, if you open the fiddle in IE, You can observe its behaviour the element selection cannot be extended beyond the element with class .text-selection-contain.
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 

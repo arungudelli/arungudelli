@@ -197,7 +197,7 @@ Accroding oracle by using IDENTITY column in Oracle 12c is best way to create au
 <ul><li>We can add only one IDENTITY column per table.</li><li>We can add identity_clause only on Numeric datatype columns not on User-defined data types.</li><li>We cannot add DEFAULT clause in column defincation if we use&nbsp;identity_clause.</li><li>We can create one table from another by adding a AS SELECT statement at the end of the CREATE TABLE for example “create table new_emp AS SELECT * from emp”; New table wont inherit IDENTITY property on column.</li><li>When you add an identity_clause, then NOT NULL constraint and NOT DEFERRABLE constraint are added by default (implicitly specified). If you add an inline constraint that conflicts with NOT NULL and NOT DEFERRABLE, then an error will occur.</li></ul>
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 

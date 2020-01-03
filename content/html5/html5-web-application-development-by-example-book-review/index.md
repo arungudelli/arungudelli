@@ -55,7 +55,7 @@ Buy this book from Amazon
 <a href="http://www.amazon.com/gp/product/1849695946/ref=as_li_qf_sp_asin_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1849695946&amp;linkCode=as2&amp;tag=arunsblog-20" target="_blank" rel="nofollow">HTML5 Web Application Development By Example Beginner’s guide</a><img style="border: none !important; margin: 0px !important;" alt="" src="https://ir-na.amazon-adsystem.com/e/ir?t=arunsblog-20&amp;l=as2&amp;o=1&amp;a=1849695946" width="1" height="1" border="0">
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 

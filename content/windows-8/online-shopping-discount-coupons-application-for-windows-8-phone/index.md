@@ -39,7 +39,7 @@ Coupon codes are meant to encourage customers to shop online. Shopping online is
 Before you download any application, you will have to check for the authenticity of the developer. If the developer is a company, then you can be rest assured that you are getting a genuine application. For some applications, you will have to make an online payment to get those applications. Some free applications for mobile phones may be free for a few months, but then they would be available at a nominal charge. If you feel that an application is good for your smartphone, then paying a nominal amount is not a big deal at all.&nbsp; Most online shopping apps are provided for free and are equally safe to download.&nbsp; So, if you are avid shopper, downloading a couple of them could be the best thing you can do.
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 

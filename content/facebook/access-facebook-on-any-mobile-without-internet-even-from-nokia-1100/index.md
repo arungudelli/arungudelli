@@ -67,10 +67,10 @@ Go to&nbsp;<a href="http://apps.facebook.com/fonetwish/" target="_blank">http://
 
 Thanks for Reading my Posts
 
-If you like my posts feel free to post comments,subscribe to&nbsp;<a href="http://feeds.feedburner.com/arungudelli/eSUg" target="_blank">My Blog RSS feed</a>&nbsp;and Like my Page On&nbsp;<a href="https://www.facebook.com/arungudelli" target="_blank">Facebook</a>&nbsp;Follow on me in&nbsp;<a href="https://twitter.com/arunGudelli" target="_blank">twitter</a>&nbsp;to get in touch.
+If you like my posts feel free to post comments,subscribe to&nbsp;<a href="http://feeds.feedburner.com/arungudelli/eSUg" target="_blank">My Blog RSS feed</a>&nbsp;and Like my Page On&nbsp;<a href="https://www.facebook.com/arungudelli" target="_blank">Facebook</a>&nbsp;Follow on me in&nbsp;<a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a>&nbsp;to get in touch.
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 

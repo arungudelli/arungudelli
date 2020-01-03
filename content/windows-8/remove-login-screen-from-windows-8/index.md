@@ -27,7 +27,7 @@ Thanks for Reading my Post.&nbsp;Please Take a look around My blog,Keep up to da
 Wait before leaving.&nbsp;why can’t you follow me on&nbsp;<a title="ArunkumarGudelli Twitter" href="http://twitter.com/arunGudelli" target="_blank">twitter&nbsp;</a>or be a friend on&nbsp;<a title="Arunkumar Gudelli Facebook" href="http://www.facebook.com/arungudelli" target="_blank">Facebook&nbsp;</a>to get in touch me
 
 Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank">Facebook</a> or <a href="https://plus.google.com/+ArunkumarGudelli" target="_blank">googlePlus</a> or <a href="https://www.linkedin.com/in/arungudelli/" target="_blank">linkedn</a> to get in touch with me.
+why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
 
 
 
