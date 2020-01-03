@@ -5,7 +5,7 @@ keywords="twitter bootstrap,responsive web design,responsive web design using tw
 type='post'
 date='2019-10-21T18:04:42+0000'
 lastmod='2019-10-21T18:04:42+0000'
-draft='false'
+draft='true'
 authors=['admin']
 [image]
 caption='Introduction To Responsive Web Design Using Twitter Bootstrap3'
