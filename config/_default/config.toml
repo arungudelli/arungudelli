@@ -9,7 +9,7 @@ title = "Arunkumar Blog"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+baseurl = "https://www.arungudelli.com/"
 canonifyURLs =true
 enableRobotsTXT=true  
 
