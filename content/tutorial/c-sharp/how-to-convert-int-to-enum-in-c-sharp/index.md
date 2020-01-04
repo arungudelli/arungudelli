@@ -23,7 +23,7 @@ Converting string to enum is very helpful incase, if we get enum from an UI clie
 We will go through an example to understand it further.
 {{%toc%}}
 
-## Convert string to enum in C# using Enum.Parse
+## **Convert string to enum in C# using Enum.Parse**
 
 We will create an enum for Days in our C# application, which has predefined values like Sunday,Monday,Tuesday etc.
 
@@ -73,7 +73,7 @@ catch(ArgumentException ex){
 }
 ```
 
-## Convert case insensitive string to enum in C# 
+## **Convert case insensitive string to enum in C#** 
 
 If we want convert a case insensitive string to enum in C#. 
 
@@ -92,7 +92,7 @@ catch(ArgumentException ex){
 }
 ```
 
-## Convert string to enum in C# using Enum.TryParse
+## **Convert string to enum in C# using Enum.TryParse**
 
 Enum.TryParse method convert a string to an enum in C#.
 
