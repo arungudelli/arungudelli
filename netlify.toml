@@ -30,6 +30,6 @@ HUGO_VERSION = "0.54.0"
 HUGO_ENABLEGITINFO = "true"
 
 [[redirects]]
-from = "http://angularjswiki.com/*"
-to = "https://www.angularjswiki.com/:splat"
+from = "/tutorial/c-sharp/how-to-convert-int-to-enum-in-c-sharp/"
+to = "/tutorial/c-sharp/how-to-convert-string-to-enum-in-c-sharp/"
 status = 301
