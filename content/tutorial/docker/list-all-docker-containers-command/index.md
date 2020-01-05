@@ -74,7 +74,7 @@ To get list of all running docker containers use the below command
 $ docker ps
 ```
 
-## **List all stopped docker containers command
+## **List all stopped docker containers command**
 
 To get list of all stopped containers in docker use the below commands
 
