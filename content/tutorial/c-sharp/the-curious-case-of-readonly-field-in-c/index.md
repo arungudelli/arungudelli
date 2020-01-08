@@ -1,5 +1,5 @@
 +++
-title="The Curious Case Of Readonly Field In C#"
+title="Readonly keyword In C#"
 summary="Readonly modifier in C# used to declare variables constant. & this readonly keyword applicable only to fields not locals."
 keywords="c#,readonly field in c#,readonly variable in c#,readonly"
 type='post'
@@ -13,26 +13,17 @@ focal_point=''
 preview_only=false
 +++
 
-
-
-
-
-
-
-
 Readonly keyword is a modifier in C# when it applied to a field, the value of the field can be assigned at the time of declaration or in constructor only not in any other methods. After that we cannot change the value.
 
 But most of the people I discussed will compare it with constant field. But Readonly field is different from constant field. And often it is misunderstood.
 
-And Readonly&nbsp;modifier can be applied only to the Fields not local variables.
+And Readonly modifier can be applied only to the Fields not local variables.
 
 First of all Readonly value is not constant it may be different depending upon object created. So its <strong><em>Constant to the object created</em></strong>
 
-{{< figure src="Readonly-keyword.png" title="Readonly field in C#" alt="Readonly field in C#" >}}
+{{%toc%}}
 
 ### <span style="text-decoration: underline;">Readonly field in C#:</span>
-
-&nbsp;
 
 As mentioned above we can assign the C# readonly fields in constructor. But a class may be having multiple constructors, in that case, the value will be different depending upon the constructor used.
 
@@ -85,11 +76,9 @@ So the readonly field value constant to the object created. To make it constant 
 
 I explained about static readonly in differences between constant vs readonly variables article.
 
-### <span style="text-decoration: underline;">We can pass C#&nbsp;<span style="text-decoration: underline;">readonly</span>&nbsp;fields as ref or out parameters in Constructor Context:</span>
+### <span style="text-decoration: underline;">We can pass C# <span style="text-decoration: underline;">readonly</span> fields as ref or out parameters in Constructor Context:</span>
 
-&nbsp;
-
-As the readonly&nbsp;fields can be assigned inside the constructor we can pass them as ref or out parameters inside the constructor context as shown below.
+ As the readonly fields can be assigned inside the constructor we can pass them as ref or out parameters inside the constructor context as shown below.
 
 <pre>public class Program
 {
@@ -137,21 +126,17 @@ As the readonly&nbsp;fields can be assigned inside the constructor we can pass t
  }
 }</pre>
 
-&nbsp;
+ 
 
 But we cannot pass them in any other methods in above example we cannot pass readonly field y in NormalMethod() as ref or out parameter because its not in constructor context.
 
-<a href="https://www.arungudelli.com/tutorial/c-sharp/difference-between-ref-and-out-parameters-in-c-sharp/" target="_blank" rel="noopener">Understand difference between ref and out parameters in c#</a>
-
-### 
+<a href="https://www.arungudelli.com/tutorial/c-sharp/difference-between-ref-and-out-parameters-in-c-sharp/" target="_blank">Understand difference between ref and out parameters in c#</a>
 
 ### <span style="text-decoration: underline;">Do not declare mutable types like arrays collections as readonly in C#:</span>
-
-&nbsp;
-
+ 
 Please go through the following article
 
-<a href="https://www.arungudelli.com/tutorial/c-sharp/10-differences-between-constant-vs-readonly-static-readonly-fields/" target="_blank" rel="noopener">Difference between </a>readonly, constant and static readonly in C#
+<a href="https://www.arungudelli.com/tutorial/c-sharp/10-differences-between-constant-vs-readonly-static-readonly-fields/" target="_blank" >Difference between readonly, constant and static readonly in C#</a>
 
 As mentioned above article in differences we should not assign mutable types to readonly because only the reference cannot be changed but the object that holds can be changed.
 
@@ -159,12 +144,12 @@ Please see the below example.
 
 <pre>public class ReadonlyCollection
  {
-&nbsp; public readonly List&lt;int&gt; readonList;
+  public readonly List&lt;int&gt; readonList;
 
-&nbsp; public ReadonlyCollection()
-&nbsp;{
-&nbsp; &nbsp;readonList = new List&lt;int&gt;() {1,2};
-&nbsp;}
+  public ReadonlyCollection()
+ {
+   readonList = new List&lt;int&gt;() {1,2};
+ }
 
 }
 
@@ -184,23 +169,7 @@ We can change the values of readonly list as shown above.
 But If we you want to assign it to new collecation it will throw error because only reference is immutable not the object that holds.
 
 {{< figure src="Readonly-field-mutable.png" title="Readonly field in C# with mutable types" alt="Readonly field in C# with mutable types" >}}
-
-&nbsp;
-
+ 
 I hope this article clears the most common doubts about Readonly keyword modifier in C#.
-
-If you have any doubts feel free to comment below.
-
-Read my article on <a href="https://www.arungudelli.com/tutorial/c-sharp/delegates-and-events-in-c-sharp/" target="_blank" rel="noopener">Delegates and Events in c#</a>
-
-Happy Coding..!
-
-Wait before leaving.
-why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
-
-
-
-
-
 
 
