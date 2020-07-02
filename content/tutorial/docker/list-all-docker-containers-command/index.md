@@ -27,7 +27,7 @@ To list down docker containers we can use below two commands
 `docker container ls` command introduced in docker 1.13 version. In older versions we have to use `docker ps` command.
 
 
-## **List all Containers in docker, using docker ls command**
+## **Using docker ls command**
 
 
 The below command returns a list of all containers in docker.
@@ -42,7 +42,7 @@ or
 docker container ls -all
 ```
 
-## **List all containers in docker, using docker ps command**
+## **Using docker ps command**
 
 In older version of docker we can use `docker ps` command to list all containers in docker.
 
