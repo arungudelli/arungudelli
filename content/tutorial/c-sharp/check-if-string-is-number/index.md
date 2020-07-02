@@ -1,6 +1,6 @@
 +++
-title="How to check if a string is number in C#"
-summary="Steps to check if a string is number in c# 1.Declare an integer variable. 2.Pass string to int.TryParse() or double.TryParse() methods with out variable. 3.If the string is a number TryParse method will return true. And assigns value to the declared integer value."
+title="How to check if a string is a number in C#"
+summary="Steps to check if a string is a number in c# 1.Declare an integer variable. 2.Pass string to int.TryParse() or double.TryParse() methods with out variable. 3.If the string is a number TryParse method will return true. And assigns value to the declared integer value."
 keywords="['check if a string is number in C#']"
 type='post'
 date='2020-07-01T19:08:51+0000'
@@ -13,15 +13,15 @@ focal_point=''
 preview_only=false
 +++
 
-Steps to check if a string is number in C#
+Steps to check if a string is a number in C#
 
 1. Declare an integer variable.
 2. Pass string to int.TryParse() or double.TryParse() methods with out variable.
-3. If the string is a number TryParse method will return true. And assigns value to the declared integer value.
+3. If the string is a number TryParse method will return true. And assigns value to the declared integer out value.
 
 {{%toc%}}
 
-## Check if a string is Number or not in C# 
+## Check if a string is a Number or not in C# 
 
 For example we have a string variable "123" and if you want to check whether it is numeric use the below C# code.
 
@@ -40,7 +40,7 @@ bool isNumber = int.TryParse(stringNumber, out numericValue);
 
 ```
 
-From C# 7 onwards we can declare out variable in TryParse Method itself.
+From C# 7 onwards we can declare (out)[https://www.arungudelli.com/tutorial/c-sharp/difference-between-ref-and-out-parameters-in-c-sharp/] variable in TryParse Method itself.
 
 ```
 bool isNumber = int.TryParse(stringNumber, out int numericValue);
