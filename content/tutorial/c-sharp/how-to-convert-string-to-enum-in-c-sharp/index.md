@@ -4,11 +4,10 @@ summary="To Convert string to enum in C# use Enum.TryParse and Enum.Parse method
 keywords="['string to enum in C#','Convert string to enum in C#']"
 type='post'
 date='2020-01-02T18:08:51+0000'
-lastmod='2020-01-02T18:08:51+0000'
+lastmod='2020-07-01T18:08:51+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Convert int to enum in C#'
 focal_point=''
 preview_only=false
 +++
@@ -21,6 +20,7 @@ To Convert string to enum in C# use the below methods.
 Converting string to enum is very helpful incase, if we get enum from an UI client over an API endpoint.
 
 We will go through an example to understand it further.
+
 {{%toc%}}
 
 ## **Convert string to enum in C# using Enum.Parse**
