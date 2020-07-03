@@ -8,7 +8,6 @@ lastmod='2020-07-01T18:08:51+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='How to loop enum values in C#'
 focal_point=''
 preview_only=false
 +++
