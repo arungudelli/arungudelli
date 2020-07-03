@@ -8,7 +8,6 @@ lastmod='2019-10-06T18:06:03+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='A Simple Collapsing Header Using CSS'
 focal_point=''
 preview_only=false
 +++

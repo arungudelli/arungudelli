@@ -8,7 +8,6 @@ lastmod='2019-10-21T18:04:42+0000'
 draft='true'
 authors=['admin']
 [image]
-caption='Introduction To Responsive Web Design Using Twitter Bootstrap3'
 focal_point=''
 preview_only=false
 +++

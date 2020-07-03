@@ -8,7 +8,6 @@ lastmod='2019-11-04T18:03:29+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Get Query String Parameter Values From URL Using JavaScript'
 focal_point=''
 preview_only=false
 +++

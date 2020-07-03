@@ -8,7 +8,6 @@ lastmod='2019-10-02T18:06:27+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Matrix Effect Using HTML5 And Javascript'
 focal_point=''
 preview_only=false
 +++

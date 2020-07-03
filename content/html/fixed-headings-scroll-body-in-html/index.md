@@ -8,7 +8,6 @@ lastmod='2019-08-16T18:09:25+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Html Table With Fixed Header & Scrollable Body'
 focal_point=''
 preview_only=false
 +++

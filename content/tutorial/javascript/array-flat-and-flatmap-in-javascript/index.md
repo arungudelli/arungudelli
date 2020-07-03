@@ -8,7 +8,6 @@ lastmod='2019-11-08T18:03:13+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Javascript FlatMap() And Javascript Flat()'
 focal_point=''
 preview_only=false
 +++

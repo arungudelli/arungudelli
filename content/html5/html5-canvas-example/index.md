@@ -8,7 +8,6 @@ lastmod='2019-09-16T18:07:47+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='HTML5 Canvas Example :A Simple Snake Game'
 focal_point=''
 preview_only=false
 +++

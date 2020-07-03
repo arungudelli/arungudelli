@@ -8,7 +8,6 @@ lastmod='2019-09-11T18:08:03+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='HTML5 Local Storage API Tutorial With Examples'
 focal_point=''
 preview_only=false
 +++

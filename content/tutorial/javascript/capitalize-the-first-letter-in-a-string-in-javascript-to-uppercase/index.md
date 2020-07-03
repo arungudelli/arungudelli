@@ -8,7 +8,6 @@ lastmod='2019-11-06T18:03:20+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='4 Ways To Capitalize The First Letter Of A String In JavaScript'
 focal_point=''
 preview_only=false
 +++

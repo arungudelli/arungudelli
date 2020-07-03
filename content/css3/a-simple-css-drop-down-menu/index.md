@@ -8,7 +8,6 @@ lastmod='2019-10-19T18:04:55+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='A Simple CSS Drop Down Menu'
 focal_point=''
 preview_only=false
 +++

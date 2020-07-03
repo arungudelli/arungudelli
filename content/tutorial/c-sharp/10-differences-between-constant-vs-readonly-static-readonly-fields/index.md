@@ -8,7 +8,6 @@ lastmod='2019-10-28T18:03:55+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='C# Const, ReadOnly & Static ReadOnly Differences'
 focal_point=''
 preview_only=false
 +++

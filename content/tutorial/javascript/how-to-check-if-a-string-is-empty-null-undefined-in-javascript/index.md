@@ -8,7 +8,6 @@ lastmod='2019-11-17T18:02:33+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='How To Check If A String Is Empty/Null/Undefined In JavaScript'
 focal_point=''
 preview_only=false
 +++

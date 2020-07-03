@@ -8,7 +8,6 @@ lastmod='2019-10-26T18:04:05+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Key Differences Between Ref And Out Parameters In C#'
 focal_point=''
 preview_only=false
 +++

@@ -8,7 +8,6 @@ lastmod='2019-11-14T18:02:45+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='How To Check If An Object Is Empty In JavaScript Examples'
 focal_point=''
 preview_only=false
 +++

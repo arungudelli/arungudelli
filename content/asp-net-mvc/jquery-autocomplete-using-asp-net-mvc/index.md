@@ -8,17 +8,9 @@ lastmod='2019-10-09T18:05:43+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Simple JQuery Autocomplete Using Asp Net MVC'
 focal_point=''
 preview_only=false
 +++
-
-
-
-
-
-
-
 
 In this tutorial I will explain how implement <span style="text-decoration: underline;"><em>jQuery Autocomplete</em></span> Search functionality using <span style="text-decoration: underline;"><em>Asp .Net MVC</em></span> and <span style="text-decoration: underline;"><em>Twitter Typeahead.js</em></span> library.
 

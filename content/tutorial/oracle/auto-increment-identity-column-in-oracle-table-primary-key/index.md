@@ -8,7 +8,6 @@ lastmod='2019-11-02T18:03:37+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='2 Ways To Create Auto Increment Column In Oracle (Primary Key)'
 focal_point=''
 preview_only=false
 +++

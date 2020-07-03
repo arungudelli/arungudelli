@@ -8,7 +8,6 @@ lastmod='2019-11-15T18:02:42+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='How To Create UUID/GUID In JavaScript With Examples'
 focal_point=''
 preview_only=false
 +++

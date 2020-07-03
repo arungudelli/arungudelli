@@ -8,7 +8,6 @@ lastmod='2019-11-03T18:03:33+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Auto Resize An Image To Fit Into A HTML Div Using CSS'
 focal_point=''
 preview_only=false
 +++

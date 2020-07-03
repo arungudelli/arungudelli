@@ -8,7 +8,6 @@ lastmod='2020-01-02T18:08:51+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Copying files/folders from host to Docker container'
 focal_point=''
 preview_only=false
 +++

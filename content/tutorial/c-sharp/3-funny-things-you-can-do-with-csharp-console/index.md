@@ -8,7 +8,6 @@ lastmod='2019-10-13T18:05:25+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='3 Funny Things You Can Do With C# Console'
 focal_point=''
 preview_only=false
 +++

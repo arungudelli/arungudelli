@@ -8,7 +8,6 @@ lastmod='2019-11-09T18:03:09+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Disable Text Selection Highlighting In HTML Using CSS'
 focal_point=''
 preview_only=false
 +++

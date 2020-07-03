@@ -8,7 +8,6 @@ lastmod='2019-10-23T18:04:23+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Checked And UnChecked Keywords In C#'
 focal_point=''
 preview_only=false
 +++

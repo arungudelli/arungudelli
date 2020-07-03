@@ -8,7 +8,6 @@ lastmod='2020-01-04T18:08:51+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Get int value enum in C#'
 focal_point=''
 preview_only=false
 +++

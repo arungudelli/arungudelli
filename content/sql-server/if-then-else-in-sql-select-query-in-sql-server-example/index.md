@@ -8,7 +8,6 @@ lastmod='2019-11-16T18:02:38+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='2 Ways To Write IF THEN ELSE In SQL SELECT Query In SQL Server'
 focal_point=''
 preview_only=false
 +++

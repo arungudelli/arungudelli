@@ -8,7 +8,6 @@ lastmod='2020-01-03T18:03:40+0000'
 draft='true'
 authors=['admin']
 [image]
-caption='List all containers in Docker command'
 focal_point=''
 preview_only=false
 +++

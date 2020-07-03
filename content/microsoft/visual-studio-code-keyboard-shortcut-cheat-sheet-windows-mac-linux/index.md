@@ -8,7 +8,6 @@ lastmod='2019-10-30T18:03:47+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Visual Studio Code Keyboard Shortcut Cheat Sheet (Windows,Mac & Linux)'
 focal_point=''
 preview_only=false
 +++

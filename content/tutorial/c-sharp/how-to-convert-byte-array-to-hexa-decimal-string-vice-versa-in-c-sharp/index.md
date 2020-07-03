@@ -8,7 +8,6 @@ lastmod='2020-01-06T18:08:51+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='convert byte array to a hexadecimal string in C#'
 focal_point=''
 preview_only=false
 +++

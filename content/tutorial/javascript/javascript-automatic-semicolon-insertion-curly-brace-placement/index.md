@@ -8,7 +8,6 @@ lastmod='2019-10-31T18:03:43+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='JavaScript Automatic Semicolon Insertion & Curly Brace Placement'
 focal_point=''
 preview_only=false
 +++

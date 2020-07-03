@@ -8,7 +8,6 @@ lastmod='2019-10-17T18:05:05+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Simple Notifications Using JQuery'
 focal_point=''
 preview_only=false
 +++

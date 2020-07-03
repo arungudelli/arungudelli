@@ -8,7 +8,6 @@ lastmod='2019-10-05T18:06:08+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Google Hangout Effects Using HTML5 And JavaScript Facedetection'
 focal_point=''
 preview_only=false
 +++

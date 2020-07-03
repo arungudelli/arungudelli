@@ -8,7 +8,6 @@ lastmod='2019-10-07T18:05:56+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='A Simple Walking Man CSS3 Animation Tutorial'
 focal_point=''
 preview_only=false
 +++

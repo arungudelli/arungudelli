@@ -8,7 +8,6 @@ lastmod='2019-09-03T18:08:30+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Simple Slide Panel Using Jquery And CSS'
 focal_point=''
 preview_only=false
 +++

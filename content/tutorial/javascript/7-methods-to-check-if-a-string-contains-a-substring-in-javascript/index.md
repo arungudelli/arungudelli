@@ -8,7 +8,6 @@ lastmod='2019-11-12T18:02:52+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Javascript String Contains: Check If A String Contains A Substring'
 focal_point=''
 preview_only=false
 +++

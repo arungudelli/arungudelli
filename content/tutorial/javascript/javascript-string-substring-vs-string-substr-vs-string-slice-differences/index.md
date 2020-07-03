@@ -8,7 +8,6 @@ lastmod='2019-11-05T18:03:24+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='JavaScript Substring Vs Substr Vs Slice Differences With Examples'
 focal_point=''
 preview_only=false
 +++

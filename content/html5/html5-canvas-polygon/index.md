@@ -8,7 +8,6 @@ lastmod='2019-10-01T18:06:35+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='How To Draw Polygon Using HTML5 Canvas'
 focal_point=''
 preview_only=false
 +++

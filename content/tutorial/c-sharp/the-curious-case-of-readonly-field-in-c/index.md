@@ -8,7 +8,6 @@ lastmod='2019-10-27T18:04:01+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='The Curious Case Of Readonly Field In C#'
 focal_point=''
 preview_only=false
 +++

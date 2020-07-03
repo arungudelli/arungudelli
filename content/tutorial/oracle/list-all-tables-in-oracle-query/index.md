@@ -8,7 +8,6 @@ lastmod='2019-11-01T18:03:40+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='List All Tables In Oracle Database Query'
 focal_point=''
 preview_only=false
 +++

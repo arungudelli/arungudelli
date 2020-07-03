@@ -8,7 +8,6 @@ lastmod='2019-11-13T18:02:48+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='3 Methods To Replace All Occurrences Of A String In JavaScript'
 focal_point=''
 preview_only=false
 +++

@@ -8,7 +8,6 @@ lastmod='2019-10-16T18:05:10+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Book Review : HTML5 Web Application Development By Example'
 focal_point=''
 preview_only=false
 +++

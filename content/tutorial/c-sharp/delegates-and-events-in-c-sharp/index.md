@@ -8,7 +8,6 @@ lastmod='2019-10-12T18:05:30+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Understanding Delegates And Events In C# / .Net Simplified : C# Tutorial'
 focal_point=''
 preview_only=false
 +++

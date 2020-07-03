@@ -8,7 +8,6 @@ lastmod='2019-08-27T18:08:54+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Beginning HTML5'
 focal_point=''
 preview_only=false
 +++

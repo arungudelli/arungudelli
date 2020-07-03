@@ -8,7 +8,6 @@ lastmod='2019-11-10T18:03:05+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Drop Columns Or Delete Columns In Oracle Table Query'
 focal_point=''
 preview_only=false
 +++

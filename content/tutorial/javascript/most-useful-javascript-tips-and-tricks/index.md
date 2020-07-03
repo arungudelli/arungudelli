@@ -8,7 +8,6 @@ lastmod='2019-10-25T18:04:11+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Most Useful JavaScript Tips & Tricks For JavaScript Developers'
 focal_point=''
 preview_only=false
 +++

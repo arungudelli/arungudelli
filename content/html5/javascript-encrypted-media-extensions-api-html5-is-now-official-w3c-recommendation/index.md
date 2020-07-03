@@ -8,7 +8,6 @@ lastmod='2019-10-29T18:03:52+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Javascript Encrypted Media Extensions API (HTML5) Is Now Official W3C Recommendation'
 focal_point=''
 preview_only=false
 +++

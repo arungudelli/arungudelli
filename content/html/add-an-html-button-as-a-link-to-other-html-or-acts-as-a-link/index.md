@@ -8,17 +8,9 @@ lastmod='2019-11-18T18:02:28+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Add An HTML Button As A Link To Other HTML Or Acts As A Link'
 focal_point=''
 preview_only=false
 +++
-
-
-
-
-
-
-
 
 To add an HTML button as a link to other HTML, we can use the button inside HTML form or style an anchor link as a button or use button onClick event.
 

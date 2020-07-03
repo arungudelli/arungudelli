@@ -8,7 +8,6 @@ lastmod='2019-11-07T18:03:16+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='4 Ways To Get The Current Timestamp In JavaScript'
 focal_point=''
 preview_only=false
 +++

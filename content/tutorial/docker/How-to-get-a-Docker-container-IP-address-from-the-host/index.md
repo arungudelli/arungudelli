@@ -8,7 +8,6 @@ lastmod='2020-01-02T18:08:51+0000'
 draft='true'
 authors=['admin']
 [image]
-caption='Convert int to enum in C#'
 focal_point=''
 preview_only=false
 +++

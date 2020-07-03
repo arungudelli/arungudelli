@@ -8,7 +8,6 @@ lastmod='2019-10-14T18:05:22+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='4 Ways To Display Indian Rupee Symbol In HTML(₹) Pages'
 focal_point=''
 preview_only=false
 +++

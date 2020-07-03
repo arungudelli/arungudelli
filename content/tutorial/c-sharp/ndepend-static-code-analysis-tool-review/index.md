@@ -8,17 +8,9 @@ lastmod='2019-10-24T18:04:17+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='NDepend – A Static Code Analysis Tool'
 focal_point=''
 preview_only=false
 +++
-
-
-
-
-
-
-
 
 In this post I am going to review one of the static code analysis tool&nbsp;<a title="ndepend" href="http://www.ndepend.com/" target="_blank">Ndepend</a> by Patrick Smacchia. Before that&nbsp;I would like to explain few things about Static Analysis of Code.
 

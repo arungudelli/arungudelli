@@ -8,7 +8,6 @@ lastmod='2019-10-04T18:06:13+0000'
 draft='false'
 authors=['admin']
 [image]
-caption='Basics Of HTML5 GetUserMedia API'
 focal_point=''
 preview_only=false
 +++
