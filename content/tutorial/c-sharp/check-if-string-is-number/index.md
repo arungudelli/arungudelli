@@ -39,7 +39,7 @@ bool isNumber = int.TryParse(stringNumber, out numericValue);
 
 ```
 
-From C# 7 onwards we can declare (out)[https://www.arungudelli.com/tutorial/c-sharp/difference-between-ref-and-out-parameters-in-c-sharp/] variable in TryParse Method itself.
+From C# 7 onwards we can declare [out](https://www.arungudelli.com/tutorial/c-sharp/difference-between-ref-and-out-parameters-in-c-sharp/) variable in TryParse Method itself.
 
 ```
 bool isNumber = int.TryParse(stringNumber, out int numericValue);
