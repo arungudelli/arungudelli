@@ -1,7 +1,7 @@
 +++
 title="Javascript String Contains: Check If A String Contains A Substring"
 summary="To check if a Javascript String Contains a substring or not, we can use 7 different Javascript methods as listed in below table."
-keywords=["check if a string contains a substring in javascript (in es6),substring check javascript (in es5 and before),substring check javascript by using javascript search method,substring check javascript by using javascript match method,substring check javascript using regular expression,substring check in javascript using lodash js,substring check javascript using underscore js,best way of substring check javascript,javascript"
+keywords=["check if a string contains a substring in javascript (in es6),substring check javascript (in es5 and before),Javascript string contains"
 ]
 type='post'
 date='2019-11-12T18:02:52+0000'
@@ -21,7 +21,7 @@ To check for case-insensitive Javascript string contains or Javascript string co
 
 {{%toc%}}
 
-## 1.JavaScript string contains substring check using includes method (in ES6):
+## 1.Using includes method in ES6:
 
 If you are using latest versions of Javascript like ES6 you can use <em>include</em> method to check if a string contains a substring or not as shown below.
 
@@ -72,7 +72,7 @@ Object.defineProperty(String.prototype, 'includes', {
 })
 }</pre>
 
-## 2.check if a string contains a substring in javascript (in ES5 and before):
+## 2.In ES5 and before using indexOf method
 
 In ES5 and before versions of Javascript we can use <em>indexOf</em> method to check if a string contains a substring or not.
 
@@ -98,7 +98,7 @@ var isContainsAfterPosition = actualstring.indexOf("In",2) !== -1;
 
 We can simply add pollyfil method for includes as it uses indexOf method internally.
 
-## 3.Javascript string contains substring check using search method:
+## 3.Using string.search method
 
 Javascript string prototype contains <em>search</em> method which accepts regular expression as parameter.
 
@@ -113,7 +113,7 @@ var isContains=actualstring.search("search") !== -1;
 
 The search method in JavaScript will return substring position if found, otherwise -1.
 
-## 4.check if a string contains a substring or not by using Javascript match method:
+## 4.Using string.match() method:
 
 To check if a string contains substring or not, use the Javascript <em>match</em> method.
 
@@ -132,7 +132,7 @@ actualstring.match("javascript");
 //null
 </pre>
 
-## 5. Javascript string contains a substring using Regular Expressions:
+## 5.Using Regular Expressions:
 
 Using regular expression <em>test</em> method, we can verify if a string contains a substring or not.
 
@@ -154,7 +154,7 @@ We cannot get the index of a substring with this method.
 
 {{< figure src="check-if-a-string-contains-substring-in-Javascript.png" title="check if a string contains substring in Javascript" alt="check if a string contains substring in Javascript" >}}
 
-## 6. Javascript String Contains Case-insensitive check
+## 6.Javascript String Contains Case-insensitive check
 
 To check for case-insensitive Javascript string contains, use the below methods.
 
@@ -215,7 +215,7 @@ These libraries contain so many javascript utility methods that can be used in o
 
 And lodash and underscore js libraries are well documented and well tested. So we can use them without any worries
 
-## 7.check if a string contains a substring in javascript using Lodash js:
+## 7.using Lodash js:
 
 lodash library contains <em>._includes()</em> method which is used to check if a string contains another substring or not in javascript.
 
@@ -224,7 +224,7 @@ This method will return true if match found otherwise it will return false
 <pre>_<span class="delimiter method">.</span><span class="name">includes</span>(<span class="string">'lodash substring'</span><span class="delimiter">,</span>&nbsp;<span class="string">'lodash'</span>);
 //returns true</pre>
 
-## 8.check if a string contains a substring in javascript using Underscore js:
+## 8.using Underscore js:
 
 Similary underscore js contains <em>includes()</em> method and we can pass substring and actual string as parameters, if match found it will return true otherwise false
 
@@ -239,10 +239,3 @@ Syntax of includes method is <em>include(string, substring) </em>
 
 Wait before leaving.
 why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
-
-
-
-
-
-
-
