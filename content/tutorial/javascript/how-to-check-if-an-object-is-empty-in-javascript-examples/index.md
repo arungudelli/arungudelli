@@ -1,11 +1,12 @@
 +++
-title="How To Check If An Object Is Empty In JavaScript Examples"
+title="8 ways To Check If An Object Is Empty or not In JavaScript"
+subtitle="learn how to check if an object is empty in Javascript with examples"
 summary="In javascript, we can check if an object is empty or not by using JSON.stringify, Object.keys (ECMA 5+),Object.entries (ECMA 7+)"
 keywords=["check if an object is empty in javascript,javascript"
 ]
 type='post'
 date='2019-11-14T18:02:45+0000'
-lastmod='2019-11-14T18:02:45+0000'
+lastmod='2020-07-06T18:02:45+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -19,13 +20,15 @@ In javascript, we can check if an object is empty or not by using
 
 <ol><li>JSON.stringify</li><li>Object.keys (ECMA 5+)</li><li>Object.entries (ECMA 7+)</li></ol>
 
-And if you are using any third party libraries like jquery, lodash, Underscore etc you can their existing methods for checking javascript empty object. I will be listing down those methods in this article with examples.
+And if you are using any third party libraries like jquery, lodash, Underscore etc you can use their existing methods for checking javascript empty object. 
+
+I will be listing down those methods in this article with examples.
 
 {{%toc%}}
 
 {{< figure src="check-if-an-object-is-empty-javascript.jpg" title="check if an object is empty javascript" alt="check if an object is empty javascript" >}}
 
-## Check if an object is empty in JavaScript using JSON.stringify:
+## Using JSON.stringify:
 
 JSON.stringify converts an object to JSON string. We can convert the javascript empty object to JSON string and check with JSON.stringify({})
 
@@ -47,9 +50,9 @@ Now we can pass the object to above ifObjectisEmpty method to check if an object
 ifObjectIsEmpty(emptyObject);
 true // Object is Empty</pre>
 
-## Check if an object is empty in JavaScript using Object.keys in es5+:
+## Using Object.keys in es5+:
 
-In ECMAScript 5 Object.keys() method returns an array of an object’s own property names. So to check if an object is empty or not in Javascript we can check if Object.keys().length is zero or not as shown below.
+In ECMAScript 5 Object.keys() method returns an array of an object’s own property names. So to check if an object is empty or not in ES5 we can check if Object.keys().length is zero or not as shown below.
 
 <pre>var normalObject = {a:2};
 Object.keys(normalObject).length
@@ -67,11 +70,11 @@ console.log('Object is not empty');
 
 </pre>
 
-## Check if an object is empty in JavaScript using Object.entries in es7+:
+## Using Object.entries in es7+:
 
 Object.entries() method in ECMAScript 7 returns an array of an object’s key-value pairs.
 
-To check if an object is empty or not in javascript using Object.entries() use the below code snippet
+In ES7+, using Object.entries() method we can check for emptyness of an object.
 
 <pre>var normalObject = {a:2};
 Object.entries(normalObject).length
@@ -89,7 +92,9 @@ console.log('Object is not empty');
 
 ## Checking if an object is empty or not in Javascript in older browsers:
 
-The above methods might not work in older browsers like IE 7 and 8 (es5 or ECMAScript 5 and before). So to check if an object is empty or not in all browsers we can loop through the object properties using for as shown below
+The above methods might not work in older browsers like IE 7 and 8 (es5 or ECMAScript 5 and before). 
+
+So to check if an object is empty or not in all browsers we can loop through the object properties using `for loop` as shown below.
 
 <pre>function ifObjectIsEmpty(obj) {
 for(var prop in obj) {
@@ -101,7 +106,7 @@ return false;
 return JSON.stringify(obj) === JSON.stringify({});
 }</pre>
 
-## Check if an object is empty in JavaScript using jQuery:
+## Using jQuery:
 
 In jQuery, we can use isEmptyObject() method to check if an object is empty or not as shown below
 
@@ -112,7 +117,7 @@ console.log("Javscript Object is empty");
 console.log("Javscript Object is not empty");
 };</pre>
 
-## Check if an object is empty in JavaScript using extjs:
+## Using extjs:
 
 In Extjs, we can use Ext.Object.isEmpty method to check if an object is empty or not as shown below
 
@@ -123,7 +128,7 @@ console.log("Javscript Object is empty");
 console.log("Javscript Object is not empty");
 };</pre>
 
-## Check if an object is empty in JavaScript using lodash:
+## Using lodash js:
 
 In loadash js, we can use _.isEmpty method to check if an object is empty or not as shown below
 
@@ -134,7 +139,7 @@ console.log("Javscript Object is empty");
 console.log("Javscript Object is not empty");
 };</pre>
 
-## Check if an object is empty in Javascript using Underscore:
+## Using Underscore js:
 
 In Underscore js, we can use _.isEmpty method to check if an object is empty or not as shown below
 
@@ -149,10 +154,3 @@ console.log("Javscript Object is not empty");
 
 Wait before leaving.
 why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
-
-
-
-
-
-
-
