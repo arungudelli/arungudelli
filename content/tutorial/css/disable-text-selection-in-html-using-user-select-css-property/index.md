@@ -20,7 +20,7 @@ We can use <em>user-select</em>&nbsp;property in CSS to disable text selection h
 
 {{< figure src="Disable-text-selection-css.jpg" title="Disable text selection css" alt="Disable text selection css" >}}
 
-## Disable text selection in HTML using CSS user-select:none:
+## Using user-select:none:
 
 To disable the text selection in HTML we need to give <em>user-select</em> property value as <em>none.&nbsp;</em>Go through the below example to understand if further.
 
@@ -45,7 +45,7 @@ But we have to add browser specific prefix before the <em>user-select</em> optio
 
 Chrome and opera supports non prefixed versions.
 
-## Disable text selection highlighting in Google Chrome using CSS:
+## In Google Chrome:
 
 To disable text selection highlighting in Google Chrome browser using CSS just set -user-select CSS property to none.
 
@@ -55,7 +55,7 @@ And no prefix is required for Google Chrome and Opera Browsers.
   user-select:none;
 }</pre>
 
-## Disable text selection highlighting in mozilla firefox using CSS:
+## In mozilla firefox:
 
 To disable text selection highlighting in mozilla firefox browser using CSS just set -moz-user-select CSS property to none.
 
@@ -65,7 +65,7 @@ And we need add -moz prefix before user-select property for mozilla firefox Brow
    -moz-user-select:none;
 }</pre>
 
-## Disable text selection highlighting in Safari using CSS:
+## In Safari:
 
 To disable text selection highlighting in Safari browser using CSS just set -webkit-user-select CSS property to none.
 
@@ -75,7 +75,7 @@ And we need add -webkit prefix before user-select property for Safari Browser.
   -webkit-user-select:none;
 }</pre>
 
-## Disable text selection highlighting in IOS Safari using CSS:
+## In IOS Safari:
 
 To disable text selection highlighting in IOS Safari browser using CSS just set -webkit-touch-callout CSS property to none.
 
@@ -83,7 +83,7 @@ To disable text selection highlighting in IOS Safari browser using CSS just set 
   -webkit-touch-callout:none;
 }</pre>
 
-## Disable text selection highlighting in Internet Explorer/Edge using CSS:
+## In Internet Explorer/Edge using:
 
 To disable text selection highlighting in Internet Explorer/Edge browser using CSS just set -ms-user-select CSS property to none.
 
@@ -133,10 +133,6 @@ When we give user-select property as all. Text inside the element is automatical
 <pre>&lt;div style="user-select:all"&gt;
 On click we can select the text
 &lt;/div&gt;</pre>
-
-
-
-## 
 
 ## user-select auto:
 
@@ -248,10 +244,3 @@ As explained above user-select : contain option is only supported in IE, if you 
 
 Wait before leaving.
 why can’t you follow me on <a href="https://twitter.com/arungudelli" target="_blank" rel="noopener">twitter</a> or be a friend on <a href="https://www.facebook.com/gudelliArun" target="_blank" rel="noopener">Facebook</a> or  <a href="https://www.linkedin.com/in/arungudelli/" target="_blank" rel="noopener">linkedn</a> to get in touch with me.
-
-
-
-
-
-
-
