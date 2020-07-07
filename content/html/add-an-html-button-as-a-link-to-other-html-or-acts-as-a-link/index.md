@@ -1,7 +1,8 @@
 +++
 title="Add An HTML Button As A Link To Other HTML Or Acts As A Link"
 summary="To add an HTML button that acts as a link to other HTML, we can use the button inside HTML form or style an anchor link as a button or use button onClick event."
-keywords="html button link code,button as a link,button as link in css,html"
+keywords=["html button link code,button as a link,button as link in css,html"
+]
 type='post'
 date='2019-11-18T18:02:28+0000'
 lastmod='2019-11-18T18:02:28+0000'

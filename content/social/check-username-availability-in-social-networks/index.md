@@ -1,7 +1,8 @@
 +++
 title="Check Username Availability In More Than 100 Social Bookmarking Sites"
 summary="Check your username availability in more than 100 social networks.Maintain one username across the social sites.Reserve your username at social sites by checking availability."
-keywords="check username availability youtube,check twitter username availability,check gmail username availability,username checker youtube,internet,social networking,social"
+keywords=["check username availability youtube,check twitter username availability,check gmail username availability,username checker youtube,internet,social networking,social"
+]
 type='post'
 date='2019-09-06T18:08:22+0000'
 lastmod='2019-09-06T18:08:22+0000'

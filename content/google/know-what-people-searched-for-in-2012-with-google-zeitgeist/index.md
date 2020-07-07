@@ -1,7 +1,8 @@
 +++
 title="Know What People Searched For In 2012 With Google Zeitgeist"
 summary="1.2 trillion queries in 146 languages from 55 countries.Know what people are Googling in 2012 with Google Zeitgeist"
-keywords="google,google zeitgeist,internet,2012"
+keywords=["google,google zeitgeist,internet,2012"
+]
 type='post'
 date='2019-09-19T18:07:37+0000'
 lastmod='2019-09-19T18:07:37+0000'

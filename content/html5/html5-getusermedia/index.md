@@ -1,7 +1,8 @@
 +++
 title="Basics Of HTML5 GetUserMedia API"
 summary="Capture video and audio with getUserMedia in HTML5,use HTML5's getusermedia to take snapshot.Tutorials explains HTML5's getusermedia API features with example"
-keywords="html5 getusermedia,html5 getusermedia api,html5 canvas,javascript,html5 getusermedia browser support,html5"
+keywords=["html5 getusermedia,html5 getusermedia api,html5 canvas,javascript,html5 getusermedia browser support,html5"
+]
 type='post'
 date='2019-10-04T18:06:13+0000'
 lastmod='2019-10-04T18:06:13+0000'

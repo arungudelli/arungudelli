@@ -1,7 +1,8 @@
 +++
 title="Readonly keyword In C#"
 summary="Readonly modifier in C# used to declare variables constant. & this readonly keyword applicable only to fields not locals."
-keywords="c#,readonly field in c#,readonly variable in c#,readonly"
+keywords=["c#,readonly field in c#,readonly variable in c#,readonly"
+]
 type='post'
 date='2019-10-27T18:04:01+0000'
 lastmod='2019-10-27T18:04:01+0000'

@@ -1,7 +1,8 @@
 +++
 title="Understanding Delegates And Events In C# / .Net Simplified : C# Tutorial"
 summary="Delegates and Events in C# are used to implement event handlers in C#.Delegate in C# is a reference to a method & Events in C# adds extra abstraction to Delegates.you will understand difference between Delegate and events after reading this C# tutorial."
-keywords="c# delegate,delegates in c#,delegate c#,delegates c#,c# delegate event,c# events and delegates,c# delegates tutorial,multicast delegates in c#,delegate in c#,c# delegate example,advantages of delegates in c#,c# delegates explained,c#"
+keywords=["c# delegate,delegates in c#,delegate c#,delegates c#,c# delegate event,c# events and delegates,c# delegates tutorial,multicast delegates in c#,delegate in c#,c# delegate example,advantages of delegates in c#,c# delegates explained,c#"
+]
 type='post'
 date='2019-10-12T18:05:30+0000'
 lastmod='2019-10-12T18:05:30+0000'

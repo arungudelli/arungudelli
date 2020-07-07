@@ -1,7 +1,8 @@
 +++
 title="Simple Pagination Using JQuery & JPages Plugin"
 summary="Client side pagination using jQuery,jPages plugin.This jQuery pagination plugin has many features like scroll pagination,CSS3 animations to pagination."
-keywords="simple pagination jquery,jquery pagination plugin,jquery pagination tutorial,jquery"
+keywords=["simple pagination jquery,jquery pagination plugin,jquery pagination tutorial,jquery"
+]
 type='post'
 date='2019-10-15T18:05:14+0000'
 lastmod='2019-10-15T18:05:14+0000'

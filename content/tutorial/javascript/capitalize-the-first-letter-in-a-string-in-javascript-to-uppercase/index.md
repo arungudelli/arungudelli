@@ -1,7 +1,8 @@
 +++
 title="4 Ways To Capitalize The First Letter Of A String In JavaScript"
 summary="In Javscript,we can capitalize the first letter of a string in Javascript by using simple Javascript code or regex or ES6 or by overriding string prototype."
-keywords="javascript,ecma6,first letter capital in javascript,capitalize the first letter of a string in javascript"
+keywords=["javascript,ecma6,first letter capital in javascript,capitalize the first letter of a string in javascript"
+]
 type='post'
 date='2019-11-06T18:03:20+0000'
 lastmod='2019-11-06T18:03:20+0000'

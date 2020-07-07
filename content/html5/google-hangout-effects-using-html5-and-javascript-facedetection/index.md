@@ -1,7 +1,8 @@
 +++
 title="Google Hangout Effects Using HTML5 And JavaScript Facedetection"
 summary="Face detection using javascript and HTML5 Canvas with an awesome Google hangout effects example.Face detection application like in Picassa and IPhoto."
-keywords="google hangout effects,js face recognition,facedetection with javascript,javascript face recognition,face detection using html5,face detection using php,,html5"
+keywords=["google hangout effects,js face recognition,facedetection with javascript,javascript face recognition,face detection using html5,face detection using php,,html5"
+]
 type='post'
 date='2019-10-05T18:06:08+0000'
 lastmod='2019-10-05T18:06:08+0000'

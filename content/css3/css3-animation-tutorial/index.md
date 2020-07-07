@@ -1,7 +1,8 @@
 +++
 title="A Simple Walking Man CSS3 Animation Tutorial"
 summary="This CSS3 Animation Tutorial will explains Basics of CSS3 Animations like CSS3 Keyframe Animation,CSS3 Transform,CSS3 Rotate Animation with walking man Example."
-keywords="css3 animations,css3 animation tutorial,css3 animation example,css3 rotate animation,css3 keyframes,css3 transform,css3 animation effects,css,html5,css3"
+keywords=["css3 animations,css3 animation tutorial,css3 animation example,css3 rotate animation,css3 keyframes,css3 transform,css3 animation effects,css,html5,css3"
+]
 type='post'
 date='2019-10-07T18:05:56+0000'
 lastmod='2019-10-07T18:05:56+0000'

@@ -1,7 +1,8 @@
 +++
 title="Google Search Tips & Tricks"
 summary="Some tips & tricks for Google searching to find whatever we want.With these Google tips & tricks we can use Google image search smartly to find exact things."
-keywords="internet tricks,google image search,internet,google"
+keywords=["internet tricks,google image search,internet,google"
+]
 type='post'
 date='2019-09-08T18:08:15+0000'
 lastmod='2019-09-08T18:08:15+0000'

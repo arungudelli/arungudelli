@@ -1,7 +1,8 @@
 +++
 title="HTML5 Local Storage API Tutorial With Examples"
 summary="Local Storage HTML5 API is a better Storage than cookies. it's often as Web Storage.With Local storage API in HTML5 web pages can store data locally in browser."
-keywords="html5 local storage,html5,html4 web storage,html5 local storage tutorial,web development,websorage api"
+keywords=["html5 local storage,html5,html4 web storage,html5 local storage tutorial,web development,websorage api"
+]
 type='post'
 date='2019-09-11T18:08:03+0000'
 lastmod='2019-09-11T18:08:03+0000'

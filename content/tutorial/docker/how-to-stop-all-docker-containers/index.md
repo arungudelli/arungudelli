@@ -1,7 +1,8 @@
 +++
 title="List all containers in Docker command"
 summary="We can get a list of all containers in  docker using docker container list or docker ps commands."
-keywords="docker,list all container,command to show all containers"
+keywords=["docker,list all container,command to show all containers"
+]
 type='post'
 date='2020-01-03T18:03:40+0000'
 lastmod='2020-01-03T18:03:40+0000'

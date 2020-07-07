@@ -1,7 +1,8 @@
 +++
 title="Free Social Media Icons Sets(30+) For Websites"
 summary="30+ Best Free Social Media Icons sets that can be used in our websites.These free social media icons are carefully picked suitable for any websites."
-keywords="social media icons,social media icon,free social media icons,social media icons free,social media icon set,free"
+keywords=["social media icons,social media icon,free social media icons,social media icons free,social media icon set,free"
+]
 type='post'
 date='2019-10-18T18:05:02+0000'
 lastmod='2019-10-18T18:05:02+0000'

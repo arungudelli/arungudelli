@@ -1,7 +1,8 @@
 +++
 title="DIGG Announced Their Reader Alternative To Google"
 summary="DIGG announced their Reader alternative to GOOGLE READER"
-keywords="google reader,digg reader,how-to"
+keywords=["google reader,digg reader,how-to"
+]
 type='post'
 date='2019-09-25T18:07:18+0000'
 lastmod='2019-09-25T18:07:18+0000'

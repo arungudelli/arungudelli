@@ -1,7 +1,8 @@
 +++
 title="Javascript FlatMap() And Javascript Flat()"
 summary="JavaScript introduced two new methods flat(),flatMap() to flatten array of arrays into single one dimensional array."
-keywords="javascript,javascript flat(),javascript flatmap()"
+keywords=["javascript,javascript flat(),javascript flatmap()"
+]
 type='post'
 date='2019-11-08T18:03:13+0000'
 lastmod='2019-11-08T18:03:13+0000'

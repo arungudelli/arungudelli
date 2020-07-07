@@ -1,7 +1,8 @@
 +++
 title="How to check if a string is a number in C#"
 summary="Steps to check if a string is a number in c# 1.Declare an integer variable. 2.Pass string to int.TryParse() or double.TryParse() methods with out variable. 3.If the string is a number TryParse method will return true. And assigns value to the declared integer value."
-keywords="['check if a string is number in C#']"
+keywords=["['check if a string is number in C#']"
+]
 type='post'
 date='2020-07-01T19:08:51+0000'
 lastmod='2020-07-01T19:08:51+0000'

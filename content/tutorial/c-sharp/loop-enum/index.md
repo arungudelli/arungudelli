@@ -1,7 +1,8 @@
 +++
 title="How to loop or get enum names and values in C#"
 summary="Steps to loop or get enum names & values in C# 1.Use C# Enum.GetValues() method to get all possible values of Enum.2.Then, enumerate or loop the enum values using foreach or for loop."
-keywords="['loop enum c#','enumarate enum in c#']"
+keywords=["['loop enum c#','enumarate enum in c#']"
+]
 type='post'
 date='2020-07-01T18:08:51+0000'
 lastmod='2020-07-01T18:08:51+0000'

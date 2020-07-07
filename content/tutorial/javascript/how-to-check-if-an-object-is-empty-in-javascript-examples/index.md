@@ -1,7 +1,8 @@
 +++
 title="How To Check If An Object Is Empty In JavaScript Examples"
 summary="In javascript, we can check if an object is empty or not by using JSON.stringify, Object.keys (ECMA 5+),Object.entries (ECMA 7+)"
-keywords="check if an object is empty in javascript,javascript"
+keywords=["check if an object is empty in javascript,javascript"
+]
 type='post'
 date='2019-11-14T18:02:45+0000'
 lastmod='2019-11-14T18:02:45+0000'

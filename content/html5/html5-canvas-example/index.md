@@ -1,7 +1,8 @@
 +++
 title="HTML5 Canvas Example :A Simple Snake Game"
 summary="A simple Snake Game using HTML5 Canvas.Step by step tutorial to develope Snake game using Html5 Canvas and JavaScript."
-keywords="html5 canvas example,html5 canvas tag,html5 canvas tutorial,html5"
+keywords=["html5 canvas example,html5 canvas tag,html5 canvas tutorial,html5"
+]
 type='post'
 date='2019-09-16T18:07:47+0000'
 lastmod='2019-09-16T18:07:47+0000'

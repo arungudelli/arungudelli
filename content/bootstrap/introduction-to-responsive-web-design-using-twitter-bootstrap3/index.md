@@ -1,7 +1,8 @@
 +++
 title="Introduction To Responsive Web Design Using Twitter Bootstrap3"
 summary="Tutorial explains how to build responsive web pages using Twitter Bootstrap Framework.This is the best framework for designing responsive websites."
-keywords="twitter bootstrap,responsive web design,responsive web design using twitter bootstrap,bootstrap"
+keywords=["twitter bootstrap,responsive web design,responsive web design using twitter bootstrap,bootstrap"
+]
 type='post'
 date='2019-10-21T18:04:42+0000'
 lastmod='2019-10-21T18:04:42+0000'

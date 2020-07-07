@@ -1,7 +1,8 @@
 +++
 title="Google Nose"
 summary="Google Nose"
-keywords="google nose,google"
+keywords=["google nose,google"
+]
 type='post'
 date='2019-09-29T18:06:58+0000'
 lastmod='2019-09-29T18:06:59+0000'

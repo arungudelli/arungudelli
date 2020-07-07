@@ -1,7 +1,8 @@
 +++
 title="Simple Slide Panel Using Jquery And CSS"
 summary="This jQuery Tutorial explains how to create a simple Slide Panel with jQuery.I used jQuery sliding methods like jQuery slide toggle to create sliding panel."
-keywords="jquery,css,slide panel jquery,slidetoggle,slideup,slidedown,vertical slide panel jquery,slide panel jquery example"
+keywords=["jquery,css,slide panel jquery,slidetoggle,slideup,slidedown,vertical slide panel jquery,slide panel jquery example"
+]
 type='post'
 date='2019-09-03T18:08:30+0000'
 lastmod='2019-09-03T18:08:30+0000'

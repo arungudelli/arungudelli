@@ -1,7 +1,8 @@
 +++
 title="Disable Text Selection Highlighting In HTML Using CSS"
 summary="We can use user-select property in CSS to disable text selection highlighting in HTML pages.It is not a standard feature, but available in all modern browsers except IE 9 & before."
-keywords="user-select css,disable text selection css,disable text selection highlighting css,css"
+keywords=["user-select css,disable text selection css,disable text selection highlighting css,css"
+]
 type='post'
 date='2019-11-09T18:03:09+0000'
 lastmod='2019-11-09T18:03:09+0000'
