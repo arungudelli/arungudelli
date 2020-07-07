@@ -1,7 +1,8 @@
 +++
 title="Why You Need A CDN (Content Delivery Network) ?"
 summary="Content Delivery Network or CDN is nothing but n/w of computers that stores the copy of your website.CDN will solve latency problems.Content Delivery Network helps to load website faster"
-keywords="content delivery network,cdn,what is cdn,why cdn required,best cdn networks"
+keywords=["content delivery network,cdn,what is cdn,why cdn required,best cdn networks"
+]
 type='post'
 date='2019-10-11T18:05:36+0000'
 lastmod='2019-10-11T18:05:36+0000'

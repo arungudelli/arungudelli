@@ -1,7 +1,8 @@
 +++
 title="Android Secret Codes To Unlock Hidden Features In Android Phones"
 summary="List of Android Secret Codes which are helpful to know about android device hardware and software configurations.and"
-keywords="android 2.2 secret codes,android secret codes,motorola android secret codes,android unlock,htc android secret codes,sony android secret codes,android secret codes ics,google,howto,android"
+keywords=["android 2.2 secret codes,android secret codes,motorola android secret codes,android unlock,htc android secret codes,sony android secret codes,android secret codes ics,google,howto,android"
+]
 type='post'
 date='2019-09-30T18:06:43+0000'
 lastmod='2019-09-30T18:06:43+0000'

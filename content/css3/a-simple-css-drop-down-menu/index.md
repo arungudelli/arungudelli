@@ -1,7 +1,8 @@
 +++
 title="A Simple CSS Drop Down Menu"
 summary="CSS Drop Down Menu: In this tutorial I will explain how to create a Simple Drop Down Menu using CSS alone without using Javascript and Images."
-keywords="css,drop down menu,css drop down menu using css,css drop down menu,css3"
+keywords=["css,drop down menu,css drop down menu using css,css drop down menu,css3"
+]
 type='post'
 date='2019-10-19T18:04:55+0000'
 lastmod='2019-10-19T18:04:55+0000'

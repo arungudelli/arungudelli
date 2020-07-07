@@ -1,7 +1,8 @@
 +++
 title="Get int value from Enum in C# with examples"
 summary="To get int value from enum in C#, cast the enum to int"
-keywords="['int value from enum in C#','Convert string to enum in C#']"
+keywords=["['int value from enum in C#','Convert string to enum in C#']"
+]
 type='post'
 date='2020-01-04T18:08:51+0000'
 lastmod='2020-01-04T18:08:51+0000'

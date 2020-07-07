@@ -1,7 +1,8 @@
 +++
 title="C# Const, ReadOnly & Static ReadOnly Differences"
 summary="C# Const makes fields or locals constant.ReadOnly applies to fields in C#, value is constant after initialization.Static ReadOnly makes ReadOnly field class member."
-keywords="c#,readonly field in c#,const field in c#,static readonly in c#,const vs readonly,"
+keywords=["c#,readonly field in c#,const field in c#,static readonly in c#,const vs readonly,"
+]
 type='post'
 date='2019-10-28T18:03:55+0000'
 lastmod='2019-10-28T18:03:55+0000'

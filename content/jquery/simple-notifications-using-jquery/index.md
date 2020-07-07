@@ -1,7 +1,8 @@
 +++
 title="Simple Notifications Using JQuery"
 summary="Toastr is the best plugin for implementing Notifications using jQuery at client side.This Toastr jQuery notification plugin comes with so many features."
-keywords="jquery,simple notifications using jquery,toastr plugin,jquery plugins,javascript"
+keywords=["jquery,simple notifications using jquery,toastr plugin,jquery plugins,javascript"
+]
 type='post'
 date='2019-10-17T18:05:05+0000'
 lastmod='2019-10-17T18:05:05+0000'

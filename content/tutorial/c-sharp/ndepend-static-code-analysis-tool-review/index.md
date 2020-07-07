@@ -1,7 +1,8 @@
 +++
 title="NDepend – A Static Code Analysis Tool"
 summary="In this post I am going to review one of the static code analysis tool Ndepend by Patrick Smacchia. Before that I would like to explain few things about Static"
-keywords="csharp,ndepend,ndepend review,c#"
+keywords=["csharp,ndepend,ndepend review,c#"
+]
 type='post'
 date='2019-10-24T18:04:17+0000'
 lastmod='2019-10-24T18:04:17+0000'

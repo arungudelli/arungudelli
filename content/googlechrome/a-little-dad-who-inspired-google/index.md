@@ -1,7 +1,8 @@
 +++
 title="A Little Dad Who Inspired Google"
 summary="An Awesome Book by Dallas Clayton"
-keywords="dallas clayton,an awesome book,google,google chrome,internet,googlechrome"
+keywords=["dallas clayton,an awesome book,google,google chrome,internet,googlechrome"
+]
 type='post'
 date='2019-09-13T18:07:59+0000'
 lastmod='2019-09-13T18:07:59+0000'

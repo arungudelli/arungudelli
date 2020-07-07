@@ -1,7 +1,8 @@
 +++
 title="Watch Torrent Videos Without Downloading"
 summary="Identifying fake torrents is difficult so before downloading we can watch torrents online.To watch torrent videos online install TS Magic Player,"
-keywords="watch torrents,ts magic player,internet tips,torrent,how-to"
+keywords=["watch torrents,ts magic player,internet tips,torrent,how-to"
+]
 type='post'
 date='2019-09-09T18:08:12+0000'
 lastmod='2019-09-09T18:08:12+0000'

@@ -1,7 +1,8 @@
 +++
 title="A Simple JQuery Autocomplete Search Tutorial"
 summary="Tutorial for jQuery-Autocomplete using Twitter typeahead.js plugin,An Alternative to jQuery UI Autocomplete library.This jQuery AutoComplete plugin has jQuery objects."
-keywords="jquery autocomplete,jquery ui autocomplete,jquery autocomplete example,jquery autocomplete json,jquery autosuggest,twitter typeahead,jquery"
+keywords=["jquery autocomplete,jquery ui autocomplete,jquery autocomplete example,jquery autocomplete json,jquery autosuggest,twitter typeahead,jquery"
+]
 type='post'
 date='2019-10-08T18:05:49+0000'
 lastmod='2019-10-08T18:05:49+0000'

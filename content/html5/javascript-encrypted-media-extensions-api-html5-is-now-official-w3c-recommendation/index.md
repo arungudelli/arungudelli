@@ -1,7 +1,8 @@
 +++
 title="Javascript Encrypted Media Extensions API (HTML5) Is Now Official W3C Recommendation"
 summary="HTML5 Encrypted Media Extensions (EME) an API used to play digital Rights Management (DRM) content (encrypted video or audio) on web applications. It is in"
-keywords="html5"
+keywords=["html5"
+]
 type='post'
 date='2019-10-29T18:03:52+0000'
 lastmod='2019-10-29T18:03:52+0000'

@@ -1,7 +1,8 @@
 +++
 title="Discover Similar Webpages While Browsing"
 summary="find webpages similar to the page you are currently looking"
-keywords="must have google chrome extension,google searching techniques,google,google chrome,google search techniques,internet tips,internet"
+keywords=["must have google chrome extension,google searching techniques,google,google chrome,google search techniques,internet tips,internet"
+]
 type='post'
 date='2019-09-14T18:07:55+0000'
 lastmod='2019-09-14T18:07:55+0000'

@@ -1,7 +1,8 @@
 +++
 title="How To Draw Polygon Using HTML5 Canvas"
 summary="To draw HTML5 Canvas Polygon we have to use JavaScript & Canvas API functions like HTML5 Canvas fill,stroke,lineTo based on path abstractions of Canvas API"
-keywords="html5 draw polygon,html5 canvas polygon,html5 canvas fill,html5 canvas stroke,html5,javascript,html5 canvas"
+keywords=["html5 draw polygon,html5 canvas polygon,html5 canvas fill,html5 canvas stroke,html5,javascript,html5 canvas"
+]
 type='post'
 date='2019-10-01T18:06:35+0000'
 lastmod='2019-10-01T18:06:35+0000'

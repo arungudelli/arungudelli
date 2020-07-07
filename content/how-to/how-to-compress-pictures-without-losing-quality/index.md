@@ -1,7 +1,8 @@
 +++
 title="How To Compress Pictures Without Losing Quality"
 summary="How to compress pictures and Emails easily without losing quality of pictures free no need to install any software."
-keywords="compress pictures,microsoft picture manager,facebook,google,internet tips,how-to"
+keywords=["compress pictures,microsoft picture manager,facebook,google,internet tips,how-to"
+]
 type='post'
 date='2019-09-20T18:07:34+0000'
 lastmod='2019-09-20T18:07:34+0000'

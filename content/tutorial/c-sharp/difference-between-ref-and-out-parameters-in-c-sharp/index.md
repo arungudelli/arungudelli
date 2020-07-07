@@ -1,7 +1,8 @@
 +++
 title="Key Differences Between Ref And Out Parameters In C#"
 summary="Ref and out in C# allows us to pass the parameters by reference instead of Value.Ref parameters required to assign the value before calling the function where as for Out parameters its not required. tutorial explains difference between ref and out in C# with examples.& also it tells the difference between ref and out parameters in C# (ref vs out) at CLR level."
-keywords="c#,ref parameter in c#,out parameter in c#,ref vs out in c#"
+keywords=["c#,ref parameter in c#,out parameter in c#,ref vs out in c#"
+]
 type='post'
 date='2019-10-26T18:04:05+0000'
 lastmod='2019-10-26T18:04:05+0000'

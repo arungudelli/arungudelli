@@ -1,7 +1,8 @@
 +++
 title="Simple JQuery Autocomplete Using Asp Net MVC"
 summary="I will explain how implement jQuery Autocomplete Search using Asp .Net MVC and Twitter Typeahead js library."
-keywords="jquery autocomplete,jquery ui autocomplete,jquery autocomplete example,jquery autocomplete json,jquery autosuggest,twitter typeahead,asp net,asp net mvc"
+keywords=["jquery autocomplete,jquery ui autocomplete,jquery autocomplete example,jquery autocomplete json,jquery autosuggest,twitter typeahead,asp net,asp net mvc"
+]
 type='post'
 date='2019-10-09T18:05:43+0000'
 lastmod='2019-10-09T18:05:43+0000'

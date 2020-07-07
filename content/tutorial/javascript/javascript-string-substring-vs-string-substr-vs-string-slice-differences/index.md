@@ -1,7 +1,8 @@
 +++
 title="JavaScript Substring Vs Substr Vs Slice Differences With Examples"
 summary="JavaScript substring(),substr(),slice() are predefined methods in string prototype used to get the substring from a string."
-keywords="javascript subtring(),javascript substr(),javascript slice(),javascript substr vs slice vs substring,javascript"
+keywords=["javascript subtring(),javascript substr(),javascript slice(),javascript substr vs slice vs substring,javascript"
+]
 type='post'
 date='2019-11-05T18:03:24+0000'
 lastmod='2019-11-05T18:03:24+0000'

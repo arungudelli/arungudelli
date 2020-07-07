@@ -1,7 +1,8 @@
 +++
 title="Get Query String Parameter Values From URL Using JavaScript"
 summary="We can get Javascript query string URL parameters by using JavaScript split, ECMAScript 6 split, reduce or JavaScript URLSearchParams. To get javascript url parameter values by name use a regular expression."
-keywords="javascipt,query string parameter in javascript,urlsearchparams in javascript,javascript"
+keywords=["javascipt,query string parameter in javascript,urlsearchparams in javascript,javascript"
+]
 type='post'
 date='2019-11-04T18:03:29+0000'
 lastmod='2019-11-04T18:03:29+0000'

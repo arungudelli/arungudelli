@@ -1,7 +1,8 @@
 +++
 title="How to convert string to enum in C#"
 summary="To Convert string to enum in C# use Enum.TryParse and Enum.Parse methods"
-keywords="['string to enum in C#','Convert string to enum in C#']"
+keywords=["['string to enum in C#','Convert string to enum in C#']"
+]
 type='post'
 date='2020-01-02T18:08:51+0000'
 lastmod='2020-07-01T18:08:51+0000'

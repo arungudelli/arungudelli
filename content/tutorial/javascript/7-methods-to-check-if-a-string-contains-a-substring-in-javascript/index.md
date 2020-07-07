@@ -1,7 +1,8 @@
 +++
 title="Javascript String Contains: Check If A String Contains A Substring"
 summary="To check if a Javascript String Contains a substring or not, we can use 7 different Javascript methods as listed in below table."
-keywords="check if a string contains a substring in javascript (in es6),substring check javascript (in es5 and before),substring check javascript by using javascript search method,substring check javascript by using javascript match method,substring check javascript using regular expression,substring check in javascript using lodash js,substring check javascript using underscore js,best way of substring check javascript,javascript"
+keywords=["check if a string contains a substring in javascript (in es6),substring check javascript (in es5 and before),substring check javascript by using javascript search method,substring check javascript by using javascript match method,substring check javascript using regular expression,substring check in javascript using lodash js,substring check javascript using underscore js,best way of substring check javascript,javascript"
+]
 type='post'
 date='2019-11-12T18:02:52+0000'
 lastmod='2019-11-12T18:02:52+0000'

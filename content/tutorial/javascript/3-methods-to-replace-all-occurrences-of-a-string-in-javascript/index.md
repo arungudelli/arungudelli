@@ -1,7 +1,8 @@
 +++
 title="3 Methods To Replace All Occurrences Of A String In JavaScript"
 summary="Javascript replace method, replaces only the first occurrence of the string. To replace all occurrences of a string in Javascript use string replace() & regex,Javascript split() & join(), Javascript indexOf method."
-keywords="replace all occurrences of a string in javascript,javascript replace,javascript replace all,javascript replace special characters,javascript replace all spaces,javascript replace all comma,javascript replace regex group,javascript replace all escape characters,javascript"
+keywords=["replace all occurrences of a string in javascript,javascript replace,javascript replace all,javascript replace special characters,javascript replace all spaces,javascript replace all comma,javascript replace regex group,javascript replace all escape characters,javascript"
+]
 type='post'
 date='2019-11-13T18:02:48+0000'
 lastmod='2019-11-13T18:02:48+0000'

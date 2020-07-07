@@ -1,7 +1,8 @@
 +++
 title="Access Facebook On Any Mobile Without Internet Even From Nokia 1100"
 summary="Now Facebook users can access Facebook on any mobile without any GPRS or internet connection.You can see Facebook notifications, chat with you Facebook friends and So many things you can on Facebook without internet connection"
-keywords="facebook,twitter,gmail,internet"
+keywords=["facebook,twitter,gmail,internet"
+]
 type='post'
 date='2019-09-21T18:07:31+0000'
 lastmod='2019-09-21T18:07:31+0000'

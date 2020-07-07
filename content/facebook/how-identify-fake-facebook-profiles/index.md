@@ -1,7 +1,8 @@
 +++
 title="How To Identify Fake Facebook Profiles"
 summary="A simple way to identify fake facebook profiles.The biggest problem in Facebook is Fake Facebook profiles.Image search is used to know Face profiles in Facebook"
-keywords="facebook fake profiles,google searching techniques,facebook,google search techniques,internet tips"
+keywords=["facebook fake profiles,google searching techniques,facebook,google search techniques,internet tips"
+]
 type='post'
 date='2019-09-15T18:07:51+0000'
 lastmod='2019-09-15T18:07:51+0000'

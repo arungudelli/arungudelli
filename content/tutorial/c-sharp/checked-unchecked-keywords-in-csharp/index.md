@@ -1,7 +1,8 @@
 +++
 title="Checked And UnChecked Keywords In C#"
 summary="C# Tutorial explains checked,unchecked contexts with examples. C# unchecked context ignores arithmetic overflows & in C# checked context not."
-keywords="checked and unchecked in c#,checked keyword in c#,unchecked keyword in c#,checked and unchecked context in c#,c#"
+keywords=["checked and unchecked in c#,checked keyword in c#,unchecked keyword in c#,checked and unchecked context in c#,c#"
+]
 type='post'
 date='2019-10-23T18:04:23+0000'
 lastmod='2019-10-23T18:04:23+0000'

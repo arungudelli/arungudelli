@@ -1,7 +1,8 @@
 +++
 title="Matrix Effect Using HTML5 And Javascript"
 summary="To create Matrix Effect using HTML5 and JavaScript,I used HTML5 canvas functions fillText,fillStyle & Javascript setInterval,javascript array map& Math.random()"
-keywords="matrix effects,matrix effects html5,html5 canvas filltext,html5 canvas fillstyle,javascript setinterval,javascript math random,javascript array map,html5"
+keywords=["matrix effects,matrix effects html5,html5 canvas filltext,html5 canvas fillstyle,javascript setinterval,javascript math random,javascript array map,html5"
+]
 type='post'
 date='2019-10-02T18:06:27+0000'
 lastmod='2019-10-02T18:06:27+0000'

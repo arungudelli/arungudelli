@@ -1,7 +1,8 @@
 +++
 title="Drop Columns Or Delete Columns In Oracle Table Query"
 summary="To delete columns in Oracle use ALTER TABLE...DROP COLUMN statement query. Dropping columns in oracle can be done in 2 ways Logical Delete, Physical Delete."
-keywords="drop column in oracle table,delete column in oracle table,drop column query in oracle,oracle"
+keywords=["drop column in oracle table,delete column in oracle table,drop column query in oracle,oracle"
+]
 type='post'
 date='2019-11-10T18:03:05+0000'
 lastmod='2019-11-10T18:03:05+0000'

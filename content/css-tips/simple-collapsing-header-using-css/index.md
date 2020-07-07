@@ -1,7 +1,8 @@
 +++
 title="A Simple Collapsing Header Using CSS"
 summary="This Tutorial will explain how to Create a Simple Collapsing Header Effect using CSS. See the Collapsing Header Examples to Understand the Tutorial."
-keywords="collapsing header effect,css,header tag,collapsing header examples,collapsing header css"
+keywords=["collapsing header effect,css,header tag,collapsing header examples,collapsing header css"
+]
 type='post'
 date='2019-10-06T18:06:03+0000'
 lastmod='2019-10-06T18:06:03+0000'
