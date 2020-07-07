@@ -1,11 +1,12 @@
 +++
-title="How To Check If An Object Is Empty In JavaScript Examples"
+title="8 ways To Check If An Object Is Empty or not In JavaScript"
+subtitle="learn how to check if an object is empty in Javascript with examples"
 summary="In javascript, we can check if an object is empty or not by using JSON.stringify, Object.keys (ECMA 5+),Object.entries (ECMA 7+)"
 keywords=["check if an object is empty in javascript,javascript"
 ]
 type='post'
 date='2019-11-14T18:02:45+0000'
-lastmod='2019-11-14T18:02:45+0000'
+lastmod='2020-07-06T18:02:45+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -19,7 +20,9 @@ In javascript, we can check if an object is empty or not by using
 
 <ol><li>JSON.stringify</li><li>Object.keys (ECMA 5+)</li><li>Object.entries (ECMA 7+)</li></ol>
 
-And if you are using any third party libraries like jquery, lodash, Underscore etc you can their existing methods for checking javascript empty object. I will be listing down those methods in this article with examples.
+And if you are using any third party libraries like jquery, lodash, Underscore etc you can use their existing methods for checking javascript empty object. 
+
+I will be listing down those methods in this article with examples.
 
 {{%toc%}}
 
@@ -49,7 +52,7 @@ true // Object is Empty</pre>
 
 ## Using Object.keys in es5+:
 
-In ECMAScript 5 Object.keys() method returns an array of an object’s own property names. So to check if an object is empty or not in Javascript we can check if Object.keys().length is zero or not as shown below.
+In ECMAScript 5 Object.keys() method returns an array of an object’s own property names. So to check if an object is empty or not in ES5 we can check if Object.keys().length is zero or not as shown below.
 
 <pre>var normalObject = {a:2};
 Object.keys(normalObject).length
@@ -71,7 +74,7 @@ console.log('Object is not empty');
 
 Object.entries() method in ECMAScript 7 returns an array of an object’s key-value pairs.
 
-To check if an object is empty or not in javascript using Object.entries() use the below code snippet
+In ES7+, using Object.entries() method we can check for emptyness of an object.
 
 <pre>var normalObject = {a:2};
 Object.entries(normalObject).length
@@ -89,7 +92,9 @@ console.log('Object is not empty');
 
 ## Checking if an object is empty or not in Javascript in older browsers:
 
-The above methods might not work in older browsers like IE 7 and 8 (es5 or ECMAScript 5 and before). So to check if an object is empty or not in all browsers we can loop through the object properties using for as shown below
+The above methods might not work in older browsers like IE 7 and 8 (es5 or ECMAScript 5 and before). 
+
+So to check if an object is empty or not in all browsers we can loop through the object properties using `for loop` as shown below.
 
 <pre>function ifObjectIsEmpty(obj) {
 for(var prop in obj) {
