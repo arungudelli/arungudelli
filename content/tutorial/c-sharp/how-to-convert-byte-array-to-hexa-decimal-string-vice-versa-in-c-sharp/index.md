@@ -1,7 +1,7 @@
 +++
 title="How to convert byte array to a hexadecimal string in C#, and vice versa?"
 summary="This post contains two simple methods to convert byte array to hexadecimal string in C# and vice versa."
-keywords=["['convert byte array to hexadecimal string in C#','convert hexa decimal string to byte array in c#']"
+keywords=["convert byte array to hexadecimal string in C#,convert hexa decimal string to byte array in c#"
 ]
 type='post'
 date='2020-01-06T18:08:51+0000'

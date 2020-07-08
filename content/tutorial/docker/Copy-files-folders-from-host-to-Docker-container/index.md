@@ -1,8 +1,7 @@
 +++
 title="Copying files/folders from host to Docker container & docker container to host"
 summary="To copy files or folders from host to docker container or docker container to host use docker cp command"
-keywords=["['cp from host to container','cp from container to host']"
-]
+keywords=["cp from host to container,cp from container to host"]
 type='post'
 date='2020-01-02T18:08:51+0000'
 lastmod='2020-01-02T18:08:51+0000'

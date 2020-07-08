@@ -7,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content="#2962ff">
   <meta name="google-site-verification" content="AiP6E1VxrOd2g80Bj_Ziep4B4PF5SG2eL6JbWUV8i3Q" />
-  <meta name="generator" content="Source Themes Academic {{ .Site.Data.academic.version }}">
-  {{ .Hugo.Generator }}
+ 
 
   <link rel='preconnect' href='//www.googletagmanager.com'/>
   <link rel='preconnect' href='//www.google-analytics.com'/>
@@ -47,7 +46,10 @@
     {{ $keywords = delimit .Params.keywords ","}}
     {{end}}
 
-    
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+      
   <meta name="description" content="{{ $desc }}">
   <meta name="keywords" content="{{$keywords}}">
   <link rel="canonical" href="{{ .Permalink }}">
@@ -248,6 +250,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
   {{ partial "head_custom" . }}
 
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "image": "{{- with $og_image }}{{.}}{{end}}",
+      "author": {
+        "@type": "Person",
+        "name": "Arunkumar Gudelli"
+      },
+      "headline": "{{ .Title }}",
+      
+      "description": "{{ $desc }}",
+       "mainEntityOfPage":"{{ .Permalink }}",
+      
+      "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+      "dateModified":"{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" | safeHTML }}",
+      
+      
+      "publisher": {
+        "@type": "Organization",
+        "name": "Arunkumar Blog",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.arungudelli.com/img/icon-512x512.png"
+        }
+      }
+    }
+    </script>  
+
 </head>
 <body id="top" data-spy="scroll" data-target="{{ if or .IsHome .Params.widgets }}#navbar-main{{ else }}#TableOfContents{{ end }}" data-offset="71" {{ if not ($scr.Get "light") }}class="dark"{{ end }}>
 
