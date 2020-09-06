@@ -202,6 +202,35 @@
     console.log('ServiceWorker failed', err);
   });
 }
+
+let xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://server.ethicalads.io/api/v1/decision/?publisher=arungudelli&ad_types=image-v1&div_ids=ad_1&format=jsonp');
+xhr.send();
+xhr.onload = function() {
+  if (xhr.status != 200) {
+  } else { 
+       debugger;
+	  var img = document.getElementById("imgad");
+	  debugger;
+	  function loaded() {
+          console.log('loaded')
+      }
+
+if (img.complete) {
+  loaded()
+} else {
+  img.addEventListener('load', loaded)
+  img.addEventListener('error', function() {
+      console.log('error')
+  })
+}
+  }
+};
+
+xhr.onerror = function() {
+  console.log("Request failed");
+};
+
     </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-35147361-1"></script>
 <script>
