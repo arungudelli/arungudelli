@@ -211,9 +211,44 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-35147361-1');
+
+  function my_callback_method(data){
+  if(data.campaign_type == "paid"){
+  
+  var adtag = document.getElementById("adtag");
+  adtag.className = "loaded";
+  adtag.setAttribute("data-ea-publisher","arungudelli");
+  adtag.setAttribute("data-ea-type","image");
+  adtag.innerHTML=data.html;
+  }else{
+    loadcarbonad();
+  }
+  }
+  
+  function loadcarbonad(){
+      var d = document.getElementById("adtag");
+      var t = document.createElement("script");
+      t.type = "application/javascript";
+    t.src="//cdn.carbonads.com/carbon.js?serve=CE7I523M&placement=wwwarungudellicom";
+      t.id = "_carbonads_js";    
+    d.append(t);
+  }
+  
+  
+  function loadads(){
+  var script = document.createElement('script');
+  script.src = 'https://server.ethicalads.io/api/v1/decision/?publisher=arungudelli&ad_types=image-v1&div_ids=ad_1&format=jsonp&callback=my_callback_method';
+  script.addEventListener('error',loadcarbonad);
+  document.body.appendChild(script);
+  }
+  
+  loadads();
+  
+
 </script>
 
-<script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+<!-- <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script> -->
+
 
 </body>
 </html>
