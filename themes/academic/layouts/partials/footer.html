@@ -213,9 +213,12 @@
   gtag('config', 'UA-35147361-1');
 
   function my_callback_method(data){
+
+    var adtag = document.getElementById("adtag");
+    if(adtag == undefined) return;
+
   if(data.campaign_type == "paid"){
   
-  var adtag = document.getElementById("adtag");
   adtag.className = "loaded";
   adtag.setAttribute("data-ea-publisher","arungudelli");
   adtag.setAttribute("data-ea-type","image");
@@ -227,6 +230,7 @@
   
   function loadcarbonad(){
       var d = document.getElementById("adtag");
+      if(d == undefined) return;
       var t = document.createElement("script");
       t.type = "application/javascript";
     t.src="//cdn.carbonads.com/carbon.js?serve=CE7I523M&placement=wwwarungudellicom";
