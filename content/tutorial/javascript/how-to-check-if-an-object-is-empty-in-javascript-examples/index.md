@@ -42,6 +42,7 @@ JSON.stringify converts an object to JSON string. We can convert the javascript 
      //Object is Not Empty
      isEmpty = false;
    }
+   return isEmpty;
 }</pre>
 
 Now we can pass the object to above ifObjectisEmpty method to check if an object is empty as shown below.
