@@ -1,11 +1,12 @@
 +++
-title="Add An HTML Button As A Link To Other HTML Or Acts As A Link"
-summary="To add an HTML button that acts as a link to other HTML, we can use the button inside HTML form or style an anchor link as a button or use button onClick event."
+title="3 Ways to Add An HTML Button As A Link To Other HTML pages"
+summary="There are 3 ways to add an HTML button as a link to other HTML pages 1. Using Buttton inside an HTML form 2. Using CSS style an anchor link as button 3. Using JavaScript button onClick event. 
+"
 keywords=["html button link code,button as a link,button as link in css,html"
 ]
 type='post'
 date='2019-11-18T18:02:28+0000'
-lastmod='2019-11-18T18:02:28+0000'
+lastmod='2020-01-13T18:02:28+0000'
 draft='false'
 authors=['admin']
 [image]
@@ -13,30 +14,38 @@ focal_point=''
 preview_only=false
 +++
 
-To add an HTML button as a link to other HTML, we can use the button inside HTML form or style an anchor link as a button or use button onClick event.
+There are 3 ways to create an HTML button that acts as a link to other HTML pages.
+
+1. Using Buttton inside an HTML form
+2. Using CSS style an anchor link as button
+3. Using JavaScript button onClick event. 
+
 
 {{%toc%}}
 
-## 1. Add an HTML button as a link using the form tag:
+## 1. Add an HTML button as a link using the form tag
 
-To create a button which acts as a link i.e., when we click on the button it will redirect to other HTML pages we can place the <em>&lt;button&gt;&nbsp;</em>tag inside a <em>&lt;form&gt;</em> and add the HTML target link in action attribute of the form element as shown below
+To create a button which acts as a link i.e., when we click on the button it will redirect to other HTML pages, place the `<button>` tag inside a `<form>` and add the HTML target link in action attribute of the form element as shown below.
 
-<pre>&lt;form action="https://www.angularjswiki.com/"&gt;
-&lt;input type="submit" value="Go to Angular Tutorials" /&gt;
-&lt;/form&gt;
+```
+<form action="https://www.angularjswiki.com/">
+<input type="submit" value="Go to Angular Tutorials" />
+</form>
 
-&lt;form action="https://www.angularjswiki.com/"&gt; 
- &lt;button type="submit"&gt;Go to Angular Tutorials&lt;/button&gt; 
-&lt;/form&gt;</pre>
+<form action="https://www.angularjswiki.com/"> 
+ <button type="submit">Go to Angular Tutorials</button> 
+</form>
+```
 
-Or we can use <em>&lt;input&gt;</em> tag with type submit which acts as a button.
+Or we can use `<input>` tag with type submit which acts as a button.
 
 To open a button link in a new tab we can add form target as blank as shown below
 
-<pre>&lt;form action="https://www.angularjswiki.com/" target="_blank"&gt; 
- &lt;button type="submit"&gt;Go to Angular Tutorials&lt;/button&gt; 
-&lt;/form&gt;</pre>
-
+```
+<form action="https://www.angularjswiki.com/" target="_blank"> 
+ <button type="submit">Go to Angular Tutorials</button> 
+</form>
+```
 And we can use HTML5 <em>formaction</em> attribute with the <em>&lt;button&gt;</em> inside a form to redirect to other HTML pages as shown below
 
 <pre>&lt;form target="_blank"&gt;
