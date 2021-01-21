@@ -33,3 +33,10 @@ HUGO_ENABLEGITINFO = "true"
 from = "/tutorial/c-sharp/how-to-convert-int-to-enum-in-c-sharp/"
 to = "/tutorial/c-sharp/how-to-convert-string-to-enum-in-c-sharp/"
 status = 301
+
+[[redirects]]
+  from = "/web/*"
+  to = "https://loving-spence-2263a7.netlify.app/:splat"
+  status = 200
+  force = true
+
