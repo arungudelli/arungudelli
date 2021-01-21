@@ -1,7 +1,6 @@
 +++
 title="3 Ways to Add An HTML Button As A Link To Other HTML pages"
-summary="There are 3 ways to add an HTML button as a link to other HTML pages 1. Using Buttton inside an HTML form 2. Using CSS style an anchor link as button 3. Using JavaScript button onClick event. 
-"
+summary="There are 3 ways to add an HTML button as a link to other HTML pages 1. Using Buttton inside an HTML form 2. Using CSS style an anchor link as button 3. Using JavaScript button onClick event."
 keywords=["html button link code,button as a link,button as link in css,html"
 ]
 type='post'
