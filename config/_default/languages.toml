@@ -5,12 +5,20 @@
 # Configure the English version of the site.
 [en]
   languageCode = "en-us"
-#  contentDir = "content/en"
+  contentDir = "content/en"
 
-#[fr]
-#languageCode = "fr"
-#contentDir = "content/fr"
-# [[fr.menu.main]]
+[fr]
+languageCode = "fr"
+contentDir = "content/fr"
+ [[fr.menu.main]]
+ name = "Home"
+  url = "#"
+  weight = 10
+
+#[de]
+#languageCode = "de"
+#contentDir = "content/de"
+# [[de.menu.main]]
 # name = "Home"
 #  url = "#"
 #  weight = 10
