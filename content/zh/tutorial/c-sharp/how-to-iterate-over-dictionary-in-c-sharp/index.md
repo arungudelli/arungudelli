@@ -40,7 +40,7 @@ for (var i = 1; i <= 5; i++)
 
 {{%toc%}}
 
-##解决方案1：使用`C# foreach` 循环
+## 解决方案1：使用`C# foreach` 循环
 
 使用`C# foreach` 循环是在C#中迭代字典键值的最简单和直接的方法。
 
@@ -63,7 +63,7 @@ dictionary key is key5 and value is value5
 
 `KeyValuePair` 我们可以很容易地访问`Key` 和`Value` 类型的属性。
 
-##解决方案2：只对C#字典的键进行迭代
+## 解决方案2：只对C#字典的键进行迭代
 
 如果你想只在字典的键上循环，使用C#字典的`dictionary.Keys` 属性。
 
@@ -74,7 +74,7 @@ foreach(var key in dictionaryExample.Keys)
 }
 ```
 
-##解决方案3：只在C#字典的值上进行迭代
+## 解决方案3：只在C#字典的值上进行迭代
 
 如果你想只迭代字典中的值，请使用C#字典`dictionary.Values` 属性。
 
@@ -85,7 +85,7 @@ foreach (var value in dictionaryExample.Values)
 }
 ```
 
-##解决方案4：使用`Deconstruct()` of `KeyValuePair<TKey,TValue>`在C# 7中
+## 解决方案4：使用`Deconstruct()` of `KeyValuePair<TKey,TValue>`在C# 7中
 
 解构器是在C#7.0版本中引入的。
  
@@ -143,7 +143,7 @@ foreach (var (key,value) in dictionaryExample)
 }
 ```
 
-##解决方案5：在C#7中使用`Deconstruct` 和`discards` 
+## 解决方案5：在C#7中使用`Deconstruct` 和`discards` 
 
 从C#7.0开始，C#支持弃权。 
 
@@ -187,7 +187,7 @@ foreach (var (key, value) in dictionaryExample.Select(x => (x.Key, x.Value)))
 
 在大多数情况下，我们不会使用这种方法，但知道这一点很好。
 
-##解决方案7：使用`dictionary.ElementAt()` 函数和`for` 循环
+## 解决方案7：使用`dictionary.ElementAt()` 函数和`for` 循环
 
 我们可以使用简单的`for` 循环来迭代字典的键值对。
 

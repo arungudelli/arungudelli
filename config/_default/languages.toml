@@ -6,6 +6,9 @@
 [en]
   languageCode = "en-us"
   contentDir = "content/en"
+name="Home"
+url="#"
+weight=1
 
 [bg]
 languageCode="bg"
