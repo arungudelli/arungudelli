@@ -1,7 +1,7 @@
 +++
 title="8 moduri de a buclă/iterare a perechilor cheie-valoare din dicționar în C#"
 summary="Utilizarea buclei foreach C# este cea mai simplă și directă modalitate de a itera peste valorile cheie ale dicționarului în C#."
-keywords=["bucla dicționar în C#, iterați dicționarul c#, bucla chei dicționar, bucla valori dicționar"]]
+keywords=["bucla dicționar în C#, iterați dicționarul c#, bucla chei dicționar, bucla valori dicționar"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

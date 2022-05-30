@@ -5,10 +5,10 @@ keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, l
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'
-rascunho='falso''
-autores=['admin']
-[imagem]
-focal_point='''
+draft='false'
+authors=['admin']
+[image]
+focal_point=''
 preview_only=false
 +++
 

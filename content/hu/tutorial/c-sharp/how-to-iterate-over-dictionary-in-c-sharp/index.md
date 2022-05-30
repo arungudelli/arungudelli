@@ -1,7 +1,7 @@
 +++
 title="8 módja a szótár kulcs-érték párok ciklusának/iterálásának C#-ban"
 summary="A C# foreach ciklus használata a legegyszerűbb és legegyszerűbb módja a szótárkulcsértékek iterálásának C# nyelven."
-keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]]
+keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

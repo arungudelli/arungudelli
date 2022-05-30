@@ -1,15 +1,15 @@
 +++
 title="C#で辞書のキーと値のペアをループ/反復処理する8つの方法"
 summary="C#のforeachループを使用することは、C#で辞書のキー値を繰り返し処理する最もシンプルでわかりやすい方法です。"
-keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]].
-type='post'（ポスト
+keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]
+type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'
 draft='false'
-authors=['管理者']
-[イメージ図］
-focal_point=''です。
-プレビューのみ=false
+authors=['admin']
+[image]
+focal_point=''
+preview_only=false
 +++
 
 C#で辞書のキーと値のペアを繰り返し処理するには、次のメソッドを使用します。

@@ -38,7 +38,7 @@ for (var i = 1; i <= 5; i++)
 }
 ```
 
-{{%{toc%}}
+{{%toc%}}
 
 ## 1. risinājums: Izmantojot `C# foreach` cilpu
 

@@ -1,7 +1,7 @@
 +++
 title="8 cara untuk mengulang/mengiterasi pasangan nilai kunci kamus di C#"
 summary="Menggunakan loop foreach C# adalah cara paling sederhana dan mudah untuk mengiterasi nilai kunci kamus di C#."
-keywords=["perulangan kamus di C#, iterasi kamus c#, perulangan kunci kamus, perulangan nilai kamus"]]
+keywords=["perulangan kamus di C#, iterasi kamus c#, perulangan kunci kamus, perulangan nilai kamus"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

@@ -1,13 +1,13 @@
 +++
 title="在C#中循环/迭代字典键值对的8种方法"
-摘要="使用C#的foreach循环是在C#中迭代字典键值的最简单和直接的方法。"
+summary="使用C#的foreach循环是在C#中迭代字典键值的最简单和直接的方法。"
 keywords=["C#中的循环字典，迭代字典c#，循环字典键，循环字典值"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'
 draft='false'
 authors=['admin']
-[图片]
+[image]
 focal_point=''
 preview_only=false
 +++
