@@ -1,7 +1,7 @@
 +++
 title="8 načinov za ustvarjanje zanke/teratiranja parov ključ-vrednost v slovarju v jeziku C#"
 summary="Uporaba zanke foreach v jeziku C# je najpreprostejši in enostaven način za iteracijo nad vrednostmi ključev slovarja v jeziku C#."
-ključne besede=["zanka slovar v C#, iteriranje slovarja c#, zanka ključi slovarja, zanka vrednosti slovarja"]
+keywords=["zanka slovar v C#, iteriranje slovarja c#, zanka ključi slovarja, zanka vrednosti slovarja"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

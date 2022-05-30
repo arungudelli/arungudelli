@@ -8,7 +8,7 @@ lastmod='2022-05-27T00:00:00+0000'
 draft='false'
 authors=['admin']
 [image]
-focal_point='''
+focal_point=''
 preview_only=false
 +++
 

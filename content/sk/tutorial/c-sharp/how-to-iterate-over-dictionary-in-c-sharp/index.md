@@ -1,7 +1,7 @@
 +++
 title="8 spôsobov, ako v jazyku C# vytvoriť cyklus/iteráciu dvojíc kľúč-hodnota slovníka"
 summary="Použitie cyklu foreach v jazyku C# je najjednoduchší a najpriamejší spôsob iterácie hodnôt kľúčov slovníka v jazyku C#."
-kľúčové slová=["cyklus slovníka v jazyku C#, iterácia slovníka c#, cyklus kľúčov slovníka, cyklus hodnôt slovníka"]
+keywords=["cyklus slovníka v jazyku C#, iterácia slovníka c#, cyklus kľúčov slovníka, cyklus hodnôt slovníka"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

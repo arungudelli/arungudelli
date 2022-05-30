@@ -1,7 +1,7 @@
 +++
 title="8 būdai, kaip C# kalba sudaryti ciklą/iteruoti žodyno rakto ir vertės poras"
 summary="C# foreach ciklo naudojimas yra paprasčiausias ir aiškiausias būdas iteruoti žodyno raktų vertes C# kalba."
-raktažodžiai=["ciklas žodyne C#, iteruoti žodyną c#, ciklas žodyno raktai, ciklas žodyno reikšmės"]
+keywords=["ciklas žodyne C#, iteruoti žodyną c#, ciklas žodyno raktai, ciklas žodyno reikšmės"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

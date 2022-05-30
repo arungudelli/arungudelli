@@ -2,13 +2,13 @@
 title="8 formas de loop/alfabetizar pares de valores chave do dicionário em C#"
 summary="A utilização de laço em C# para a frente é a forma mais simples e directa de iterar sobre os valores chave do dicionário em C#"
 keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]
-type='post''
+type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'
-rascunho='falso'
-autores=['admin']
-[imagem]
-focal_point='''
+draft='false'
+authors=['admin']
+[image]
+focal_point=''
 preview_only=false
 +++
 

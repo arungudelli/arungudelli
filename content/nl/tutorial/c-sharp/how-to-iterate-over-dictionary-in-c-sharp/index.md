@@ -2,10 +2,10 @@
 title="8 manieren om dictionary key value paren te itereren in C#"
 summary="Met behulp van C# foreach loop is de eenvoudigste en eenvoudige manier om te itereren over dictionary key values in C#."
 keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]
-type="post
+type="post"
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'
-draft='vals'
+draft='false'
 authors=['admin']
 [image]
 focal_point=''

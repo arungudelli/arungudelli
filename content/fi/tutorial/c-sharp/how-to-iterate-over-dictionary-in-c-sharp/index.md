@@ -1,7 +1,7 @@
 +++
 title="8 tapaa silmukoida/toistaa sanakirjan avain-arvopareja C#:ssa"
 summary="C#:n foreach-silmukan käyttäminen on yksinkertaisin ja suoraviivaisin tapa kerrata sanakirjan avainarvoja C#:ssa."
-keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]]
+keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

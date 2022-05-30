@@ -1,13 +1,13 @@
 +++
 title="8 veidi, kā veidot cilpas/iterēt vārdnīcas atslēgu/vērtību pārus C# valodā"
 summary="Izmantojot C# foreach cilpu, tas ir vienkāršākais un vienkāršākais veids, kā C# programmā iterēt vārdnīcas atslēgu vērtības."
-atslēgas vārdi=[["cilpa vārdnīca C#, iterēt vārdnīcu c#, cilpa vārdnīcas atslēgas, cilpa vārdnīcas vērtības"]]
+keywords=["cilpa vārdnīca C#, iterēt vārdnīcu c#, cilpa vārdnīcas atslēgas, cilpa vārdnīcas vērtības"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'
 draft='false'
 authors=['admin']
-[attēls]
+[image]
 focal_point=''
 preview_only=false
 +++

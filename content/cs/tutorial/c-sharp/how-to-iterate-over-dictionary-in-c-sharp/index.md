@@ -1,7 +1,7 @@
 +++
 title="8 způsobů, jak v jazyce C# vytvořit smyčku/iterovat dvojice klíč-hodnota slovníku"
 summary="Použití smyčky foreach v jazyce C# je nejjednodušší a přímočarý způsob iterace hodnot klíčů slovníku v jazyce C#."
-klíčová slova=["smyčka slovníku v C#, iterace slovníku c#, smyčka klíčů slovníku, smyčka hodnot slovníku"]
+keywords=["smyčka slovníku v C#, iterace slovníku c#, smyčka klíčů slovníku, smyčka hodnot slovníku"]
 type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'

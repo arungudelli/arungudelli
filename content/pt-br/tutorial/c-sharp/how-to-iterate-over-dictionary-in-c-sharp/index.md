@@ -2,7 +2,7 @@
 title="8 formas de loop/alfabetizar pares de valores chave do dicionário em C#"
 summary="O uso de loop C# foreach é a maneira mais simples e direta de iterar sobre os valores chave do dicionário em C#"
 keywords=["loop dictionary in C#, iterate dictionary c#, loop dictionary keys, loop dictionary values"]
-type='post''
+type='post'
 date='2022-05-27T00:00:00+0000'
 lastmod='2022-05-27T00:00:00+0000'
 rascunho='falso''
