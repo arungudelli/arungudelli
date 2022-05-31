@@ -1,8 +1,7 @@
 +++
 title="How to check if a string is a number in C#"
-summary="Steps to check if a string is a number in c# 1.Declare an integer variable. 2.Pass string to int.TryParse() or double.TryParse() methods with out variable. 3.If the string is a number TryParse method will return true. And assigns value to the declared integer value."
-keywords=["check if a string is number in C#"
-]
+summary="Steps to check if a string is a number in c# 1.Declare an integer variable. 2.Pass string to `int.TryParse()` or `double.TryParse()` methods with `out` variable. 3.If the string is a number `TryParse` method will return true. And assigns value to the declared integer `out` value."
+keywords=["check if a string is number in C#"]
 type='post'
 date='2020-07-01T19:08:51+0000'
 lastmod='2020-07-01T19:08:51+0000'
@@ -16,8 +15,8 @@ preview_only=false
 Steps to check if a string is a number in C#
 
 1. Declare an integer variable.
-2. Pass string to int.TryParse() or double.TryParse() methods with out variable.
-3. If the string is a number TryParse method will return true. And assigns value to the declared integer out value.
+2. Pass string to `int.TryParse()` or `double.TryParse()` methods with `out` variable.
+3. If the string is a number `TryParse` method will return true. And assigns value to the declared integer `out` value.
 
 {{%toc%}}
 
@@ -47,11 +46,11 @@ bool isNumber = int.TryParse(stringNumber, out int numericValue);
 
 ```
 
-The problem with the above int.TryParse method is it cannot check for negative string number values.
+The problem with the above `int.TryParse` method is it cannot check for negative string number values.
 
 ## Checking for negative string number in C# 
 
-To Check for negative string number values we can use C# double.TryParse() method.
+To Check for negative string number values we can use C# `double.TryParse()` method.
 
 ```
 var negativeString = "-123";
@@ -67,4 +66,4 @@ if(double.TryParse(negativeString,out number)){
 
 ## Best way to check if string is number in C# 
 
-Always use double.TryParse() method to check if a string is number, because it can validate both positive and negative numbers.
+Always use `double.TryParse()` method to check if a string is number, because it can validate both positive and negative numbers.
