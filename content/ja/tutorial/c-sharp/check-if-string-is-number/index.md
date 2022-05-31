@@ -1,7 +1,7 @@
 +++
 title="C#で文字列が数値かどうかを確認する方法"
 summary="C#で文字列が数値かどうかを確認する手順 1.整数変数を宣言する。 2.`out` 変数で`int.TryParse()` または`double.TryParse()` メソッドに文字列を渡す。 3.文字列が数値の場合、`TryParse` メソッドは真を返します。そして宣言された整数`out` の値に値を代入する。"
-keywords=["check if a string is number in C#" ]文字列が数字かどうかを確認する。
+keywords=["check if a string is number in C#" ]
 type='post'
 date='2020-07-01T19:08:51+0000'
 lastmod='2020-07-01T19:08:51+0000'
