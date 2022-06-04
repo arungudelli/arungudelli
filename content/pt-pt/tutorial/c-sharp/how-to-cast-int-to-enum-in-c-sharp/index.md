@@ -1,6 +1,6 @@
 +++
-title   ="How to cast int to enum in C#"
-summary ="To cast `int` to `enum` in C#, explicitly type cast the `enum` variable to integer."
+title   ="Como lançar `int` a `enum` em C#"
+summary ="Para lançar `int` a `enum` em C#, digite explicitamente a variável `enum` para inteirar"
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
@@ -12,7 +12,7 @@ focal_point=''
 preview_only=false
 +++
 
-To cast `int` to `enum` in C#, explicitly type cast the `enum` variable to integer.
+Para lançar `int` a `enum` em C#, digite explicitamente a variável `enum` para inteirar.
 
 ```
 SampleEnum sample = (SampleEnum)IntVariable;
@@ -20,11 +20,11 @@ SampleEnum sample = (SampleEnum)IntVariable;
 
 {{%toc%}}
 
-## Solution 1: Using explicit type casting of `enum` variable
+## Solução 1: Usando fundição de tipo explícito de `enum` variável
 
-Let's go through an example to understand it further.
+Passemos por um exemplo para o compreender melhor.
 
-We have an `enum` type called `Days`, which represents week days starting from Monday.
+Temos um tipo `enum` chamado `Days`, que representa os dias da semana a partir de segunda-feira.
 
 ```
 public enum Days
@@ -43,9 +43,9 @@ Days day = (Days) dayInteger;
 Console.WriteLine(day.ToString());//Monday
 ```
 
-But there is a problem with above **`int` to `enum` conversion**.
+Mas há um problema com **`int` a `enum` conversão***.
 
-What if the `int` value does not exists in the C# `Enum` variable?
+E se o valor `int` não existir na variável C# `Enum`?
 
 ```
 int dayInteger = 100;
@@ -53,15 +53,15 @@ Days day = (Days) dayInteger;
 Console.WriteLine(day.ToString());//100
 ```
 
-It will not throw any exception.
+Não irá lançar qualquer excepção.
 
-So it's better to check if the `int` value exists in `Enum` before casting it to the integer.
+Por isso é melhor verificar se o valor `int` existe em `Enum` antes de o lançar para o inteiro.
 
-## Check if an integer exists or not in `enum` variable
+## Verificar se existe ou não um número inteiro na variável `enum` 
 
-To get the all integer values in C# `Enum` we can use `Enum.GetValues` method.
+Para obter todos os valores inteiros em C# `Enum`, podemos utilizar o método `Enum.GetValues`.
 
-Convert them to C# list, so that we can use `list.Contains()` method to check if the given integer exist in `enum` variable.
+Convertê-los para a lista C#, para que possamos utilizar o método `list.Contains()` para verificar se o número inteiro dado existe na variável `enum`.
 
 ```
 var intValue = 100;
@@ -75,7 +75,7 @@ if(enumValues.Contains(intValue)){
 }
 
 ```
-We can use `Enum.IsDefined()` method to check if converted integer value exist in the given `enum` type.  
+Podemos utilizar o método `Enum.IsDefined()` para verificar se existe um valor inteiro convertido no tipo `enum` dado.  
 
 ```
 var enumValue = (Days)1;
@@ -88,9 +88,9 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 ```
 
 
-## Solution 2: Use `Enum.ToObject()` method
+## Solução 2: Utilizar o método `Enum.ToObject()` 
 
-We can use `Enum.ToObject()` method, convert `int` value to `enum` in C#.
+Podemos usar o método `Enum.ToObject()`, converter o valor `int` para `enum` em C#.
 
 ```
 var enumValue = Enum.ToObject(typeof(Days),1);
