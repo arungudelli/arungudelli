@@ -1,0 +1,119 @@
+# Meta Data for SEO
+
+## Homepage
+title = "Arunkumar Blog"
+titleSeparator = ""
+titleAddition = ""
+description = "Learn programming and web development with simple detailed tutorials and examples."
+
+## Documentation
+# docsVersion = "0.3"
+
+## Open Graph
+images = ["Arungudelli_Post.png"]
+ogLocale = "en_US"
+domainTLD = "www.arungudelli.com"
+titleHome = "Arunkumar Blog"
+
+## Twitter Cards
+#twitterSite = "@arungudelli"
+twitterCreator = "@arungudelli"
+
+## JSON-LD
+schemaType = "Person"
+#schemaType = "Organization"
+schemaName = "Arunkumar Blog"
+schemaAuthor = "Arunkumar Gudelli"
+schemaAuthorTwitter = "https://twitter.com/arungudelli"
+schemaAuthorLinkedIn = "https://www.linkedin.com/in/arungudelli/"
+schemaAuthorGitHub = "https://github.com/arungudelli"
+schemaLocale = "en-US"
+schemaLogo = "arungudelli-logo.jpg"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "arungudelli-logo.png"
+schemaImageWidth = 512
+schemaImageHeight = 512
+schemaTwitter = "https://twitter.com/arungudelli"
+schemaLinkedIn = "https://www.linkedin.com/in/arungudelli/"
+schemaGitHub = "https://github.com/arungudelli/"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+# Images
+imageResponsive = true
+imageConvertTo = "webp"
+imageImageSizes = ["480","720","1080","1280","1600","2048"]
+singleSize = false
+imageAddClass = "img-fluid lazyload blur-up"
+
+### Image template
+defaultImage = "default-image.png" # put in `./assets/images/`
+fillImage = "1270x740 Center" # normalize image size
+
+# Footer
+#footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+
+# Feed
+copyRight = "Copyright (c) 2021-2022 Arunkumar Gudelli"
+
+# Alert
+alert = false
+alertDismissable = true
+# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
+alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
+
+# Edit Page
+# repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
+repoHost = "GitHub"
+#repoHost = "Gitea"
+docsRepo = "https://github.com/arungudelli/arungudelli"
+docsRepoBranch = "master"
+docsRepoSubPath = ""
+editPage = false
+lastMod = false
+
+# Set site log or disable
+siteLogo = false
+siteLogoLight = "/icon-logo.png"
+siteLogoWidth = "50px" # width adjustment or set 'auto'
+
+[sections]
+  sectionNav = ["docs", "guides"]
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = false
+  searchSectionsShow = []
+  searchSectionsIndex = []
+  darkMode = false
+  bootStrapJs = true
+  breadCrumb = true
+  highLight = false
+  kaTex = false
+  multilingualMode = true
+  docsVersioning = false
+  fullWidth = false
+  navbarSticky = true
+  toTopButton = false
+  scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
+
+[menu]
+  [menu.section]
+    auto = true
+    collapsibleSidebar = true

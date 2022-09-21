@@ -1,0 +1,99 @@
+{{ define "main" }}
+<section class="section container-fluid mt-n3 pb-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-12 text-center">
+      <h1 class="mt-0">{{ .Title }}</h1>
+    </div>
+    <div class="col-lg-9 col-xl-8 text-center">
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <img class="img-fluid blur-up ls-is-cached lazyloaded" src="/images/icons/Arungudelli.png" alt="Arun Gudelli">
+      <!-- <a class="btn btn-primary btn-lg px-4 mb-2" href="/learn/" role="button" target="_blank">{{ i18n "get-started" }}</a>
+      <p class="meta">Open-source MIT Licensed. <a href="https://github.com/arungudelli/go" target="_blank">GitHub</a></p> -->
+    </div>
+
+   
+
+  </div>
+</section>
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-lg-9">
+      {{- .Content -}}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-footer" }}
+<section class="section section-sm container-fluid">
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-9">
+      <!-- {{- .Content -}} -->
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ define "sidebar-prefooter" }}
+  {{ if eq $.Site.Language.LanguageName "English" }}
+  <section class="section section-sm">
+    <div class="container">
+      <!-- <div class="row justify-content-center text-center">
+        <div class="col-lg-5">
+          <h2 class="h4">Go Language Tips & tricks</h2>
+          <p>List of useful <a href="/tips/" target="_blank">Go Language Tips & Tricks</a></p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Learn Go Language ⚡️</h2>
+          <p>New to Go language?? <a href="/learn/" target="_blank">Start Here</a></p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Latest Go Language News</h2>
+          <p>See What's happening around <a href="/news/" target="_blank">Go Language</a></p>
+        </div>
+      </div> -->
+      <div class="row justify-content-center text-center">
+        <div class="col-md-12 col-lg-10 col-xl-8">
+        {{ partial "sidebar/newsletter.html" . -}}
+      </div>
+        <!-- <div class="col-lg-5">
+          <h2 class="h4">Full text search</h2>
+          <p>Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Page layouts</h2>
+          <p>Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.</p>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="h4">Dark mode</h2>
+          <p>Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <section class="section section-sm mt-3 pt-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-10 col-xl-8">
+          <h2 class="h3 mt-3 text-center">Latest from Arun Gudelli</h2>
+          <div class="card-list">
+          {{ range first 5 (.Site.RegularPages)  -}}
+          <div class="card">
+            <div class="card-body">
+              <h3><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}{{ with .Params.emoji -}}&nbsp;{{ . | emojify }}{{ end -}}</a></h3>
+              <p>{{ .Params.lead | safeHTML }}</p>
+              {{ partial "main/blog-meta.html" . -}}
+            </div>
+          </div>
+          {{ end -}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+{{ end }}
+
+
+
+
