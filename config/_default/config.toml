@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://www.arungudelli.com/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
