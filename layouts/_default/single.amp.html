@@ -21,7 +21,8 @@ limitations under the License.
 <head>
   <meta charset="utf-8">
   <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
-  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="canonical" href="{{ (index .Page.AlternativeOutputFormats 0).Permalink   }}">
+
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="amp-google-client-id-api" content="googleanalytics">
   <script async="" src="https://cdn.ampproject.org/v0.js"></script>
