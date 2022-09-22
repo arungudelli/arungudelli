@@ -16,7 +16,7 @@ defaultContentLanguage = "en"
 # add redirects/headers
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
-section = ["HTML", "RSS", "SITEMAP","AMP"]
+section = ["HTML", "RSS", "SITEMAP"]
 page = ["HTML","AMP"]
 
 # remove .{ext} from text/netlify
