@@ -1,7 +1,6 @@
-
 ---
-title: "How to Generate Random Numbers in C#"
-description: "Different ways to generate random numbers in C# with simple examples."
+title: "How to Generate Random Numbers (integers or long) in C#"
+description: "Different ways to generate random numbers (integers or long) in C# with simple examples."
 lead: ""
 date: 2022-09-21T14:41:21+01:00
 lastmod: 2022-09-21T14:41:21+01:00
