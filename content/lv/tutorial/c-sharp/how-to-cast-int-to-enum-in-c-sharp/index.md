@@ -1,10 +1,11 @@
 +++
-title   ="Kā C# valodā `int` pārvērst `enum` "
-summary ="Lai C# valodā atveidotu `int` uz `enum`, skaidri ierakstiet mainīgo `enum` uz veselu skaitli."
+title   ="2 veidi, kā konvertēt/pārvērst int uz enum programmā C#"
+summary ="Ir 2 veidi, kā konvertēt int uz enum programmā C# 1. Izmantojot C# tiešo tipa atveidi. 2. 2. Izmantojot metodi Enum.ToObject()."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-Lai `int` pārvērstu `enum` uz C#, skaidri ierakstiet cast `enum` mainīgo uz integer.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+Ir 2 veidi, kā konvertēt vai atveidot `int` uz `enum` programmā C#
+
+1. Izmantojot C# tiešo tipa atveidi.
+2. Izmantojot `Enum.ToObject()` metodi
 
 {{%toc%}}
 
-## 1. risinājums: Izmantojot `enum` mainīgā tiešo tipa atveidi
+## Risinājums Nr. 1: Izmantojot C# tiešo tipa atveidi
+
+Vienkāršs veids, kā konvertēt `int` uz `enum` c# valodā ir izmantot tiešo tipa atveidi.
 
 Lai to labāk izprastu, aplūkosim piemēru.
 
-Mums ir `enum` tips ar nosaukumu `Days`, kas apzīmē nedēļas dienas, sākot no pirmdienas.
+Mums ir `enum` tips ar nosaukumu `LogLevel`, kas apzīmē dažādus žurnālu reģistrēšanas līmeņus.
 
-```
-public enum Days
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Bet ir problēma ar iepriekš minēto **`int` uz `enum` konvertēšanu**.
+Skaidrā kastēšana tiek veikta, ievietojot `enum` tips iekavās pirms `int` vērtības.
 
-Ko darīt, ja `int` vērtība nepastāv C# `Enum` mainīgajā?
+Bet ir problēma ar iepriekš minēto **C# `int` uz `enum` konvertēšanu**.
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+Ko darīt, ja C# `Enum` mainīgajā nav `int` vērtības?
+
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Izņēmums netiks mests.
 
-Tāpēc labāk ir pārbaudīt, vai `int` vērtība eksistē `Enum` pirms tās pārrēķināšanas uz veselu skaitli.
+Tāpēc labāk ir pārbaudīt, vai `int` vērtība eksistē `C# Enum` pirms tās pārrēķināšanas uz veselu skaitli.
 
-## Pārbaudiet, vai mainīgajā `enum` ir vesels skaitlis vai nav
+## Pārbaudiet, vai vesels skaitlis pastāv vai ne `C# enum` mainīgajā
 
-Lai iegūtu visas veselu skaitļu vērtības C# `Enum`, mēs varam izmantot `Enum.GetValues` metodi.
+Lai iegūtu visas veselu skaitļu vērtības mainīgajā `C# Enum`, mēs varam izmantot `Enum.GetValues` metodi.
 
-Konvertējiet tās uz C# sarakstu, lai mēs varētu izmantot `list.Contains()` metodi, lai pārbaudītu, vai dotais veslais skaitlis pastāv `enum` mainīgajā.
+Pārvērst tās `C#` sarakstā, lai mēs varētu izmantot `list.Contains()` metodi, lai pārbaudītu, vai dotais veslais skaitlis pastāv `enum` mainīgajā.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Mēs varam izmantot `Enum.IsDefined()` metodi, lai pārbaudītu, vai konvertētā veselā skaitļa vērtība pastāv dotajā `enum` tipā.  
+Mēs varam izmantot `Enum.IsDefined()` metodi, lai pārbaudītu, vai konvertētā veselā skaitļa vērtība eksistē dotajā sarakstā `enum` tipā.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## 2. risinājums: Izmantojiet `Enum.ToObject()` metodi
 
-Mēs varam izmantot `Enum.ToObject()` metodi, konvertēt `int` vērtību uz `enum` C#.
+Mēs varam izmantot `C# Enum.ToObject()` metodi, konvertēt `int` vērtību uz `enum` c# valodā.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

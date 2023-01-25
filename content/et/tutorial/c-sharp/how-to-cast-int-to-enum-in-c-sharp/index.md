@@ -1,10 +1,11 @@
 +++
-title   ="Kuidas valada `int` aadressile `enum` C# keeles"
-summary ="Selleks, et C# keeles valada `int` muutujaks `enum`, tuleb muutuja `enum` selgesõnaliselt valada täisarvuks."
+title   ="2 viisi, kuidas konverteerida / casta int to enum in C#"
+summary ="On 2 viisi, kuidas casta int to enum in C# 1. Kasutades C# eksplitsiitset tüübi valimist. 2. Kasutades meetodit Enum.ToObject()."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-Et castida `int` C#-s `enum` -ks, tipi selgesõnaliselt cast `enum` muutuja täisarvuks.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+On 2 võimalust, kuidas teisendada või valada `int` to `enum` c# keeles
+
+1. Kasutades C# selgesõnalist tüübi valimist.
+2. Kasutades `Enum.ToObject()` meetodit
 
 {{%toc%}}
 
-## Lahendus 1: Muutuja `enum` selgesõnalise tüübi valimise kasutamine
+## Lahendus 1: C# selgesõnalise tüübi valimise kasutamine
 
-Vaatame läbi ühe näite, et seda paremini mõista.
+Lihtne viis konverteerida `int` `enum` c# keeles on kasutada selgesõnalist tüübivahetust.
 
-Meil on tüüp `enum` nimega `Days`, mis tähistab nädalapäevi alates esmaspäevast.
+Vaatame läbi näite, et seda paremini mõista.
 
-```
-public enum Days
+Meil on olemas `enum` tüüp nimega `LogLevel`, mis esindab erinevaid logimise tasemeid.
+
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Kuid ülaltoodud **`int` konverteerimisega `enum` on probleem**.
+Eksplitsiitne valimine toimub paigutades `enum` tüüp sulgudes `int` väärtuse ette.
+
+Kuid ülaltoodud **C# `int` puhul on probleemiks, et `enum` teisendamisega**.
 
 Mis siis, kui `int` väärtust ei ole C# `Enum` muutujas olemas?
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 See ei tekita ühtegi erandit.
 
-Seega on parem kontrollida, kas `int` väärtus on olemas aadressil `Enum`, enne kui see täisarvuks valatakse.
+Seega on parem kontrollida, kas `int` väärtus on olemas aadressil `C# Enum`, enne kui see täisarvuks valatakse.
 
-## Kontrollida, kas `enum` muutujas on täisarv olemas või mitte
+## Kontrollida, kas täisarv on olemas või mitte `C# enum` muutuja
 
-Kõigi täisarvude väärtuste saamiseks C# `Enum` saame kasutada `Enum.GetValues` meetodit.
+Kõigi täisarvuliste väärtuste saamiseks `C# Enum` saame kasutada `Enum.GetValues` meetodit.
 
-Konverteerige need C# loendiks, et saaksime kasutada `list.Contains()` meetodit, et kontrollida, kas antud täisarv on olemas `enum` muutujas.
+Konverteerida need `C#` loendiks, et saaksime kasutada `list.Contains()` meetodit, et kontrollida, kas antud täisarv on olemas `enum` muutuja.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Me saame kasutada `Enum.IsDefined()` meetodit, et kontrollida, kas konverteeritud täisarvu väärtus on olemas antud `enum` tüübis.  
+Me saame kasutada `Enum.IsDefined()` meetodit, et kontrollida, kas teisendatud täisarvu väärtus on olemas antud muutujas `enum` tüüpi.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## Lahendus 2: Kasutage `Enum.ToObject()` meetodit
 
-Me võime kasutada `Enum.ToObject()` meetodit, teisendada `int` väärtuse `enum` -ks C#-s.
+Me võime kasutada `C# Enum.ToObject()` meetodit, teisendada `int` väärtust `enum` c# keeles.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

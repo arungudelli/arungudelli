@@ -1,10 +1,11 @@
 +++
-title   ="C#'ta `int` adresinden `enum` adresine nasıl döküm yapılır?"
-summary ="C#'ta `int` öğesini `enum` öğesine dönüştürmek için, `enum` değişkenini tamsayıya açıkça dönüştürün."
+title   ="C#'ta int türünü enum türüne dönüştürmenin/dökmenin 2 yolu"
+summary ="C#'ta int türünü enum türüne dönüştürmenin/dökmenin 2 yolu vardır 1. C# açık tip dökümünü kullanma. 2. Enum.ToObject() yöntemini kullanarak."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-C#'ta `int` değişkenini `enum` değişkenine dönüştürmek için, `enum` değişkenini açık bir şekilde tamsayıya dönüştürün.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+Dönüştürmenin veya döküm yapmanın 2 yolu vardır `int` `enum` c#'ta
+
+1. C# açık tip dökümünü kullanma.
+2. `Enum.ToObject()` yöntemini kullanma
 
 {{%toc%}}
 
-## Çözüm 1: `enum` değişkeninin açık tip dökümünü kullanma
+## Çözüm 1: C# açık tip dökümünü kullanma
+
+Basit bir şekilde `int` şu biçime dönüştürülür `enum` c#'ta açık tip dökümünü kullanmaktır.
 
 Bunu daha iyi anlamak için bir örnek üzerinden gidelim.
 
-Pazartesiden başlayan hafta günlerini temsil eden `Days` adında bir `enum` türümüz var.
+Bizim bir `enum``LogLevel` olarak adlandırılan ve farklı günlük kaydı seviyelerini temsil eden tür.
 
-```
-public enum Days
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Ancak yukarıdaki **`int` - `enum` dönüşümü** ile ilgili bir sorun var.
+Yerleştirilerek yapılan açık döküm `enum``int` değerinin önüne parantez içinde yazın.
+
+Ancak yukarıdaki **C# `int` ile ilgili bir sorun var `enum` dönüşüm**.
 
  `int` değeri C# `Enum` değişkeninde mevcut değilse ne olur?
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Herhangi bir istisna fırlatmayacaktır.
 
-Bu nedenle, tamsayıya dönüştürmeden önce `int` değerinin `Enum` adresinde mevcut olup olmadığını kontrol etmek daha iyidir.
+Bu nedenle, tamsayıya dönüştürmeden önce `int` değerinin `C# Enum` adresinde var olup olmadığını kontrol etmek daha iyidir.
 
-## `enum` değişkeninde bir tamsayı olup olmadığını kontrol edin
+## Bir tamsayının var olup olmadığını kontrol edin `C# enum` değişken
 
-C#'ta tüm tamsayı değerlerini almak için `Enum` `Enum.GetValues` yöntemini kullanabiliriz.
+ `C# Enum` adresindeki tüm tamsayı değerlerini almak için `Enum.GetValues` yöntemini kullanabiliriz.
 
-Bunları C# listesine dönüştürün, böylece verilen tamsayının `enum` değişkeninde var olup olmadığını kontrol etmek için `list.Contains()` yöntemini kullanabiliriz.
+Bunları `C#` listesine dönüştürün, böylece verilen tamsayının içinde olup olmadığını kontrol etmek için `list.Contains()` yöntemini kullanabiliriz `enum` değişken.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Dönüştürülen tamsayı değerinin verilen `enum` türünde var olup olmadığını kontrol etmek için `Enum.IsDefined()` yöntemini kullanabiliriz.  
+Verilen tamsayı değerinde dönüştürülmüş tamsayı değerinin olup olmadığını kontrol etmek için `Enum.IsDefined()` yöntemini kullanabiliriz `enum` tip.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## Çözüm 2: `Enum.ToObject()` yöntemini kullanın
 
-C#'ta `Enum.ToObject()` metodunu kullanabilir, `int` değerini `enum` değerine dönüştürebiliriz.
+ `C# Enum.ToObject()` yöntemini kullanabilir, `int` değerini `enum` c#'ta.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

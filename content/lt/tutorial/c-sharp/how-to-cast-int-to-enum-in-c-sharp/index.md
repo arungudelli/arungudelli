@@ -1,10 +1,11 @@
 +++
-title   ="Kaip C# kalba paversti `int` į `enum` "
-summary ="Norėdami C# kalba `int` paversti į `enum`, aiškiai įveskite `enum` kintamąjį į sveiką skaičių."
+title   ="2 būdai, kaip C# konvertuoti/atversti int į enum "
+summary ="Yra 2 būdai, kaip C# konvertuoti int į enum 1. Naudojant C# aiškųjį tipų atvaizdavimą. 2. 2. Naudojant Enum.ToObject() metodą."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-Norėdami C# kalba `int` paversti į `enum`, aiškiai įveskite cast `enum` kintamąjį į sveiką skaičių.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+Yra 2 būdai, kaip konvertuoti arba paversti `int` į `enum` c# kalba
+
+1. Naudojant C# aiškiai išreikštą tipų atvaizdavimą.
+2. Naudojant `Enum.ToObject()` metodą
 
 {{%toc%}}
 
-## 1 sprendimas: Naudojant aiškų `enum` kintamojo tipo atvaizdavimą
+## 1 sprendimas: naudojant C# aiškaus tipo atvaizdavimą
 
-Kad geriau suprastume, panagrinėkime pavyzdį.
+Paprastas būdas konvertuoti `int` į `enum` c# kalba - naudoti aiškų tipo atvaizdavimą.
 
-Turime `enum` tipą, pavadintą `Days`, kuris žymi savaitės dienas, prasidedančias pirmadieniu.
+Kad geriau jį suprastume, panagrinėkime pavyzdį.
 
-```
-public enum Days
+Turime `enum` tipą, pavadintą `LogLevel`, kuris reiškia skirtingus registravimo lygius.
+
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Tačiau kyla problema dėl pirmiau minėto **`int` konvertavimo į `enum` **.
+Aiškus atvaizdavimas atliekamas dedant `enum` tipą skliausteliuose prieš `int` reikšmę.
 
-Ką daryti, jei `int` reikšmė neegzistuoja C# `Enum` kintamajame?
+Tačiau yra problema, kai pirmiau **C# `int` į `enum` konvertavimu**.
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+Ką daryti, jei `int` reikšmės nėra C# `Enum` kintamajame?
+
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Tai nesukels jokių išimčių.
 
-Todėl prieš atmetant į sveikąjį skaičių geriau patikrinti, ar `int` reikšmė egzistuoja `Enum`.
+Todėl prieš atmetant į sveikąjį skaičių geriau patikrinti, ar `int` reikšmė egzistuoja `C# Enum`.
 
-## Patikrinkite, ar `enum` kintamajame yra sveikasis skaičius, ar ne
+## Patikrinkite, ar sveikasis skaičius egzistuoja, ar ne `C# enum` kintamajame
 
-Norėdami gauti visas sveikojo skaičiaus reikšmes C# `Enum`, galime naudoti `Enum.GetValues` metodą.
+Norėdami gauti visas sveikųjų skaičių reikšmes `C# Enum`, galime naudoti `Enum.GetValues` metodą.
 
-Konvertuokite jas į C# sąrašą, kad galėtume `list.Contains()` metodu patikrinti, ar `enum` kintamajame egzistuoja nurodytas sveikasis skaičius.
+Konvertuokite jas į `C#` sąrašą, kad galėtume `list.Contains()` metodu patikrinti, ar duotas sveikasis skaičius egzistuoja `enum` kintamajame.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Galime naudoti `Enum.IsDefined()` metodą, kad patikrintume, ar konvertuota sveikojo skaičiaus reikšmė egzistuoja duotame `enum` tipe.  
+Galime naudoti `Enum.IsDefined()` metodą, kad patikrintume, ar konvertuota sveikojo skaičiaus reikšmė egzistuoja duotame `enum` tipą.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## 2 sprendimas: naudokite `Enum.ToObject()` metodą
 
-Galime naudoti `Enum.ToObject()` metodą, konvertuoti `int` reikšmę į `enum` C# kalba.
+Galime naudoti `C# Enum.ToObject()` metodą, konvertuoti `int` reikšmę į `enum` c# kalba.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

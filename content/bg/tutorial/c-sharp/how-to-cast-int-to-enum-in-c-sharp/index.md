@@ -1,10 +1,11 @@
 +++
-title   ="Как да превърнем `int` в `enum` в C#"
-summary ="За да превърнете `int` в `enum` в C#, изрично въведете cast на променливата `enum` в integer."
+title   ="2 начина за конвертиране/превръщане на int в enum в C#"
+summary ="Има 2 начина за превръщане на int в enum в C# 1. Използване на явното хвърляне на типове в C#. 2. Използване на метода Enum.ToObject()."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-За да превърнете `int` в `enum` в C#, изрично въведете cast на променливата `enum` в integer.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+Има 2 начина за преобразуване или превръщане на `int` в `enum` в C#
+
+1. Използване на явното присвояване на типа в C#.
+2. Използване на метода `Enum.ToObject()` 
 
 {{%toc%}}
 
-## Решение 1: Използване на изрично присвояване на типа на променливата `enum` 
+## Решение 1: Използване на изрично присвояване на типове в C#
+
+Простият начин за преобразуване на `int` в `enum` в езика C# е да се използва изрично избиране на типа.
 
 Нека разгледаме един пример, за да го разберем по-добре.
 
-Имаме тип `enum`, наречен `Days`, който представя дните от седмицата, започващи от понеделник.
+Имаме `enum` тип, наречен `LogLevel`, който представлява различни нива на регистриране.
 
-```
-public enum Days
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Но има проблем с горното ** преобразуване на`int` в `enum` **.
+Явното хвърляне се извършва чрез поставяне на `enum` тип в скоби пред стойността на `int`.
 
-Какво става, ако стойността `int` не съществува в променливата `Enum` на C#?
+Но има проблем с горното **C# `int` към `enum` преобразуване**.
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+Какво става, ако стойността `int` не съществува в променливата C# `Enum`?
+
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Това няма да доведе до изключение.
 
-Затова е по-добре да проверите дали стойността `int` съществува в `Enum`, преди да я превърнете в цяло число.
+Затова е по-добре да проверите дали стойността `int` съществува в `C# Enum`, преди да я превърнете в цяло число.
 
-## Проверете дали в променливата `enum` съществува цяло число или не
+## Проверете дали цяло число съществува или не в `C# enum` променливата
 
-За да получим всички целочислени стойности в C# `Enum`, можем да използваме метода `Enum.GetValues`.
+За да получим всички целочислени стойности в `C# Enum`, можем да използваме метода `Enum.GetValues`.
 
-Конвертираме ги в списък на C#, за да можем да използваме метода `list.Contains()`, за да проверим дали дадено цяло число съществува в променливата `enum`.
+Конвертираме ги в списък `C#`, за да можем да използваме метода `list.Contains()`, за да проверим дали даденото цяло число съществува в `enum` променлива.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Можем да използваме метода `Enum.IsDefined()`, за да проверим дали преобразуваната целочислена стойност съществува в дадения тип `enum`.  
+Можем да използваме метода `Enum.IsDefined()`, за да проверим дали преобразуваната целочислена стойност съществува в дадената `enum` тип.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## Решение 2: Използвайте метода `Enum.ToObject()` 
 
-Можем да използваме метода `Enum.ToObject()`, да преобразуваме стойността на `int` в `enum` в C#.
+Можем да използваме метода `C# Enum.ToObject()`, като преобразуваме стойността на `int` в `enum` в C#.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

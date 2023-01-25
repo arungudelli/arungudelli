@@ -1,10 +1,11 @@
 +++
-title   ="Hogyan lehet a `int` -t `enum` -re vetíteni C#-ban"
-summary ="A `int` egész számra történő átváltásához `enum` -re C# nyelven, explicit módon írja át a `enum` változót egész számra."
+title   ="2 módja az int konvertálásának/castolásának a enum címre a C#-ban"
+summary ="2 módja van az int-nek a enum címre való castolásának a C#-ban 1. A C# explicit type casting használatával. 2. Az Enum.ToObject() módszer használatával."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-Ahhoz, hogy a `int` -t a `enum` -re öntse C#-ban, kifejezetten írja be a `enum` változót integerre.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+2 módja van a `int` konvertálásának vagy castolásának `enum` c# nyelven
+
+1. A C# explicit típusöntés használata.
+2. A `Enum.ToObject()` módszer használata
 
 {{%toc%}}
 
-## 1. megoldás: A `enum` változó explicit típusátvitelének használata
+## Megoldás 1: C# explicit type casting használata
+
+A `int` egyszerű módon konvertálható `enum` c# nyelven az explicit típusváltás használata.
 
 Nézzünk végig egy példát, hogy jobban megértsük.
 
-Van egy `enum` típusunk, a `Days`, amely a hétfőtől kezdődő hétköznapokat jelöli.
+Van egy `enum``LogLevel` nevű típusunk, amely a naplózás különböző szintjeit reprezentálja.
 
-```
-public enum Days
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-De van egy probléma a fenti **`int` és `enum` közötti átalakítással**.
+Az explicit casting a `enum` típus zárójelben a `int` érték elé kerül.
+
+De van egy probléma a fenti **C# `int` to `enum` átalakítás**.
 
 Mi van akkor, ha a `int` érték nem létezik a C# `Enum` változóban?
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Nem dob semmilyen kivételt.
 
-Tehát jobb, ha ellenőrizzük, hogy a `int` érték létezik-e a `Enum` címen, mielőtt egész számra öntjük.
+Tehát jobb, ha ellenőrizzük, hogy a `int` érték létezik-e a `C# Enum` címen, mielőtt egész számra öntjük.
 
-## Ellenőrizze, hogy létezik-e egész szám a `enum` változóban vagy sem
+## Ellenőrizze, hogy egy egész szám létezik-e vagy sem a `C# enum` változóban
 
-A C# `Enum` összes egész szám értékének kinyeréséhez a `Enum.GetValues` metódust használhatjuk.
+A `C# Enum` összes egész szám értékének kinyeréséhez használhatjuk a `Enum.GetValues` módszert.
 
-Konvertáljuk őket C# listává, így a `list.Contains()` módszerrel ellenőrizhetjük, hogy az adott egész szám létezik-e a `enum` változóban.
+Konvertáljuk őket a `C#` listába, hogy a `list.Contains()` módszerrel ellenőrizni tudjuk, hogy az adott egész szám létezik-e a változóban `enum` változóban.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-A `Enum.IsDefined()` módszerrel ellenőrizhetjük, hogy a konvertált egész érték létezik-e az adott `enum` típusban.  
+A `Enum.IsDefined()` módszerrel ellenőrizhetjük, hogy a konvertált egész érték létezik-e az adott változóban `enum` típusban.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -89,19 +91,19 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 ```
 
 
-## 2. megoldás: Használja a `Enum.ToObject()` módszert
+## Megoldás 2: Használja a `Enum.ToObject()` módszert
 
-Használhatjuk a `Enum.ToObject()` módszert, a `int` értéket `enum` értékké alakíthatjuk C# nyelven.
+Használhatjuk a `C# Enum.ToObject()` módszert, a `int` értéket konvertálhatjuk a következőre `enum` c# nyelven.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

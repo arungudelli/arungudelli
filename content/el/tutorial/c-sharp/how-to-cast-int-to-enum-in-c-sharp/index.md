@@ -1,10 +1,11 @@
 +++
-title   ="Πώς να μετατρέψετε το `int` σε `enum` σε C#"
-summary ="Για να μετατρέψετε την `int` σε `enum` σε C#, κάντε ρητή μετατροπή της μεταβλητής `enum` σε ακέραιο αριθμό."
+title   ="2 τρόποι μετατροπής/μετατροπής int σε enum σε C#"
+summary ="Υπάρχουν 2 τρόποι για να μετατραπεί int σε enum σε C# 1. Χρησιμοποιώντας ρητή χύτευση τύπου της C#. 2. Χρησιμοποιώντας τη μέθοδο Enum.ToObject()."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-Για να cast `int` σε `enum` σε C#, ρητά τύπου cast τη μεταβλητή `enum` σε integer.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+Υπάρχουν 2 τρόποι για να μετατρέψετε ή να ρίξετε το `int` σε `enum` σε C#
+
+1. Χρησιμοποιώντας ρητή χύτευση τύπου της C#.
+2. Χρήση της μεθόδου `Enum.ToObject()` 
 
 {{%toc%}}
 
-## Λύση 1: Χρήση ρητής μετατροπής τύπου της μεταβλητής `enum` 
+## Λύση 1: Χρήση ρητής διανομής τύπου C#
+
+Ο απλός τρόπος μετατροπής του `int` σε `enum` στη C# είναι η χρήση ρητής χύτευσης τύπου.
 
 Ας δούμε ένα παράδειγμα για να το κατανοήσουμε καλύτερα.
 
-Έχουμε έναν τύπο `enum` που ονομάζεται `Days`, ο οποίος αντιπροσωπεύει τις ημέρες της εβδομάδας που ξεκινούν από τη Δευτέρα.
+Έχουμε ένα `enum` τύπο που ονομάζεται `LogLevel`, ο οποίος αντιπροσωπεύει διαφορετικά επίπεδα καταγραφής.
 
-```
-public enum Days
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Υπάρχει όμως ένα πρόβλημα με την παραπάνω ** μετατροπή από`int` σε `enum` **.
+Το ρητό casting γίνεται με την τοποθέτηση του `enum` τύπου σε παρένθεση μπροστά από την τιμή `int`.
+
+Αλλά υπάρχει ένα πρόβλημα με το παραπάνω **C# `int` σε `enum` μετατροπή**.
 
 Τι γίνεται αν η τιμή `int` δεν υπάρχει στη μεταβλητή C# `Enum` 
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Δεν θα πετάξει καμία εξαίρεση.
 
-Επομένως, είναι καλύτερο να ελέγξετε αν η τιμή `int` υπάρχει στο `Enum` πριν τη μετατροπή της σε ακέραιο αριθμό.
+Επομένως, είναι προτιμότερο να ελέγξετε αν η τιμή `int` υπάρχει στο `C# Enum` πριν τη μετατροπή της σε ακέραιο αριθμό.
 
-## Ελέγξτε αν ένας ακέραιος αριθμός υπάρχει ή όχι στη μεταβλητή `enum` 
+## Ελέγξτε αν ένας ακέραιος αριθμός υπάρχει ή όχι στο `C# enum` μεταβλητή
 
-Για να πάρουμε όλες τις ακέραιες τιμές στη C# `Enum` μπορούμε να χρησιμοποιήσουμε τη μέθοδο `Enum.GetValues`.
+Για να πάρουμε όλες τις ακέραιες τιμές στο `C# Enum` μπορούμε να χρησιμοποιήσουμε τη μέθοδο `Enum.GetValues`.
 
-Μετατρέψτε τις σε λίστα C#, έτσι ώστε να μπορούμε να χρησιμοποιήσουμε τη μέθοδο `list.Contains()` για να ελέγξουμε αν ο συγκεκριμένος ακέραιος υπάρχει στη μεταβλητή `enum`.
+Μετατρέψτε τις σε λίστα `C#`, ώστε να μπορούμε να χρησιμοποιήσουμε τη μέθοδο `list.Contains()` για να ελέγξουμε αν ο συγκεκριμένος ακέραιος υπάρχει στη `enum` μεταβλητή.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Μπορούμε να χρησιμοποιήσουμε τη μέθοδο `Enum.IsDefined()` για να ελέγξουμε αν η μετατρεπόμενη ακέραια τιμή υπάρχει στον δεδομένο τύπο `enum`.  
+Μπορούμε να χρησιμοποιήσουμε τη μέθοδο `Enum.IsDefined()` για να ελέγξουμε αν η μετατρεπόμενη ακέραια τιμή υπάρχει στη δεδομένη `enum` τύπο.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## Λύση 2: Χρήση της μεθόδου `Enum.ToObject()` 
 
-Μπορούμε να χρησιμοποιήσουμε τη μέθοδο `Enum.ToObject()`, να μετατρέψουμε την τιμή `int` σε `enum` σε C#.
+Μπορούμε να χρησιμοποιήσουμε τη μέθοδο `C# Enum.ToObject()`, μετατρέποντας την τιμή `int` σε `enum` σε C#.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

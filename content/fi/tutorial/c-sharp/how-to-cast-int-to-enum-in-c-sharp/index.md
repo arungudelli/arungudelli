@@ -1,10 +1,11 @@
 +++
-title   ="Kuinka `int` valetaan `enum`:ksi C#:ssa"
-summary ="Jos haluat castata `int` muotoon `enum` C#:ssa, kirjoita nimenomaisesti tyyppi cast `enum` muuttuja kokonaisluvuksi."
+title   ="2 tapaa muuntaa/castata int muotoon enum in C#"
+summary ="On 2 tapaa castata int muotoon enum in C# 1. Käyttämällä C#:n eksplisiittistä tyypinvalintaa. 2. Käyttämällä Enum.ToObject()-menetelmää."
+
 keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-Jos haluat castata `int` muotoon `enum` C#:ssa, kirjoita nimenomaisesti cast `enum` -muuttuja kokonaisluvuksi.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+On 2 tapaa muuntaa tai valaa `int` muotoon `enum` c#:ssa
+
+1. Käyttämällä C#:n eksplisiittistä tyyppivalintaa.
+2. `Enum.ToObject()` -menetelmän käyttäminen
 
 {{%toc%}}
 
-## Ratkaisu 1: Muuttujan `enum` nimenomaisen tyypinvalinnan käyttäminen
+## Ratkaisu 1: C#:n eksplisiittisen tyypinvalinnan käyttäminen
 
-Käydään läpi esimerkki, jotta asia ymmärretään paremmin.
+Yksinkertainen tapa muuntaa `int` muotoon `enum` c#-kielellä on käyttää eksplisiittistä tyypinvalintaa.
 
-Meillä on `enum` -tyyppi nimeltään `Days`, joka edustaa maanantaista alkavia viikonpäiviä.
+Käydään läpi esimerkki sen ymmärtämiseksi tarkemmin.
 
-```
-public enum Days
+Meillä on `enum` tyyppi nimeltään `LogLevel`, joka edustaa eri kirjaustasoja.
+
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Mutta edellä mainitussa **`int`:n muuntamisessa `enum`:ksi** on ongelma.
+Eksplisiittinen valu tehdään sijoittamalla `enum` tyyppi sulkeisiin `int` arvon eteen.
 
-Mitä jos `int` arvoa ei ole olemassa C# `Enum` -muuttujassa?
+Mutta on olemassa ongelma, kun edellä **C# `int` to `enum` muuntamisessa**.
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+Entä jos `int` -arvoa ei ole olemassa C# `Enum` -muuttujassa?
+
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Se ei aiheuta poikkeusta.
 
-On siis parempi tarkistaa, onko `int` -arvo olemassa osoitteessa `Enum`, ennen kuin se heitetään kokonaisluvuksi.
+On siis parempi tarkistaa, onko `int` -arvo olemassa osoitteessa `C# Enum`, ennen kuin se valetaan kokonaisluvuksi.
 
-## Tarkista, onko kokonaisluku olemassa `enum` -muuttujassa vai ei
+## Tarkista, onko kokonaisluku olemassa vai ei `C# enum` muuttujassa
 
-Saadaksemme kaikki kokonaislukuarvot C# `Enum` -muuttujasta voimme käyttää `Enum.GetValues` -menetelmää.
+Saadaksemme kaikki kokonaislukuarvot muuttujasta `C# Enum` voimme käyttää `Enum.GetValues` -menetelmää.
 
-Muunnetaan ne C#-luetteloksi, jotta voimme käyttää `list.Contains()` -metodia tarkistaaksemme, onko annettu kokonaisluku olemassa `enum` -muuttujassa.
+Muunnetaan ne `C#` -luetteloksi, jotta voimme käyttää `list.Contains()` -menetelmää tarkistaaksemme, onko annettu kokonaisluku olemassa muuttujassa `enum` muuttuja.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Voimme käyttää `Enum.IsDefined()` -menetelmää tarkistaaksemme, onko muunnettu kokonaislukuarvo olemassa annetussa `enum` -tyypissä.  
+Voimme käyttää `Enum.IsDefined()` -menetelmää tarkistaaksemme, onko muunnettu kokonaislukuarvo olemassa annetussa muuttujassa `enum` tyyppi.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## Ratkaisu 2: Käytä `Enum.ToObject()` -menetelmää
 
-Voimme käyttää `Enum.ToObject()` -metodia, muuntaa `int` -arvon `enum` -arvoksi C#:ssa.
+Voimme käyttää `C# Enum.ToObject()` -menetelmää, muuntaa `int` arvon muotoon `enum` c#-kielellä.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 

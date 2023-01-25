@@ -1,10 +1,11 @@
 +++
-title   ="Bagaimana cara cast `int` ke `enum` di C#"
-summary ="Untuk cast `int` ke `enum` di C#, secara eksplisit ketik cast variabel `enum` ke integer."
-keywords=["int ke enum di C#, cast int ke enum di C#"]
+title   ="2 cara untuk mengkonversi/mengubah int menjadi enum di C#"
+summary ="Ada 2 cara untuk mengubah int menjadi enum di C# 1. Menggunakan casting tipe eksplisit C#. 2. 2. Menggunakan metode Enum.ToObject()."
+
+keywords=["int to enum in C#,cast int to enum in C#"]
 type='post'
 date='2021-02-10T00:00:51+0000'
-lastmod='2022-06-03T00:00:52+0000'
+lastmod='2023-01-24T00:00:52+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
@@ -13,75 +14,76 @@ focal_point=''
 preview_only=false
 +++
 
-Untuk cast `int` ke `enum` di C#, secara eksplisit ketik cast variabel `enum` ke integer.
 
-```
-SampleEnum sample = (SampleEnum)IntVariable;
-```
+Ada 2 cara untuk mengubah atau meng-cast `int` ke `enum` di C#
+
+1. Menggunakan pengecoran tipe eksplisit C#.
+2. Menggunakan metode `Enum.ToObject()` 
 
 {{%toc%}}
 
-## Solusi 1: Menggunakan pengecoran tipe eksplisit dari variabel `enum` 
+## Solusi 1: Menggunakan pengecoran tipe eksplisit C#
+
+Cara sederhana untuk mengonversi `int` ke `enum` di C# adalah dengan menggunakan pengecoran tipe eksplisit.
 
 Mari kita lihat sebuah contoh untuk memahaminya lebih lanjut.
 
-Kita memiliki tipe `enum` yang disebut `Days`, yang merepresentasikan hari dalam seminggu mulai dari hari Senin.
+Kita memiliki sebuah `enum` bernama `LogLevel`, yang merepresentasikan berbagai tingkat penebangan.
 
-```
-public enum Days
+```csharp
+public enum LogLevel
 {
-        Monday,  
-        Tuesday,  
-        Wednesday,  
-        Thursday,  
-        Friday,  
-        Saturday,  
-        Sunday
+   ERROR=1, 
+   WARN=2, 
+   INFO=3, 
+   DEBUG=4
 }
 
-int dayInteger = 6;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//Monday
+int logEnumInteger = 1;
+LogLevel errorEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(errorEnum.ToString());//ERROR
 ```
 
-Tetapi ada masalah dengan konversi **`int` ke `enum` ** di atas.
+Pengecoran eksplisit dilakukan dengan menempatkan `enum` dalam tanda kurung di depan nilai `int`.
 
-Bagaimana jika nilai `int` tidak ada di variabel C# `Enum`?
+Tetapi ada masalah dengan **C# di atas `int` untuk `enum` konversi**.
 
-```
-int dayInteger = 100;
-Days day = (Days) dayInteger;
-Console.WriteLine(day.ToString());//100
+Bagaimana jika nilai `int` tidak ada dalam variabel C# `Enum`?
+
+```csharp
+int logEnumInteger = 100;
+LogLevel unknownEnum = (LogLevel) logEnumInteger;
+Console.WriteLine(unknownEnum.ToString());//100
 ```
 
 Ini tidak akan melemparkan pengecualian apa pun.
 
-Jadi lebih baik untuk memeriksa apakah nilai `int` ada di `Enum` sebelum casting ke integer.
+Jadi, lebih baik untuk memeriksa apakah nilai `int` ada di `C# Enum` sebelum meng-cast-nya ke bilangan bulat.
 
-## Periksa apakah integer ada atau tidak di variabel `enum` 
+## Memeriksa apakah sebuah bilangan bulat ada atau tidak dalam `C# enum` variabel
 
-Untuk mendapatkan semua nilai integer di C# `Enum` kita bisa menggunakan metode `Enum.GetValues`.
+Untuk mendapatkan semua nilai integer dalam `C# Enum` kita dapat menggunakan metode `Enum.GetValues`.
 
-Konversikan ke daftar C#, sehingga kita dapat menggunakan metode `list.Contains()` untuk memeriksa apakah integer yang diberikan ada di variabel `enum`.
+Ubahlah menjadi list `C#`, sehingga kita dapat menggunakan metode `list.Contains()` untuk memeriksa apakah bilangan bulat yang diberikan ada dalam `enum` variabel.
 
-```
+```csharp
 var intValue = 100;
-var enumValues = Enum.GetValues(typeof(Days)).Cast<int>().ToList();
+var enumValues = Enum.GetValues(typeof(LogLevel)).Cast<int>().ToList();
 
 if(enumValues.Contains(intValue)){
-  Console.WriteLine("We can Cast int to Enum");  
-   Days day = (Days) intValue;
+   Console.WriteLine("We can Cast C# int to Enum");  
+   LogLevel loggingValue = (LogLevel) intValue;
 }else{
-  Console.WriteLine("Cannot Cast int to Enum");
+  Console.WriteLine("Cannot Cast C# int to Enum");
 }
 
 ```
-Kita dapat menggunakan metode `Enum.IsDefined()` untuk memeriksa apakah nilai integer yang dikonversi ada dalam tipe `enum` yang diberikan.  
+Kita dapat menggunakan metode `Enum.IsDefined()` untuk memeriksa apakah nilai integer yang dikonversi ada dalam variabel `enum` yang diberikan.  
 
-```
-var enumValue = (Days)1;
+```csharp
+var enumValue = (LogLevel)1;
 
-if (Enum.IsDefined(typeof(Days), enumValue)){
+if (Enum.IsDefined(typeof(LogLevel), enumValue)){
    Console.WriteLine("The converted int to enum value is",enumValue);
 }else{
    Console.WriteLine("Cannot Convert int to Enum",enumValue);
@@ -91,17 +93,17 @@ if (Enum.IsDefined(typeof(Days), enumValue)){
 
 ## Solusi 2: Gunakan metode `Enum.ToObject()` 
 
-Kita bisa menggunakan metode `Enum.ToObject()`, mengubah nilai `int` menjadi `enum` di C#.
+Kita dapat menggunakan metode `C# Enum.ToObject()`, mengubah nilai `int` menjadi `enum` dalam bahasa C#.
 
 ```
-var enumValue = Enum.ToObject(typeof(Days),1);
+var enumValue = Enum.ToObject(typeof(LogLevel),1);
 
 Console.WriteLine(enumValue);
 
-//Tuesday
+//ERROR
 
 Console.WriteLine(enumValue.GetType());
-//Days
+//LogLevel
 
 ```
 
