@@ -1,11 +1,11 @@
 +++
 title="3 Funny Things You Can Do With C# Console"
-summary="Play around with C# Console with properties like C# Console.Title,C# Console.SetWindowSize() and C# Console.Beep().I hope you will enjoy this article"
+summary="Play around with C# Console with properties like C# Console.Title,C# Console.SetWindowSize() and C# Console.Beep()"
 keywords=["c# console.title,c# console.setwindowsize(),c# console.beep(),c# console,c#"
 ]
 type='post'
 date='2019-10-13T18:05:25+0000'
-lastmod='2019-10-13T18:05:25+0000'
+lastmod='2023-01-26T00:00:00+0000'
 draft='false'
 contributors= ["Arun Gudelli"]
 images=[]
