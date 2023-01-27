@@ -18,7 +18,7 @@ Yesterday I am discussing with one of my cousin, he is currently doing a course 
 
 These code snippets may not help us in our daily life but it’s good know these things.
 
-### <span style="text-decoration: underline;">Fun with Console Title:</span>
+## Fun with Console Title
 
 <a title="Console.Title CSharp" href="http://msdn.microsoft.com/en-us/library/system.console.title%28v=vs.110%29.aspx" target="_blank" rel="noopener">Console.Title</a> property sets the title of C# console window.
 
@@ -26,42 +26,45 @@ We can set animated console title like below using following code snippet.
 
 {{< figure src="AnimatedConsoleTitles.gif" title="Animated Console Title" alt="Animated Console Title" >}}
 
-<pre>            string Progresbar = "This is animated title of Console";
-            var title = "";
-            while (true)
-            {
-                for (int i = 0; i &lt; Progresbar.Length; i++)
-                {
-                    title += Progresbar[i];
-                    Console.Title = title;
-                    Thread.Sleep(100);
-                }
-                title = "";  
-            }</pre>
+```csharp       
+string Progressbar = "This is animated title of Console";
+var title = "";
+while (true)
+{
+    for (int i = 0; i < Progressbar.Length; i++)
+    {
+        title += Progressbar[i];
+        Console.Title = title;
+        Thread.Sleep(100);
+    }
+    title = "";  
+}
+```
 
-&nbsp;
+## Moving Console Window
 
-### <span style="text-decoration: underline;">Moving Console Window</span>
+We can use `Console.SetWindowSize(numberColumns, numberRows)` property to set the console window size. 
 
-We can use&nbsp;<span style="text-decoration: underline;">Console.SetWindowSize(numberColumns, numberRows)</span>&nbsp;property to set the console window size. We use this property to create moving console window as shown above with following code snippet.
+We use this property to create moving console window as shown above with following code snippet.
 
 {{< figure src="AnimatedWindowSizeConsole.gif" title="Animated Window Size Console" alt="Animated Window Size Console" >}}
 
-<pre>            for (int i = 1; i &lt; 40; i++)
+```csharp
+       for (int i = 1; i < 40; i++)
             {
                 Console.SetWindowSize(i, i);
                 System.Threading.Thread.Sleep(50);
-            }</pre>
+            }
+```            
 
-&nbsp;
+## Annoying Beep Sound
 
-### <span style="text-decoration: underline;">Annoying Beep Sound:</span>
+We can use `Console.Beep()` method to emit beep sound from system speakers.
 
-We can use Console.Beep() method to emit beep sound from system speakers.
+We can annoy the user by setting different frequencies and durations.
 
-We can annoy the &nbsp;user by setting different frequencies and durations.
-
-<pre>            private static int frequency = 10000;
+```csharp       
+            private static int frequency = 10000;
             private static int duration = 100;
             Console.WriteLine("Use keyboard arrows to adjust frequency and duration");
             do
@@ -92,19 +95,11 @@ We can annoy the &nbsp;user by setting different frequencies and durations.
                         duration = Math.Max(duration, 100);
                         break;
                 }
-            } while (true);</pre>
+            } while (true);
+```
 
-&nbsp;
 
-<span style="text-decoration: underline;"><strong>Bonus Tips:</strong></span><strong>&nbsp;&nbsp;</strong><a title="C# Delegates and Events" href="https://www.arungudelli.com/csharp/delegates-and-events-in-csharp/" target="_blank" rel="noopener">Understand C# Delegates and Events in C# with simple real world examples</a>
-
-&nbsp;
-
-Download&nbsp;<a href="http://sdrv.ms/1b4HWa7" target="_blank" rel="noopener">Source Code</a>
-
-Download&nbsp;<a href="http://sdrv.ms/1b4HWa7" target="_blank" rel="noopener">Source Code</a>
-
-&nbsp;
+Bonus Tips:<a title="C# Delegates and Events" href="https://www.arungudelli.com/csharp/delegates-and-events-in-csharp/" target="_blank" rel="noopener">Understand C# Delegates and Events in C# with simple real world examples</a>
 
 
 
