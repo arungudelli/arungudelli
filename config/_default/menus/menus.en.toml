@@ -69,9 +69,16 @@
 [[main]]
   name = "C#"
   weight = 40
-  identifier = "quick-start"
+  identifier = "C#"
   url = "/csharp-tips/"
   parent = "tips"
+
+[[main]]
+  name = "SQL Server"
+  weight = 40
+  identifier = "SQL Server"
+  url = "/sql-server/"
+  parent = "tips"  
 
 #[[main]]
 #  name = "Tutorial"
