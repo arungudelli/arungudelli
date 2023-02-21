@@ -1,8 +1,10 @@
 ---
-title: 'sql-server'
-description: ' '
-date: 2020-10-06T08:49:55+00:00
-lastmod: 2020-10-06T08:49:55+00:00
+title: "SQL Server Tips & Tricks"
+description: ""
+lead: ""
+date: 2022-01-25T14:40:56+01:00
+lastmod: 2022-01-25T14:40:56+01:00
 draft: false
 images: []
+type: docs
 ---
