@@ -1,6 +1,6 @@
 ---
 title: "How to Add a column with a default value to an existing table in SQL Server"
-description: "In SQL server, To add a column with a default value to an existing table use `ALTER` Table `ADD` column name with `NULL/NOT NULL` constraint with `DEFAULT` value."
+description: "In SQL server, To add a column with a default value to an existing table use 'ALTER' Table 'ADD' column name with 'NULL/NOT NULL' constraint with 'DEFAULT' value."
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
 contributors: ["Arun Gudelli"]
