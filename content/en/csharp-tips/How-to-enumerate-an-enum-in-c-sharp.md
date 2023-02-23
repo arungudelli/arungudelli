@@ -1,6 +1,6 @@
 ---
-title: "How to loop/enumerate C# enum"
-description: "Different ways to loop or enumerate C# enum with examples"
+title: "How to enumerate C# enum"
+description: "Different ways to enumerate C# enum with examples"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,7 +13,7 @@ type: docs
 
 Enums are widely used in `C#` language. 
 
-And there are 4 ways to loop or enumerate enum in `C#`. 
+And there are 4 ways to enumerate enum in `C#`. 
 
 1. Using `C# Enum.GetValues()` in .Net 5 & above.
 2. Using `C# Enum.GetValues()` in older .Net versions.
@@ -40,7 +40,7 @@ Now we will see different ways to enumerate the `C# enum`.
 
 ## Using `C# Enum.GetValues()` Generic method in .Net 5 & above
 
-If you are using latest version of `.Net` , i.e., `.Net 5` and above you can use generic version for the `Enum.GetValues` method to loop through the `C# enum`.
+If you are using latest version of `.Net` , i.e., `.Net 5` and above you can use generic version for the `Enum.GetValues` method to enumerate the `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -56,7 +56,7 @@ void loopEnum()
 
 The new generic version of `Enum.GetValues` returns the array of enum values. 
 
-And further we can use `for` or `foreach` statements to enumerate the `C# enum`. 
+And further we can use `for` or `foreach` statements to list the `C# enum` names. 
 
 As the array contains the `enum` type we need to convert it to the string using `ToString()` method.
 
@@ -69,7 +69,7 @@ You need to pass `typeof()` enum as a parameter to `Enum.GetValues()` method.
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-And it returns enum values of type `System.Array` and further we can use `foreach` statement to loop through the C# enum.
+And it returns enum values of type `System.Array` and further we can use `foreach` statement to loop through the `C# enum` names.
 
 ```csharp
 void loopEnum()
@@ -99,7 +99,7 @@ void loopEnum()
 
 `C# Enum.GetValues()` method returns array of enum types. 
 
-That's why we converted enum values to string before printing them in the console.
+That's why we converted enum names to string before printing them in the console.
 
 Using `C# Enum.GetNames()` method we can enumerate enum names as strings, so that it's not required to convert them to strings.
 
@@ -130,7 +130,7 @@ void loopEnum()
 }
 ```
 
-So If you want to loop enum names as strings we can use `C# Enum.GetNames()` method.
+So If you want to en enumerate names as strings we can use `C# Enum.GetNames()` method.
 
 ## Using `Linq`
 
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Summary
 
-In this tutorial we learnt to loop through enum in C# using `Enum.GetValues()` and `Enum.GetNames()` method.
+In this tutorial we learnt to enumerate enum in C# using `Enum.GetValues()` and `Enum.GetNames()` method.
 
 
 

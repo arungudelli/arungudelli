@@ -1,6 +1,6 @@
 ---
-title: "Kuinka silmukoida/luetella C#-luetteloa"
-description: "Eri tapoja silmukoida tai luetella C#-luetteloa esimerkkien avulla"
+title: "Miten enumerate C# enum"
+description: " Eri tapoja enumerate C# enum esimerkkien kera"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -11,16 +11,16 @@ type: docs
 
 ---
 
-Enumeita käytetään laajalti `C#` -kielessä. 
+Enumeita käytetään laajalti `C#` kielessä. 
 
-Ja on olemassa 4 tapaa silmukoida tai luetella enumia `C#`. 
+Ja on olemassa 4 tapaa enumerate enum `C#` . 
 
-1. Käyttämällä `C# Enum.GetValues()` in .Net 5 &amp; above.
+1. `C# Enum.GetValues()` käyttäminen .Net 5:ssä ja sitä uudemmissa ohjelmissa.
 2. `C# Enum.GetValues()` käyttäminen vanhemmissa .Net-versioissa.
-3. `C# Enum.GetNames()` käyttäminen luettelemalla luettelemien nimet merkkijonoina.
+3. Käyttämällä `C# Enum.GetNames()` enum erate enum nimet merkkijonoina.
 4. Käyttäminen `Linq`
 
-Käydään läpi esimerkki sen ymmärtämiseksi tarkemmin. 
+Käydään läpi esimerkki, jotta ymmärrämme sen paremmin. 
 
 Ensin luodaan C# `enum`
 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` edustaa erityyppisiä kirjaustasoja.
+The `enum` edustaa erityyppisiä kirjaustasoja.
 
-Nyt näemme erilaisia tapoja luetella `C# enum`.
+Nyt näemme erilaisia tapoja enumerate the `C# enum`.
 
-## `C# Enum.GetValues()` Generic-menetelmän käyttäminen .Net 5:ssä ja sitä uudemmissa versioissa
+## `C# Enum.GetValues()` Generic-menetelmän käyttäminen .Net 5:ssä ja sitä uudemmissa ohjelmissa
 
-Jos käytät uusinta versiota `.Net` eli `.Net 5` tai uudempaa versiota, voit käyttää `Enum.GetValues` -menetelmän geneeristä versiota `C# enum`-menetelmän läpikäymiseen.
+Jos käytät uusinta versiota `.Net`, eli `.Net 5` tai uudempaa versiota, voit käyttää geneeristä versiota `Enum.GetValues` -menetelmästä enumerate the `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
-Uusi geneerinen versio `Enum.GetValues` palauttaa enum-arvojen joukon. 
+Uusi geneerinen versio `Enum.GetValues` palauttaa enum -arvojen joukon. 
 
-Lisäksi voimme käyttää `for` - tai `foreach` -lauseita luettelemalla `C# enum`. 
+Lisäksi voimme käyttää `for` - tai `foreach` -lausekkeita listaamaan `C# enum` nimet. 
 
-Koska array sisältää `enum` -tyypin, se on muunnettava merkkijonoksi käyttäen `ToString()` -metodia.
+Koska array sisältää `enum` tyypin, se on muunnettava merkkijonoksi `ToString()` -menetelmällä.
 
-## `C# Enum.GetValues()` käyttäminen vanhemmissa .Net-versioissa.
+## `C# Enum.GetValues()` -menetelmän käyttäminen vanhemmissa .Net-versioissa.
 
-Vanhemmissa versioissa `.Net` ei ole käytettävissä geneeristä metodia `Enum.GetValues()` -metodia varten. 
+Vanhemmissa versioissa `.Net` ei ole käytettävissä geneeristä menetelmää `Enum.GetValues()` -menetelmää varten. 
 
-Sinun on annettava `typeof()` enum parametrina `Enum.GetValues()` -metodille. 
+Sinun on välitettävä `typeof()` enum parametrina `Enum.GetValues()` -metodille. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Se palauttaa `System.Array` -tyyppiset enum-arvot, ja lisäksi voimme käyttää `foreach` -lauseketta C#- enumin läpikäymiseen.
+Ja se palauttaa enum arvot tyyppiä `System.Array` ja lisäksi voimme käyttää `foreach` lauseketta kiertääksemme läpi arvot `C# enum` nimet.
 
 ```csharp
 void loopEnum()
@@ -95,15 +95,15 @@ void loopEnum()
 }
 ```
 
-## Käyttämällä `C# Enum.GetNames()` luettelemalla luettelemien nimet merkkijonoina 
+## Käyttämällä `C# Enum.GetNames()` enum erate enum nimiä merkkijonoina 
 
-`C# Enum.GetValues()` menetelmä palauttaa enum-tyyppien joukon. 
+`C# Enum.GetValues()` menetelmä palauttaa enum tyyppien joukon. 
 
-Siksi muunnimme enum-arvot merkkijonoksi ennen niiden tulostamista konsoliin.
+Siksi muunnimme enum nimet merkkijonoksi ennen niiden tulostamista konsoliin.
 
- `C# Enum.GetNames()` -menetelmällä voimme luetella enum-nimet merkkijonoina, joten niitä ei tarvitse muuntaa merkkijonoiksi.
+Metodin `C# Enum.GetNames()` avulla voimme enumerate enum nimet merkkijonoina, jolloin niitä ei tarvitse muuntaa merkkijonoiksi.
 
-Jos käytät `.Net 5` ja sitä uudempaa toimintoa, voit käyttää yleistä `C# Enum.GetNames()` -funktiota.
+Jos käytät `.Net 5` ja sitä uudempaa, voit käyttää yleistä `C# Enum.GetNames()` -funktiota.
 
 ```csharp
 void loopEnum()
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-Vanhemmissa versioissa meidän on annettava `typeof()` enum-parametri.
+Vanhemmissa versioissa meidän on annettava `typeof()` enum -parametri.
 
 ```csharp
 void loopEnum()
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-Jos siis haluat silmukoida enum-nimet merkkijonoina, voimme käyttää `C# Enum.GetNames()` -menetelmää.
+Jos siis halutaan enumerate-nimet merkkijonoina, voidaan käyttää `C# Enum.GetNames()` -menetelmää.
 
 ## Käyttämällä `Linq`
 
-Voimme käyttää `Linq forEach` -metodia C#-luettelon luettelemiseen `Enum.GetValues()` - ja `Enum.GetNames()` -metodien avulla.
+Voimme käyttää `Linq forEach` -menetelmää enumerate C# enum, `Enum.GetValues()` ja `Enum.GetNames()` -menetelmien avulla.
 
- `.Net 5` ja sitä suuremmissa käytetään alla olevaa koodinpätkää.
+Käytä `.Net 5` ja sen yläpuolella alla olevaa koodinpätkää.
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Yhteenveto
 
-Tässä opetusohjelmassa opimme käymään läpi enumia C#:ssa käyttäen `Enum.GetValues()` ja `Enum.GetNames()` -menetelmää.
+Tässä opetusohjelmassa opimme enumerate enum C#-kielellä käyttäen `Enum.GetValues()` - ja `Enum.GetNames()` -metodia.
 
 
 

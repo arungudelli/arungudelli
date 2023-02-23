@@ -1,6 +1,6 @@
 ---
-title: "Kako narediti zanko ali naštevanje C# enum"
-description: "Različni načini zanke ali naštevanja C# enum s primeri"
+title: "Kako enumerate C# enum"
+description: " Različni načini enumerate C# enum s primeri"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,11 +13,11 @@ type: docs
 
 Enumi se pogosto uporabljajo v jeziku `C#`. 
 
-In obstajajo 4 načini, kako narediti zanko ali našteti enum v `C#`. 
+In obstajajo 4 načini za enumerate enum v `C#`. 
 
-1. Uporaba `C# Enum.GetValues()` v .Net 5 in novejših različicah.
+1. Uporaba `C# Enum.GetValues()` v okolju .Net 5 in novejšem.
 2. Uporaba `C# Enum.GetValues()` v starejših različicah .Net.
-3. Uporaba `C# Enum.GetNames()` za naštevanje imen enumov kot nizov.
+3. Uporaba `C# Enum.GetNames()` za enumerate enum imen kot nizov.
 4. Uporaba `Linq`
 
 Za boljše razumevanje si oglejmo primer. 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` predstavlja različne vrste nivojev beleženja.
+Spletna stran `enum` predstavljajo različne vrste ravni beleženja.
 
-Zdaj si bomo ogledali različne načine naštevanja `C# enum`.
+Zdaj si bomo ogledali različne načine za enum`C# enum`.
 
-## Uporaba generične metode `C# Enum.GetValues()` v .Net 5 in novejših različicah
+## Uporaba `C# Enum.GetValues()` Generične metode v .Net 5 in novejših različicah
 
-Če uporabljate najnovejšo različico `.Net`, tj. `.Net 5` in višje, lahko uporabite generično različico za metodo `Enum.GetValues`, s katero se v zanki prebijete skozi `C# enum`.
+Če uporabljate najnovejšo različico `.Net`, tj. `.Net 5` in novejšo, lahko uporabite generično različico za metodo `Enum.GetValues`, da enumerate `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
-Nova generična različica metode `Enum.GetValues` vrne polje vrednosti enumov. 
+Nova splošna različica `Enum.GetValues` vrne polje vrednosti enum. 
 
- `C# enum`V nadaljevanju lahko za naštevanje uporabimo stavke `for` ali `foreach`. 
+Nadalje lahko uporabimo izjave `for` ali `foreach` za seznam `C# enum` imen. 
 
-Ker polje vsebuje tip `enum`, ga moramo pretvoriti v niz z uporabo metode `ToString()`.
+Ker polje vsebuje `enum` vrsto, jo moramo pretvoriti v niz z uporabo metode `ToString()`.
 
-## Uporaba `C# Enum.GetValues()` v starejših različicah .Net.
+## Uporaba metode `C# Enum.GetValues()` v starejših različicah .Net.
 
 V starejših različicah `.Net` za metodo `Enum.GetValues()` ni na voljo generične metode. 
 
-Metodi `Enum.GetValues()` morate kot parameter posredovati enum `typeof()`. 
+Metodi `Enum.GetValues()` morate kot parameter posredovati `typeof()` enum . 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-In ta vrne vrednosti enuma tipa `System.Array`, v nadaljevanju pa lahko uporabimo stavek `foreach`, da naredimo zanko skozi enum C#.
+In ta vrne enum vrednosti tipa `System.Array`, v nadaljevanju pa lahko uporabimo izjavo `foreach` za kroženje po zanki skozi `C# enum` imena.
 
 ```csharp
 void loopEnum()
@@ -82,7 +82,7 @@ void loopEnum()
 }
 ```
 
-Če želite rezultat `IEnumerable`, lahko metodo `Enum.GetValues()` še dodatno izdelamo.
+Če želimo rezultat `IEnumerable`, lahko dodatno uporabimo metodo `Enum.GetValues()`.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Uporaba `C# Enum.GetNames()` za naštevanje imen enumov kot nizov 
+## Uporaba `C# Enum.GetNames()` za enumeratiranje enum imen kot nizov 
 
-`C# Enum.GetValues()` metoda vrne polje tipov enumov. 
+`C# Enum.GetValues()` metoda vrne polje enum tipov. 
 
-Zato smo vrednosti enumov pretvorili v niz, preden smo jih natisnili v konzolo.
+Zato smo imena enum pretvorili v niz, preden smo jih natisnili v konzolo.
 
-Z metodo `C# Enum.GetNames()` lahko naštejemo imena enumov kot nize, tako da jih ni treba pretvoriti v nize.
+Z uporabo metode `C# Enum.GetNames()` lahko enumeraturiramo imena enum kot nize, tako da jih ni treba pretvoriti v nize.
 
 Če uporabljate `.Net 5` in višje, lahko uporabite splošno funkcijo `C# Enum.GetNames()`.
 
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-V starejših različicah moramo posredovati parameter `typeof()` enum.
+V starejših različicah moramo posredovati parameter `typeof()` enum .
 
 ```csharp
 void loopEnum()
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-Če torej želimo imena enumov v obliki nizov, lahko uporabimo metodo `C# Enum.GetNames()`.
+Če torej želimo en enumerate imena kot nize, lahko uporabimo metodo `C# Enum.GetNames()`.
 
 ## Uporaba `Linq`
 
- `Linq forEach` lahko uporabimo metodo za naštevanje C# enumov s pomočjo metod `Enum.GetValues()` in `Enum.GetNames()`.
+ `Linq forEach` lahko uporabimo metodo enumerate C# enum, s pomočjo metod `Enum.GetValues()` in `Enum.GetNames()`.
 
-V `.Net 5` in višje uporabite spodnji del kode.
+V spletni strani `.Net 5` in višjih uporabite spodnji del kode.
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Povzetek
 
-V tem učbeniku smo se naučili, kako z metodo `Enum.GetValues()` in `Enum.GetNames()` zaciklirati enum v jeziku C#.
+V tem učbeniku smo se naučili enumerate enum v C# z uporabo metod `Enum.GetValues()` in `Enum.GetNames()`.
 
 
 

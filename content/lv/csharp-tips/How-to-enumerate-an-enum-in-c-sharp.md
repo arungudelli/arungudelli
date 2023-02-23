@@ -1,6 +1,6 @@
 ---
-title: "Kā veidot cilpas/skaitīt C# enum"
-description: "Dažādi veidi, kā veidot cilpas vai uzskaitīt C# enum ar piemēriem"
+title: "Kā enumerate C# enum"
+description: " Dažādi veidi, kā enumerate C# enum ar piemēriem"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,11 +13,11 @@ type: docs
 
 Enumus plaši izmanto `C#` valodā. 
 
-Un ir 4 veidi, kā `C#`. 
+Un ir 4 veidi, kā enumerate enum `C#` . 
 
 1. `C# Enum.GetValues()` izmantošana .Net 5 un jaunākās versijās.
 2. Izmantojot `C# Enum.GetValues()` vecākās .Net versijās.
-3. Izmantojot `C# Enum.GetNames()`, lai uzskaitītu enum nosaukumus kā virknes.
+3. Izmantojot `C# Enum.GetNames()`, lai enumerate enum vārdus kā virknes.
 4. Izmantojot `Linq`
 
 Izskatīsim piemēru, lai to labāk izprastu. 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` ir attēloti dažādi mežistrādes līmeņu veidi.
+Portāls `enum` apzīmē dažādus žurnālu veidošanas līmeņus.
 
-Tagad mēs apskatīsim dažādus veidus, kā uzskaitīt `C# enum`.
+Tagad mēs aplūkosim dažādus veidus, kā enumerate `C# enum`.
 
-## `C# Enum.GetValues()` vispārīgās metodes izmantošana .Net 5 un jaunākās versijās
+## Izmantojot `C# Enum.GetValues()` Generic metodi .Net 5 un jaunākās versijās
 
-Ja izmantojat jaunāko `.Net` versiju, t. i., `.Net 5` un jaunāku versiju, varat izmantot vispārīgo versiju `Enum.GetValues` metodei, lai veiktu cilpu caur `C# enum`.
+Ja izmantojat jaunāko `.Net` versiju, t. i., `.Net 5` un jaunāku versiju, varat izmantot vispārīgo versiju `Enum.GetValues` metodei, lai enumeratētu `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,11 +54,11 @@ void loopEnum()
 }
 ```
 
-Jaunā vispārīgā `Enum.GetValues` versija atgriež enuma vērtību masīvu. 
+Jaunā vispārīgā `Enum.GetValues` versija atgriež enum vērtību masīvu. 
 
-Un tālāk mēs varam izmantot `for` vai `foreach` paziņojumus, lai uzskaitītu `C# enum`. 
+Un tālāk mēs varam izmantot `for` vai `foreach` paziņojumus, lai uzskaitītu `C# enum` vārdus. 
 
-Tā kā masīvs satur `enum` tipu, mums tas jāpārveido virknē, izmantojot `ToString()` metodi.
+Tā kā masīvs satur `enum` tips, mums tas jāpārvērš virknē, izmantojot `ToString()` metodi.
 
 ## Izmantojot `C# Enum.GetValues()` vecākās .Net versijās.
 
@@ -69,7 +69,7 @@ Jums ir jānodod `typeof()` enum kā parametrs `Enum.GetValues()` metodei.
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Un tā atgriež `System.Array` tipa enuma vērtības, un tālāk mēs varam izmantot `foreach` izteikumu, lai veiktu ciklu caur C# enumu.
+Un tā atgriež enum tipa `System.Array` vērtības, un tālāk mēs varam izmantot `foreach` izteikumu, lai veiktu cilpu caur `C# enum` vārdus.
 
 ```csharp
 void loopEnum()
@@ -95,15 +95,15 @@ void loopEnum()
 }
 ```
 
-## Izmantojot `C# Enum.GetNames()`, lai uzskaitītu enumu nosaukumus kā virknes 
+## Izmantojot `C# Enum.GetNames()`, lai enumeratētu enum vārdus kā virknes 
 
-`C# Enum.GetValues()` metode atgriež enumu tipu masīvu. 
+`C# Enum.GetValues()` metode atgriež enum tipu masīvu. 
 
-Tāpēc mēs pārvēršam enumu vērtības virknē, pirms tās izdrukāt konsoles ekrānā.
+Tāpēc mēs konvertējām enum vārdus virknē, pirms tos izdrukāt konsoles ekrānā.
 
-Izmantojot `C# Enum.GetNames()` metodi, mēs varam uzskaitīt enumu nosaukumus kā virknes, lai tos nevajadzētu konvertēt virknēs.
+Izmantojot `C# Enum.GetNames()` metodi, mēs varam enumerēt enum vārdus kā virknes, lai tos nevajadzētu konvertēt virknēs.
 
-Ja izmantojat `.Net 5` un augstāk, varat izmantot vispārīgo `C# Enum.GetNames()` funkciju.
+Ja jūs izmantojat `.Net 5` un augstāk, jūs varat izmantot vispārīgo `C# Enum.GetNames()` funkciju.
 
 ```csharp
 void loopEnum()
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-Vecākajās versijās mums ir jānogādā `typeof()` enum parametrs.
+Vecākajās versijās mums ir jāievada `typeof()` enum parametrs.
 
 ```csharp
 void loopEnum()
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-Tātad, ja vēlaties, lai enumu nosaukumi būtu kā virknes, varam izmantot `C# Enum.GetNames()` metodi.
+Tātad, ja jūs vēlaties enumerate vārdus kā virknes, mēs varam izmantot `C# Enum.GetNames()` metodi.
 
 ## Izmantojot `Linq`
 
-Mēs varam izmantot `Linq forEach` metodi, lai uzskaitītu C# enumus, izmantojot `Enum.GetValues()` un `Enum.GetNames()` metodes.
+Mēs varam izmantot `Linq forEach` metodi, lai enumeratētu C# enum, izmantojot `Enum.GetValues()` un `Enum.GetNames()` metodes.
 
-Izmantojot `.Net 5` un augstāk, izmantojiet zemāk redzamo koda fragmentu.
+ `.Net 5` un augstāk izmanto zemāk redzamo koda fragmentu.
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Kopsavilkums
 
-Šajā pamācībā mēs uzzinājām, kā C# programmā izveidot cilpu caur enum, izmantojot `Enum.GetValues()` un `Enum.GetNames()` metodi.
+Šajā pamācībā mēs iemācījāmies enumerate enum C# valodā, izmantojot `Enum.GetValues()` un `Enum.GetNames()` metodi.
 
 
 

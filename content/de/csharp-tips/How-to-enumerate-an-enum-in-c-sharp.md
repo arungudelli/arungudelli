@@ -1,6 +1,6 @@
 ---
-title: "Schleifen/Aufzählung von C# enum"
-description: "Verschiedene Möglichkeiten zur Schleifenbildung oder Aufzählung von C# enum mit Beispielen"
+title: "Wie man enumerate C# enum"
+description: " Verschiedene Möglichkeiten, enumerate C# enum mit Beispielen"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,11 +13,11 @@ type: docs
 
 Enums sind in der Sprache `C#` weit verbreitet. 
 
-Und es gibt 4 Möglichkeiten, Schleife oder enumerate enum in `C#`. 
+Und es gibt 4 Möglichkeiten, enumerate enum in `C#`. 
 
-1. Verwendung von `C# Enum.GetValues()` in .Net 5 &amp; höher.
+1. Verwendung von `C# Enum.GetValues()` in .Net 5 und höher.
 2. Verwendung von `C# Enum.GetValues()` in älteren .Net-Versionen.
-3. Verwendung von `C# Enum.GetNames()` zum Aufzählen von Aufzählungsnamen als Strings.
+3. Verwendung von `C# Enum.GetNames()` für enumum enum Namen als Strings zu erstellen.
 4. Verwendung von `Linq`
 
 Lassen Sie uns ein Beispiel durchgehen, um es besser zu verstehen. 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
-Die `enum` stellt verschiedene Arten von Protokollierungsstufen dar.
+Die `enum` steht für verschiedene Arten von Protokollierungsstufen.
 
-Jetzt werden wir verschiedene Möglichkeiten sehen, die `C# enum` aufzuzählen.
+Jetzt werden wir verschiedene Möglichkeiten sehen, die enumzu erstellen `C# enum`.
 
 ## Verwendung der Methode `C# Enum.GetValues()` Generic in .Net 5 und höher
 
-Wenn Sie die neueste Version von `.Net` verwenden, d.h. `.Net 5` und höher, können Sie die generische Version für die Methode `Enum.GetValues` verwenden, um eine Schleife durch die `C# enum` zu ziehen.
+Wenn Sie die neueste Version von `.Net` verwenden, d.h. `.Net 5` und höher, können Sie die generische Version für die Methode `Enum.GetValues` verwenden, um enumzu erstellen `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
-Die neue generische Version von `Enum.GetValues` gibt das Array der Enum-Werte zurück. 
+Die neue generische Version von `Enum.GetValues` gibt das Array der Werte von enum zurück. 
 
-Außerdem können wir die Anweisungen `for` oder `foreach` verwenden, um die `C# enum` aufzuzählen. 
+Außerdem können wir die Anweisungen `for` oder `foreach` verwenden, um die `C# enum` namen aufzulisten. 
 
-Da das Array den Typ `enum` enthält, müssen wir es mit der Methode `ToString()` in einen String umwandeln.
+Da das Array den `enum` typ enthält, müssen wir ihn mit der Methode `ToString()` in eine Zeichenkette umwandeln.
 
 ## Verwendung von `C# Enum.GetValues()` in älteren .Net-Versionen.
 
-In den älteren Versionen von `.Net` gibt es keine generische Methode für die Methode `Enum.GetValues()`. 
+In den älteren Versionen von `.Net` gibt es keine generische Methode, die für die Methode `Enum.GetValues()` verfügbar ist. 
 
 Sie müssen `typeof()` enum als Parameter an die Methode `Enum.GetValues()` übergeben. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Sie gibt Enum-Werte des Typs `System.Array` zurück und wir können die `foreach` -Anweisung verwenden, um eine Schleife durch das C#-Enum zu ziehen.
+Sie gibt enum Werte des Typs `System.Array` zurück und wir können die `foreach` Anweisung verwenden, um eine Schleife durch die `C# enum` namen.
 
 ```csharp
 void loopEnum()
@@ -82,7 +82,7 @@ void loopEnum()
 }
 ```
 
-Wenn Sie `IEnumerable` Ergebnis wollen, können wir weiter casten die `Enum.GetValues()` Methode.
+Wenn Sie `IEnumerable` Ergebnis wollen, können wir weiter die `Enum.GetValues()` Methode.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Verwendung von `C# Enum.GetNames()` zur Aufzählung von Aufzählungsnamen als Strings 
+## Verwendung von `C# Enum.GetNames()` zur enumerate enum Namen als Strings 
 
-`C# Enum.GetValues()` methode gibt Array von Aufzählungstypen zurück. 
+`C# Enum.GetValues()` methode gibt Array von enum Typen zurück. 
 
-Deshalb haben wir die Enum-Werte in Strings umgewandelt, bevor wir sie auf der Konsole ausgeben.
+Deshalb haben wir die enum Namen in Strings umgewandelt, bevor wir sie in der Konsole ausgeben.
 
-Mit der Methode `C# Enum.GetNames()` können wir die Enum-Namen als Strings aufzählen, so dass es nicht erforderlich ist, sie in Strings umzuwandeln.
+Mit der Methode `C# Enum.GetNames()` können wir enumerate enum Namen als Strings, so dass es nicht erforderlich ist, sie in Strings zu konvertieren.
 
 Wenn Sie `.Net 5` und höher verwenden, können Sie die generische Funktion `C# Enum.GetNames()` verwenden.
 
@@ -130,11 +130,11 @@ void loopEnum()
 }
 ```
 
-Wenn Sie also Enum-Namen als Strings in einer Schleife verwenden möchten, können wir die Methode `C# Enum.GetNames()` verwenden.
+Wenn Sie also enumerate Namen als Zeichenketten verwenden möchten, können wir die Methode `C# Enum.GetNames()` verwenden.
 
 ## Verwendung von `Linq`
 
-Wir können die Methode `Linq forEach` verwenden, um C# enum mit Hilfe der Methoden `Enum.GetValues()` und `Enum.GetNames()` aufzuzählen.
+Wir können die Methode `Linq forEach` verwenden, um enumerate C# enum, mit Hilfe der Methoden `Enum.GetValues()` und `Enum.GetNames()`.
 
 In `.Net 5` und höher verwenden Sie den folgenden Codeausschnitt.
 
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Zusammenfassung
 
-In diesem Tutorial haben wir gelernt, in C# mit der Methode `Enum.GetValues()` und `Enum.GetNames()` eine Schleife durch enum zu ziehen.
+In diesem Tutorium haben wir gelernt, enumerate enum in C# mit `Enum.GetValues()` und `Enum.GetNames()` Methode.
 
 
 

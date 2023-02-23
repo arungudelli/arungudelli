@@ -1,6 +1,6 @@
 ---
-title: "Kaip sudaryti ciklą ir išvardyti C# enum"
-description: "Įvairūs ciklo sudarymo arba išvardijimo būdai C# enum su pavyzdžiais"
+title: "Kaip enumerate C# enum"
+description: " Įvairūs būdai enumerate C# enum su pavyzdžiais"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,11 +13,11 @@ type: docs
 
 Enumai plačiai naudojami `C#` kalboje. 
 
-Yra 4 būdai, kaip sudaryti ciklą arba išvardyti enumą `C#`. 
+Ir yra 4 būdai, kaip enumerate enum `C#` . 
 
 1. `C# Enum.GetValues()` naudojimas .Net 5 ir naujesnėse versijose.
 2. Naudojant `C# Enum.GetValues()` senesnėse .Net versijose.
-3. Naudojant `C# Enum.GetNames()` išvardyti sąrašo vardus kaip eilutes.
+3. Naudojant `C# Enum.GetNames()` enum erate enum vardus kaip eilutes.
 4. Naudojant `Linq`
 
 Kad geriau suprastume, panagrinėkime pavyzdį. 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` atvaizduoja skirtingų tipų registravimo lygius.
+Svetainė `enum` žymi skirtingus registravimo lygius.
 
-Dabar pamatysime skirtingus būdus, kaip išvardyti `C# enum`.
+Dabar pamatysime skirtingus būdus, kaip enum`C# enum`.
 
 ## `C# Enum.GetValues()` bendrojo metodo naudojimas .Net 5 ir naujesnėse versijose
 
-Jei naudojate naujausią `.Net` versiją, t. y. `.Net 5` ir naujesnę, galite naudoti bendrąją `Enum.GetValues` metodo versiją, kad galėtumėte suvesti ciklą per `C# enum`.
+Jei naudojate naujausią `.Net`, t. y. `.Net 5` ir naujesnę, versiją, galite naudoti bendrąją `Enum.GetValues` metodo versiją, kad enumerate `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -56,11 +56,11 @@ void loopEnum()
 
 Naujoji bendroji `Enum.GetValues` versija grąžina enum reikšmių masyvą. 
 
-Ir toliau galime naudoti `for` arba `foreach` teiginius, kad išvardytume `C# enum`. 
+Ir toliau galime naudoti `for` arba `foreach` teiginius, kad išvardytume `C# enum` vardus. 
 
 Kadangi masyve yra `enum` tipas, turime jį konvertuoti į eilutę naudodami `ToString()` metodą.
 
-## Naudojant `C# Enum.GetValues()` senesnėse .net versijose.
+## Naudojant `C# Enum.GetValues()` senesnėse .Net versijose.
 
 Senesnėse `.Net` versijose nėra bendrojo `Enum.GetValues()` metodo. 
 
@@ -69,7 +69,7 @@ Reikia perduoti `typeof()` enum kaip parametrą `Enum.GetValues()` metodui.
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-O jis grąžina `System.Array` tipo enumo reikšmes, o toliau galime naudoti `foreach` teiginį, norėdami cikliškai pereiti per C# enumą.
+Ir jis grąžina enum tipo `System.Array` reikšmes, o toliau galime naudoti `foreach` teiginį, kad cikliškai pereitume per `C# enum` vardus.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Naudojant `C# Enum.GetNames()` išvardyti enum vardus kaip eilutes 
+## Naudojant `C# Enum.GetNames()` enum erate enum vardus kaip eilutes 
 
 `C# Enum.GetValues()` metodas grąžina enum tipų masyvą. 
 
-Todėl prieš spausdindami enum reikšmes į eilutę jas konvertavome į eilutę.
+Todėl prieš spausdindami enum vardus į eilutę juos konvertavome į eilutę.
 
-Naudodamiesi `C# Enum.GetNames()` metodu galime išvardyti enum vardus kaip eilutes, todėl jų nereikia konvertuoti į eilutes.
+Naudodamiesi `C# Enum.GetNames()` metodu galime enumeruoti enum vardus kaip eilutes, kad nereikėtų jų konvertuoti į eilutes.
 
 Jei naudojate `.Net 5` ir aukštesnes funkcijas, galite naudoti bendrąją `C# Enum.GetNames()` funkciją.
 
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-Taigi, jei norime įrašyti enum vardus kaip eilutes, galime naudoti `C# Enum.GetNames()` metodą.
+Taigi, jei norite enumerate vardus kaip eilutes, galime naudoti `C# Enum.GetNames()` metodą.
 
 ## Naudojant `Linq`
 
-C# enumams išvardyti galime naudoti `Linq forEach` metodą, naudodami `Enum.GetValues()` ir `Enum.GetNames()` metodus.
+ `Linq forEach` metodą galime naudoti enumerate C# enum, naudodami `Enum.GetValues()` ir `Enum.GetNames()` metodus.
 
-Naudodami `.Net 5` ir vėlesnius kodus, naudokite toliau pateiktą kodo fragmentą.
+ `.Net 5` ir aukštesniuose formatuose naudokite toliau pateiktą kodo fragmentą.
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Santrauka
 
-Šioje pamokoje išmokome cikliškai peržiūrėti enum C#, naudodami `Enum.GetValues()` ir `Enum.GetNames()` metodą.
+Šioje pamokoje išmokome enumerate enum C# kalba, naudodami `Enum.GetValues()` ir `Enum.GetNames()` metodus.
 
 
 

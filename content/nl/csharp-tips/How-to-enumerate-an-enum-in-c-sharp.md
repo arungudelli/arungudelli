@@ -1,6 +1,6 @@
 ---
-title: "Hoe C# enum te lussen/op te sommen"
-description: "Verschillende manieren om C# enum te lussen of op te sommen met voorbeelden"
+title: "Hoe enumereren C# enum"
+description: " Verschillende manieren om enumereren C# enum met voorbeelden"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -11,13 +11,13 @@ type: docs
 
 ---
 
-Enums worden veel gebruikt in de taal `C#`. 
+Enums worden veel gebruikt in `C#` taal. 
 
-En er zijn 4 manieren om enum te lussen of op te sommen in `C#`. 
+En er zijn 4 manieren om enumerate enum in `C#`. 
 
 1. `C# Enum.GetValues()` gebruiken in .Net 5 en hoger.
 2. `C# Enum.GetValues()` gebruiken in oudere .Net versies.
-3. `C# Enum.GetNames()` gebruiken om enumnamen als strings op te sommen.
+3. Gebruik van `C# Enum.GetNames()` om enumerate enum namen als strings.
 4. Gebruik van `Linq`
 
 Laten we een voorbeeld doornemen om het verder te begrijpen. 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
-De `enum` vertegenwoordigt verschillende soorten logging niveaus.
+De `enum` staat voor verschillende soorten logboekniveaus.
 
-Nu zullen we verschillende manieren zien om de `C# enum` op te sommen.
+Nu zullen we verschillende manieren zien om de enumerate van de `C# enum`.
 
-## Gebruik van `C# Enum.GetValues()` Generieke methode in .Net 5 &amp; hoger
+## `C# Enum.GetValues()` Generieke methode te gebruiken in .Net 5 &amp; hoger
 
-Als u de laatste versie van `.Net` gebruikt, d.w.z. `.Net 5` en hoger, kunt u de generieke versie gebruiken voor de methode `Enum.GetValues` om door de `C# enum` te lussen.
+Als u de laatste versie van `.Net` gebruikt, d.w.z. `.Net 5` en hoger, kunt u de generieke versie van de `Enum.GetValues` methode gebruiken om enumde `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
-De nieuwe generieke versie van `Enum.GetValues` geeft de array van enumwaarden terug. 
+De nieuwe generieke versie van `Enum.GetValues` geeft de array van enum waarden terug. 
 
-En verder kunnen we `for` of `foreach` statements gebruiken om de `C# enum` op te sommen. 
+En verder kunnen we de verklaringen `for` of `foreach` gebruiken om de `C# enum` namen. 
 
-Aangezien het array het type `enum` bevat, moeten we het converteren naar de string met de methode `ToString()`.
+Aangezien de array het `enum` type bevat, moeten we het converteren naar de string met de methode `ToString()`.
 
-## Gebruik van `C# Enum.GetValues()` in oudere .Net versies.
+## Gebruik `C# Enum.GetValues()` in oudere .Net versies.
 
 In de oudere versies van `.Net` is er geen generieke methode beschikbaar voor de methode `Enum.GetValues()`. 
 
-U moet `typeof()` enum als parameter doorgeven aan `Enum.GetValues()` methode. 
+U moet `typeof()` enum als parameter doorgeven aan de methode `Enum.GetValues()`. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-En het geeft enumwaarden terug van het type `System.Array` en verder kunnen we `foreach` statement gebruiken om door het C# enum te lussen.
+En het geeft enum waarden terug van het type `System.Array` en verder kunnen we `foreach` statement gebruiken om door de `C# enum` namen.
 
 ```csharp
 void loopEnum()
@@ -82,7 +82,7 @@ void loopEnum()
 }
 ```
 
-Als u het resultaat `IEnumerable` wilt, kunnen we de methode `Enum.GetValues()` verder casten.
+Als u een `IEnumerable` resultaat wilt, kunnen we de methode `Enum.GetValues()` verder casten.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## `C# Enum.GetNames()` gebruiken om enumnamen als strings op te sommen 
+## `C# Enum.GetNames()` gebruiken om enumerate enum namen als strings te gebruiken 
 
-`C# Enum.GetValues()` methode geeft array van enum types terug. 
+`C# Enum.GetValues()` geeft de methode een array van enum types. 
 
-Daarom hebben we enumwaarden geconverteerd naar string voordat we ze in de console afdrukken.
+Daarom hebben we enum namen geconverteerd naar string voordat we ze afdrukken in de console.
 
-Met de methode `C# Enum.GetNames()` kunnen we enumnamen als strings opsommen, zodat het niet nodig is ze naar strings te converteren.
+Met de methode `C# Enum.GetNames()` kunnen we enumeren enum namen als strings, zodat het niet nodig is ze te converteren naar strings.
 
 Als u `.Net 5` en hoger gebruikt, kunt u de generieke functie `C# Enum.GetNames()` gebruiken.
 
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-In de oudere versies moeten we `typeof()` enum parameter doorgeven.
+In de oudere versies moeten we de parameter `typeof()` enum doorgeven.
 
 ```csharp
 void loopEnum()
@@ -130,11 +130,11 @@ void loopEnum()
 }
 ```
 
-Dus als u enum-namen als strings wilt lussen, kunt u de methode `C# Enum.GetNames()` gebruiken.
+Dus als u en enumnamen als strings wilt gebruiken, kunnen we de methode `C# Enum.GetNames()` gebruiken.
 
 ## Met behulp van `Linq`
 
-We kunnen `Linq forEach` methode gebruiken om C# enum op te sommen, met behulp van `Enum.GetValues()` en `Enum.GetNames()` methoden.
+We kunnen `Linq forEach` methode gebruiken om enumerate C# enum, met behulp van `Enum.GetValues()` en `Enum.GetNames()` methoden.
 
 Gebruik in `.Net 5` en hoger het onderstaande codefragment.
 
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Samenvatting
 
-In deze tutorial hebben we geleerd om door enum te lussen in C# met behulp van `Enum.GetValues()` en `Enum.GetNames()` methode.
+In deze tutorial hebben we geleerd om enumerate enum in C# met behulp van `Enum.GetValues()` en `Enum.GetNames()` methode.
 
 
 

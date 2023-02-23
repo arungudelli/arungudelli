@@ -1,6 +1,6 @@
 ---
-title: "Como fazer loop/enumerar C# enum"
-description: "Diferentes formas de loop ou enumerar C# enumerar com exemplos"
+title: "Como enumerate C# enum"
+description: " Diferentes maneiras de enumerate C# enum com exemplos"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,11 +13,11 @@ type: docs
 
 Os enumeros são amplamente utilizados na língua `C#`. 
 
-E há 4 maneiras de loopar ou enumerar enumerar em `C#`. 
+E há 4 maneiras de enumerate enum em `C#`. 
 
 1. Usando `C# Enum.GetValues()` em .Net 5 e acima.
 2. Usando `C# Enum.GetValues()` em versões .Net mais antigas.
-3. Usando `C# Enum.GetNames()` para enumerar nomes de enumeração como cordas.
+3. Usando `C# Enum.GetNames()` para enumerguer nomes enum como cordas.
 4. Usando `Linq`
 
 Vamos passar por um exemplo para entendê-lo melhor. 
@@ -36,11 +36,11 @@ public enum LogLevel
 
 O `enum` representa diferentes tipos de níveis de extração.
 
-Agora veremos diferentes maneiras de enumerar o `C# enum`.
+Agora veremos diferentes maneiras de enumerguer o `C# enum`.
 
 ## Usando `C# Enum.GetValues()` Método genérico em .Net 5 e acima
 
-Se você estiver usando a última versão de `.Net`, ou seja, `.Net 5` e acima, você pode usar a versão genérica para o método `Enum.GetValues` para fazer loop através do `C# enum`.
+Se você estiver usando a última versão de `.Net`, ou seja, `.Net 5` e acima, você pode usar a versão genérica para o método `Enum.GetValues` para enumerate the `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,11 +54,11 @@ void loopEnum()
 }
 ```
 
-A nova versão genérica de `Enum.GetValues` retorna o conjunto de valores enuméricos. 
+A nova versão genérica de `Enum.GetValues` retorna a matriz de valores enum. 
 
-Além disso, podemos usar `for` ou `foreach` para enumerar as declarações `C# enum`. 
+Além disso, podemos usar `for` ou `foreach` para listar as declarações `C# enum` nomes. 
 
-Como a matriz contém o tipo `enum`, precisamos convertê-la para a cadeia usando o método `ToString()`.
+Como a matriz contém o `enum` tipo, precisamos convertê-lo para a corda usando o método `ToString()`.
 
 ## Usando `C# Enum.GetValues()` em versões .Net mais antigas.
 
@@ -69,7 +69,7 @@ Você precisa passar `typeof()` enum como parâmetro para o método `Enum.GetVal
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-E retorna valores enuméricos do tipo `System.Array` e, além disso, podemos usar a declaração `foreach` para fazer um loop através do enum C#.
+E ele retorna enum valores do tipo `System.Array` e, além disso, podemos usar a declaração `foreach` para fazer o loop através do `C# enum` nomes.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Usando `C# Enum.GetNames()` para enumerar nomes de enumeração como cordas 
+## Usando `C# Enum.GetNames()` para enumerguer nomes enum como cordas 
 
-`C# Enum.GetValues()` método retorna array de tipos de enumeração. 
+`C# Enum.GetValues()` método retorna array de tipos enum. 
 
-É por isso que convertemos valores enuméricos em cadeia antes de imprimi-los no console.
+É por isso que convertemos os nomes enum para string antes de imprimi-los no console.
 
-Usando o método `C# Enum.GetNames()` podemos enumerar nomes de enumeração como cordas, para que não seja necessário convertê-las em cordas.
+Usando o método `C# Enum.GetNames()` podemos enumerguer nomes enum como cordas, para que não seja necessário convertê-los em cordas.
 
 Se você estiver usando `.Net 5` e acima, você pode usar a função genérica `C# Enum.GetNames()`.
 
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-Nas versões mais antigas, precisamos passar o parâmetro `typeof()` enum.
+Nas versões mais antigas, precisamos passar o parâmetro `typeof()` enum .
 
 ```csharp
 void loopEnum()
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-Portanto, se você quiser enumerar nomes como cordas, podemos usar o método `C# Enum.GetNames()`.
+Portanto, se você quiser en enumerate names as strings, podemos usar o método `C# Enum.GetNames()`.
 
 ## Usando `Linq`
 
-Podemos usar o método `Linq forEach` para enumerar C# enumerar, com a ajuda dos métodos `Enum.GetValues()` e `Enum.GetNames()`.
+Podemos usar o método `Linq forEach` para enumerate C# enum, com a ajuda dos métodos `Enum.GetValues()` e `Enum.GetNames()`.
 
-Em `.Net 5` e acima, use o trecho de código abaixo.
+Em `.Net 5` e acima use o trecho de código abaixo.
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Sumário
 
-Neste tutorial aprendemos a percorrer o enumero em C# usando o método `Enum.GetValues()` e `Enum.GetNames()`.
+Neste tutorial, aprendemos a enumerar enum em C# usando o método `Enum.GetValues()` e `Enum.GetNames()`.
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: "C# enum döngüsü/ numaralandırması nasıl yapılır"
-description: "Örneklerle C# enum döngüsü veya numaralandırması yapmanın farklı yolları"
+title: "C# nasıl enumerate edilir enum"
+description: " C#'ı enumerate etmenin farklı yolları enum örneklerle"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,11 +13,11 @@ type: docs
 
 Enumlar `C#` dilinde yaygın olarak kullanılmaktadır. 
 
-Ve `C#` adresinde enum'u döngüye sokmanın veya numaralandırmanın 4 yolu vardır. 
+Ve `C#` adresinde enum adresini enumerate etmenin 4 yolu vardır. 
 
 1. .Net 5 ve üzeri sürümlerde `C# Enum.GetValues()` adresini kullanma.
 2. Eski .Net sürümlerinde `C# Enum.GetValues()` adresini kullanma.
-3. Enum adlarını dizeler olarak numaralandırmak için `C# Enum.GetNames()` adresini kullanma.
+3. `C# Enum.GetNames()` adlarını dizeler olarak enumerate etmek için enum kullanmak.
 4. Kullanma `Linq`
 
 Bunu daha iyi anlamak için bir örnek üzerinden gidelim. 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` farklı günlük kaydı seviyelerini temsil eder.
+Bu `enum` farklı günlük kaydı seviyelerini temsil eder.
 
-Şimdi `C# enum` adresini numaralandırmanın farklı yollarını göreceğiz.
+Şimdi enumerate için farklı yollar göreceğiz `C# enum`.
 
 ##.Net 5 ve üzeri sürümlerde `C# Enum.GetValues()` Generic yöntemini kullanma
 
- `.Net` 'un en son sürümünü, yani `.Net 5` ve üstünü kullanıyorsanız, `C# enum`'da döngü oluşturmak için `Enum.GetValues` yönteminin genel sürümünü kullanabilirsiniz.
+ `.Net`, yani `.Net 5` ve üstünün en son sürümünü kullanıyorsanız, `Enum.GetValues` yöntemi için genel sürümü enumerate etmek için kullanabilirsiniz `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
- `Enum.GetValues` adresinin yeni genel sürümü, enum değerleri dizisini döndürür. 
+ `Enum.GetValues` 'un yeni genel sürümü enum değerleri dizisini döndürür. 
 
-Ayrıca `C# enum` adresini numaralandırmak için `for` veya `foreach` ifadelerini kullanabiliriz. 
+Ve ayrıca `for` veya `foreach` ifadelerini listelemek için kullanabiliriz `C# enum` isimler. 
 
-Dizi `enum` türünü içerdiğinden, `ToString()` yöntemini kullanarak dizeye dönüştürmemiz gerekir.
+Dizi aşağıdakileri içerdiğinden `enum` türünü `ToString()` yöntemini kullanarak dizeye dönüştürmemiz gerekir.
 
 ## Eski .Net sürümlerinde `C# Enum.GetValues()` adresini kullanma.
 
  `.Net` 'un eski sürümlerinde `Enum.GetValues()` yöntemi için genel bir yöntem mevcut değildir. 
 
- `Enum.GetValues()` yöntemine parametre olarak `typeof()` enum'unu geçirmeniz gerekir. 
+ `typeof()` enum adresini `Enum.GetValues()` yöntemine parametre olarak geçirmeniz gerekir. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Ve `System.Array` türünde enum değerleri döndürür ve ayrıca C# enum'u boyunca döngü yapmak için `foreach` deyimini kullanabiliriz.
+Ve `System.Array` türünde enum değerlerini döndürür ve ayrıca `foreach` deyimini kullanarak `C# enum` isimler.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Enum adlarını dizeler olarak numaralandırmak için `C# Enum.GetNames()` adresini kullanma 
+## `C# Enum.GetNames()` adlarını dizeler olarak enumerate etmek için enum kullanma 
 
-`C# Enum.GetValues()` metodu enum tiplerinden oluşan bir dizi döndürür. 
+`C# Enum.GetValues()` yöntemi enum türlerinden oluşan bir dizi döndürür. 
 
-Bu yüzden enum değerlerini konsola yazdırmadan önce string'e dönüştürdük.
+Bu yüzden konsola yazdırmadan önce enum adlarını dizeye dönüştürdük.
 
- `C# Enum.GetNames()` yöntemini kullanarak enum adlarını string olarak numaralandırabiliriz, böylece onları string'e dönüştürmek gerekmez.
+ `C# Enum.GetNames()` yöntemini kullanarak enum enum adlarını dizeler olarak erate edebiliriz, böylece bunları dizelere dönüştürmek gerekmez.
 
  `.Net 5` ve üstünü kullanıyorsanız, genel `C# Enum.GetNames()` işlevini kullanabilirsiniz.
 
@@ -130,11 +130,11 @@ void loopEnum()
 }
 ```
 
-Yani enum isimlerini string olarak döngüye sokmak isterseniz `C# Enum.GetNames()` metodunu kullanabiliriz.
+Eğer isimleri string olarak enumerate etmek istiyorsanız `C# Enum.GetNames()` metodunu kullanabiliriz.
 
 ## Kullanma `Linq`
 
-C# enum'larını numaralandırmak için `Enum.GetValues()` ve `Enum.GetNames()` yöntemleri yardımıyla `Linq forEach` yöntemini kullanabiliriz.
+ `Enum.GetValues()` ve `Enum.GetNames()` metotları yardımıyla C# enum'u enumerate etmek için `Linq forEach` metodunu kullanabiliriz.
 
  `.Net 5` ve üzerinde aşağıdaki kod parçacığını kullanın.
 
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Özet
 
-Bu derste C#'ta `Enum.GetValues()` ve `Enum.GetNames()` yöntemlerini kullanarak enum içinde döngü yapmayı öğrendik.
+Bu eğitimde `Enum.GetValues()` ve `Enum.GetNames()` yöntemlerini kullanarak C#'ta enum adresini enumerate etmeyi öğrendik.
 
 
 

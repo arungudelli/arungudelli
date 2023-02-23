@@ -1,6 +1,6 @@
 ---
-title: "Jak zapętlić/wyliczyć C# enum"
-description: "Różne sposoby zapętlenia lub wyliczenia C# enum z przykładami"
+title: "Jak enumerate C# enum"
+description: " Różne sposoby enumerate C# enum z przykładami"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -11,14 +11,14 @@ type: docs
 
 ---
 
-Enum są szeroko stosowane w języku `C#`. 
+Enumy są szeroko stosowane w języku `C#`. 
 
-I istnieją 4 sposoby zapętlenia lub wyliczenia enum w `C#`. 
+I są 4 sposoby enumerate enum w `C#`. 
 
 1. Używanie `C# Enum.GetValues()` w .Net 5 i wyżej.
 2. Używanie `C# Enum.GetValues()` w starszych wersjach .Net.
-3. Używanie `C# Enum.GetNames()` do wyliczania nazw enum jako ciągów.
-4. Używanie `Linq`
+3. Używanie `C# Enum.GetNames()` do enumerate enum names as strings.
+4. Używanie strony `Linq`
 
 Przejdźmy przez przykład, aby zrozumieć to dalej. 
 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` reprezentujący różne rodzaje poziomów logowania.
+Strona `enum` reprezentuje różne typy poziomów logowania.
 
-Teraz zobaczymy różne sposoby wyliczania `C# enum`.
+Teraz zobaczymy różne sposoby na enumerate the `C# enum`.
 
-## Używanie metody `C# Enum.GetValues()` Generic w .Net 5 i wyżej
+## Używanie `C# Enum.GetValues()` metody Generic w .Net 5 i wyżej
 
-Jeśli używasz najnowszej wersji `.Net`, tzn. `.Net 5` i wyżej, możesz użyć wersji generycznej dla metody `Enum.GetValues` do zapętlenia `C# enum`.
+Jeżeli używasz najnowszej wersji `.Net`, tzn. `.Net 5` i wyżej możesz użyć wersji generycznej dla metody `Enum.GetValues` do enumerate the `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -56,20 +56,20 @@ void loopEnum()
 
 Nowa generyczna wersja `Enum.GetValues` zwraca tablicę wartości enum. 
 
-I dalej możemy użyć `for` lub `foreach` deklaracji, aby wyliczyć `C# enum`. 
+I dalej możemy użyć `for` lub `foreach` do wypisania nazw `C# enum` nazwy. 
 
-Ponieważ tablica zawiera typ `enum` musimy ją przekonwertować na łańcuch przy pomocy metody `ToString()`.
+Ponieważ tablica zawiera `enum` typ, musimy przekonwertować go na ciąg znaków za pomocą metody `ToString()`.
 
-## Używanie `C# Enum.GetValues()` w starszych wersjach .Net.
+## Użycie `C# Enum.GetValues()` w starszych wersjach .Net.
 
 W starszych wersjach `.Net` nie ma dostępnej metody generycznej dla metody `Enum.GetValues()`. 
 
-Musisz przekazać enum `typeof()` jako parametr do metody `Enum.GetValues()`. 
+Musisz przekazać `typeof()` enum jako parametr do metody `Enum.GetValues()`. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Zwraca ona wartości enum typu `System.Array` i dalej możemy użyć instrukcji `foreach` do zapętlenia enum w C#.
+Metoda ta zwraca wartości typu enum `System.Array` i dalej możemy użyć instrukcji `foreach` do zapętlenia nazw `C# enum` nazwy.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Użycie `C# Enum.GetNames()` do wyliczania nazw enum jako ciągów znaków 
+## Użycie `C# Enum.GetNames()` do enumeracji enum nazw jako ciągów znaków 
 
 `C# Enum.GetValues()` metoda zwraca tablicę typów enum. 
 
-Dlatego właśnie przekonwertowaliśmy wartości enum na ciąg przed wydrukowaniem ich w konsoli.
+Dlatego właśnie przekonwertowaliśmy enum nazwy na stringi przed wypisaniem ich w konsoli.
 
-Za pomocą metody `C# Enum.GetNames()` możemy wyliczyć nazwy enum jako łańcuchy, dzięki czemu nie jest wymagana ich konwersja na łańcuchy.
+Za pomocą metody `C# Enum.GetNames()` możemy enumerować nazwy enum jako łańcuchy, dzięki czemu nie jest wymagane konwertowanie ich na łańcuchy.
 
 Jeśli używasz `.Net 5` i wyżej, możesz użyć funkcji generycznej `C# Enum.GetNames()`.
 
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-W starszych wersjach musimy przekazać parametr enum `typeof()`.
+W starszych wersjach musimy przekazać parametr `typeof()` enum .
 
 ```csharp
 void loopEnum()
@@ -130,11 +130,11 @@ void loopEnum()
 }
 ```
 
-Jeśli więc chcemy zapętlić nazwy enum jako ciągi znaków możemy użyć metody `C# Enum.GetNames()`.
+Jeśli więc chcemy en enumerate names as strings możemy użyć metody `C# Enum.GetNames()`.
 
 ## Użycie `Linq`
 
-Możemy użyć metody `Linq forEach` do wyliczenia C# enum, z pomocą metod `Enum.GetValues()` i `Enum.GetNames()`.
+Możemy użyć metody `Linq forEach` do enumerate C# enum, z pomocą metod `Enum.GetValues()` i `Enum.GetNames()`.
 
 Na stronie `.Net 5` i wyżej użyj poniższego fragmentu kodu.
 
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Podsumowanie
 
-W tym tutorialu nauczyliśmy się zapętlać enum w C# za pomocą metody `Enum.GetValues()` oraz `Enum.GetNames()`.
+W tym tutorialu nauczyliśmy się enumerować enum w C# za pomocą metody `Enum.GetValues()` oraz `Enum.GetNames()`.
 
 
 

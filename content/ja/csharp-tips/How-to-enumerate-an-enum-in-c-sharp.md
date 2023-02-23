@@ -1,6 +1,6 @@
 ---
-title: "How to loop/enumerate C# enum"
-description: "C#のenumをループさせたり列挙するさまざまな方法と例"
+title: "How toenumerate C#enum"
+description: " Different ways toenumerate C#enum with examples."
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -11,18 +11,18 @@ type: docs
 
 ---
 
-enumは、`C#` 言語で広く使われています。 
+`C#` 言語ではEnumが広く使われています。 
 
-そして、`C#` でenumをループまたは列挙する4つの方法があります。 
+そして、enumerateenum in`C#` の4つの方法があります。 
 
-1.`C# Enum.GetValues()` を .Net 5 &amp; above で使用する。
-2.古い.Netバージョンで`C# Enum.GetValues()` を使用する。
-3.`C# Enum.GetNames()` を使用して、列挙名を文字列として列挙する。
+1.`C# Enum.GetValues()` を .Net 5 以上で使用する。
+2.古い.Netのバージョンで`C# Enum.GetValues()` を使用する。
+3.`C# Enum.GetNames()` を使用して、enum enum の名前を文字列として消去する。
 4.使用方法`Linq`
 
 さらに理解するために例を見てみましょう。 
 
-まず、C#の`enum`
+まず、C#の `enum`
 
 ```csharp
 public enum LogLevel
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
-`enum` は、さまざまなタイプのロギングレベルを表します。
+があります。 `enum`は、さまざまなタイプのロギングレベルを表します。
 
-ここで、`C# enum` を列挙するさまざまな方法を見てみましょう。
+今度は、enumerate のさまざまな方法について見ていきます。 `C# enum`.
 
-## `C# Enum.GetValues()` .Net 5 &amp; above の Generic メソッドの使用
+## `C# Enum.GetValues()` .Net 5 以上で Generic メソッドを使用する
 
-`.Net` の最新バージョン、つまり`.Net 5` 以降を使用している場合、`Enum.GetValues` メソッドにジェネリックバージョンを使用して、`C# enum` をループさせることができます。
+`.Net` の最新版、すなわち`.Net 5` 以上を使用している場合、`Enum.GetValues` メソッドに汎用版を使用して、enumを消去することができます。 `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,13 +54,13 @@ void loopEnum()
 }
 ```
 
-新しいジェネリック版`Enum.GetValues` は，enum 値の配列を返します。 
+新しい汎用版`Enum.GetValues` は、enum の値の配列を返します。 
 
-そしてさらに、`for` または`foreach` ステートメントを使用して、`C# enum` を列挙することができます。 
+さらに、`for` または`foreach` ステートメントを使用して、名前をリストアップすることができます。 `C# enum`の名前をリストアップすることができます。 
 
-配列は`enum` 型を含んでいるので、`ToString()` メソッドを使って文字列に変換する必要があります。
+配列は型を含んでいるので `enum`を含むので、`ToString()` メソッドを使って文字列に変換する必要があります。
 
-## 古いバージョンの.Netでは、`C# Enum.GetValues()` を使用します。
+## 古いバージョンの.Netでは、`C# Enum.GetValues()` 。
 
 古いバージョンの`.Net` では、`Enum.GetValues()` メソッドで利用できるジェネリックメソッドがありません。 
 
@@ -69,7 +69,7 @@ void loopEnum()
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-そして、`System.Array` 型の enum 値を返します。さらに、`foreach` ステートメントを使用して、C# enum をループすることができます。
+そしてそれは`System.Array` 型のenum 値を返し、さらに`foreach` ステートメントを使って `C# enum`の名前をループすることができます。
 
 ```csharp
 void loopEnum()
@@ -82,7 +82,7 @@ void loopEnum()
 }
 ```
 
-もし、`IEnumerable` の結果が欲しければ、さらに`Enum.GetValues()` メソッドをキャストすればよい。
+もし、`IEnumerable` の結果が欲しいなら、さらに`Enum.GetValues()` メソッドをキャストすればよい。
 
 ```csharp
 void loopEnum()
@@ -95,15 +95,15 @@ void loopEnum()
 }
 ```
 
-## `C# Enum.GetNames()` を使って、文字列としての列挙名を列挙する。 
+## `C# Enum.GetNames()` を使ってenumを消すenum 名前を文字列にする 
 
-`C# Enum.GetValues()` メソッドは enum 型の配列を返します。 
+`C# Enum.GetValues()` メソッドはenum 型の配列を返します。 
 
-そのため、コンソールに表示する前にenumの値を文字列に変換しています。
+そのため、enum の名前を文字列に変換してからコンソールに出力しています。
 
-`C# Enum.GetNames()` メソッドを使用すると、enum の名前を文字列として列挙することができるので、文字列に変換する必要はありません。
+`C# Enum.GetNames()` メソッドを使うと、enumerateenum の名前を文字列として出力できるので、文字列に変換する必要はありません。
 
-`.Net 5` 以上をお使いの場合は、汎用関数`C# Enum.GetNames()` をお使いください。
+`.Net 5` 以上をお使いの方は、汎用関数`C# Enum.GetNames()` をお使いください。
 
 ```csharp
 void loopEnum()
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-そのため、enum 名を文字列としてループさせたい場合は、`C# Enum.GetNames()` メソッドを使用することができます。
+もし、enumの名前を文字列で表示したい場合は、`C# Enum.GetNames()` メソッドを使用することができます。
 
 ## 使用方法`Linq`
 
-C#のenumを列挙するには、`Enum.GetValues()` と`Enum.GetNames()` メソッドの助けを借りて、`Linq forEach` メソッドを使用します。
+`Linq forEach` メソッドを使用すると、C#enum を`Enum.GetValues()` と`Enum.GetNames()` メソッドの助けを借りて、enumerate することができます。
 
-`.Net 5` 以上では、以下のコード・スニペットを使用してください。
+`.Net 5` 以上では、以下のコードスニペットを使用してください。
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## 概要
 
-このチュートリアルでは、`Enum.GetValues()` と`Enum.GetNames()` メソッドを使用して、C# で enum をループ処理することを学びました。
+enum このチュートリアルでは、C# で`Enum.GetValues()` と`Enum.GetNames()` メソッドを使ってenumを作成することを学びました。
 
 
 

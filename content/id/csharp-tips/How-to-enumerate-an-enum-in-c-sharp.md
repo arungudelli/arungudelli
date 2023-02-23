@@ -1,6 +1,6 @@
 ---
-title: "Cara mengulang/mencacah enum C#"
-description: "Berbagai cara untuk mengulang atau mencacah enum C# dengan contoh"
+title: "Cara enumerate C# enum"
+description: " Berbagai cara untuk enumerate C# enum dengan contoh"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,14 +13,14 @@ type: docs
 
 Enum digunakan secara luas dalam bahasa `C#`. 
 
-Dan ada 4 cara untuk mengulang atau mencacah enum di `C#`. 
+Dan ada 4 cara untuk enumerate enum di `C#`. 
 
 1. Menggunakan `C# Enum.GetValues()` di .Net 5 ke atas.
 2. Menggunakan `C# Enum.GetValues()` di versi .Net yang lebih lama.
-3. Menggunakan `C# Enum.GetNames()` untuk mencacah nama enum sebagai string.
+3. Menggunakan `C# Enum.GetNames()` untuk enummembuat nama enum sebagai string.
 4. Menggunakan `Linq`
 
-Mari kita lihat sebuah contoh untuk memahaminya lebih jauh. 
+Mari kita lihat sebuah contoh untuk memahaminya lebih lanjut. 
 
 Pertama, kita akan membuat sebuah program C# `enum`
 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` mewakili berbagai jenis level penebangan.
+Tingkat penebangan `enum` mewakili berbagai jenis tingkat penebangan.
 
-Sekarang kita akan melihat berbagai cara untuk menghitung `C# enum`.
+Sekarang kita akan melihat berbagai cara untuk enumerate `C# enum`.
 
-## Menggunakan `C# Enum.GetValues()` Metode umum di .Net 5 &amp; di atasnya
+## Menggunakan `C# Enum.GetValues()` Metode umum di .Net 5 &amp; di atas
 
-Jika Anda menggunakan versi terbaru dari `.Net`, yaitu, `.Net 5` dan di atasnya, Anda dapat menggunakan versi umum untuk metode `Enum.GetValues` untuk mengulang melalui `C# enum`.
+Jika Anda menggunakan versi terbaru dari `.Net`, yaitu, `.Net 5` dan di atasnya, Anda dapat menggunakan versi generik untuk metode `Enum.GetValues` untuk enumerate file `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -56,20 +56,20 @@ void loopEnum()
 
 Versi generik baru dari `Enum.GetValues` mengembalikan larik nilai enum. 
 
-Dan selanjutnya kita dapat menggunakan pernyataan `for` atau `foreach` untuk mencacah `C# enum`. 
+Dan selanjutnya kita bisa menggunakan pernyataan `for` atau `foreach` untuk mendaftarkan `C# enum` nama. 
 
-Karena larik berisi tipe `enum`, kita perlu mengubahnya menjadi string menggunakan metode `ToString()`.
+Karena larik tersebut berisi tipe `enum` kita perlu mengonversinya menjadi string menggunakan metode `ToString()`.
 
 ## Menggunakan `C# Enum.GetValues()` di versi .Net yang lebih lama.
 
 Pada versi lama `.Net` tidak ada metode generik yang tersedia untuk metode `Enum.GetValues()`. 
 
-Anda harus mengoper enum `typeof()` sebagai parameter ke metode `Enum.GetValues()`. 
+Anda harus mengoper `typeof()` enum sebagai parameter ke metode `Enum.GetValues()`. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Dan mengembalikan nilai enum dengan tipe `System.Array` dan selanjutnya kita bisa menggunakan pernyataan `foreach` untuk mengulang enum C#.
+Dan mengembalikan nilai enum dengan tipe `System.Array` dan selanjutnya kita dapat menggunakan pernyataan `foreach` untuk mengulang `C# enum` nama.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Menggunakan `C# Enum.GetNames()` untuk mencacah nama enum sebagai string 
+## Menggunakan `C# Enum.GetNames()` untuk enummembuat nama enum sebagai string 
 
-`C# Enum.GetValues()` metode mengembalikan larik tipe enum. 
+`C# Enum.GetValues()` metode mengembalikan array dari tipe enum. 
 
-Itulah mengapa kita mengubah nilai enum menjadi string sebelum mencetaknya di konsol.
+Itulah mengapa kami mengubah nama enum menjadi string sebelum mencetaknya di konsol.
 
-Dengan menggunakan metode `C# Enum.GetNames()` kita dapat mencacah nama enum sebagai string, sehingga tidak perlu mengonversinya menjadi string.
+Dengan menggunakan metode `C# Enum.GetNames()` kita dapat enummembuat nama enum sebagai string, sehingga tidak perlu mengonversinya menjadi string.
 
 Jika Anda menggunakan `.Net 5` &amp; di atasnya, Anda dapat menggunakan fungsi generik `C# Enum.GetNames()`.
 
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-Pada versi yang lebih lama, kita perlu mengoper parameter enum `typeof()`.
+Pada versi yang lebih lama, kita perlu memasukkan parameter `typeof()` enum .
 
 ```csharp
 void loopEnum()
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-Jadi, jika Anda ingin mengulang nama enum sebagai string, kita dapat menggunakan metode `C# Enum.GetNames()`.
+Jadi, jika Anda ingin membuat enumnama sebagai string, kita dapat menggunakan metode `C# Enum.GetNames()`.
 
 ## Menggunakan `Linq`
 
-Kita bisa menggunakan metode `Linq forEach` untuk mencacah enum C#, dengan bantuan metode `Enum.GetValues()` dan `Enum.GetNames()`.
+Kita dapat menggunakan metode `Linq forEach` untuk enummembuat C# enum, dengan bantuan metode `Enum.GetValues()` dan `Enum.GetNames()`.
 
-Pada `.Net 5` dan yang lebih tinggi, gunakan cuplikan kode di bawah ini.
+Pada `.Net 5` dan di atasnya gunakan potongan kode di bawah ini.
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Ringkasan
 
-Pada tutorial ini kita belajar perulangan melalui enum di C# menggunakan metode `Enum.GetValues()` dan `Enum.GetNames()`.
+Dalam tutorial ini kita belajar untuk enummembuat enum dalam bahasa C# menggunakan metode `Enum.GetValues()` dan `Enum.GetNames()`.
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: "Hogyan lehet a C# enumot hurokba zárni/számozni"
-description: "A C# enum hurokba zárásának vagy felsorolásának különböző módjai példákkal"
+title: "Hogyan enumerate C# enum"
+description: "  A enumerate C# enum különböző módjai példákkal"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,11 +13,11 @@ type: docs
 
 Az enumokat széles körben használják a `C#` nyelvben. 
 
-És 4 módja van a ciklus vagy enum felsorolásának a `C#`. 
+És 4 módja van a enumerate enum a `C#`. 
 
-1. A `C# Enum.GetValues()` használata a .Net 5 és magasabb verzióban.
+1. A `C# Enum.GetValues()` használata a .Net 5 és újabb programokban.
 2. A `C# Enum.GetValues()` használata régebbi .Net verziókban.
-3. A `C# Enum.GetNames()` használata az enum nevek stringként történő felsorolásához.
+3. A `C# Enum.GetNames()` használata a enuma enum nevek stringként való előállításához.
 4. A  használata `Linq`
 
 Nézzünk végig egy példát, hogy jobban megértsük. 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
-A `enum` különböző típusú naplózási szinteket reprezentál.
+A `enum` különböző típusú naplózási szinteket jelöl.
 
-Most a `C# enum` felsorolásának különböző módjait fogjuk látni.
+Most megnézzük a enumkülönböző módozatait `C# enum`.
 
-## A `C# Enum.GetValues()` általános módszer használata a .Net 5 és újabb verziókban
+## A `C# Enum.GetValues()` generikus módszer használata a .Net 5 és újabb verziókban
 
-Ha a `.Net` legújabb verzióját használja, azaz a `.Net 5` és magasabb verziót, akkor a `Enum.GetValues` módszer általános verzióját használhatja a `C# enum` végighaladásához.
+Ha a `.Net` legújabb verzióját használja, azaz a `.Net 5` és magasabb verziót, akkor a `Enum.GetValues` módszer általános verzióját használhatja a enumerate a módszerhez `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
-A `Enum.GetValues` új generikus változata visszaadja az enum értékek tömbjét. 
+A `Enum.GetValues` új általános változata a enum értékek tömbjét adja vissza. 
 
-A továbbiakban pedig a `for` vagy a `foreach` utasításokat használhatjuk a `C# enum` felsorolásához. 
+Továbbá használhatjuk a `for` vagy a `foreach` utasításokat, hogy felsoroljuk a `C# enum` neveket. 
 
-Mivel a tömb a `enum` típust tartalmazza, a `ToString()` módszerrel kell azt stringgé konvertálnunk.
+Mivel a tömb tartalmazza a `enum` típust tartalmaz, azt a `ToString()` módszerrel karakterlánccá kell konvertálnunk.
 
 ## A `C# Enum.GetValues()` használata a régebbi .Net verziókban.
 
-A `.Net` régebbi verzióiban a `Enum.GetValues()` módszerhez nem áll rendelkezésre általános módszer. 
+A `.Net` régebbi verzióiban nem áll rendelkezésre általános módszer a `Enum.GetValues()` módszerhez. 
 
-A `typeof()` enumot paraméterként kell átadni a `Enum.GetValues()` metódusnak. 
+A `Enum.GetValues()` metódusnak paraméterként át kell adnia a `typeof()` enum  címet. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Ez pedig a `System.Array` típusú enum értékeket adja vissza, és a `foreach` utasítással a C# enumot ciklusosan végigjárhatjuk.
+Ez pedig visszaadja a enum típusú `System.Array` értékeket, és a továbbiakban a `foreach` utasítással végighaladhatunk a típusú értékeken `C# enum` neveken.
 
 ```csharp
 void loopEnum()
@@ -95,15 +95,15 @@ void loopEnum()
 }
 ```
 
-## A `C# Enum.GetNames()` használata az enum nevek felsorolásához karakterláncokként 
+## A `C# Enum.GetNames()` használata a enumerate enum nevek stringként való átalakításához 
 
-`C# Enum.GetValues()` a módszer az enum típusok tömbjét adja vissza. 
+`C# Enum.GetValues()` a módszer a enum típusok tömbjét adja vissza. 
 
-Ezért konvertáltuk az enum értékeket sztringgé, mielőtt a konzolra kiírnánk őket.
+Ezért alakítottuk át a enum neveket sztringgé, mielőtt a konzolra nyomtattuk volna őket.
 
-A `C# Enum.GetNames()` metódus segítségével az enum neveket sztringként tudjuk felsorolni, így nem szükséges sztringgé konvertálni őket.
+A `C# Enum.GetNames()` metódus segítségével a enumert tudjuk a enum neveket karakterláncokká alakítani, így nem szükséges azokat karakterláncokká konvertálni.
 
-Ha a `.Net 5` és a felette lévő `C# Enum.GetNames()` függvényt használja, akkor az általános függvényt használhatja.
+Ha a `.Net 5` és a felette lévő neveket használja, használhatja az általános `C# Enum.GetNames()` függvényt.
 
 ```csharp
 void loopEnum()
@@ -130,13 +130,13 @@ void loopEnum()
 }
 ```
 
-Ha tehát az enum neveket stringként akarjuk hurkosítani, akkor használhatjuk a `C# Enum.GetNames()` módszert.
+Ha tehát a enumerate neveket karakterláncokként szeretnénk megadni, akkor használhatjuk a `C# Enum.GetNames()` módszert.
 
-## A  használatával `Linq`
+## A  használata `Linq`
 
-A `Linq forEach` metódust a `Enum.GetValues()` és `Enum.GetNames()` metódusok segítségével használhatjuk a C# enum felsorolásához.
+A `Linq forEach` módszert használhatjuk a enumerate C# enum, a `Enum.GetValues()` és a `Enum.GetNames()` módszerek segítségével.
 
-A `.Net 5` és annál magasabb kódrészletet használjuk az alábbi kódrészletet.
+A `.Net 5` és a fentiekben az alábbi kódrészletet használjuk.
 
 ```csharp
 //Using Enum.GetValues
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Összefoglaló
 
-Ebben a bemutatóban megtanultuk, hogyan lehet a `Enum.GetValues()` és a `Enum.GetNames()` módszerrel végighaladni az enumon C# nyelven.
+Ebben a bemutatóban megtanultuk, hogyan kell enumerate enum C# nyelven a `Enum.GetValues()` és a `Enum.GetNames()` módszer segítségével.
 
 
 

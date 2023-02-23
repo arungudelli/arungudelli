@@ -1,6 +1,6 @@
 ---
-title: "Ako vytvoriť cyklus/výpočet enumov v jazyku C#"
-description: "Rôzne spôsoby vytvárania cyklov alebo enumov v jazyku C# s príkladmi"
+title: "Ako enumerate C# enum"
+description: " Rôzne spôsoby enumerate C# enum s príkladmi"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -11,14 +11,14 @@ type: docs
 
 ---
 
-Enumy sú široko používané v jazyku `C#`. 
+Enumy sú v jazyku `C#` široko používané. 
 
-A existujú 4 spôsoby, ako zacykliť alebo vymenovať enum v `C#`. 
+A existujú 4 spôsoby, ako enumerate enum v `C#`. 
 
 1. Používanie `C# Enum.GetValues()` v .Net 5 a vyšších verziách.
 2. Použitie `C# Enum.GetValues()` v starších verziách .Net.
-3. Použitie `C# Enum.GetNames()` na vymenovanie názvov enum ako reťazcov.
-4. Používanie adresy `Linq`
+3. Použitie `C# Enum.GetNames()` na enumerate enum names as strings.
+4. Používanie stránky `Linq`
 
 Prejdime si príklad, aby sme ho lepšie pochopili. 
 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` predstavuje rôzne typy úrovní protokolovania.
+Stránka `enum` predstavuje rôzne typy úrovní protokolovania.
 
-Teraz si ukážeme rôzne spôsoby, ako vymenovať `C# enum`.
+Teraz si ukážeme rôzne spôsoby, ako enumerovať `C# enum`.
 
-## Použitie `C# Enum.GetValues()` Generická metóda v .Net 5 a vyšších verziách
+## Používanie `C# Enum.GetValues()` Generická metóda v .net 5 a vyšších verziách
 
-Ak používate najnovšiu verziu `.Net`, t. j. `.Net 5` a vyššiu, môžete použiť generickú verziu pre metódu `Enum.GetValues` na prechádzanie `C# enum`.
+Ak používate najnovšiu verziu `.Net`, t. j. `.Net 5` a vyššiu, môžete použiť generickú verziu pre metódu `Enum.GetValues` na enumerate `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
-Nová generická verzia metódy `Enum.GetValues` vracia pole hodnôt enumu. 
+Nová všeobecná verzia `Enum.GetValues` vracia pole hodnôt enum. 
 
-A ďalej môžeme použiť príkazy `for` alebo `foreach` na vymenovanie `C# enum`. 
+A ďalej môžeme použiť príkazy `for` alebo `foreach` na vypísanie zoznamu `C# enum` mien. 
 
-Keďže pole obsahuje typ `enum`, musíme ho previesť na reťazec pomocou metódy `ToString()`.
+Keďže pole obsahuje `enum` typ, musíme ho previesť na reťazec pomocou metódy `ToString()`.
 
-## Použitie `C# Enum.GetValues()` v starších verziách .net.
+## Použitie adresy `C# Enum.GetValues()` v starších verziách siete .net.
 
 V starších verziách `.Net` nie je k dispozícii generická metóda pre metódu `Enum.GetValues()`. 
 
-Metóde `Enum.GetValues()` musíte ako parameter odovzdať enum `typeof()`. 
+Metóde `Enum.GetValues()` musíte ako parameter odovzdať `typeof()` enum . 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-A tá vracia enumové hodnoty typu `System.Array` a ďalej môžeme použiť príkaz `foreach` na prechádzanie enumov v jazyku C#.
+A tá vracia hodnoty enum typu `System.Array` a ďalej môžeme použiť príkaz `foreach` na prechádzanie cyklu cez `C# enum` mien.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Použitie `C# Enum.GetNames()` na vymenovanie názvov enum ako reťazcov 
+## Použitie `C# Enum.GetNames()` na enumerate enum mien ako reťazcov 
 
-`C# Enum.GetValues()` metóda vracia pole typov enumov. 
+`C# Enum.GetValues()` metóda vracia pole typov enum. 
 
-Preto sme hodnoty enumov konvertovali na reťazec pred ich vypísaním do konzoly.
+Preto sme pred vypísaním v konzole konvertovali enum názvy na reťazec.
 
-Pomocou metódy `C# Enum.GetNames()` môžeme vyčísliť názvy enumov ako reťazce, takže ich nie je potrebné konvertovať na reťazce.
+Pomocou metódy `C# Enum.GetNames()` môžeme enumerovať názvy enum ako reťazce, takže ich nie je potrebné konvertovať na reťazce.
 
 Ak používate `.Net 5` a vyššie, môžete použiť generickú funkciu `C# Enum.GetNames()`.
 
@@ -117,7 +117,7 @@ void loopEnum()
 }
 ```
 
-V starších verziách musíme odovzdať parameter enum `typeof()`.
+V starších verziách musíme odovzdať parameter `typeof()` enum .
 
 ```csharp
 void loopEnum()
@@ -130,11 +130,11 @@ void loopEnum()
 }
 ```
 
-Ak teda chceme názvy enumov zacykliť ako reťazce, môžeme použiť metódu `C# Enum.GetNames()`.
+Ak teda chceme en enumerovať názvy ako reťazce, môžeme použiť metódu `C# Enum.GetNames()`.
 
-## Použitie adresy `Linq`
+## Použitie `Linq`
 
- `Linq forEach` môžeme použiť metódu `Enum.GetValues()` a `Enum.GetNames()` na vymenovanie enumov v jazyku C#.
+ `Linq forEach` môžeme použiť metódu enumerate C# enum, pomocou metód `Enum.GetValues()` a `Enum.GetNames()`.
 
 V `.Net 5` a vyššie použite nižšie uvedený úryvok kódu.
 
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Zhrnutie
 
-V tomto návode sme sa naučili prechádzať enum v jazyku C# pomocou metód `Enum.GetValues()` a `Enum.GetNames()`.
+V tomto tutoriáli sme sa naučili enumerovať enum v jazyku C# pomocou metód `Enum.GetValues()` a `Enum.GetNames()`.
 
 
 

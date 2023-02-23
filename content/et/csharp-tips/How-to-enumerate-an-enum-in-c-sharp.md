@@ -1,6 +1,6 @@
 ---
-title: "Kuidas loopida/loendada C# enum"
-description: "Erinevad viisid loopida või loendada C# enum koos näidetega"
+title: "Kuidas enumerate C# enum"
+description: " Erinevad viisid enumerate C# enum koos näidetega"
 lead: ""
 date: 2023-02-20T14:41:21+01:00
 lastmod: 2023-02-20T14:41:21+01:00
@@ -13,14 +13,14 @@ type: docs
 
 Enumid on `C#` keeles laialdaselt kasutusel. 
 
-Ja seal on 4 viisi, kuidas loopida või loendada enum `C#`. 
+Ja on 4 viisi, kuidas enumerate enum `C#` . 
 
 1. Kasutades `C# Enum.GetValues()` in .Net 5 &amp; above.
 2. Kasutades `C# Enum.GetValues()` vanemates .Net versioonides.
-3. `C# Enum.GetNames()` kasutamine loenduste nimede loendamiseks stringidena.
+3. Kasutades `C# Enum.GetNames()` enum erate enum nimed stringidena.
 4. Kasutades `Linq`
 
-Käime läbi ühe näite, et seda paremini mõista. 
+Käime selle täpsemaks mõistmiseks läbi ühe näite. 
 
 Kõigepealt loome C# `enum`
 
@@ -34,13 +34,13 @@ public enum LogLevel
 }
 ```
 
- `enum` esindab erinevaid logimistasemeid.
+The `enum` tähistab erinevaid logimistasemeid.
 
-Nüüd näeme erinevaid viise, kuidas loetleda `C# enum`.
+Nüüd näeme erinevaid viise, kuidas enumerateerida `C# enum`.
 
-## Kasutades `C# Enum.GetValues()` Generic meetodit .Net 5 ja kõrgemates versioonides
+## `C# Enum.GetValues()` Generic meetodi kasutamine .Net 5 ja kõrgemates versioonides
 
-Kui te kasutate `.Net` uusimat versiooni, st `.Net 5` ja uuemat versiooni, siis saate kasutada `Enum.GetValues` meetodi generic versiooni, et läbida `C# enum`.
+Kui te kasutate `.Net` uusimat versiooni, st `.Net 5` ja uuemat versiooni, saate kasutada `Enum.GetValues` meetodi enumerate generic versiooni `C# enum`.
 
 ```csharp
 void loopEnum()
@@ -54,22 +54,22 @@ void loopEnum()
 }
 ```
 
-Uus üldine versioon `Enum.GetValues` tagastab enum-väärtuste massiivi. 
+Uus üldine versioon `Enum.GetValues` tagastab enum väärtuste massiivi. 
 
-Ja edasi saame kasutada `for` või `foreach` avaldusi, et loetleda `C# enum`. 
+Ja edasi saame kasutada `for` või `foreach` avaldusi, et loetleda `C# enum` nimed. 
 
-Kuna massiiv sisaldab `enum` tüüpi, peame selle teisendama stringiks, kasutades `ToString()` meetodit.
+Kuna massiiv sisaldab `enum` tüübi, peame selle teisendama stringiks, kasutades meetodit `ToString()`.
 
 ## Kasutades `C# Enum.GetValues()` vanemates .Net versioonides.
 
-Vanemates `.Net` versioonides ei ole `Enum.GetValues()` meetodi jaoks saadaval üldist meetodit. 
+Vanemates versioonides `.Net` ei ole `Enum.GetValues()` meetodi jaoks saadaval üldist meetodit. 
 
-Meetodile `Enum.GetValues()` tuleb parameetrina üle anda `typeof()` enum. 
+Sa pead andma `typeof()` enum parameetrina `Enum.GetValues()` meetodile üle. 
 
 ```csharp
 Array logLevels = Enum.GetValues(typeof(LogLevel))
 ```
-Ja see tagastab `System.Array` tüüpi enumi väärtused ja edasi saame kasutada `foreach` avaldust, et C# enumil läbi käia.
+Ja see tagastab enum tüüpi `System.Array` väärtused ja edasi saame kasutada `foreach` avaldust, et loopida läbi `C# enum` nimede läbi.
 
 ```csharp
 void loopEnum()
@@ -95,13 +95,13 @@ void loopEnum()
 }
 ```
 
-## Kasutades `C# Enum.GetNames()`, et loendada loenduste nimesid stringidena 
+## Kasutades `C# Enum.GetNames()`, et enumerate enum nimed stringidena 
 
-`C# Enum.GetValues()` meetod tagastab enum-tüüpide massiivi. 
+`C# Enum.GetValues()` meetod tagastab enum tüüpide massiivi. 
 
-Sellepärast konverteerisime enum väärtused stringiks enne nende väljastamist konsooli.
+Seepärast teisendasime enum nimed stringiks enne nende väljastamist konsooli.
 
-Kasutades meetodit `C# Enum.GetNames()` saame loendada enumide nimed stringidena, nii et neid ei ole vaja teisendada stringideks.
+Kasutades `C# Enum.GetNames()` meetodit saame enumerate enum nimed stringideks, nii et neid ei ole vaja teisendada stringideks.
 
 Kui te kasutate `.Net 5` ja rohkem, võite kasutada üldist `C# Enum.GetNames()` funktsiooni.
 
@@ -130,11 +130,11 @@ void loopEnum()
 }
 ```
 
-Nii et kui soovite loop enum nimed stringidena saame kasutada `C# Enum.GetNames()` meetodit.
+Nii et kui soovite en enumerate nimed stringidena saame kasutada `C# Enum.GetNames()` meetodit.
 
 ## Kasutades `Linq`
 
- `Linq forEach` meetodit saame kasutada `Enum.GetValues()` ja `Enum.GetNames()` meetodite abil C# enumide loendamiseks.
+ `Linq forEach` meetodit saame kasutada enumerate C# enum, `Enum.GetValues()` ja `Enum.GetNames()` meetodite abil.
 
 In `.Net 5` ja eespool kasutada alljärgnevat koodilõiku.
 
@@ -166,7 +166,7 @@ Enum.GetNames(typeof(LogLevel))
 
 ## Kokkuvõte
 
-Selles õpiobjektis õppisime C# keeles enumide läbimist, kasutades `Enum.GetValues()` ja `Enum.GetNames()` meetodit.
+Selles õpetuses õppisime enumerate enum C# keeles, kasutades `Enum.GetValues()` ja `Enum.GetNames()` meetodit.
 
 
 
