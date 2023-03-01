@@ -67,7 +67,7 @@ class Product
 }
 ```
 
-## method 4: Using `DefaultValue` Attribute && Property Setter
+## Method 4: Using `DefaultValue` Attribute && Property Setter
 
 In the above example we have created a private variable and assigned a default value. 
 
