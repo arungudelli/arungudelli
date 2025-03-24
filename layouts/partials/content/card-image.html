@@ -4,7 +4,7 @@
 {{ end -}}
 {{ $image := "" }}
 {{ with .Params.images}}
-{{ $image := .Resources.GetMatch (printf "**%s" (index . 0)) }}
+{{ $image = resources.Get (index . 0) }}
 {{ else }}
 {{ if not $image -}}
   {{ $image = resources.Get (printf "%s%s" "images/" site.Params.defaultImage) }}
