@@ -16,7 +16,7 @@ It's a small addition on the surface, but it has significant implications for cl
 
 In this post, I’ll walk through what the `field` keyword does, how it simplifies property declarations, and some edge cases to be aware of.
 
-
+{{< youtube 8VRtVux0q5o >}}
 
 ---
 
