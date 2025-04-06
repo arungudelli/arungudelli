@@ -1,8 +1,8 @@
 ---
 title: "Exploring the New 'field' Keyword in C# 14 with .NET 10 Preview 2"
 description: "Exploring the New 'field' Keyword in C# 14 with .NET 10 Preview 2"
-date: "2025-03-23T00:00:00+01:00"
-lastmod: "2025-03-23T00:00:00+01:00"
+date: "2025-04-06T00:00:00+01:00"
+lastmod: "2025-04-06T00:00:00+01:00"
 draft: "false"
 type: "docs"
 images: ["images/field-keyword.webp"]
@@ -92,48 +92,97 @@ This change encourages better encapsulation and makes it easier to refactor.
 
 Since `field` is a **contextual keyword**, it only has special meaning inside property accessors. 
 
-But if you already have a **local or class-level variable named `field`**, it can create ambiguity.
+But what happens when you already have a **local or class-level variable named `field`**, it can create ambiguity.
 
-If you have such a symbol within the same scope, you can resolve conflicts by:
-
-- Using `@field` to refer to the symbol
+Let’s explore that with a practical example:
 
 ```csharp
-string field = "local";
-public string Name
+internal class Program
 {
-    get => @field; // refers to the local variable, not the compiler field
-    set => field = value; // this would be ambiguous
-}
-```
-- Using `this.field` for class-level fields.
+    static void Main(string[] args)
+    {
+        Console.WriteLine("C# 14 Field Keyword");
+    }
 
-Here's an example:
+    static int field = 3;
 
-```csharp
-int field = 18;
-
-/// <summary>
-/// Age must be greater than 18
-/// </summary>
-public int Age
-{
-    get;
-    set => field = value > @field ? value : throw new ArgumentNullException(nameof(value));
+    internal class Employee
+    {
+        public string Name
+        {
+            get;
+            set
+            {
+                field = value.Length > @field ? value : throw new ArgumentException("Name is too short.");
+            }
+        }
+    }
 }
 ```
 
-In this case:
-- The local variable `int field = 18;` shadows the contextual `field` keyword.
-- Inside the property:
-  - `@field` refers explicitly to the **local variable** named `field`.
-  - `field = value` refers to the **compiler-generated backing field** for the `Age` property.
+If you already have a variable named `field` (like the static variable in the `Program` class), and you also want to use the new contextual `field` keyword within a property, **you must escape your variable name using `@field`**.
 
-This ensures that the property only allows values **greater than 18**, where `18` is held in the local variable.
+This tells the compiler:  
+> “Hey, I’m referring to the user-defined variable, not the backing field.”
+
+🧠 **Code Explanation:**
+
+- `static int field = 3;`  
+  This defines a static variable named `field` in the outer `Program` class.
+
+- Inside the nested `Employee` class, the `Name` property uses:
+  ```csharp
+  field = value.Length > @field ? value : throw new ArgumentException(...);
+  ```
+  - On the **left-hand side**, `field =` refers to the **compiler-generated backing field** for the `Name` property. This is a new feature introduced in C# 14.
+  - On the **right-hand side**, `@field` refers to our static variable from the outer `Program` class.
+
+So the logic here checks:
+- If the incoming `value` (i.e., the name being set) is longer than 3 characters (`@field` = 3),
+- Then it gets assigned to the backing field via the new `field` keyword,
+- Otherwise, it throws an exception.
+
+If you try to assign a name with more than 3 characters — say `"John"` — it will be accepted. Anything shorter, like `"Al"`, will raise an error:
+
+```
+ArgumentException: Name is too short.
+```
+
+Let’s take another example — this time, we have a **class-level field** named `field`.
+
+```csharp
+public class Person
+{
+    private int field = 18;
+
+    public int Age
+    {
+        get;
+        set => field = value > this.field ? value : throw new ArgumentException("Age must be higher than the existing field.");
+    }
+}
+```
+
+🧠 **Code Explanation:**
+
+- `this.field` refers to the **class-level variable** holding the value `18`.
+- `field =` on the left side refers to the **auto-generated backing field** of the `Age` property.
+
+So this line of code means:  
+
+👉 Assign the new value to the property **only if it's greater than the existing `field` variable**.
+
+By using `this.field`, you're making it crystal clear that you're talking about the class-level variable — which avoids confusion with the compiler’s contextual `field`. 
+
+Or you can use `@field` also.
+
+
 
 🧠 **Tip:** When dealing with properties using the `field` keyword, it’s best to avoid naming other variables `field`. 
 
-If necessary, you can use `@field` or `this.field` to reference your own variable and let `field` (without `@`) refer to the auto-property backing field.
+If necessary, you can use `@field` to refer local variable and `this.field` or `@field` to reference class level fields.
+
+Let `field` (without `@`) refer to the auto-property backing field.
 
 ---
 
