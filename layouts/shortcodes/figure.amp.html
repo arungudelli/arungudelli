@@ -1,6 +1,15 @@
 {{/* Enable image to be loaded from local page dir or media library at `static/img/`. */}}
 {{ $image_src := .Get "src" }}
 {{ $featured := (.Page.Resources.ByType "image").GetMatch $image_src }}
+
+{{/* If not found in Page Resources, assume it's from static/img */}}
+
+{{ if not $featured }}
+  {{ $image_path := printf "%s" $image_src }}
+  {{ $featured = resources.Get $image_path }}
+  {{ $image_src = printf "%s" $image_src | relURL }}
+{{ end }}
+
 {{ if .Get "library" }}
   {{ $image_src = printf "img/%s" $image_src | relURL }}
 {{ end }}
@@ -48,4 +57,4 @@
 <amp-img src="{{$image_src}}" srcset="{{$image_src}}" sizes="{{$sizes}}" width="{{$featured.Width}}" height="{{$featured.Height}}" alt="{{.Get "alt"}}" class="mb4 mx3" layout="responsive"></amp-img>
 {{end}}
 </div>
-
+ 
