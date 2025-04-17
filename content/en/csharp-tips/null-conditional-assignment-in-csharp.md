@@ -5,7 +5,7 @@ date: "2025-04-16T00:00:00+01:00"
 lastmod: "2025-04-16T00:00:00+01:00"
 draft: "false"
 type: "docs"
-images: ["images/field-keyword.webp"]
+images: ["images/null-conditional-assignment-csharp.png"]
 ---
 
 While working with the latest **.NET 10 Preview 3**, I came across a new language feature in C# 14 that simplifies how we assign values to nullable objects: **null-conditional assignment**.
@@ -42,6 +42,17 @@ This is a perfectly valid approach—but it feels a bit verbose for such a simpl
 We're just ensuring the object isn’t null before performing an assignment.
 
 ---
+
+{{< figure
+  process="fill 2100x900"
+  lqip="21x webp q20"
+  loading="lazy"
+  fetchpriority="auto" 
+  sizes="auto"
+  src="images/null-conditional-assignment-csharp.png"
+  alt="Null-Conditional Assignment C#"
+  caption="Null-Conditional Assignment C#"
+>}}
 
 ## ✨ The New Way: Null-Conditional Assignment
 
@@ -87,16 +98,129 @@ config?.RetryCount = 3;
 
 ## 🧪 Real-World Example
 
+Let’s simulate a practical use case: an application receives optional user profile data from an API, and we want to update it only if the data exists.
+
+### 🧱 Supporting Classes: `UserProfile` and `ProfileService`
+
 ```csharp
-public void UpdateCustomerInfo(Customer? customer, string? name, int? age)
+using System;
+
+namespace NullConditionalAssignmentDemo
 {
-    customer?.Name = name ?? "Unknown";
-    if (age.HasValue)
-        customer?.Age = age.Value;
+    public class UserProfile
+    {
+        public string? DisplayName { get; set; }
+        public string? Bio { get; set; }
+        public int Age { get; set; }
+
+        public void Print()
+        {
+            Console.WriteLine($"DisplayName: {DisplayName ?? "N/A"}");
+            Console.WriteLine($"Bio: {Bio ?? "N/A"}");
+            Console.WriteLine($"Age: {Age}");
+        }
+    }
+
+    public class ProfileService
+    {
+        public UserProfile? GetProfileFromApi(string username)
+        {
+            if (username.ToLower() == "ghost") return null;
+
+            return new UserProfile
+            {
+                DisplayName = "Arun Gudelli",
+                Bio = "C# Developer | Tech Blogger",
+                Age = 29
+            };
+        }
+
+        public void UpdateProfile(UserProfile? profile, string? newBio, int? newAge)
+        {
+            profile?.Bio = newBio;
+            if (newAge.HasValue)
+                profile?.Age = newAge.Value;
+        }
+    }
 }
 ```
 
-This approach keeps things short, readable, and safe.
+**Explanation:**
+- `UserProfile` is a basic data model class with nullable properties and a `Print()` method for displaying values.
+- `ProfileService` simulates external API behavior. If the input is `"ghost"`, it returns `null`, representing a failed or empty response.
+- The `UpdateProfile` method uses null-conditional assignment to update the profile safely, without any `if (profile != null)` checks.
+
+One important takeaway here is that we can still safely call `UpdateProfile` even if the profile is `null`.
+
+Normally, this might lead to a `NullReferenceException`, but thanks to **null-conditional assignment**, the assignments are silently skipped if the object is `null`.
+
+In the `UpdateProfile` method, we use statements like `profile?.Bio = newBio` which ensures that the assignment only occurs if profile is not `null`.
+
+Even if the caller passes a `null` profile (like when the `user` is `ghost`), the method runs without any exceptions.
+
+The same goes for age—if we have a non-null value (`int?`), we assign it to `profile?.Age = newAge.Value`, which again runs only if the profile is not `null`.
+
+This design pattern simplifies calling logic—no need to check for null before every update. 
+
+The update method itself safely handles it, keeping the code both neat and expressive.
+
+---
+
+### 🚀 Main Program: Using the Classes with Null-Safe Updates
+
+```csharp
+using System;
+
+namespace NullConditionalAssignmentDemo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var service = new ProfileService();
+
+            string username1 = "arun";
+            string username2 = "ghost";
+
+            var profile1 = service.GetProfileFromApi(username1);
+            var profile2 = service.GetProfileFromApi(username2);
+
+            string? updatedBio = "Updated bio from UI";
+            int? updatedAge = 30;
+
+            service.UpdateProfile(profile1, updatedBio, updatedAge);
+            service.UpdateProfile(profile2, updatedBio, updatedAge);
+
+            Console.WriteLine("Profile 1 (arun):");
+            profile1?.Print();
+
+            Console.WriteLine("Profile 2 (ghost):");
+            profile2?.Print();
+        }
+    }
+}
+```
+**Explanation:**
+
+- In this main program, we simulate two scenarios:
+  - One where a valid profile is returned (`arun`)
+  - Another where the user does not exist and the method returns `null` (`ghost`)
+- Both profiles are passed to the `UpdateProfile` method.
+- The method contains null-conditional assignments like `profile?.Bio = newBio`, which means the update only happens if the profile is not null.
+- Even if `profile` is `null`, the method executes safely without throwing any exception.
+- This eliminates the need for the caller to check if the object is null before calling the method.
+- Finally, we use `profile?.Print()` to display the result. For `arun`, it prints the updated profile. For `ghost`, nothing is printed, but no error is thrown.
+- This demonstrates how null-conditional access and assignment provide safe and readable ways to deal with possibly-null objects.
+
+**Output**:
+
+```
+Profile 1 (arun):
+DisplayName: Arun Gudelli
+Bio: Updated bio from UI
+Age: 30
+Profile 2 (ghost):
+```
 
 ---
 
@@ -153,7 +277,13 @@ This small feature reduces code noise, improves clarity, and protects against nu
 ## 📌 TL;DR
 
 - ✅ Introduced in .NET 10 Preview 3  
-- ♻️ Assign values only when the object is non-null  
+- 🔁 Assign values only when the object is non-null  
 - 🧪 Use `<LangVersion>preview</LangVersion>` in `.csproj`  
 - 🧱 Not yet fully supported in Visual Studio  
 - ✅ Use `dotnet build` CLI to test
+
+
+
+
+
+

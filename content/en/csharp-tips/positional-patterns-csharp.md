@@ -5,7 +5,7 @@ date: "2025-04-16T00:00:00+01:00"
 lastmod: "2025-04-16T00:00:00+01:00"
 draft: "false"
 type: "docs"
-images: ["images/pattenmatchingincsharp.png"]
+images: ["images/Positional-Patterns-in-Csharp.png"]
 ---
 
 C# has been evolving steadily, and with C# 8.0 and beyond, pattern matching got a serious power-up. 
@@ -15,6 +15,17 @@ One of the coolest additions is **Positional Patterns**.
 If you've ever written code that checks for multiple values inside a class or struct, this feature might just make your code cleaner and easier to read.
 
 In this post, let me walk you through what positional patterns are, when to use them, and how they compare to other matching techniques like property patterns.
+
+{{< figure
+  process="fill 2100x900"
+  lqip="21x webp q20"
+  loading="lazy"
+  fetchpriority="auto" 
+  sizes="auto"
+  src="images/Positional-Patterns-in-Csharp.png"
+  alt="Positional Patterns in C#"
+  caption="Positional Patterns in C#"
+>}}
 
 ---
 
