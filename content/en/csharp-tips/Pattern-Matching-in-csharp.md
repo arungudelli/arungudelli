@@ -197,6 +197,10 @@ string status = (x, y) switch
 
 Works great when modeling coordinates, ranges, or grid systems.
 
+
+👉 **Want to dive deeper into how positional pattern matching works and where it shines?**  
+[Read this detailed article on Positional Patterns in C# – The What, Why, and How]({{< relref "csharp-tips/positional-patterns-csharp.md" >}})  
+
 ---
 
 ## 📦 7. Var Pattern
