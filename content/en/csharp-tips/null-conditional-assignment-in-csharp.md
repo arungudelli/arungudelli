@@ -12,6 +12,8 @@ While working with the latest **.NET 10 Preview 3**, I came across a new languag
 
 It’s a small addition, but it helps reduce repetitive null checks and makes your code cleaner. 
 
+{{< youtube 9jOtWjF9QeU >}}
+
 Let me show you how it works with a simple example.
 
 ---
