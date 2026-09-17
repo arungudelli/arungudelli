@@ -1,13 +1,18 @@
 ---
-title: "Page Wikis: Durable Codebase Knowledge Your Team and Your AI Both Reuse"
+title: "Your LLM Keeps Re-reading the Same Code. Give It a Wiki."
 description: "Documentation is software's oldest chore — and LLMs are finally good at it, because they don't mind boring work. Inspired by Karpathy's LLM Wiki, here's the page wiki: one distilled, source-anchored markdown file per page that humans can read to understand the codebase and LLMs reuse to skip re-reading it. A shared, durable knowledge base that cuts input tokens and stays honest via a git-hash freshness anchor. With a runnable demo that measures the saving."
 date: "2026-09-17T00:00:00+01:00"
 lastmod: "2026-09-17T00:00:00+01:00"
 draft: "false"
 type: "docs"
 mermaid: true
-images: []
 ---
+
+It has been about a year since I wrote an article.
+
+Not because I ran out of things to say. LLMs simply changed the feeling of writing about software. When an LLM can explain a framework, compare approaches, and produce an example in seconds, publishing another step-by-step tutorial can feel a little unnecessary.
+
+But recently I came across an idea that felt worth sharing. It is not about teaching an LLM one more programming trick. It is about helping it remember what it already learned about a codebase, so every new session does not have to start from zero.
 
 Let me start with the most boring problem in software — and why I've suddenly gotten excited about it.
 
@@ -55,6 +60,15 @@ The **LLM** gets the same pages as a context primer. It reads the relevant page 
 
 So I did the obvious thing. I pointed all of this at the place I spend all day — a **codebase** — and built a small, runnable version of it. I call each per-page file a **page wiki**: `page-wiki.md`.
 
+Here, **page** means a bounded area of a codebase, not only a browser page. A page wiki could describe:
+
+- A UI route
+- An API endpoint
+- A background job
+- A service
+- A data pipeline
+- Any related group of files that makes sense to understand and change together
+
 The rest of this post is the story of it: how simple the file can be, the one thing you have to add to make it safe on code that changes under you, a demo you can clone, and the actual token numbers.
 
 ---
@@ -72,6 +86,8 @@ Every session, it rediscovers what it already knew. On a throwaway script, that'
 On a codebase you'll live in for months, it's a tax on every single request — paid in tokens, in latency, and in the context window you'd rather spend on the actual problem.
 
 ---
+
+
 
 ## 🧠 The core idea
 
@@ -101,7 +117,7 @@ wiki-index        (which page is this request even about?)
 ```
 
 - **Source** is the truth. It's big, it's scattered across many files, and reading all of it is what costs you.
-- **`page-wiki.md`** is one small file per page. It carries the overview, the component tree, the data flow, the key files, and — crucially — the *gotchas* a model would otherwise have to re-derive. Each page records the git blob hash of every source file it summarizes.
+- **`page-wiki.md`** is one small file per bounded codebase area. It carries the overview, the component or request-flow map, the data flow, the key files, and — crucially — the *gotchas* a model would otherwise have to re-derive. Each page records the git blob hash of every source file it summarizes.
 - **`wiki-index`** answers a different question: given a fuzzy request like *"fix the book list search"*, which page do I load? It's a lightweight resolver so you don't have to know the file layout to find the right page.
 
 ---
