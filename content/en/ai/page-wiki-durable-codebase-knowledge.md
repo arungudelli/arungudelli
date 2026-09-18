@@ -409,13 +409,13 @@ The fix is to be deliberate about what the summary carries. Record the *shapes* 
 
 A page wiki is a starting point, not a substitute for looking when it counts.
 
-**A few honest edges — this is a pattern, not a finished product.**
+**A few honest edges, from actually using it.**
 
-The anchor is deliberately simple, and that simplicity has edges worth knowing:
+I didn't hit these in theory. Each one bit me while building the demo and running the pattern on my own code, and they're worth knowing before you lean on it:
 
-- **The hash is byte-level, not meaning-level.** A reformatted import or a renamed local variable flips a page STALE even though the summary is still perfectly true. So treat STALE as *"re-verify,"* not *"rewrite from scratch."* Most of the time a quick glance confirms the distilled truth still holds, and you just re-anchor.
-- **Reuse is a discipline, not a guarantee.** The anchor tells you a page *can* be trusted; it doesn't force reuse. That's the whole reason [a command pipeline](#-the-missing-piece-a-command-pipeline) matters. The tooling is what actually decides when to lean on the page and when to fall back to source.
-- **Editing still reads the file you're changing.** The biggest saving is on *understanding*: the data flow, the coupling, the gotchas you'd otherwise re-derive. You'll still open the one file you're about to patch. That's fine: re-deriving understanding is the expensive part, and that's exactly what the page saves.
+- **The hash is byte-level, not meaning-level.** A reformatted import or a renamed local variable flips a page STALE even though the summary is still perfectly true. The first time a formatting-only commit turned one of my pages red, it drove the lesson home: treat STALE as *"re-verify,"* not *"rewrite from scratch."* Most of the time a quick glance confirms the distilled truth still holds, and you just re-anchor.
+- **Reuse is a discipline, not a guarantee.** The anchor tells you a page *can* be trusted; it doesn't force reuse. Early on I'd still catch myself opening the source "just to be sure" and burning the tokens anyway. That's the whole reason [a command pipeline](#-the-missing-piece-a-command-pipeline) matters. The tooling is what actually decides when to lean on the page and when to fall back to source.
+- **Editing still reads the file you're changing.** This one caught me out at first, I expected the page to replace the source outright. It doesn't. The biggest saving is on *understanding*: the data flow, the coupling, the gotchas you'd otherwise re-derive. You'll still open the one file you're about to patch. That's fine: re-deriving understanding is the expensive part, and that's exactly what the page saves.
 
 None of these break the idea. They're the natural next things to sharpen (a meaning-aware anchor, a resolver that double-checks itself) and they're why this is a starting pattern to build on, not a finished tool.
 
