@@ -9,17 +9,11 @@ mermaid: true
 images: ["images/page-wiki-durable-codebase-knowledge.png"]
 ---
 
-It has been about a year since I wrote an article.
+I haven't published in about a year. Not because I ran out of things to say, LLMs did. When a model can explain any framework in seconds, writing another step-by-step tutorial feels pointless.
 
-Not because I ran out of things to say. LLMs simply changed the feeling of writing about software. 
+But this idea is different. It's not a trick to teach an LLM. It's a way to make it *remember* what it already learned about your codebase, so every new session doesn't start from zero.
 
-When an LLM can explain a framework, compare approaches, and produce an example in seconds, publishing another step-by-step tutorial can feel a little unnecessary.
-
-But recently I came across an idea that felt worth sharing. It's not about teaching an LLM one more programming trick. 
-
-It's about helping it remember what it already learned about a codebase, so every new session doesn't have to start from zero.
-
-Let me start with the most boring problem in software, and why I've suddenly gotten excited about it.
+And it starts with the most boring problem in software.
 
 Every team I've worked on has carried the same quiet guilt: **the documentation is out of date.**
 
