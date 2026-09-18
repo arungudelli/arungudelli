@@ -1,8 +1,8 @@
 ---
 title: "Your LLM Keeps Re-reading the Same Code. Give It a Wiki."
 description: "Documentation is software's oldest chore, and LLMs are finally good at it, because they don't mind boring work. Inspired by Karpathy's LLM Wiki, here's the page wiki: one distilled, source-anchored markdown file per page that humans can read to understand the codebase and LLMs reuse to skip re-reading it. A shared, durable knowledge base that cuts input tokens and stays honest via a git-hash freshness anchor. With a runnable demo that measures the saving."
-date: "2026-09-17T00:00:00+01:00"
-lastmod: "2026-09-17T00:00:00+01:00"
+date: "2026-09-19T00:00:00+01:00"
+lastmod: "2026-09-19T00:00:00+01:00"
 draft: "false"
 type: "docs"
 mermaid: false
