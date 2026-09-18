@@ -11,15 +11,23 @@ images: ["images/page-wiki-durable-codebase-knowledge.png"]
 
 It has been about a year since I wrote an article.
 
-Not because I ran out of things to say. LLMs simply changed the feeling of writing about software. When an LLM can explain a framework, compare approaches, and produce an example in seconds, publishing another step-by-step tutorial can feel a little unnecessary.
+Not because I ran out of things to say. LLMs simply changed the feeling of writing about software. 
 
-But recently I came across an idea that felt worth sharing. It's not about teaching an LLM one more programming trick. It's about helping it remember what it already learned about a codebase, so every new session doesn't have to start from zero.
+When an LLM can explain a framework, compare approaches, and produce an example in seconds, publishing another step-by-step tutorial can feel a little unnecessary.
+
+But recently I came across an idea that felt worth sharing. It's not about teaching an LLM one more programming trick. 
+
+It's about helping it remember what it already learned about a codebase, so every new session doesn't have to start from zero.
 
 Let me start with the most boring problem in software, and why I've suddenly gotten excited about it.
 
-Every team I've worked on has carried the same quiet guilt: **the documentation is out of date.** Not because anyone is lazy, but because keeping docs current is boring, repetitive, thankless work.
+Every team I've worked on has carried the same quiet guilt: **the documentation is out of date.**
 
-You write the page once, feel good, and then the code moves on without it. Six months later that doc is a liability. Confidently wrong, quietly rotting, and trusted by the new person who didn't know any better.
+Not because anyone is lazy, but because keeping docs current is boring, repetitive, thankless work.
+
+You write the page once, feel good, and then the code moves on without it. 
+
+Six months later that doc is a liability. Confidently wrong, quietly rotting, and trusted by the new person who didn't know any better.
 
 We never really solved this. We just learned to live with it.
 
@@ -27,15 +35,23 @@ The knowledge that actually runs a product (the meaning of a metric, the join be
 
 So why am I excited? Because for the first time, we have a kind of worker that is *genuinely good at the boring part.*
 
-LLMs don't get bored. They don't mind updating a cross-reference. They'll read fifteen files carefully, write down what they found, and do it again tomorrow without sighing once.
+LLMs don't get bored. They don't mind updating a cross-reference. 
 
-The exact chore that makes humans abandon their wikis is the thing an LLM does happily, all day long. That single fact inverts the economics of documentation.
+They'll read fifteen files carefully, write down what they found, and do it again tomorrow without sighing once.
+
+The exact chore that makes humans abandon their wikis is the thing an LLM does happily, all day long. 
+
+That single fact inverts the economics of documentation.
 
 One gist crystallized this for me.
 
-It was a piece by **Andrej Karpathy** on what he calls the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>. His observation is that right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Each answer evaporates; the next one starts from zero.
+It was a piece by **Andrej Karpathy** on what he calls the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>. 
 
-His fix isn't fancier search. It's a wiki the LLM compiles once and keeps current, a *persistent, compounding artifact.* He even traces the lineage to Vannevar Bush's 1945 **Memex**, an idea that failed the first time because *humans* couldn't bear the upkeep. Now the LLM bears it.
+His observation is that right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Each answer evaporates; the next one starts from zero.
+
+His fix isn't fancier search. It's a wiki the LLM compiles once and keeps current, a *persistent, compounding artifact.* 
+
+He even traces the lineage to Vannevar Bush's 1945 **Memex**, an idea that failed the first time because *humans* couldn't bear the upkeep. Now the LLM bears it.
 
 He puts the whole division of labor in one line: *"You're in charge of sourcing, exploration, and asking the right questions. The LLM does all the grunt work, the summarizing, cross-referencing, filing, and bookkeeping."*
 
@@ -51,7 +67,9 @@ And that's what clicks into place. A wiki written and maintained by an LLM isn't
 
 One artifact, two beneficiaries: the human gets a living map of the codebase that actually stays current, and the LLM gets a context primer so it walks in already oriented instead of grepping around to rebuild the map from scratch.
 
-So I did the obvious thing. I pointed all of this at the place I spend all day, a **codebase**, and built a small, runnable version of it. I call each per-page file a **page wiki**: `page-wiki.md`.
+So I did the obvious thing. 
+
+I pointed all of this at the place I spend all day, a **codebase**, and built a small, runnable version of it. I call each per-page file a **page wiki**: `page-wiki.md`.
 
 Here, **page** means a bounded area of a codebase, not only a browser page. A page wiki could describe:
 
@@ -100,7 +118,9 @@ A codebase is a book with thousands of "words" (functions, components, endpoints
 
 So it does the only thing it can: it scans. It greps for words from your prompt, opens whatever files match, reads them to check whether they're the right ones, and if not, greps again and opens more.
 
-Every miss is another page turned: another file read, another turn, another few thousand tokens. And when the thing you're changing doesn't literally contain the words you typed (a synonym, an indirection, a call wired up dynamically) the search sails right past it and the model wanders.
+Every miss is another page turned: another file read, another turn, another few thousand tokens.
+
+And when the thing you're changing doesn't literally contain the words you typed (a synonym, an indirection, a call wired up dynamically) the search sails right past it and the model wanders.
 
 Here's the part I find fascinating: **this is exactly how a human mind works, too.**
 
@@ -118,7 +138,9 @@ And here's the catch with an LLM: **every session, it's the newcomer.** It has n
 
 However good it is at reasoning, it wakes up each time having never seen your repo, and rebuilds the map from scratch, the same way you would if your memory reset every morning.
 
-A page wiki is that senior engineer's mental index, **written down and kept fresh**, so a model (or a new teammate) who has never seen the code gets the expert's shortcut on the very first try. It turns the shuffled dictionary back into an alphabetical one.
+A page wiki is that senior engineer's mental index, **written down and kept fresh**, so a model (or a new teammate) who has never seen the code gets the expert's shortcut on the very first try. 
+
+It turns the shuffled dictionary back into an alphabetical one.
 
 With that index in place, the assistant does what you'd do with a properly sorted dictionary: one lookup, straight to the entry. The prompt resolves to a page, the page names the exact files, and its distilled knowledge rides along for free.
 
@@ -172,7 +194,11 @@ A `page-wiki.md` stores the git blob hash of each source file it describes. Chec
 
 {{< wiki-animation >}}
 
-You could just timestamp each file ("last updated on…") which is fine for "when did we last touch this." But a timestamp can't tell you whether the *bytes* actually changed, only whether the clock moved. On code, that's the difference that matters.
+You could just timestamp each file ("last updated on…") which is fine for "when did we last touch this."
+
+But a timestamp can't tell you whether the *bytes* actually changed, only whether the clock moved.
+
+On code, that's the difference that matters.
 
 A content hash either matches what's on disk or it doesn't. No "I think this is probably still right."
 
@@ -230,7 +256,9 @@ It's three pieces:
 | `wiki/` | A **Hugo** site: one `page-wiki.md` per page plus a `wiki-index` resolver. This is the wiki layer. |
 | `tools/` | `facts.mjs`, a dependency-free CLI that runs the whole loop: resolve → check freshness → compare → demo. |
 
-Here's a real `page-wiki.md` from the demo. Nothing exotic, just plain markdown, a little YAML frontmatter, and links to related pages: a file that renders as a web page for humans and reads as plain text for an LLM.
+Here's a real `page-wiki.md` from the demo.
+
+Nothing exotic, just plain markdown, a little YAML frontmatter, and links to related pages: a file that renders as a web page for humans and reads as plain text for an LLM.
 
 The only thing I added is the `source-hashes` block, which is the anchor:
 
@@ -287,7 +315,9 @@ One important clarification: this is a saving on **input tokens**, the context y
 
 You're not re-reading and re-analysing the source on every request, so the prompt you send in shrinks. That's the entire win, and it lives on the input side.
 
-**Output tokens**, what the model writes back, don't change; the same edit still has to be typed out. But in a coding session the input dwarfs the output, because the code you pour in is far larger than the answer that comes out. Shrinking the input is exactly where the cost is.
+**Output tokens**, what the model writes back, don't change; the same edit still has to be typed out.
+
+But in a coding session the input dwarfs the output, because the code you pour in is far larger than the answer that comes out. Shrinking the input is exactly where the cost is.
 
 A fair-play note on the numbers: the demo estimates tokens with the well-known `~4 characters per token` heuristic, not an exact BPE tokenizer.
 
@@ -405,7 +435,9 @@ But the **best** `page-wiki.md` is one a human has reviewed, because a human cat
 
 That's the best of both worlds: the LLM does the boring bulk, the human does the judgement.
 
-And it shouldn't be a one-time review. When you're mid-session and you notice a page missed something (a discrepancy, a subtle behaviour, a gotcha the model never surfaced) you should be able to just say so, and have that correction folded straight back into the page.
+And it shouldn't be a one-time review.
+
+When you're mid-session and you notice a page missed something (a discrepancy, a subtle behaviour, a gotcha the model never surfaced) you should be able to just say so, and have that correction folded straight back into the page.
 
 That's a second pipeline worth building into your setup: not only produce-or-reuse, but **correct-in-place.** The instant a human spots a gap, the fix lands in the wiki.
 
