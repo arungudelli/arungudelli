@@ -6,7 +6,7 @@ lastmod: "2026-09-17T00:00:00+01:00"
 draft: "false"
 type: "docs"
 mermaid: true
-images: ["images/featured/page-wiki-durable-codebase-knowledge.png"]
+images: ["images/page-wiki-durable-codebase-knowledge.png"]
 ---
 
 It has been about a year since I wrote an article.
