@@ -9,9 +9,13 @@ mermaid: true
 images: ["images/page-wiki-durable-codebase-knowledge.png"]
 ---
 
-I haven't published in about a year. Not because I ran out of things to say, LLMs did. When a model can explain any framework in seconds, writing another step-by-step tutorial feels pointless.
+I haven't published in about a year. 
 
-But this idea is different. It's not a trick to teach an LLM. It's a way to make it *remember* what it already learned about your codebase, so every new session doesn't start from zero.
+Not because I ran out of things to say, LLMs did. When a model can explain any framework in seconds, writing another step-by-step tutorial feels pointless.
+
+But this idea is different. 
+
+It's not a trick to teach an LLM. It's a way to make it *remember* what it already learned about your codebase, so every new session doesn't start from zero.
 
 And it starts with the most boring problem in software.
 
