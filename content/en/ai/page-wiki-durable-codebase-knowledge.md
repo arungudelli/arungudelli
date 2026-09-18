@@ -185,6 +185,8 @@ A page wiki is that senior engineer's mental index, **written down and kept fres
 
 With that index in place, the assistant does what you'd do with a properly sorted dictionary: one lookup, straight to the entry. The prompt resolves to a page, the page names the exact files, and its distilled knowledge rides along for free.
 
+{{< wiki-animation >}}
+
 {{< mermaid >}}
 flowchart LR
     subgraph without [Without a wiki - grep the jumbled dictionary]
@@ -237,9 +239,14 @@ sequenceDiagram
 
 ## 🎮 A demo you can actually run
 
-Talking about token savings is easy. I wanted something anyone could run and measure, with zero proprietary code involved, so I built a small demo:
+Talking about token savings is easy. I built a small demo so you can run the loop and measure it yourself:
 
-**👉 [github.com/arungudelli/token-llm-wiki](https://github.com/arungudelli/token-llm-wiki)**
+**👉 <a href="https://github.com/arungudelli/token-llm-wiki" target="_blank">github.com/arungudelli/token-llm-wiki</a>**
+
+Both pieces are deployed to GitHub Pages — no setup needed to see the pattern in action:
+
+- <a href="https://arungudelli.github.io/token-llm-wiki/app/" target="_blank">**Live Angular bookstore**</a> — the toy codebase the wiki describes.
+- <a href="https://arungudelli.github.io/token-llm-wiki/" target="_blank">**Live wiki**</a> — one `page-wiki.md` per page, rendered as a Hugo site. Open the <a href="https://arungudelli.github.io/token-llm-wiki/pages/book-list/" target="_blank">book-list entry</a> to see exactly what an LLM reads instead of the source.
 
 It's three pieces:
 
