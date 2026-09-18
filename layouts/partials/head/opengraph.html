@@ -38,10 +38,12 @@
   <!-- <meta property="og:image" content="{{ $.Permalink }}{{ . }}"> -->
   <meta property="og:image" content="{{ $.Site.BaseURL }}{{ . }}">
   {{ end -}}
-  {{ $ogImg := resources.Get (index . 0) -}}
-  {{ with $ogImg -}}
-  <meta property="og:image:width" content="{{ .Width }}">
-  <meta property="og:image:height" content="{{ .Height }}">
+  {{ $ogPath := index . 0 -}}
+  {{ if $ogPath -}}
+    {{ with resources.Get $ogPath -}}
+    <meta property="og:image:width" content="{{ .Width }}">
+    <meta property="og:image:height" content="{{ .Height }}">
+    {{ end -}}
   {{ end -}}
 {{ else -}}
   {{ $images := $.Resources.ByType "image" -}}
