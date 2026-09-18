@@ -1,0 +1,398 @@
+<div style="width:100%;overflow-x:auto;margin:1.5rem 0">
+<canvas id="wikiFlowAnim" style="max-width:740px;width:100%;display:block;margin:0 auto;border-radius:12px;box-shadow:0 4px 32px rgba(0,0,0,0.5)"></canvas>
+<p style="text-align:center;font-size:0.75rem;color:#64748b;margin-top:0.5rem;font-style:italic">Orange: re-reads source every time. Teal: reads wiki, edits, then updates the wiki and re-anchors the git hash.</p>
+<script>
+(function () {
+  var C = document.getElementById('wikiFlowAnim');
+  if (!C) return;
+  var ctx = C.getContext('2d');
+  var W = 740, H = 500;
+  C.width = W; C.height = H;
+
+  /* ── palette ── */
+  var P = {
+    bg:    '#0d1117',
+    grid:  'rgba(255,255,255,0.022)',
+    panL:  'rgba(239,68,68,0.07)',   panR:  'rgba(34,197,94,0.07)',
+    brdL:  'rgba(239,68,68,0.3)',    brdR:  'rgba(34,197,94,0.3)',
+    arrL:  '#dc2626',                arrR:  '#16a34a',
+    loop:  '#ea580c',
+    retArr:'#d97706',
+    nfL:   '#1a0f0f',  nbL:  '#ef4444',
+    nfR:   '#0a1a10',  nbR:  '#22c55e',
+    nfS:   '#0f2718',  nbS:  '#4ade80',
+    nfW:   '#12200d',  nbW:  '#86efac',
+    nfD:   '#1a1800',  nbD:  '#f59e0b',
+    txt:   '#e2e8f0',  dim:  '#475569',
+    dotL:  '#f97316',  dotR: '#06b6d4',
+    hdrL:  '#fca5a5',  hdrR: '#86efac',
+  };
+
+  /* ── layout ── */
+  var LX = 185, RX = 555;
+  var NW = 148, NH = 36, NR = 7;
+
+  /* node definitions */
+  var Ln = {
+    p: {x:LX, y:62,  lbl:'Prompt',              t:'oval'},
+    g: {x:LX, y:138, lbl:'grep / glob repo',    t:'rect'},
+    o: {x:LX, y:210, lbl:'Open candidate file', t:'rect'},
+    d: {x:LX, y:292, lbl:'Right place?',        t:'diam'},
+    e: {x:LX, y:396, lbl:'Finally edit',        t:'rect', s:true},
+  };
+  var Rn = {
+    p: {x:RX, y:55,  lbl:'Prompt',              t:'oval'},
+    i: {x:RX, y:138, lbl:'wiki-index resolver', t:'rect'},
+    w: {x:RX, y:225, lbl:'page-wiki.md',        t:'rect'},
+    e: {x:RX, y:325, lbl:'Edit right files',    t:'rect', s:true},
+    u: {x:RX, y:420, lbl:'Update wiki + re-anchor hash', t:'rect'},
+  };
+
+  /* ── helpers ── */
+  function rr(x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x+r,y); ctx.lineTo(x+w-r,y); ctx.arcTo(x+w,y,x+w,y+r,r);
+    ctx.lineTo(x+w,y+h-r); ctx.arcTo(x+w,y+h,x+w-r,y+h,r);
+    ctx.lineTo(x+r,y+h); ctx.arcTo(x,y+h,x,y+h-r,r);
+    ctx.lineTo(x,y+r); ctx.arcTo(x,y,x+r,y,r);
+    ctx.closePath();
+  }
+
+  function drawNode(n, lit, pulse, overrideFill, overrideBorder) {
+    var x=n.x, y=n.y, lbl=n.lbl, t=n.t, s=n.s;
+    var isL = x < 370;
+    var nf = overrideFill  || (s ? P.nfS : (isL ? P.nfL : P.nfR));
+    var nb = overrideBorder|| (s ? P.nbS : (isL ? P.nbL : P.nbR));
+    if (t==='diam') { nf=P.nfD; nb=P.nbD; }
+
+    if (lit) { ctx.shadowColor=nb; ctx.shadowBlur=8+(pulse||0)*16; }
+
+    if (t==='oval') {
+      ctx.beginPath(); ctx.ellipse(x,y,NW/2,NH/2,0,0,Math.PI*2);
+      ctx.fillStyle=nf; ctx.fill(); ctx.strokeStyle=nb; ctx.lineWidth=lit?2:1.5; ctx.stroke();
+    } else if (t==='diam') {
+      ctx.beginPath(); ctx.moveTo(x,y-27); ctx.lineTo(x+70,y); ctx.lineTo(x,y+27); ctx.lineTo(x-70,y); ctx.closePath();
+      ctx.fillStyle=nf; ctx.fill(); ctx.strokeStyle=nb; ctx.lineWidth=lit?2:1.5; ctx.stroke();
+    } else {
+      rr(x-NW/2,y-NH/2,NW,NH,NR); ctx.fillStyle=nf; ctx.fill(); ctx.strokeStyle=nb; ctx.lineWidth=lit?2:1.5; ctx.stroke();
+    }
+    ctx.shadowBlur=0;
+
+    ctx.fillStyle = lit ? '#fff' : P.txt;
+    ctx.font = (lit?'600 ':'500 ')+'10.5px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif';
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    var words = lbl.split(' ');
+    if (lbl.length > 17) {
+      var m = Math.ceil(words.length/2);
+      ctx.fillText(words.slice(0,m).join(' '), x, y-6);
+      ctx.fillText(words.slice(m).join(' '), x, y+7);
+    } else {
+      ctx.fillText(lbl, x, y);
+    }
+  }
+
+  function ah(x,y,ang,col){
+    ctx.save(); ctx.translate(x,y); ctx.rotate(ang);
+    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(-8,-4); ctx.lineTo(-8,4); ctx.closePath();
+    ctx.fillStyle=col; ctx.fill(); ctx.restore();
+  }
+
+  function arr(x1,y1,x2,y2,col,lbl,dash){
+    ctx.beginPath(); ctx.strokeStyle=col; ctx.lineWidth=1.5;
+    ctx.setLineDash(dash?[4,4]:[]);
+    ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke(); ctx.setLineDash([]);
+    ah(x2,y2,Math.atan2(y2-y1,x2-x1),col);
+    if (lbl) {
+      ctx.fillStyle=P.dim; ctx.font='10px sans-serif';
+      ctx.textAlign='left'; ctx.textBaseline='middle';
+      ctx.fillText(lbl,(x1+x2)/2+5,(y1+y2)/2);
+    }
+  }
+
+  function loopArr(){
+    var pts=[
+      {x:Ln.d.x-70, y:Ln.d.y},
+      {x:Ln.g.x-94, y:Ln.d.y},
+      {x:Ln.g.x-94, y:Ln.g.y},
+      {x:Ln.g.x-NW/2, y:Ln.g.y},
+    ];
+    ctx.beginPath(); ctx.strokeStyle=P.loop; ctx.lineWidth=1.5; ctx.setLineDash([4,4]);
+    ctx.moveTo(pts[0].x,pts[0].y);
+    for(var i=1;i<pts.length;i++) ctx.lineTo(pts[i].x,pts[i].y);
+    ctx.stroke(); ctx.setLineDash([]);
+    ah(pts[3].x,pts[3].y,0,P.loop);
+    ctx.fillStyle=P.dim; ctx.font='10px sans-serif';
+    ctx.textAlign='right'; ctx.textBaseline='middle';
+    ctx.fillText('no / not sure', pts[1].x-5, (pts[1].y+pts[2].y)/2);
+  }
+
+  /* return arrow: edit → (right side) → update node */
+  function returnArr(){
+    var ex=RX+NW/2, ey=Rn.e.y;
+    var ux=RX+NW/2, uy=Rn.u.y;
+    var bx=ex+30;
+    ctx.beginPath(); ctx.strokeStyle=P.retArr; ctx.lineWidth=1.5; ctx.setLineDash([4,4]);
+    ctx.moveTo(ex,ey); ctx.lineTo(bx,ey); ctx.lineTo(bx,uy); ctx.lineTo(ux,uy);
+    ctx.stroke(); ctx.setLineDash([]);
+    ah(ux,uy,Math.PI,P.retArr);
+
+    /* label along the vertical section */
+    ctx.save();
+    ctx.translate(bx+12, (ey+uy)/2);
+    ctx.rotate(Math.PI/2);
+    ctx.fillStyle=P.retArr; ctx.font='9px sans-serif';
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText('commit edit → re-anchor hash', 0, 0);
+    ctx.restore();
+  }
+
+  /* ── background ── */
+  function drawBg(){
+    ctx.fillStyle=P.bg; ctx.fillRect(0,0,W,H);
+    ctx.strokeStyle=P.grid; ctx.lineWidth=1;
+    for(var x=0;x<W;x+=28){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
+    for(var y=0;y<H;y+=28){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
+    rr(8,32,356,H-40,12); ctx.fillStyle=P.panL; ctx.fill(); ctx.strokeStyle=P.brdL; ctx.lineWidth=1; ctx.stroke();
+    rr(376,32,356,H-40,12); ctx.fillStyle=P.panR; ctx.fill(); ctx.strokeStyle=P.brdR; ctx.lineWidth=1; ctx.stroke();
+    ctx.beginPath(); ctx.strokeStyle='rgba(255,255,255,0.07)'; ctx.lineWidth=1;
+    ctx.setLineDash([5,5]); ctx.moveTo(368,38); ctx.lineTo(368,H-15); ctx.stroke(); ctx.setLineDash([]);
+    ctx.font='700 11px -apple-system,BlinkMacSystemFont,sans-serif'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillStyle=P.hdrL; ctx.fillText('WITHOUT WIKI', LX, 20);
+    ctx.fillStyle=P.hdrR; ctx.fillText('WITH WIKI', RX, 20);
+  }
+
+  function drawEdges(){
+    /* left panel */
+    arr(LX,Ln.p.y+NH/2, LX,Ln.g.y-NH/2, P.arrL);
+    arr(LX,Ln.g.y+NH/2, LX,Ln.o.y-NH/2, P.arrL);
+    arr(LX,Ln.o.y+NH/2, LX,Ln.d.y-27,   P.arrL);
+    arr(LX,Ln.d.y+27,   LX,Ln.e.y-NH/2, P.arrL,'yes');
+    loopArr();
+    /* right panel — main flow */
+    arr(RX,Rn.p.y+NH/2, RX,Rn.i.y-NH/2, P.arrR);
+    arr(RX,Rn.i.y+NH/2, RX,Rn.w.y-NH/2, P.arrR);
+    arr(RX,Rn.w.y+NH/2, RX,Rn.e.y-NH/2, P.arrR);
+    arr(RX,Rn.e.y+NH/2, RX,Rn.u.y-NH/2, P.arrR);
+    /* return / re-anchor arrow */
+    returnArr();
+  }
+
+  /* ── path building ── */
+  function wp(x,y){return{x:x,y:y};}
+
+  var Lwp = [
+    wp(LX, Ln.p.y),
+    wp(LX, Ln.g.y),
+    wp(LX, Ln.o.y),
+    wp(LX, Ln.d.y-27),
+    wp(LX-70, Ln.d.y),
+    wp(LX-94, Ln.d.y),
+    wp(LX-94, Ln.g.y),
+    wp(LX-NW/2, Ln.g.y),
+    wp(LX, Ln.g.y),
+    wp(LX, Ln.o.y),
+    wp(LX, Ln.d.y-27),
+    wp(LX-70, Ln.d.y),
+    wp(LX-94, Ln.d.y),
+    wp(LX-94, Ln.g.y),
+    wp(LX-NW/2, Ln.g.y),
+    wp(LX, Ln.g.y),
+    wp(LX, Ln.o.y),
+    wp(LX, Ln.d.y-27),
+    wp(LX, Ln.d.y+27),
+    wp(LX, Ln.e.y),
+  ];
+
+  /* right: straight down through all nodes, then re-anchor leg */
+  var Rwp = [
+    wp(RX, Rn.p.y),
+    wp(RX, Rn.i.y),
+    wp(RX, Rn.w.y),
+    wp(RX, Rn.e.y),
+    wp(RX, Rn.u.y),
+  ];
+
+  /* return leg: update node → right side → up → back into wiki node */
+  var Rwp2 = [
+    wp(RX, Rn.u.y),
+    wp(RX+NW/2,    Rn.u.y),
+    wp(RX+NW/2+30, Rn.u.y),
+    wp(RX+NW/2+30, Rn.w.y),
+    wp(RX+NW/2,    Rn.w.y),
+    wp(RX,         Rn.w.y),
+  ];
+
+  function mkPath(wps){
+    var segs=[], tot=0;
+    for(var i=0;i<wps.length-1;i++){
+      var dx=wps[i+1].x-wps[i].x, dy=wps[i+1].y-wps[i].y;
+      var len=Math.sqrt(dx*dx+dy*dy);
+      segs.push({a:wps[i],b:wps[i+1],len:len,cum:tot});
+      tot+=len;
+    }
+    return{segs:segs,tot:tot};
+  }
+
+  function posAt(path,t){
+    var d=Math.max(0,Math.min(1,t))*path.tot;
+    for(var i=0;i<path.segs.length;i++){
+      var s=path.segs[i];
+      if(d<=s.cum+s.len){
+        var u=s.len>0?(d-s.cum)/s.len:0;
+        return{x:s.a.x+(s.b.x-s.a.x)*u, y:s.a.y+(s.b.y-s.a.y)*u};
+      }
+    }
+    var last=path.segs[path.segs.length-1];
+    return{x:last.b.x,y:last.b.y};
+  }
+
+  var Lpath  = mkPath(Lwp);
+  var Rpath  = mkPath(Rwp);
+  var Rpath2 = mkPath(Rwp2);
+
+  /* ── timing ── */
+  var L_DUR    = 6500;  /* left: 3 loops then edit */
+  var R_DOWN   = 2600;  /* right: prompt → update node */
+  var R_RETURN = 900;   /* right: update node → wiki (re-anchor) */
+  var R_TOTAL  = R_DOWN + R_RETURN;
+  var PAUSE    = 1800;
+  var CYCLE    = L_DUR + PAUSE;
+
+  var TM = 14;
+  var Ltr=[], Rtr=[];
+
+  function ease(t){ return t<.5?2*t*t:-1+(4-2*t)*t; }
+
+  function drawDot(x,y,col){
+    var g=ctx.createRadialGradient(x,y,0,x,y,18);
+    g.addColorStop(0,col); g.addColorStop(1,'transparent');
+    ctx.beginPath(); ctx.arc(x,y,18,0,Math.PI*2); ctx.fillStyle=g; ctx.fill();
+    ctx.beginPath(); ctx.arc(x,y,5,0,Math.PI*2); ctx.fillStyle=col; ctx.fill();
+    ctx.beginPath(); ctx.arc(x,y,2,0,Math.PI*2); ctx.fillStyle='rgba(255,255,255,0.9)'; ctx.fill();
+  }
+
+  function drawTrail(tr, col){
+    for(var i=0;i<tr.length;i++){
+      ctx.globalAlpha=(i/tr.length)*0.45;
+      ctx.beginPath();
+      ctx.arc(tr[i].x,tr[i].y,1.5+(i/tr.length)*3.5,0,Math.PI*2);
+      ctx.fillStyle=col; ctx.fill();
+    }
+    ctx.globalAlpha=1;
+  }
+
+  function drawStatus(ph, lDone, rPhase){
+    ctx.font='bold 11px -apple-system,BlinkMacSystemFont,sans-serif';
+    ctx.textAlign='center'; ctx.textBaseline='middle';
+
+    /* left */
+    if (!lDone) {
+      var loop = ph < 2300 ? 1 : ph < 4600 ? 2 : 3;
+      ctx.fillStyle='rgba(251,146,60,0.75)';
+      ctx.fillText('Loop '+loop+' of 3', LX, H-18);
+    } else {
+      ctx.fillStyle=P.hdrL; ctx.fillText('✓ Done', LX, H-18);
+    }
+
+    /* right */
+    ctx.fillStyle = rPhase===2 ? P.hdrR
+                  : rPhase===1 ? '#fbbf24'
+                  : 'rgba(6,182,212,0.75)';
+    var msg = rPhase===2 ? '✓ Wiki re-anchored'
+            : rPhase===1 ? 'Re-anchoring hash...'
+            : 'Reading wiki → editing...';
+    ctx.fillText(msg, RX, H-18);
+  }
+
+  var t0=null;
+
+  function frame(ts){
+    if(!t0) t0=ts;
+    var ph=(ts-t0)%CYCLE;
+
+    var lDone   = ph >= L_DUR;
+    var rPhase  = ph >= R_TOTAL ? 2 : ph >= R_DOWN ? 1 : 0;
+
+    /* calculate dot positions */
+    var lpos=null, rpos=null;
+
+    if(!lDone){
+      lpos=posAt(Lpath, ease(Math.min(ph/L_DUR,1)));
+      Ltr.push({x:lpos.x,y:lpos.y});
+      if(Ltr.length>TM) Ltr.shift();
+    } else { Ltr.length=0; }
+
+    if(rPhase===0){
+      rpos=posAt(Rpath, ease(Math.min(ph/R_DOWN,1)));
+      Rtr.push({x:rpos.x,y:rpos.y});
+      if(Rtr.length>TM) Rtr.shift();
+    } else if(rPhase===1){
+      rpos=posAt(Rpath2, ease(Math.min((ph-R_DOWN)/R_RETURN,1)));
+      Rtr.push({x:rpos.x,y:rpos.y});
+      if(Rtr.length>TM) Rtr.shift();
+    } else {
+      Rtr.length=0;
+    }
+
+    /* draw — back to front */
+    ctx.clearRect(0,0,W,H);
+    drawBg();
+    drawEdges();
+
+    /* trails */
+    drawTrail(Ltr, P.dotL);
+    drawTrail(Rtr, P.dotR);
+
+    /* nodes */
+    var lPulse = lDone ? 0.5+0.5*Math.sin((ph-L_DUR)/300) : 0;
+    var editPulse = rPhase>=1 ? 0.5+0.5*Math.sin((ph-R_DOWN)/300) : 0;
+    var wikiPulse = rPhase===2 ? 0.5+0.5*Math.sin((ph-R_TOTAL)/280) : 0;
+    var updatePulse = rPhase>=1 ? 0.5+0.5*Math.sin((ph-R_DOWN)/300) : 0;
+
+    var k, n;
+    for(k in Ln){
+      n=Ln[k];
+      drawNode(n, lDone&&!!n.s, lDone&&n.s?lPulse:0);
+    }
+    for(k in Rn){
+      n=Rn[k];
+      if(n===Rn.e){
+        drawNode(n, rPhase>=1, rPhase>=1?editPulse:0);
+      } else if(n===Rn.u){
+        drawNode(n, rPhase>=1, rPhase>=1?updatePulse:0, P.nfW, P.nbW);
+      } else if(n===Rn.w){
+        /* wiki node glows amber while returning, then green when done */
+        if(rPhase===2){
+          drawNode(n, true, wikiPulse, '#0f2010', '#4ade80');
+        } else if(rPhase===1){
+          drawNode(n, true, 0.3, '#1c1500', '#d97706');
+        } else {
+          drawNode(n, false, 0);
+        }
+      } else {
+        drawNode(n, false, 0);
+      }
+    }
+
+    /* git hash badge on wiki node when re-anchored */
+    if(rPhase===2){
+      var alpha=Math.min(1,(ph-R_TOTAL)/400);
+      ctx.globalAlpha=alpha;
+      ctx.fillStyle='#4ade80'; ctx.font='bold 9px monospace';
+      ctx.textAlign='center'; ctx.textBaseline='middle';
+      ctx.fillText('# hash updated ✓', RX, Rn.w.y+NH/2+11);
+      ctx.globalAlpha=1;
+    }
+
+    /* dots on top */
+    if(lpos) drawDot(lpos.x,lpos.y,P.dotL);
+    if(rpos) drawDot(rpos.x,rpos.y,P.dotR);
+
+    drawStatus(ph, lDone, rPhase);
+    requestAnimationFrame(frame);
+  }
+
+  requestAnimationFrame(frame);
+})();
+</script>
+</div>
