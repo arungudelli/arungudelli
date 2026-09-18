@@ -223,10 +223,10 @@ sequenceDiagram
     Index-->>LLM: book-list (page-wiki.md + its source file list)
     LLM->>Wiki: Read one distilled page
     LLM->>Src: Re-hash the listed files, compare to source-hashes
-    alt Hashes match (FRESH)
+    alt All hashes match, page is FRESH
         Src-->>LLM: Unchanged
         Note over LLM,Src: Reuse the page. Source is NOT re-read.
-    else A file drifted (STALE)
+    else A file drifted, page is STALE
         Src-->>LLM: Return only the changed files
         LLM->>Wiki: Update the summary and re-anchor
     end
@@ -372,13 +372,13 @@ Either way you get your answer. The difference is that the second path leaves a 
 
 {{< mermaid >}}
 flowchart TD
-    P([Prompt in any session, any user]) --> R[Resolve page via wiki-index]
-    R --> Q{Fresh page-wiki.md exists?}
-    Q -- yes --> RE[Reuse the page - source NOT re-read]
-    Q -- no or stale --> GEN[LLM produces or refreshes page-wiki.md and anchors it]
+    P(["Prompt in any session, any user"]) --> R["Resolve page via wiki-index"]
+    R --> Q{"Fresh page-wiki.md exists?"}
+    Q -- yes --> RE["Reuse the page, source NOT re-read"]
+    Q -- no or stale --> GEN["LLM produces or refreshes page-wiki.md and anchors it"]
     GEN --> RE
-    RE --> W[Do the work]
-    W --> N[[Next session or teammate reuses the same page]]
+    RE --> W["Do the work"]
+    W --> N[["Next session or teammate reuses the same page"]]
 {{< /mermaid >}}
 
 Yes, you have to build the index first, but "first" is lazy and incremental. The first person to touch a page pays to produce it; everyone after them rides free.
