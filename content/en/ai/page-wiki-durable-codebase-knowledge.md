@@ -33,7 +33,7 @@ The exact chore that makes humans abandon their wikis is the thing an LLM does h
 
 One gist crystallized this for me.
 
-It was a piece by **Andrej Karpathy** on what he calls the **[LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)**. His observation is that right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Each answer evaporates; the next one starts from zero.
+It was a piece by **Andrej Karpathy** on what he calls the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>. His observation is that right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Each answer evaporates; the next one starts from zero.
 
 His fix isn't fancier search. It's a wiki the LLM compiles once and keeps current, a *persistent, compounding artifact.* He even traces the lineage to Vannevar Bush's 1945 **Memex**, an idea that failed the first time because *humans* couldn't bear the upkeep. Now the LLM bears it.
 
