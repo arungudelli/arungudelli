@@ -5,7 +5,7 @@ date: "2026-09-17T00:00:00+01:00"
 lastmod: "2026-09-17T00:00:00+01:00"
 draft: "false"
 type: "docs"
-mermaid: true
+mermaid: false
 images: ["images/page-wiki-durable-codebase-knowledge.png"]
 ---
 
@@ -210,28 +210,8 @@ But it's work you do **once** (and the LLM does it, since it's exactly the borin
 
 At query time, the full loop looks like this:
 
-{{< mermaid >}}
-sequenceDiagram
-    actor Dev as You
-    participant LLM as LLM / Agent
-    participant Index as wiki-index
-    participant Wiki as page-wiki.md
-    participant Src as Source code
+<img src="/images/page-wiki-query-flow.png" alt="Sequence diagram of one page-wiki request: the LLM resolves the page via wiki-index, reads the distilled page-wiki.md, re-hashes the source files against the stored hashes, then reuses the page when FRESH or refreshes and re-anchors it when STALE" loading="lazy" width="1300" height="940" style="max-width:100%;height:auto;border-radius:8px;">
 
-    Dev->>LLM: Add a search box to the book list page
-    LLM->>Index: Which page does this prompt map to?
-    Index-->>LLM: book-list (page-wiki.md + its source file list)
-    LLM->>Wiki: Read one distilled page
-    LLM->>Src: Re-hash the listed files, compare to source-hashes
-    alt All hashes match, page is FRESH
-        Src-->>LLM: Unchanged
-        Note over LLM,Src: Reuse the page. Source is NOT re-read.
-    else A file drifted, page is STALE
-        Src-->>LLM: Return only the changed files
-        LLM->>Wiki: Update the summary and re-anchor
-    end
-    LLM-->>Dev: Edit the right files, with the gotchas already known
-{{< /mermaid >}}
 
 ---
 
@@ -370,16 +350,8 @@ The trick is to make it a pipeline. Every task starts by resolving the page, the
 
 Either way you get your answer. The difference is that the second path leaves a fresh page behind, so the next session, and the next teammate, find it ready.
 
-{{< mermaid >}}
-flowchart TD
-    P(["Prompt in any session, any user"]) --> R["Resolve page via wiki-index"]
-    R --> Q{"Fresh page-wiki.md exists?"}
-    Q -- yes --> RE["Reuse the page, source NOT re-read"]
-    Q -- no or stale --> GEN["LLM produces or refreshes page-wiki.md and anchors it"]
-    GEN --> RE
-    RE --> W["Do the work"]
-    W --> N[["Next session or teammate reuses the same page"]]
-{{< /mermaid >}}
+<img src="/images/page-wiki-team-pipeline.png" alt="Flowchart of the produce-or-reuse pipeline: a prompt resolves to a page via wiki-index; if a fresh page-wiki.md exists it is reused without re-reading source, otherwise the LLM produces or refreshes and anchors it, then the work is done and the page is reused by the next session or teammate" loading="lazy" width="1120" height="1000" style="max-width:100%;height:auto;border-radius:8px;">
+
 
 Yes, you have to build the index first, but "first" is lazy and incremental. The first person to touch a page pays to produce it; everyone after them rides free.
 
