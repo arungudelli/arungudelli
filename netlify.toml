@@ -2,6 +2,19 @@
   publish = "public"
   functions = "functions"
 
+# Old URL -> new URL (slug changed to llm-wiki-for-code-base)
+[[redirects]]
+  from = "/ai/page-wiki-durable-codebase-knowledge/"
+  to = "/ai/llm-wiki-for-code-base/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/ai/page-wiki-durable-codebase-knowledge"
+  to = "/ai/llm-wiki-for-code-base/"
+  status = 301
+  force = true
+
 [build.environment]
   NODE_VERSION = "16.16.0"
   NPM_VERSION = "8.11.0"
