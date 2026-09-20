@@ -125,7 +125,7 @@ But in a project where you are working for months, you are paying for this again
 
 Think about a dictionary.
 
-While searching a word in dictionary, we won't read a dictionary from first page to last. 
+While searching a word in dictionary, we won't read a dictionary from first page to last page. 
 
 The dictionary sorted alphabetically. 
 
@@ -149,39 +149,75 @@ We were stuck doing a slow, one-by-one search.
 
 **Finding code in a new repo is exactly this random-order dictionary.**
 
-A codebase is a book with thousands of "words" (functions, components, endpoints) spread across hundreds of "pages," the files. When an AI assistant comes in with no prior knowledge, it is holding the shuffled dictionary.
+A codebase is a book with thousands of "words" (functions, components, endpoints) spread across hundreds of "pages," the files. 
 
-So it does the only thing it can. It scans.
+When an LLM tries to change the code, it does not have any knowledge about the code base, just like the  dictionary without index.
 
-It greps for words from your prompt. Opens whatever files match. Reads them to check if they are correct. If not, greps again and opens more.
+So it will do scanning of our code base file by file, based on the words from our prompt (grep search). 
 
-Every miss is one more page turned. One more file read. One more turn. One more few thousand tokens.
+Opens whatever files match. 
 
-And if the thing you are changing does not have the exact words you typed, some synonym, some indirection, some call wired up dynamically, the search goes past it and the model wanders.
+Reads them to check if they are correct. 
+
+If not, greps again and opens more.
+
+Every miss is one more page turned. 
+
+One more file read. One more turn. 
+
+**One more few thousand tokens.**
+
+And if the code you want to change is not using the same words you typed, the search will simply miss it.
+
+Maybe the file is using some other name. 
+
+Maybe the call is happening indirectly, at runtime.
+
+Now the model is lost. It starts guessing.
 
 This is exactly how a human mind also works.
 
-Put a fresh engineer into a large codebase. Tell them to change the book-list search. They also can't jump straight to the correct file.
+Put a fresh engineer into a large codebase. 
 
-They open things. Read. Follow imports. Guess. Check. Go back. The human version of grep.
+Tell them to change the **book-list search**. 
+
+They also can't jump straight to the correct file.
+
+They open files. Read. Follow imports. Guess. Check. Go back. The human version of grep.
 
 It is slow. And it is slow for the same reason. No index yet.
 
-Now see the senior engineer who lived in that codebase for two years. Same task. He does not search at all.
+Now take one senior engineer working in that same codebase from two years.
 
-He already knows. *"That's the `BookListComponent`. The search is a computed signal over the in-memory list. And careful, the filtering is client-side."* Straight to the file. Straight to the gotcha.
+Same task. He will not search at all.
 
-The difference is not raw intelligence. The expert has built an index in his head.
 
-With an LLM, every session it is the fresher. It has no memory of your codebase.
+He already knows it. *"That is the `BookListComponent`. Search is a computed signal on the in-memory list. And one thing, filtering is happening only on client-side."*
 
-However smart it is at reasoning, it wakes up every time having never seen your repo. And builds the map from zero. Same as you, if your memory reset every morning.
+He opens the file directly. And he already knows where to change the code.
+
+He is not more intelligent than the fresher. 
+
+He is just having the index ready in his head.
+
+With an LLM, every session it is the fresher. 
+
+It has no memory of your codebase.
+
+However smart it is at reasoning, it wakes up every time having never seen your repo. 
+
+And builds the map from zero. 
+
+Same as you, if your memory reset every morning.
 
 A page wiki is that senior engineer's mental index. Written down and kept fresh.
 
-So a model, or a new teammate, who never saw the code gets the expert's shortcut on the very first try.
+So a new teammate, or the model, who never saw this code will also get the same shortcut or index on day one.
 
-With that index ready, the assistant does one lookup. Straight to the entry. The prompt resolves to a page, the page names the exact files, and its distilled knowledge comes along for free.
+Now no searching. The LLM opens one page. 
+
+That page tells which files to touch and what to be careful about.
+
 
 ---
 
