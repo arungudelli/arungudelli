@@ -93,39 +93,59 @@ Here **page** means one bounded area of a codebase, not only a browser page. A p
 - A data pipeline
 - Any related group of files which you understand and change together
 
-Rest of this post is the full story. How simple the file can be. The one thing you must add to make it safe on code which keeps changing. A demo you can clone. And the actual token numbers.
+---
+
+## How does LLM read our codebase??
+
+You ask the LLM to change one page. 
+
+It opens five files. Reads everything. 
+
+Then it understands how they are connected. 
+
+After that only it starts the work.
+
+Tomorrow you ask one more change in the same page. 
+
+It opens the same five files. 
+
+Reads everything again. From zero.
+
+Every time it is learning the same thing again.
+
+For a small script, no issue.
+
+But in a project where you are working for months, you are paying for this again and again. 
+
+**More tokens**, more waiting, and your context window is full before the real work starts.
 
 ---
 
-## What does the pain look like in a codebase?
+## What is missing? An index.
 
-This is how "no accumulation" feels when the sources are *source files.*
+Think about a dictionary.
 
-You ask the assistant to change one page. It opens five files. Reads them top to bottom. Understands how they connect. And *then* does the work.
+While searching a word in dictionary, we won't read a dictionary from first page to last. 
 
-Next session you ask a related change on the same page. It opens the same five files. Reads them fully again. From zero.
+The dictionary sorted alphabetically. 
 
-Every session it finds out again what it already knew.
+We jump directly the first letter of the word, then the move few pages, and reach the word in seconds.
 
-On a throwaway script, this is free.
+That alphabetical order *is* an index. 
 
-On a codebase where you will stay for months, it is a tax. On every single request. Paid in tokens, in waiting time, and in the context window which you want to use for the actual problem.
+It is the only reason a book with 100,000 words is still usable.
 
----
+Now imagine the same dictionary in random order. 
 
-## Why is this so hard?
+Same words, same meanings. No alphabetical order.
 
-Start with a dictionary.
+To find one word you have no option. 
 
-You don't read a dictionary from first page to last. It is sorted alphabetically. So you jump to roughly the correct letter, then the correct few pages, and reach the word in seconds.
+Start from page, Read page after page. Until you find that word.
 
-That alphabetical order *is* an index. It is the only reason a book with 100,000 words is still usable.
+Same book. But without the index it is almost useless. 
 
-Now imagine the same dictionary in random order. Same words, same meanings. No alphabetical order. No thumb tabs.
-
-To find one word you have no option. Start from page one and scan. Page after page. Until by luck you hit it.
-
-Same book. But without the index it is almost useless. You are stuck doing a slow, one-by-one search.
+We were stuck doing a slow, one-by-one search.
 
 **Finding code in a new repo is exactly this random-order dictionary.**
 
