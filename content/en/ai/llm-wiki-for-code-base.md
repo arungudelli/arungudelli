@@ -221,7 +221,7 @@ That page tells which files to touch and what to be careful about.
 
 ---
 
-## So what is the actual idea?
+## The whole idea in one line
 
 The pattern is one sentence:
 
