@@ -14,61 +14,77 @@ I did not publish anything from last one year.
 
 Reason is LLM only. Because when AI can explain everything very fast, writing step-by-step tutorial is waste of time.
 
-But this new idea is different. It is not for teaching AI. It is for making AI remember our project code, so every time it will not start from zero.
+But this one is different. It is not a tutorial.
+
+It is about making AI remember our project code. So next time it will not start from zero.
 
 It starts with very boring problem in software.
 
 In every team I worked, everyone has same tension: documentation is not updated.
 
-Reason is simple. Updating docs is very boring work and nobody will say thanks.
+Reason is simple. Updating docs is very boring work.
 
-You will write one time, then code will change. After six months, doc is totally wrong. But new joiner will trust it because he don't know anything.
+We engineers are lazy to write docs. And we are also very bad at it.
 
-We never fixed this problem. We just adjust with it.
+You will write one time, then code will change. 
 
-Main project knowledge (like payment flow logic, or why one function is there) is only inside senior engineer head or some old Slack message which nobody can find.
+After six months, doc is totally wrong. 
 
-So why I am very excited? Because first time, we have one worker who can do this boring work.
+But new joiner will trust it because he don't know anything.
 
-LLM will not get bored. They can check fifteen files and update the details, and again do same thing tomorrow without complaining.
+Nobody ever bothered to fix this. We just ignore it and continue our work.
 
-The boring work which developers hate, AI will do happily daily. This will completely change how we do documentation.
+Main project knowledge (like payment flow logic, or why one function is there) is only inside senior engineer head or some old Slack message which difficult to find.
 
-One gist made this very clear to me.
+But think about LLMs they won't get bored. They can check fifteen files and update the details, and again do same thing tomorrow without complaining.
 
-It is a piece by **Andrej Karpathy**. He calls it the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>.
+The boring work which developers like us hate, LLMs will do happily daily. 
 
-His point is simple. Right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Every answer is lost. Next time it starts from zero again.
+This will completely change how we do documentation.
 
-His fix is not a better search. It is a wiki which the LLM builds one time and keeps updated. One file which keeps growing.
+I understood this properly after reading one gist on GitHub.
 
-He even connects it to Vannevar Bush's 1945 **Memex**. That idea failed first time because *humans* could not do the maintenance. Now the LLM will do that part.
+It is written by **Andrej Karpathy**. 
+
+He calls it the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>.
+
+His point is simple. Right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* 
+
+Every answer is lost. Next time it starts from zero again.
+
+His fix is not a better search. 
+
+It is a wiki which the LLM builds one time and keeps updated. 
+
+One file which keeps growing.
+
+He even connects it to Vannevar Bush's 1945 **Memex**. That idea failed first time because *humans* could not do the maintenance. 
+
+Now the LLM will do that part.
 
 He says the full division of work in one line: *"You're in charge of sourcing, exploration, and asking the right questions. The LLM does all the grunt work, the summarizing, cross-referencing, filing, and bookkeeping."*
 
-So one question comes. What should these notes actually be?
+Next question is, what should these docs look like?
 
-Answer is nicely boring. Format can be anything.
+Nothing fancy. Any format will work.
 
-Mine is just **plain markdown files**. Small YAML frontmatter. And links between pages.
+I am using plain markdown files. Small YAML frontmatter on top. And links between pages.
 
-That is the full trick.
+That is it.
 
-One markdown file renders as a **Hugo website which a human can read**. The *same file* is plain text which an **LLM can read**. One file. No conversion in between.
+One markdown file renders as a **Hugo website which a human can read**. 
 
-You don't need any special format or knowledge-base product for this. If you already have one format you like, use it. Point is the pattern, not the paperwork.
+The *same file* is plain text which an **LLM can read**. One file.
 
-A wiki written and maintained by an LLM is one file which serves both. The machine and the human. Same file.
+No special tool needed here. If you already have some format you like, just use it.
 
-Human gets a live map of the codebase which stays correct. LLM gets a starting context, so it comes in already knowing the place, instead of grepping around to build the map again.
+Human gets a map of the codebase which is correct. LLM gets the context ready, so it will not grep the whole repo again.
 
-So I did the obvious thing.
+I built a small demo where every page in the codebase gets its own documentation file. 
 
-I pointed all this at the place where I spend full day. A codebase. And built a small, runnable version.
+I call it a page wiki: **page-wiki.md**. 
 
-I call each per-page file a **page wiki**: `page-wiki.md`.
-
-Here **page** means one bounded area of a codebase, not only a browser page. A page wiki can describe:
+Here **page** means one bounded area of a codebase, not only a browser page. A page wiki can be:
 
 - A UI route
 - An API endpoint
