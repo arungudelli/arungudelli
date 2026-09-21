@@ -495,6 +495,14 @@ $navbar-dark-active-color:          $link-color-dark;
   border: 1px solid $link-color-dark;
 }
 
+[data-dark-mode] body .author-block {
+  border-right-color: $body-overlay-dark;
+}
+
+[data-dark-mode] body .author-block .author-tagline {
+  color: $gray-500;
+}
+
 [data-dark-mode] .page-link {
   color: $link-color-dark;
   background-color: transparent;

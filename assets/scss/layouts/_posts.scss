@@ -130,3 +130,67 @@ ul.network-icon {
 .network-icon li {
   margin-right: 5px;
 }
+
+/* Combined "let's connect" + newsletter card */
+.newsletter .connect-card .card-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.author-block .author-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-block .author-name {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.author-block .author-tagline {
+  margin: 0.1rem 0 0.25rem;
+  font-size: 0.8rem;
+  color: $gray-600;
+}
+
+.author-block .author-social .nav-link {
+  padding: 0.25rem;
+}
+
+.newsletter-block .card-title {
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-block .card-text {
+  margin-bottom: 0.85rem;
+}
+
+@include media-breakpoint-up(sm) {
+  .author-block {
+    width: 13rem;
+    border-right: 1px solid $gray-200;
+  }
+
+  .newsletter-block {
+    padding-left: 1.75rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .newsletter-block {
+    text-align: center;
+  }
+
+  .newsletter-block .email-form {
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .newsletter-block .form-control {
+    text-align: center;
+  }
+}
