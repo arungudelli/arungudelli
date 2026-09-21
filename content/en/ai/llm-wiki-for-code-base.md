@@ -363,11 +363,11 @@ A page wiki is a starting point. It is not a replacement for opening the file wh
 
 These are not theory. Each one hit me while building the demo and using this on my own code. Better to know them before you depend on it:
 
-- **The hash checks bytes, not meaning.** One formatting change or one renamed local variable will make a page STALE, even when the summary is still fully correct. First time a formatting-only commit turned my page red, I learnt the lesson. Treat STALE as *"check once again,"* not *"write from scratch."* Most of the time one quick check tells you the summary is still correct, and you just re-anchor.
-- **Reuse is a habit, not a guarantee.** The anchor only tells you the page *can* be trusted. It will not force you to use it. In the beginning I was still opening the source "just to confirm" and wasting the tokens anyway. That is why [a command pipeline](#what-is-still-missing) matters. The tooling should decide when to trust the page and when to go back to source.
+- **The hash checks bytes, not meaning.** One formatting change or one renamed local variable will make a page STALE, even when the summary is still fully correct. First time a formatting-only commit turned my page red, I learnt the lesson. So treat STALE as a signal to check the page once again. Most of the time one quick check tells you the summary is still correct, and you just re-anchor.
+- **Reuse will not happen by itself.** The anchor only tells you the page *can* be trusted. It will not force you to use it. In the beginning I was still opening the source "just to confirm" and wasting the tokens anyway. That is why [a command pipeline](#what-is-still-missing) matters. The tooling should decide when to trust the page and when to go back to source.
 - **Editing will still read the file you are changing.** This one surprised me first. I thought the page will fully replace the source. It will not. The big saving is on *understanding*: the data flow, how files are connected, the gotchas which you will otherwise find out again. You will still open the one file you are patching. That is okay, because understanding the page again is the costly part, and that is what the wiki saves.
 
-None of these break the idea. These are the next things to improve (an anchor which understands meaning, a resolver which checks itself). And this is why I am calling it a starting pattern, not a finished tool.
+None of these break the idea. These are the next things to improve (an anchor which understands meaning, a resolver which checks itself). And this is why I am calling it a starting pattern.
 
 ---
 
@@ -429,7 +429,5 @@ node tools/facts.mjs demo "book list"
 ```
 
 Then change any source file in `app/`, run `check-all` again, and see that page turn **STALE**. The anchor catches the change immediately.
-
-Your codebase deserves a wiki which stays correct. One which your team can read and your AI can reuse. Not one which goes wrong the moment you write it.
 
 If you try this on your own project, tell me how much you saved.
