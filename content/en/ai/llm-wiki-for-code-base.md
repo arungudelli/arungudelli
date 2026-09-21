@@ -125,11 +125,11 @@ But in a project where you are working for months, you are paying for this again
 
 Think about a dictionary.
 
-While searching a word in dictionary, we won't read a dictionary from first page to last page. 
+When we search one word in a dictionary, we don't read it from first page to last page. 
 
-The dictionary sorted alphabetically. 
+The dictionary is sorted alphabetically. 
 
-We jump directly the first letter of the word, then the move few pages, and reach the word in seconds.
+We jump directly to the first letter of the word, then move few pages, and reach the word in seconds.
 
 That alphabetical order *is* an index. 
 
@@ -141,19 +141,19 @@ Same words, same meanings. No alphabetical order.
 
 To find one word you have no option. 
 
-Start from page, Read page after page. Until you find that word.
+Start from page one. Read page after page. Until you find that word.
 
 Same book. But without the index it is almost useless. 
 
-We were stuck doing a slow, one-by-one search.
+We are stuck doing a slow, one-by-one search.
 
 **Finding code in a new repo is exactly this random-order dictionary.**
 
 A codebase is a book with thousands of "words" (functions, components, endpoints) spread across hundreds of "pages," the files. 
 
-When an LLM tries to change the code, it does not have any knowledge about the code base, just like the  dictionary without index.
+When an LLM tries to change the code, it has no knowledge about the codebase. Same like the dictionary without index.
 
-So it will do scanning of our code base file by file, based on the words from our prompt (grep search). 
+So it starts scanning our codebase file by file, using the words from our prompt (grep search). 
 
 Opens whatever files match. 
 
@@ -232,15 +232,15 @@ That is it. Two things make it work. These are the parts people usually skip:
 1. Each page is a **short summary** which a human (or a model) wrote on purpose. Not a raw dump of the files.
 2. Each page is **anchored to the exact source it describes**. So it can tell you when it is out of date, instead of misleading you silently.
 
-A wiki which cannot tell you it is stale is a liability, not an asset.
+A wiki which cannot tell you it is old is dangerous. Better to keep nothing.
 
-The git-hash anchor is the thing which turns "notes I wrote one time" into durable knowledge. Something you can trust session after session, and give to someone else.
+The git-hash anchor is what turns "some notes I wrote one time" into something you can actually trust. Every session, and for the full team.
 
 ---
 
 ## What are the three layers?
 
-In simple words, the pattern has three layers:
+The setup has three layers:
 
 ```text
 app source        (many files — the ground truth)
@@ -250,46 +250,46 @@ page-wiki.md      (one short file per page, anchored to source by git hash)     
 wiki-index        (which page is this request even about?)
 ```
 
-- **Source** is the truth. It is big. It is spread across many files. Reading all of it is what costs you.
-- **`page-wiki.md`** is one small file per bounded area. It has the overview, the component or request-flow map, the data flow, the key files, and most importantly the *gotchas* which a model would otherwise work out again. Each page stores the git blob hash of every source file it summarizes.
-- **`wiki-index`** answers a different question. For a fuzzy request like *"fix the book list search"*, which page do I load? It is a light resolver. So you don't need to know the file layout to find the correct page.
+- **Source** is the real truth. It is big and spread across many files. Reading all of it is what costs you.
+- **`page-wiki.md`** is one small file for one area. It has the overview, the component or request flow, the data flow, the important files, and the *gotchas* which the model will otherwise find out again. Each page also stores the git blob hash of every source file it covers.
+- **`wiki-index`** answers one more question. For a vague request like *"fix the book list search"*, which page should I open? It is a small lookup file. So you need not know the folder structure to reach the correct page.
 
 ---
 
 ## Why anchor to the git blob hash?
 
-This is my one real addition to Karpathy's pattern. It exists because a codebase behaves differently from a pile of documents.
+This is the one thing I added on top of Karpathy's idea. Because a codebase is not like a set of documents.
 
-In the original LLM Wiki, freshness is mostly a human-driven event. You give the agent new sources. It reads them again. A periodic *lint* pass checks for contradictions and stale claims. This works when *you* control when the sources change.
+In the original LLM Wiki, the human decides when to update. You give the agent new sources. It reads them again. Sometimes a *lint* pass checks for wrong or old points. This works when *you* are controlling when the sources change.
 
-Source code will not wait for you. It changes all the time. Silently. From every commit and every teammate.
+But code will not wait for you. It is changing daily, from every commit and every teammate. And nobody will inform you.
 
-So the freshness check must be automatic, cheap, and impossible to fudge. That is the part which makes the full thing safe.
+So the freshness check must be automatic and cheap. And nobody should be able to fake it. That is what makes this whole thing safe.
 
-A `page-wiki.md` stores the git blob hash of each source file it describes. Then checking freshness is trivial and exact. You re-hash the current source files and compare:
+A `page-wiki.md` stores the git blob hash of every source file it describes. So the check is simple and exact. Hash the current files again and compare:
 
 - **All hashes match → the page is FRESH.** Reuse it. Do **not** re-read the source.
 - **A hash differs → that file DRIFTED → the page is STALE.** Re-read *only the changed files*, update the summary, re-anchor.
 
 {{< wiki-animation >}}
 
-You can also just timestamp each file ("last updated on…"). That is fine for "when did we last touch this."
+You can also keep a timestamp in each file ("last updated on…"). That is okay to know when somebody touched it last.
 
-But a timestamp cannot tell you if the *bytes* actually changed. Only if the clock moved.
+But timestamp will not tell you if the code actually changed. It only tells you the clock moved.
 
-On code, that is the difference which matters.
+For code, that difference matters.
 
-A content hash either matches what is on disk or it does not. No "I think this is probably still correct."
+A hash will either match the file on disk or it will not. No "I think it is still correct" guessing.
 
-So the wiki fails loudly. It tells you the moment it is out of date. Which is exactly the moment a naive copy would silently give you a wrong answer.
+So the wiki fails loudly. It tells you the second it goes old. That is exactly the moment when a normal doc will quietly give you a wrong answer.
 
 ---
 
-The catch is the part people skip. You have to build the index first. Understanding a page and writing its `page-wiki.md` is real work.
+One catch is there, and people skip it. You have to build the index first. Understanding one page and writing its `page-wiki.md` is real work.
 
-But this work you do one time. And the LLM does it, because it is exactly the boring type. Every future request gets the benefit. Build one time, reuse many times.
+But this work you do only one time. And the LLM will do it, because this is exactly the boring type of work. After that every request gets the benefit. Build one time, reuse many times.
 
-At query time, the full loop looks like this:
+So when you ask something, the full flow looks like this:
 
 <img src="/images/page-wiki-query-flow.png" alt="Sequence diagram of one page-wiki request: the LLM resolves the page via wiki-index, reads the short page-wiki.md summary, re-hashes the source files against the stored hashes, then reuses the page when FRESH or refreshes and re-anchors it when STALE" loading="lazy" width="1300" height="940" style="max-width:100%;height:auto;border-radius:8px;">
 
@@ -298,28 +298,28 @@ At query time, the full loop looks like this:
 
 ## What does a real demo look like?
 
-Talking about token savings is easy. So I built a small demo. You can run the loop and measure it yourself:
+Talking about token saving is easy. So I built a small demo. You can run it and check the numbers yourself:
 
 **<a href="https://github.com/arungudelli/token-llm-wiki" target="_blank">github.com/arungudelli/token-llm-wiki</a>**
 
-Both pieces are deployed to GitHub Pages. No setup needed to see the pattern working:
+Both parts are deployed on GitHub Pages. No setup needed to see it working:
 
-- <a href="https://arungudelli.github.io/token-llm-wiki/app/" target="_blank">**Live Angular bookstore**</a>, the toy codebase which the wiki describes.
-- <a href="https://arungudelli.github.io/token-llm-wiki/" target="_blank">**Live wiki**</a>, one `page-wiki.md` per page, rendered as a Hugo site. Open the <a href="https://arungudelli.github.io/token-llm-wiki/pages/book-list/" target="_blank">book-list entry</a> to see exactly what an LLM reads instead of the source.
+- <a href="https://arungudelli.github.io/token-llm-wiki/app/" target="_blank">**Live Angular bookstore**</a>, the small codebase which the wiki describes.
+- <a href="https://arungudelli.github.io/token-llm-wiki/" target="_blank">**Live wiki**</a>, one `page-wiki.md` per page, rendered as a Hugo site. Open the <a href="https://arungudelli.github.io/token-llm-wiki/pages/book-list/" target="_blank">book-list entry</a> to see what the LLM reads instead of the source.
 
 It is three pieces:
 
 | Folder | Role |
 |---|---|
-| `app/` | A toy **Angular bookstore** (list → detail → cart). This is the "codebase" an assistant would otherwise read file by file. |
+| `app/` | A small **Angular bookstore** (list → detail → cart). This is the "codebase" which the assistant will otherwise read file by file. |
 | `wiki/` | A **Hugo** site: one `page-wiki.md` per page plus a `wiki-index` resolver. This is the wiki layer. |
-| `tools/` | `facts.mjs`, a dependency-free CLI that runs the whole loop: resolve → check freshness → compare → demo. |
+| `tools/` | `facts.mjs`, a small CLI with no dependencies. It runs the full loop: resolve → check freshness → compare → demo. |
 
 Here is a real `page-wiki.md` from the demo.
 
-Nothing fancy. Plain markdown, small YAML frontmatter, and links to related pages. One file which renders as a web page for humans and reads as plain text for an LLM.
+Nothing fancy. Plain markdown, small YAML frontmatter, and links to related pages. Same file renders as a web page for humans, and reads as plain text for the LLM.
 
-The only thing I added is the `source-hashes` block. That is the anchor:
+Only extra thing is the `source-hashes` block. That is the anchor:
 
 ```markdown
 ---
@@ -349,13 +349,13 @@ whole catalog as a card grid with a live search box + genre `<select>`, plus a p
   reactively everywhere.
 ```
 
-That "Gotchas" section is the full point. A model which reads *this* already knows the non-obvious things. The things it would otherwise work out again by reading every file.
+That "Gotchas" section is the main point. A model which reads *this* already knows the hidden things. Otherwise it has to find them again by reading every file.
 
 ---
 
 ## What does it actually save?
 
-The CLI (`node tools/facts.mjs compare-all`) compares the cost two ways for each page. Re-reading all the source files, versus reading the single `page-wiki.md`:
+The CLI (`node tools/facts.mjs compare-all`) compares the cost in two ways for each page. Reading all the source files again, versus reading only the `page-wiki.md`:
 
 | Page | Source files | Re-read source | Reuse `page-wiki.md` | Saved |
 |---|---|---|---|---|
@@ -364,25 +364,25 @@ The CLI (`node tools/facts.mjs compare-all`) compares the cost two ways for each
 | `cart-checkout` | 6 | ~1,027 tok | ~590 tok | **~43%** |
 | **Total** | 17 | **~3,718 tok** | **~1,863 tok** | **~50%** |
 
-Roughly half the tokens. Per page, per visit. On a toy app where the files are already small.
+Almost half the tokens. Per page, every time. And this is a small app where files are already tiny.
 
-On a real page with a service, two-three models, a template, and its styles, the gap is bigger. The `page-wiki.md` size stays flat while the source it replaces keeps growing.
+On a real page with one service, two-three models, a template and its styles, the gap will be much bigger. The `page-wiki.md` size stays same, but the source it replaces keeps growing.
 
-So take these demo numbers as a floor, not a ceiling. This is a tiny toy repo. On a large codebase where one page pulls thousands of tokens of source, a one-page summary saves much more.
+So take these demo numbers as the minimum. This is a very small repo. In a big codebase where one page pulls thousands of tokens, one summary page will save a lot more.
 
-One thing to be clear about. This is a saving on **input tokens**. The context you feed into the model.
+One thing to be clear. This saving is on **input tokens**. The context which you send into the model.
 
-You are not re-reading and re-analysing the source on every request. So the prompt you send in becomes small. That is the full win. It is on the input side.
+You are not reading and analysing the source again for every request. So the prompt you send becomes small. That is the win, and it is on the input side.
 
-**Output tokens**, what the model writes back, do not change. The same edit still has to be typed out.
+**Output tokens**, what the model writes back, will not change. The same edit still has to be written.
 
-But in a coding session the input is much bigger than the output. The code you pour in is far bigger than the answer which comes out. Reducing the input is exactly where the cost is.
+But in a coding session the input is always much bigger than the output. The code you send in is far bigger than the answer coming out. So reducing the input is where the money is.
 
-A fair-play note on the numbers. The demo estimates tokens with the well-known `~4 characters per token` rule of thumb. Not an exact BPE tokenizer.
+One honest note on the numbers. The demo counts tokens using the common `~4 characters per token` rule. It is not an exact tokenizer.
 
-That is on purpose. It is more than enough to show the *relative* saving. And you can swap in `tiktoken` behind the same function if you want exact figures.
+That is done on purpose. It is enough to show the *relative* saving. If you want exact numbers, put `tiktoken` behind the same function.
 
-The point is you stop paying full price to learn the same page again. The exact second decimal does not matter.
+The point is, you stop paying full price to learn the same page again. The exact decimal does not matter.
 
 The freshness check is also cheap:
 
@@ -404,125 +404,125 @@ book-list: FRESH (5/5 source hashes match)
 => REUSE page-wiki.md — read ~593 tokens instead of ~1277 (saved ~54%). Source NOT re-read.
 ```
 
-Resolve the page. Check it is fresh. Reuse the page. For a comprehension pass, the source is never opened.
+Resolve the page. Check it is fresh. Reuse it. Just to understand the page, the source is never opened.
 
 ---
 
 ## What happens across a whole team?
 
-That ~50% is per page, per visit, for *one* person.
+That ~50% is per page, per visit, for *one* person only.
 
-The wiki is not personal. It lives in the repo, in version control, right next to the code. So it is shared.
+But the wiki is not personal. It sits inside the repo, in version control, next to the code. So everybody shares it.
 
-One engineer understands the book-list page one time. Its `page-wiki.md` goes into the repo. From then on, every teammate (and every future session of his own) starts from that page. Nobody works it out again.
+One engineer understands the book-list page one time. That `page-wiki.md` goes into the repo. After that every teammate, and all their own future sessions, start from that page. Nobody finds it out again.
 
-Now do the large-team maths. Take thirty engineers. Each opening a few AI sessions a day. All working on the same few hundred pages.
+Now do the team maths. Take thirty engineers. Each one opening few AI sessions daily. All working on the same few hundred pages.
 
-Without a shared wiki, every one of those sessions re-reads the same code from zero. The same page found again thousands of times a week.
+Without a shared wiki, every session reads the same code from zero. Same page is figured out again thousands of times in a week.
 
-With one wiki, that discovery happens once per page. Everyone else reuses it. The saving spreads across the full team, not only your own sessions.
+With one wiki, this happens one time per page. Everybody else reuses it. So the saving is for the full team, not only your sessions.
 
-And you don't have to document everything up front. The pages get built as you go.
+And you need not document everything in the beginning. Pages get built as you work.
 
-The trick is to make it a pipeline. Every task starts by resolving the page. Then asks one question. Does a fresh wiki page already exist?
+Make it a pipeline. Every task starts by resolving the page. Then one question. Is a fresh wiki page already there?
 
-- **Yes** → reuse it. You paid nothing to make it. You just ride the shared knowledge.
-- **No, or it is stale** → the LLM produces (or refreshes) the `page-wiki.md` right there, anchors it, and *then* does the work.
+- **Yes** → reuse it. You did not pay anything to create it. You are just using the team's work.
+- **No, or it is stale** → the LLM writes (or updates) the `page-wiki.md` then and there, anchors it, and *then* starts the work.
 
-Either way you get your answer. The difference is the second path leaves a fresh page behind. So the next session, and the next teammate, find it ready.
+Both ways you get your answer. Only difference is, the second one leaves a fresh page behind. So the next session, and the next teammate, will find it ready.
 
 <img src="/images/page-wiki-team-pipeline.png" alt="Flowchart of the produce-or-reuse pipeline: a prompt resolves to a page via wiki-index; if a fresh page-wiki.md exists it is reused without re-reading source, otherwise the LLM produces or refreshes and anchors it, then the work is done and the page is reused by the next session or teammate" loading="lazy" width="1120" height="1000" style="max-width:100%;height:auto;border-radius:8px;">
 
 
-Yes, you have to build the index first. But "first" is lazy and step by step. The first person who touches a page pays to make it. Everyone after him rides free.
+Yes, you have to build the index first. But it happens slowly, page by page. Whoever touches a page first pays for it. Everybody after that gets it free.
 
-The wiki is a living artifact which you maintain, same as you maintain the code. It just happens to be maintained mostly by the one worker who does not mind the upkeep.
+The wiki is a living thing which you maintain, same like the code. Only difference is, most of the maintenance is done by the one worker who does not mind this work.
 
 ---
 
 ## When is this worth it?
 
-I want to be honest about the trade-offs. This is not free.
+Let me be honest here. This is not free.
 
 **It helps when:**
 
-- The codebase is **large and fairly stable**. You come back to the same areas often, and they do not churn every hour.
-- You work across **many sessions**. The wiki spreads its cost over every future visit. The more you return, the more it saves.
-- The non-obvious knowledge (gotchas, data flow, cross-file coupling) is **expensive to rediscover** each time.
+- The codebase is **big and mostly stable**. You come back to the same areas often, and they are not changing every hour.
+- You work in **many sessions**. The cost of the wiki is spread over every future visit. More you come back, more it saves.
+- The hidden knowledge (gotchas, data flow, how files are connected) is **costly to find out** again and again.
 
 **It is not worth it when:**
 
-- The code changes constantly. You will spend all your time re-anchoring stale pages.
-- The codebase is small enough that reading it costs nothing anyway.
-- The work is a one-shot throwaway which you will never touch again.
+- The code is changing constantly. You will spend all your time re-anchoring stale pages.
+- The codebase is small, so reading it is anyway cheap.
+- The work is one-time throwaway which you will never touch again.
 
-There is also a real fidelity cost to know about. A short summary will always miss some details. If a page shows one field and skips a sibling's exact type, an assistant which trusts the page can miss that detail.
+One more real cost is there. A short summary will always miss some details. If a page shows one field and skips the exact type of another field, an assistant which trusts the page will also miss it.
 
-The fix is to be careful about what the summary carries. Record the *shapes* and the *differences* which matter. And confirm the small details from source when a change actually depends on them.
+Fix is to be careful about what goes inside the summary. Keep the *shapes* and the *differences* which matter. And check the small details from source when your change depends on them.
 
-A page wiki is a starting point. Not a replacement for looking when it counts.
+A page wiki is a starting point. It is not a replacement for opening the file when it really matters.
 
-**A few honest edges, from actually using it.**
+**Few rough edges, from actually using it.**
 
-I did not hit these in theory. Each one bit me while building the demo and running the pattern on my own code. They are worth knowing before you depend on it:
+These are not theory. Each one hit me while building the demo and using this on my own code. Better to know them before you depend on it:
 
-- **The hash is byte-level, not meaning-level.** A reformatted import or a renamed local variable flips a page STALE even though the summary is still perfectly true. The first time a formatting-only commit turned one of my pages red, it drove the lesson home: treat STALE as *"re-verify,"* not *"rewrite from scratch."* Most of the time a quick check confirms the summary is still correct, and you just re-anchor.
-- **Reuse is a discipline, not a guarantee.** The anchor tells you a page *can* be trusted. It does not force reuse. Early on I would still catch myself opening the source "just to be sure" and burning the tokens anyway. That is the whole reason [a command pipeline](#what-is-still-missing) matters. The tooling is what actually decides when to lean on the page and when to fall back to source.
-- **Editing still reads the file you are changing.** This one caught me out at first. I expected the page to replace the source outright. It does not. The biggest saving is on *understanding*: the data flow, the coupling, the gotchas you would otherwise work out again. You will still open the one file you are about to patch. That is fine: working out the understanding again is the expensive part, and that is exactly what the page saves.
+- **The hash checks bytes, not meaning.** One formatting change or one renamed local variable will make a page STALE, even when the summary is still fully correct. First time a formatting-only commit turned my page red, I learnt the lesson. Treat STALE as *"check once again,"* not *"write from scratch."* Most of the time one quick check tells you the summary is still correct, and you just re-anchor.
+- **Reuse is a habit, not a guarantee.** The anchor only tells you the page *can* be trusted. It will not force you to use it. In the beginning I was still opening the source "just to confirm" and wasting the tokens anyway. That is why [a command pipeline](#what-is-still-missing) matters. The tooling should decide when to trust the page and when to go back to source.
+- **Editing will still read the file you are changing.** This one surprised me first. I thought the page will fully replace the source. It will not. The big saving is on *understanding*: the data flow, how files are connected, the gotchas which you will otherwise find out again. You will still open the one file you are patching. That is okay, because understanding the page again is the costly part, and that is what the wiki saves.
 
-None of these break the idea. They are the natural next things to sharpen (a meaning-aware anchor, a resolver which double-checks itself). And they are why this is a starting pattern to build on, not a finished tool.
+None of these break the idea. These are the next things to improve (an anchor which understands meaning, a resolver which checks itself). And this is why I am calling it a starting pattern, not a finished tool.
 
 ---
 
 ## Who writes the wiki, the LLM or the human?
 
-The full thing is only as good as the knowledge inside it.
+This whole thing is only as good as the knowledge inside it.
 
-An accurate page saves you tokens *and* gets the change correct. A slightly wrong one saves tokens and silently misleads you.
+A correct page saves tokens *and* gets the change right. A slightly wrong page saves tokens and quietly sends you in the wrong direction.
 
-So accuracy is the real lever. That is where the human comes back in.
+So correctness is the main thing. And this is where the human is needed.
 
-An LLM is very good at the *first draft* of a page. It reads everything and writes down what it saw. Fast and without complaining.
+An LLM is very good at the *first draft* of a page. It reads everything and writes down what it saw. Fast, and without complaining.
 
-But the best `page-wiki.md` is one which a human has reviewed. A human catches what the model skipped. And knows the gotcha which is not written anywhere in the code.
+But the best `page-wiki.md` is the one which a human reviewed. Human will catch what the model missed. And human knows the gotcha which is not written anywhere in the code.
 
-That is the best of both worlds. The LLM does the boring bulk. The human does the judgement.
+So LLM does the boring bulk work. Human does the thinking part.
 
-And it should not be a one-time review.
+And this review should not happen only one time.
 
-You are mid-session. You notice a page missed something. A mismatch, a subtle behaviour, a gotcha the model never showed. You should be able to just say so, and that correction goes straight back into the page.
+You are in the middle of a session. You see the page missed something. Some wrong point, some behaviour, some gotcha which the model never wrote. You should be able to just say it, and that correction should go back into the page.
 
-That is a second pipeline worth building into your setup. Correct-in-place, along with produce-or-reuse. The moment a human spots a gap, the fix lands in the wiki.
+That is the second pipeline worth building. Correct-in-place, along with produce-or-reuse. The moment a human sees a gap, the fix goes into the wiki.
 
-So the next session, and the next teammate, get the sharper version. Over time the wiki stays fresh and actually gets *smarter*. Every human correction is a permanent upgrade which everyone downstream rides for free.
+So the next session, and the next teammate, get the better version. Slowly the wiki stays fresh and also becomes *smarter*. Every human correction stays there permanently, and everybody after that gets it free.
 
 ---
 
 ## What is still missing?
 
-The demo CLI shows each step by hand. Resolve, check, compare, reanchor. That is on purpose. It makes every part of the loop visible and measurable.
+The demo CLI does every step manually. Resolve, check, compare, re-anchor. That is done on purpose, so you can see and measure each part of the loop.
 
-But running it by hand is not how this scales.
+But running it manually will not scale.
 
-The steps are fully deterministic. Resolve the page. Check freshness against the source hashes. Update the summary if anything drifted. Re-anchor. That is a pipeline. And pipelines belong in commands, not in prompts.
+All the steps are fixed. Resolve the page. Check freshness against the source hashes. Update the summary if something changed. Re-anchor. This is a pipeline. And a pipeline should be in a command, not in a prompt.
 
-The natural fit is a shared command which everyone on the team runs the same way:
+Best way is one shared command which the full team runs in the same way:
 
-- A **Claude Code command or skill** which wraps the full loop. When you start work on a page, it resolves the page, checks freshness, and hands you a ready wiki. Or generates one if it does not exist yet.
-- A **post-commit hook** which detects which source files changed, finds the affected page wikis, and re-anchors them automatically. Without anyone remembering to.
-- A **CI step** which runs `check-all` on every PR and flags any page wiki which drifted from the diff.
+- A **Claude Code command or skill** which wraps the full loop. When you start work on a page, it resolves the page, checks freshness, and gives you a ready wiki. Or creates one if it is not there.
+- A **post-commit hook** which finds which source files changed, finds the affected page wikis, and re-anchors them automatically. Nobody has to remember it.
+- A **CI step** which runs `check-all` on every PR and flags any page wiki which went out of sync with the diff.
 
-When a new file is added to the codebase, the pipeline sees it has no hash in any existing wiki. It adds it to the correct page's source list and re-anchors. The wiki grows along with the codebase instead of lagging behind it.
+When somebody adds a new file, the pipeline sees this file has no hash in any wiki. It adds the file to the correct page and re-anchors. So the wiki grows along with the codebase, instead of going behind.
 
-This is what turns the pattern from a habit which a few careful engineers maintain into infrastructure which the whole team depends on. The CLI in the demo is the core logic. The command pipeline is the wrapper which makes it invisible.
+This is what changes it from a habit of two-three careful engineers into something the full team can depend on. The CLI in the demo is the core logic. The command pipeline is the wrapper which makes it automatic.
 
-The idea is yours to adapt. Build the wrapper one time for your stack, and the wiki takes care of itself.
+Take the idea and change it for your stack. Build the wrapper one time, then the wiki will take care of itself.
 
 ---
 
 ## Want to try it yourself?
 
-Clone it, run the loop, watch the numbers:
+Clone it, run the loop, and see the numbers:
 
 ```bash
 git clone https://github.com/arungudelli/token-llm-wiki.git
@@ -531,8 +531,8 @@ node tools/facts.mjs compare-all
 node tools/facts.mjs demo "book list"
 ```
 
-Then edit a source file in `app/`, run `check-all` again, and watch that page flip to **STALE**. The anchor catches the drift immediately.
+Then change any source file in `app/`, run `check-all` again, and see that page turn **STALE**. The anchor catches the change immediately.
 
-Your codebase deserves a wiki which stays true. One which your team can read and your AI can reuse. Instead of one which rots the moment you write it.
+Your codebase deserves a wiki which stays correct. One which your team can read and your AI can reuse. Not one which goes wrong the moment you write it.
 
-If you try it on your own project, tell me what saving you measure.
+If you try this on your own project, tell me how much you saved.
