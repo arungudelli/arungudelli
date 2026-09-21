@@ -134,7 +134,7 @@ The git-hash anchor is what turns "some notes I wrote one time" into something y
 
 ---
 
-## What are the three layers?
+## The setup
 
 The setup has three layers:
 
@@ -156,7 +156,7 @@ wiki-index        (which page is this request even about?)
 
 A codebase is not like a set of documents.
 
-In the original LLM Wiki, the human decides when to update. You give the agent new sources. It reads them again. Sometimes a *lint* pass checks for wrong or old points. This works when *you* are controlling when the sources change.
+With documents, you decide when to update. You give the agent new sources. It reads them again. Maybe you run some check to catch the wrong or old points. That works, because you are controlling when the sources change.
 
 But code will not wait for you. It is changing daily, from every commit and every teammate. And nobody will inform you.
 
@@ -192,9 +192,9 @@ So when you ask something, the full flow looks like this:
 
 ---
 
-## What does a real demo look like?
+## The demo
 
-Talking about token saving is easy. So I built a small demo. You can run it and check the numbers yourself:
+Talking about token saving is easy. You can run the demo and check the numbers yourself:
 
 **<a href="https://github.com/arungudelli/token-llm-wiki" target="_blank">github.com/arungudelli/token-llm-wiki</a>**
 
@@ -370,15 +370,15 @@ None of these break the idea. These are the next things to improve (an anchor wh
 
 ---
 
-## The LLM writes it, but you own the correctness
+## LLM writes it, but you own the correctness
 
 This whole thing is only as good as the knowledge inside it.
 
-A correct page saves tokens *and* gets the change right. A slightly wrong page saves tokens and quietly sends you in the wrong direction.
+A correct page saves tokens and gets the change right. A slightly wrong page saves tokens and quietly sends you in the wrong direction.
 
 So correctness is the main thing. And this is where the human is needed.
 
-An LLM is very good at the *first draft* of a page. It reads everything and writes down what it saw. Fast, and without complaining.
+An LLM is very good at the first draft of a page. It reads everything and writes down what it saw. Fast, and without complaining.
 
 But the best `page-wiki.md` is the one which a human reviewed. Human will catch what the model missed. And human knows the gotcha which is not written anywhere in the code.
 
@@ -416,7 +416,7 @@ Take the idea and change it for your stack. Build the wrapper one time, then the
 
 ---
 
-## Want to try it yourself?
+## Try it yourself
 
 Clone it, run the loop, and see the numbers:
 
