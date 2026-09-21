@@ -14,71 +14,39 @@ I did not publish anything from last one year.
 
 Reason is LLM only. Because when AI can explain everything very fast, writing step-by-step tutorial is waste of time.
 
-But this one is different. It is not a tutorial.
+But this one is different. It is not a tutorial.It is about making AI remember our project code. So next time it will not start from zero.
 
-It is about making AI remember our project code. So next time it will not start from zero.
-
-It starts with very boring problem in software.
-
-In every team I worked, everyone has same tension: documentation is not updated.
+It starts with very boring problem in software. i.e., **Documentation**. In every team I worked, everyone has same tension: documentation is not updated.
 
 Reason is simple. Updating docs is very boring work.
 
-We engineers are lazy to write docs. And we are also very bad at it.
-
-You will write one time, then code will change. 
+We engineers are lazy to write docs. And we are also very bad at it. May be you will write documentation one time, then code will change. And you forgot to update the documentation. 
 
 After six months, doc is totally wrong. 
 
-But new joiner will trust it because he don't know anything.
+But new joiner will trust it because he don't know anything. Nobody ever bothered to fix this. We just ignore it and continue our work.
 
-Nobody ever bothered to fix this. We just ignore it and continue our work.
+Main project knowledge (like payment flow logic, or why one function is there) is only inside senior engineer head or some old Slack messages which difficult to find.
 
-Main project knowledge (like payment flow logic, or why one function is there) is only inside senior engineer head or some old Slack message which difficult to find.
-
-But think about LLMs they won't get bored. They can check fifteen files and update the details, and again do same thing tomorrow without complaining.
-
-The boring work which developers like us hate, LLMs will do happily daily. 
+But think about LLMs they won't get bored. They can check fifteen files and update the details, and again do same thing tomorrow without complaining. The boring work which developers like us hate, LLMs will do happily daily. 
 
 This will completely change how we do documentation.
 
-I understood this properly after reading one gist on GitHub.
+I understood this properly after reading one gist on GitHub. It is written by **Andrej Karpathy**. He calls it the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>.
 
-It is written by **Andrej Karpathy**. 
-
-He calls it the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>.
-
-His point is simple. Right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* 
-
-Every answer is lost. Next time it starts from zero again.
-
-His fix is not a better search. 
+His point is simple. Right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Every answer is lost. Next time it starts from zero again. His fix is not a better search. 
 
 It is a wiki which the LLM builds one time and keeps updated. 
 
-One file which keeps growing.
-
-He even connects it to Vannevar Bush's 1945 **Memex**. That idea failed first time because *humans* could not do the maintenance. 
-
-Now the LLM will do that part.
+He even connects it to <a href="https://en.wikipedia.org/wiki/Memex" target="_blanck">Vannevar Bush's 1945 Memex</a>. That idea failed first time because *humans* could not do the maintenance. Now the LLM will do that part.
 
 He says the full division of work in one line: *"You're in charge of sourcing, exploration, and asking the right questions. The LLM does all the grunt work, the summarizing, cross-referencing, filing, and bookkeeping."*
 
-Next question is, what should these docs look like?
+Next question is, what should these docs look like? Nothing fancy. Any format will work.
 
-Nothing fancy. Any format will work.
+I am using plain markdown files. Small YAML frontmatter on top. And links between pages. That is it. One markdown file renders as a **Hugo website which a human can read**. The *same file* is plain text which an **LLM can read**. 
 
-I am using plain markdown files. Small YAML frontmatter on top. And links between pages.
-
-That is it.
-
-One markdown file renders as a **Hugo website which a human can read**. 
-
-The *same file* is plain text which an **LLM can read**. One file.
-
-No special tool needed here. If you already have some format you like, just use it.
-
-Human gets a map of the codebase which is correct. LLM gets the context ready, so it will not grep the whole repo again.
+No special tool needed here. If you already have some format you like, just use it. Human gets a map of the codebase which is correct. LLM gets the context ready, so it will not grep the whole repo again.
 
 I built a small demo where every page in the codebase gets its own documentation file. 
 
@@ -97,127 +65,56 @@ Here **page** means one bounded area of a codebase, not only a browser page. A p
 
 ## How does LLM read our codebase??
 
-You ask the LLM to change one page. 
+You ask the LLM to change one page. It opens five files. Reads everything. Then it understands how they are connected. After that only it starts the work.
 
-It opens five files. Reads everything. 
+Tomorrow you ask one more change in the same page. It opens the same five files. Reads everything again. From zero. Every time it is learning the same thing again.
 
-Then it understands how they are connected. 
-
-After that only it starts the work.
-
-Tomorrow you ask one more change in the same page. 
-
-It opens the same five files. 
-
-Reads everything again. From zero.
-
-Every time it is learning the same thing again.
-
-For a small script, no issue.
-
-But in a project where you are working for months, you are paying for this again and again. 
-
-**More tokens**, more waiting, and your context window is full before the real work starts.
+For a small script, no issue. But in a project where you are working for months, you are paying for this again and again. **More tokens**, more waiting, and your context window is full before the real work starts.
 
 ---
 
 ## What is missing? An index.
 
-Think about a dictionary.
-
-When we search one word in a dictionary, we don't read it from first page to last page. 
-
-The dictionary is sorted alphabetically. 
+Think about a dictionary. When we search one word in a dictionary, we won't read it from first page to last page. The dictionary is sorted alphabetically. 
 
 We jump directly to the first letter of the word, then move few pages, and reach the word in seconds.
 
-That alphabetical order *is* an index. 
+That alphabetical order is **an index**. 
 
 It is the only reason a book with 100,000 words is still usable.
 
-Now imagine the same dictionary in random order. 
+Now imagine the same dictionary in random order. Same words, same meanings. No alphabetical order. To find one word you have to  start from page one. Read page after page. Until you find that word.
 
-Same words, same meanings. No alphabetical order.
-
-To find one word you have no option. 
-
-Start from page one. Read page after page. Until you find that word.
-
-Same book. But without the index it is almost useless. 
-
-We are stuck doing a slow, one-by-one search.
+Same book. But **without the index** it is almost useless. We are stuck doing a slow, one-by-one page search.
 
 **Finding code in a new repo is exactly this random-order dictionary.**
 
 A codebase is a book with thousands of "words" (functions, components, endpoints) spread across hundreds of "pages," the files. 
-
 When an LLM tries to change the code, it has no knowledge about the codebase. Same like the dictionary without index.
 
 So it starts scanning our codebase file by file, using the words from our prompt (grep search). 
 
-Opens whatever files match. 
+Opens whatever files match. Reads them to check if they are correct. If not, greps again and opens more. Every miss is one more page turned. One more file read. One more turn. **One more few thousand tokens.**
 
-Reads them to check if they are correct. 
-
-If not, greps again and opens more.
-
-Every miss is one more page turned. 
-
-One more file read. One more turn. 
-
-**One more few thousand tokens.**
-
-And if the code you want to change is not using the same words you typed, the search will simply miss it.
-
-Maybe the file is using some other name. 
-
-Maybe the call is happening indirectly, at runtime.
-
-Now the model is lost. It starts guessing.
+And if the code you want to change is not using the same words you typed, the search will simply miss it. Maybe the file is using some other name. Maybe the call is happening indirectly, at runtime. Now the model is lost. It starts guessing.
 
 This is exactly how a human mind also works.
 
-Put a fresh engineer into a large codebase. 
-
-Tell them to change the **book-list search**. 
-
-They also can't jump straight to the correct file.
-
-They open files. Read. Follow imports. Guess. Check. Go back. The human version of grep.
+Put a fresh engineer into a large codebase. Tell them to change the **book-list search**. They also can't jump straight to the correct file. They open files. Read. Follow imports. Guess. Check. Go back. **The human version of grep.**
 
 It is slow. And it is slow for the same reason. No index yet.
 
-Now take one senior engineer working in that same codebase from two years.
-
-Same task. He will not search at all.
-
+Now take one senior engineer working in that same codebase from two years. Same task. He will not search at all.
 
 He already knows it. *"That is the `BookListComponent`. Search is a computed signal on the in-memory list. And one thing, filtering is happening only on client-side."*
 
-He opens the file directly. And he already knows where to change the code.
+He opens the file directly. And he already knows where to change the code. He is not more intelligent than the fresher. He is just having the **index ready in his head**.
 
-He is not more intelligent than the fresher. 
+With an LLM, every session it is the fresher. It has no memory of your codebase. However smart it is at reasoning, it wakes up every time having never seen your repo. And builds the map from zero. Same as you, if your memory reset every morning.
 
-He is just having the index ready in his head.
+**A page wiki is that senior engineer's mental index**. Written down and kept fresh. So a new teammate, or the model, who never saw this code will also get the same shortcut or index on day one.
 
-With an LLM, every session it is the fresher. 
-
-It has no memory of your codebase.
-
-However smart it is at reasoning, it wakes up every time having never seen your repo. 
-
-And builds the map from zero. 
-
-Same as you, if your memory reset every morning.
-
-A page wiki is that senior engineer's mental index. Written down and kept fresh.
-
-So a new teammate, or the model, who never saw this code will also get the same shortcut or index on day one.
-
-Now no searching. The LLM opens one page. 
-
-That page tells which files to touch and what to be careful about.
-
+Now no searching. The LLM opens one page. That page tells which files to touch and what to be careful about.
 
 ---
 
