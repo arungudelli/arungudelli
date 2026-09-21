@@ -14,43 +14,43 @@ I did not publish anything from last one year.
 
 Reason is LLMs. Because when LLMs can explain everything very fast, writing step-by-step tutorial is waste of time.
 
-But this one is different. It is not a tutorial.It is about making LLMs remember our project code. So next time it will not start from zero.
+But this one is different. It is not a tutorial. It is about making LLMs remember our project code. So next time it will not start from zero.
 
-It starts with very boring problem in software. i.e., **Documentation**. In every team I worked, everyone has same tension: documentation is not updated.
+It starts with very boring problem in software: **Documentation**. In every team I worked in, everyone has same tension: documentation is not updated.
 
 Reason is simple. Updating docs is very boring work.
 
-We engineers are lazy to write docs. And we are also very bad at it. May be you will write documentation one time, then code will change. And you forgot to update the documentation. 
+We engineers are lazy to write docs. And we are also very bad at it. Maybe you will write documentation one time, and then code will change. And you forget to update the documentation.
 
-After six months, doc is totally wrong. 
+After six months, doc is totally wrong.
 
-But new joiner will trust it because he don't know anything. Nobody ever bothered to fix this. We just ignore it and continue our work.
+But new joiner will trust it because he doesn't know anything. Nobody ever bothered to fix this. We just ignore it and continue our work.
 
-Main project knowledge (like payment flow logic, or why one function is there) is only inside senior engineer head or some old Slack messages which difficult to find.
+Main project knowledge (like payment flow logic, or why one function is there) is only inside a senior engineer's head or some old Slack messages which are difficult to find.
 
-But think about LLMs they won't get bored. They can check fifteen files and update the details, and again do same thing tomorrow without complaining. The boring work which developers like us hate, LLMs will do happily daily. 
+But think about LLMs. They won't get bored. They can check fifteen files and update the details, and again do same thing tomorrow without complaining. The boring work which developers like us hate, LLMs will do happily daily.
 
 This will completely change how we do documentation.
 
 I understood this properly after reading one gist on GitHub. It is written by **Andrej Karpathy**. He calls it the <a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f" target="_blank">**LLM Wiki**</a>.
 
-His point is simple. Right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Every answer is lost. Next time it starts from zero again. His fix is not a better search. 
+His point is simple. Right now *"the LLM is rediscovering knowledge from scratch on every question. There's no accumulation."* Every answer is lost. Next time it starts from zero again. His fix is not a better search.
 
-It is a wiki which the LLM builds one time and keeps updated. 
+It is a wiki which the LLM builds one time and keeps updated.
 
-He even connects it to <a href="https://en.wikipedia.org/wiki/Memex" target="_blanck">Vannevar Bush's 1945 Memex</a>. That idea failed first time because *humans* could not do the maintenance. Now the LLM will do that part.
+He even connects it to <a href="https://en.wikipedia.org/wiki/Memex" target="_blank">Vannevar Bush's 1945 Memex</a>. That idea failed first time because *humans* could not do the maintenance. Now the LLM will do that part.
 
 He says the full division of work in one line: *"You're in charge of sourcing, exploration, and asking the right questions. The LLM does all the grunt work, the summarizing, cross-referencing, filing, and bookkeeping."*
 
 Next question is, what should these docs look like? Nothing fancy. Any format will work.
 
-I am using plain markdown files. Small YAML frontmatter on top. And links between pages. That is it. One markdown file renders as a **Hugo website which a human can read**. The *same file* is plain text which an **LLM can read**. 
+I am using plain markdown files. Small YAML frontmatter on top. And links between pages. That is it. One markdown file renders as a **Hugo website which a human can read**. The *same file* is plain text which an **LLM can read**.
 
 No special tool needed here. If you already have some format you like, just use it. Human gets a map of the codebase which is correct. LLM gets the context ready, so it will not grep the whole repo again.
 
-I built a small demo where every page in the codebase gets its own documentation file. 
+I built a small demo where every page in the codebase gets its own documentation file.
 
-I call it a page wiki: **page-wiki.md**. 
+I call it a page wiki: **page-wiki.md**.
 
 Here **page** means one bounded area of a codebase, not only a browser page. A page wiki can be:
 
@@ -63,7 +63,7 @@ Here **page** means one bounded area of a codebase, not only a browser page. A p
 
 ---
 
-## How does LLM read our codebase??
+## How does an LLM read our codebase?
 
 You ask the LLM to change one page. It opens five files. Reads everything. Then it understands how they are connected. After that only it starts the work.
 
@@ -75,24 +75,23 @@ For a small script, no issue. But in a project where you are working for months,
 
 ## What is missing? An index.
 
-Think about a dictionary. When we search one word in a dictionary, we won't read it from first page to last page. The dictionary is sorted alphabetically. 
+Think about a dictionary. When we search for one word in a dictionary, we won't read it from first page to last page. The dictionary is sorted alphabetically.
 
-We jump directly to the first letter of the word, then move few pages, and reach the word in seconds.
+We jump directly to the first letter of the word, then move a few pages, and reach the word in seconds.
 
-That alphabetical order is **an index**. 
+That alphabetical order is **an index**.
 
 It is the only reason a book with 100,000 words is still usable.
 
-Now imagine the same dictionary in random order. Same words, same meanings. No alphabetical order. To find one word you have to  start from page one. Read page after page. Until you find that word.
+Now imagine the same dictionary in random order. Same words, same meanings. No alphabetical order. To find one word, you have to start from page one. Read page after page. Until you find that word.
 
 Same book. But **without the index** it is almost useless. We are stuck doing a slow, one-by-one page search.
 
 **Finding code in a new repo is exactly this random-order dictionary.**
 
-A codebase is a book with thousands of "words" (functions, components, endpoints) spread across hundreds of "pages," the files. 
-When an LLM tries to change the code, it has no knowledge about the codebase. Same like the dictionary without index.
+A codebase is a book with thousands of "words" (functions, components, endpoints) spread across hundreds of "pages," the files. When an LLM tries to change the code, it has no knowledge about the codebase. Same like the dictionary without index.
 
-So it starts scanning our codebase file by file, using the words from our prompt (grep search). 
+So it starts scanning our codebase file by file, using the words from our prompt (grep search).
 
 Opens whatever files match. Reads them to check if they are correct. If not, greps again and opens more. Every miss is one more page turned. One more file read. One more turn. **One more few thousand tokens.**
 
@@ -313,7 +312,7 @@ But the wiki is not personal. It sits inside the repo, in version control, next 
 
 One engineer understands the book-list page one time. That `page-wiki.md` goes into the repo. After that every teammate, and all their own future sessions, start from that page. Nobody finds it out again.
 
-Now do the team maths. Take thirty engineers. Each one opening few AI sessions daily. All working on the same few hundred pages.
+Now do the team maths. Take thirty engineers. Each one opening a few AI sessions daily. All working on the same few hundred pages.
 
 Without a shared wiki, every session reads the same code from zero. Same page is figured out again thousands of times in a week.
 
