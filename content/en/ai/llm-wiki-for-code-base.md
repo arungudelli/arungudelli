@@ -12,9 +12,9 @@ images: ["images/page-wiki-durable-codebase-knowledge.png"]
 
 I did not publish anything from last one year.
 
-Reason is LLM only. Because when AI can explain everything very fast, writing step-by-step tutorial is waste of time.
+Reason is LLMs. Because when LLMs can explain everything very fast, writing step-by-step tutorial is waste of time.
 
-But this one is different. It is not a tutorial.It is about making AI remember our project code. So next time it will not start from zero.
+But this one is different. It is not a tutorial.It is about making LLMs remember our project code. So next time it will not start from zero.
 
 It starts with very boring problem in software. i.e., **Documentation**. In every team I worked, everyone has same tension: documentation is not updated.
 
@@ -155,7 +155,7 @@ wiki-index        (which page is this request even about?)
 
 ## Why anchor to the git blob hash?
 
-This is the one thing I added on top of Karpathy's idea. Because a codebase is not like a set of documents.
+A codebase is not like a set of documents.
 
 In the original LLM Wiki, the human decides when to update. You give the agent new sources. It reads them again. Sometimes a *lint* pass checks for wrong or old points. This works when *you* are controlling when the sources change.
 
@@ -371,7 +371,7 @@ None of these break the idea. These are the next things to improve (an anchor wh
 
 ---
 
-## Who writes the wiki, the LLM or the human?
+## The LLM writes it, but you own the correctness
 
 This whole thing is only as good as the knowledge inside it.
 
