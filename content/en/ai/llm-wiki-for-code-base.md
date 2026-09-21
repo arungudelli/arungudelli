@@ -2,8 +2,8 @@
 title: "Your LLM Keeps Re-reading the Same Code. Give It a Wiki."
 slug: "llm-wiki-for-code-base"
 description: "Your LLM reads the same files again in every session. A page wiki fixes this. One short markdown file per page, anchored to the source with the git blob hash, so it tells you when it goes stale. Same file which a human can read and an LLM can reuse. Inspired by Karpathy's LLM Wiki. With a small demo which measures the token saving."
-date: "2026-09-19T00:29:00+05:30"
-lastmod: "2026-09-19T00:29:00+05:30"
+date: "2026-09-21T17:48:00+05:30"
+lastmod: "2026-09-21T17:48:00+05:30"
 draft: "false"
 type: "docs"
 mermaid: false
