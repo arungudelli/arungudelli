@@ -1,7 +1,7 @@
 ---
 title: "Your LLM Keeps Re-reading the Same Code. Give It a Wiki."
 slug: "llm-wiki-for-code-base"
-description: "Documentation is software's oldest chore, and LLMs are finally good at it, because they don't mind boring work. Inspired by Karpathy's LLM Wiki, here's the page wiki: one distilled, source-anchored markdown file per page that humans can read to understand the codebase and LLMs reuse to skip re-reading it. A shared, durable knowledge base that cuts input tokens and stays honest via a git-hash freshness anchor. With a runnable demo that measures the saving."
+description: "Documentation is software's oldest chore, and LLMs are finally good at it, because they don't mind boring work. Inspired by Karpathy's LLM Wiki, here's the page wiki: one short, source-anchored markdown file per page that humans can read to understand the codebase and LLMs reuse to skip re-reading it. A shared, durable knowledge base that cuts input tokens and stays honest via a git-hash freshness anchor. With a runnable demo that measures the saving."
 date: "2026-09-19T00:29:00+05:30"
 lastmod: "2026-09-19T00:29:00+05:30"
 draft: "false"
@@ -225,11 +225,11 @@ That page tells which files to touch and what to be careful about.
 
 The pattern is one sentence:
 
-> Understand a page **once**, write down the distilled, reusable truth as a `page-wiki.md`, anchor that file to the source by git blob hash, then reuse the page instead of re-reading the source every time. When the source changes, the anchor goes *stale*, and only *then* do you re-read.
+> Understand a page **once**, write down the important points in a `page-wiki.md`, link that file to the source using the git blob hash, then read the page next time instead of reading the full source again. When the code changes, the hash will not match and the page becomes *stale*. Only then you read the source again.
 
 That is it. Two things make it work. These are the parts people usually skip:
 
-1. Each page is a **distilled** summary which a human (or a model) wrote on purpose. Not a raw dump of the files.
+1. Each page is a **short summary** which a human (or a model) wrote on purpose. Not a raw dump of the files.
 2. Each page is **anchored to the exact source it describes**. So it can tell you when it is out of date, instead of misleading you silently.
 
 A wiki which cannot tell you it is stale is a liability, not an asset.
@@ -245,7 +245,7 @@ In simple words, the pattern has three layers:
 ```text
 app source        (many files — the ground truth)
    ↑ re-read ONLY when the page is STALE
-page-wiki.md      (one distilled file per page, anchored to source by git hash)   ← reused every time
+page-wiki.md      (one short file per page, anchored to source by git hash)      ← reused every time
    ↑ resolved via
 wiki-index        (which page is this request even about?)
 ```
@@ -291,7 +291,7 @@ But this work you do one time. And the LLM does it, because it is exactly the bo
 
 At query time, the full loop looks like this:
 
-<img src="/images/page-wiki-query-flow.png" alt="Sequence diagram of one page-wiki request: the LLM resolves the page via wiki-index, reads the distilled page-wiki.md, re-hashes the source files against the stored hashes, then reuses the page when FRESH or refreshes and re-anchors it when STALE" loading="lazy" width="1300" height="940" style="max-width:100%;height:auto;border-radius:8px;">
+<img src="/images/page-wiki-query-flow.png" alt="Sequence diagram of one page-wiki request: the LLM resolves the page via wiki-index, reads the short page-wiki.md summary, re-hashes the source files against the stored hashes, then reuses the page when FRESH or refreshes and re-anchors it when STALE" loading="lazy" width="1300" height="940" style="max-width:100%;height:auto;border-radius:8px;">
 
 
 ---
@@ -456,7 +456,7 @@ I want to be honest about the trade-offs. This is not free.
 - The codebase is small enough that reading it costs nothing anyway.
 - The work is a one-shot throwaway which you will never touch again.
 
-There is also a real fidelity cost to know about. A distilled summary is, by definition, lossy. If a page shows one field and skips a sibling's exact type, an assistant which trusts the page can miss that detail.
+There is also a real fidelity cost to know about. A short summary will always miss some details. If a page shows one field and skips a sibling's exact type, an assistant which trusts the page can miss that detail.
 
 The fix is to be careful about what the summary carries. Record the *shapes* and the *differences* which matter. And confirm the small details from source when a change actually depends on them.
 
@@ -466,7 +466,7 @@ A page wiki is a starting point. Not a replacement for looking when it counts.
 
 I did not hit these in theory. Each one bit me while building the demo and running the pattern on my own code. They are worth knowing before you depend on it:
 
-- **The hash is byte-level, not meaning-level.** A reformatted import or a renamed local variable flips a page STALE even though the summary is still perfectly true. The first time a formatting-only commit turned one of my pages red, it drove the lesson home: treat STALE as *"re-verify,"* not *"rewrite from scratch."* Most of the time a quick glance confirms the distilled truth still holds, and you just re-anchor.
+- **The hash is byte-level, not meaning-level.** A reformatted import or a renamed local variable flips a page STALE even though the summary is still perfectly true. The first time a formatting-only commit turned one of my pages red, it drove the lesson home: treat STALE as *"re-verify,"* not *"rewrite from scratch."* Most of the time a quick check confirms the summary is still correct, and you just re-anchor.
 - **Reuse is a discipline, not a guarantee.** The anchor tells you a page *can* be trusted. It does not force reuse. Early on I would still catch myself opening the source "just to be sure" and burning the tokens anyway. That is the whole reason [a command pipeline](#what-is-still-missing) matters. The tooling is what actually decides when to lean on the page and when to fall back to source.
 - **Editing still reads the file you are changing.** This one caught me out at first. I expected the page to replace the source outright. It does not. The biggest saving is on *understanding*: the data flow, the coupling, the gotchas you would otherwise work out again. You will still open the one file you are about to patch. That is fine: working out the understanding again is the expensive part, and that is exactly what the page saves.
 
